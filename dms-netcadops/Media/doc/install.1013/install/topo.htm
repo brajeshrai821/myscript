@@ -1,0 +1,1097 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 23, 2006 13:32:46 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5.1 Build 4" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Product and Installation Overview</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="preface.htm" title="Previous" />
+<link rel="next" href="reqs.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+<link rel="index" href="index.htm" title="Index" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Installation Guide  </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25217-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="preface.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="reqs.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="BABIAFAH" name="BABIAFAH"></a><a id="sthref10" name="sthref10"></a>
+<h1 class="chapter"><span class="secnum">1 </span> <a name="ASINS123|recommended topologies"></a>Product and Installation Overview</h1>
+<p>This chapter describes what is contained in Oracle Application Server and recommended topologies. It contains the following sections:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CEGDIHID">Section 1.1, "Product Overview"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGIHCHA">Section 1.2, "Basic and Advanced Installation"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGHEDFG">Section 1.3, "Recommended Topologies"</a>
+</p>
+</li>
+</ul><a id="CEGDIHID" name="CEGDIHID"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref11" name="sthref11"></a>
+<h2 class="sect1"><span class="secnum">1.1 </span>Product Overview
+</h2>
+<p>Oracle Application Server is made up of a middle tier and OracleAS Infrastructure. You deploy and run your applications on the middle tiers. The infrastructure provides services that are used by middle tiers. These services can be shared by one or more middle tiers. 
+</p>
+<p>Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) provides a complete Java 2, Enterprise Edition (J2EE) 1.4-compliant environment. Specifically, this release provides a new version of Oracle Containers for J2EE (OC4J). OC4J provides all the containers, APIs, and services mandated by the J2EE specification. This release is designed for administrators who are using OC4J to deploy and manage J2EE applications. 
+</p>
+<p>In addition to OC4J, this release also includes new releases of Oracle HTTP Server, Oracle Process Manager and Notification Server (OPMN), and Oracle Enterprise Manager 10<span class="italic">g</span> Application Server Control Console.
+</p>
+<p>You can integrate Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) with an existing Oracle Application Server environment that includes 10<span class="italic">g</span> (9.0.4) or 10<span class="italic">g</span> Release 2 (10.1.2) OracleAS Infrastructure, 10<span class="italic">g</span> Release 2 (10.1.2) Oracle HTTP Server, or 10<span class="italic">g</span> Release 2 (10.1.2) OracleAS Web Cache components. 
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p><!A HREF="olinkSRC ASMAS"><span class="italic">Oracle Application Server Upgrade and Compatibility Guide</span></a> for more information about which specific versions are compatible with 10<span class="italic">g</span> Release 3 (10.1.3)
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</div><!-- class="sect1" -->
+<a id="CEGIHCHA" name="CEGIHCHA"></a>
+<div class="sect1">
+<a id="sthref12" name="sthref12"></a>
+<h2 class="sect1"><span class="secnum">1.2 </span>Basic and Advanced Installation
+</h2>
+<p> <a href="#BHCDGEGD">Table 1-1</a> summarizes the groups of services available with each installation type.
+</p>
+<div class="tblhruleformalwide">
+<a id="sthref13" name="sthref13"></a><a id="BHCDGEGD" name="BHCDGEGD"></a>
+<p class="titleintable">Table 1-1 Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Install Types<a id="sthref14" name="sthref14"></a></p>
+<table class="HRuleFormalWide" title="Oracle Application Server 10g Release 3 (10.1.3) Install Types" summary="Summary of installation types." dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t3">Install Mode
+</th>
+<th align="left" valign="bottom" id="r1c2-t3">Available Installation Types
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t3" headers="r1c1-t3">
+<p>Basic
+</p>
+</td>
+<td align="left" headers="r2c1-t3 r1c2-t3">
+<ul>
+<li type="disc">
+<p>Integrated Web Server, J2EE Server, and Process Management
+</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t3" headers="r1c1-t3">
+<p>Advanced
+</p>
+</td>
+<td align="left" headers="r3c1-t3 r1c2-t3">
+<ul>
+<li type="disc">
+<p>Integrated Web Server, J2EE Server, and Process Management
+</p>
+<p>This option installs both OC4J and Oracle HTTP Server and their associated components. It also installs Application Server Control Console for management and deployment operations and OPMN for process control. 
+</p>
+</li>
+<li type="disc">
+<p>J2EE Server and Process Management
+</p>
+<p>This option installs OC4J, the main runtime component of the Oracle Application Server. It also installs Application Server Control Console for management and deployment operations and OPMN for process control. 
+</p>
+</li>
+<li type="disc">
+<p>Web Server and Process Management
+</p>
+<p>This option installs Oracle HTTP Server with SSL Support for deploying applications. It also installs OPMN for process control. 
+</p>
+</li>
+<li type="disc">
+<p>Oracle TopLink
+</p>
+<p>This option installs TopLink Foundation Library and Oracle TopLink Workbench for use by J2EE applications.
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformalwide" -->
+
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>Oracle TopLink documentation for further information about the Oracle TopLink advanced installation option
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+<p>The basic (one-click) installation prompts you with questions on the initial installation screen, and then it proceeds to install the product without any further user interaction. The default values for all the components are used.
+</p>
+<p>The advanced installation provides you with a great degree of customization and flexibility, which enables installation of additional languages, port configuration options, and cluster configuration.
+</p>
+<p><a href="#CEGCJBIB">Table 1-2</a> summarizes the differences in the customization options between basic and advanced installation.
+</p>
+<div class="tblhruleformalwide">
+<a id="sthref15" name="sthref15"></a><a id="CEGCJBIB" name="CEGCJBIB"></a>
+<p class="titleintable">Table 1-2 Basic and Advanced Installation Features</p>
+<table class="HRuleFormalWide" title="Basic and Advanced Installation Features" summary="Summary of the difference between basic and advanced installation features" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5">Action or Option
+</th>
+<th align="left" valign="bottom" id="r1c2-t5">Basic
+</th>
+<th align="left" valign="bottom" id="r1c3-t5">Advanced
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p>Specify an Oracle Home
+</p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>Yes
+</p>
+</td>
+<td align="left" headers="r2c1-t5 r1c3-t5">
+<p>Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p>Specify an instance name and <code>oc4jadmin</code> password
+</p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>Yes
+</p>
+</td>
+<td align="left" headers="r3c1-t5 r1c3-t5">
+<p>Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
+<p>Select additional languages
+</p>
+</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">
+<p>No
+</p>
+</td>
+<td align="left" headers="r4c1-t5 r1c3-t5">
+<p>Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t5" headers="r1c1-t5">
+<p>Specify automatic or manual port configuration
+</p>
+</td>
+<td align="left" headers="r5c1-t5 r1c2-t5">
+<p>No
+</p>
+</td>
+<td align="left" headers="r5c1-t5 r1c3-t5">
+<p>Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t5" headers="r1c1-t5">
+<p>Configure Application Server Control
+</p>
+</td>
+<td align="left" headers="r6c1-t5 r1c2-t5">
+<p>No
+</p>
+</td>
+<td align="left" headers="r6c1-t5 r1c3-t5">
+<p>Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t5" headers="r1c1-t5">
+<p>Specify default OC4J instance name
+</p>
+</td>
+<td align="left" headers="r7c1-t5 r1c2-t5">
+<p>No
+</p>
+</td>
+<td align="left" headers="r7c1-t5 r1c3-t5">
+<p>Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t5" headers="r1c1-t5">
+<p>Configure instance to be part of a cluster 
+</p>
+</td>
+<td align="left" headers="r8c1-t5 r1c2-t5">
+<p>No
+</p>
+</td>
+<td align="left" headers="r8c1-t5 r1c3-t5">
+<p>Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t5" headers="r1c1-t5">
+<p>Configuration assistants
+</p>
+</td>
+<td align="left" headers="r9c1-t5 r1c2-t5">
+<p>Yes
+</p>
+</td>
+<td align="left" headers="r9c1-t5 r1c3-t5">
+<p>Yes
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformalwide" -->
+
+</div><!-- class="sect1" -->
+<a id="CEGHEDFG" name="CEGHEDFG"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref16" name="sthref16"></a>
+<h2 class="sect1"><span class="secnum">1.3 </span>Recommended Topologies<a id="ABC5236814" name="ABC5236814"></a>
+</h2>
+<p><a href="#BEJEGJDF">Table 1-3</a> provides a road map of where to find information about the supported 10<span class="italic">g</span> Release 3 (10.1.3) topologies.
+</p>
+<div class="tblhruleformalwide">
+<a id="sthref17" name="sthref17"></a><a id="BEJEGJDF" name="BEJEGJDF"></a>
+<p class="titleintable">Table 1-3 Basic and Advanced Installation Features</p>
+<table class="HRuleFormalWide" title="Basic and Advanced Installation Features" summary="Summary of the difference between basic and advanced installation features" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6">Topology
+</th>
+<th align="left" valign="bottom" id="r1c2-t6">See This Documentation for Details
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p><span class="bold">10.1.3 Middle-Tier Topologies</span><a id="sthref18" name="sthref18"></a>
+</p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<p>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">
+<p>A middle tier containing an integrated OC4J instance with Oracle HTTP Server in one Oracle home
+</p>
+</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">
+<p><a href="#CEGEECFH">Section 1.3.1, "Installing an Integrated Web Server and OC4J Middle Tier"</a>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t6" headers="r1c1-t6">
+<p>Two middle tiers containing an integrated OC4J instance with Oracle HTTP Server in two separate Oracle homes. You establish an OracleAS Clusters configuration for these middle tiers and designate one of the OC4J instances as the Administration OC4J instance for running the Application Server Control Console. You then manage both OC4J instances from this instance of Application Server Control Console. 
+</p>
+</td>
+<td align="left" headers="r4c1-t6 r1c2-t6">
+<p><a href="#CEGICHBH">Section 1.3.2, "Installing Multiple Integrated Web Server and OC4J Middle Tiers"</a>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t6" headers="r1c1-t6">
+<p>Two middle tiers, one containing Oracle HTTP Server and the second containing an OC4J instance
+</p>
+</td>
+<td align="left" headers="r5c1-t6 r1c2-t6">
+<p><a href="#CEGDBIFI">Section 1.3.3, "Installing a Web Server Middle Tier and OC4J Middle Tier on Separate Hosts"</a>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t6" headers="r1c1-t6">
+<p>Three middle tiers, one containing Oracle HTTP Server and two containing OC4J instances. You establish an OracleAS Clusters configuration for the OC4J instances and designate one of the OC4J instances as the Administration OC4J instance for running the Application Server Control Console. You then manage both OC4J instances from this instance of Application Server Control Console.
+</p>
+</td>
+<td align="left" headers="r6c1-t6 r1c2-t6">
+<p><a href="#BABJAEFA">Section 1.3.4, "Installing a Web Server Middle Tier and Multiple OC4J Middle Tiers"</a>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t6" headers="r1c1-t6">
+<p>An enterprise data center for J2EE applications that use Oracle Application Server Java Authentication and Authorization Service (JAAS) Provider LDAP for user authentication. This topology contains four middle tiers, two containing Oracle HTTP Servers and two containing OC4J instances. In this configuration, Application Server Control Console is available on its own OC4J Web site. A firewall separates the Oracle HTTP Servers from the OC4J instances.
+</p>
+</td>
+<td align="left" headers="r7c1-t6 r1c2-t6">
+<p>"myJ2EE," in the <!A HREF="xlinkSRC ASTED003"><span class="italic">Oracle Application Server Enterprise Deployment Guide</span></a>
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t6" headers="r1c1-t6">
+<p><span class="bold">High-Availability Topologies</span><a id="sthref19" name="sthref19"></a>
+</p>
+</td>
+<td align="left" headers="r8c1-t6 r1c2-t6">
+<p>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t6" headers="r1c1-t6">
+<p>An OracleAS Clusters configuration in which two or more middle-tier instances serve the same content. A load balancer distributes requests equally among the active instances. 
+</p>
+</td>
+<td align="left" headers="r9c1-t6 r1c2-t6">
+<p><a href="ha.htm#BGBIIIJA">Section 6.3, "Creating the Active-Active Topology"</a>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t6" headers="r1c1-t6">
+<p>An Oracle Application Server Cold Failover Clusters configuration in which two or more middle-tier instances serve the same content, but only instance is active at any one time. 
+</p>
+</td>
+<td align="left" headers="r10c1-t6 r1c2-t6">
+<p><a href="ha.htm#BABEAAAD">Section 6.4, "Creating the Active-Passive Topology"</a>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t6" headers="r1c1-t6">
+<p>An OracleAS Disaster Recovery configuration in which a standby site mirrors a production site. During normal operation, the production site handles all the requests. If the production site goes down, the standby site takes over and handles all the requests.
+</p>
+</td>
+<td align="left" headers="r11c1-t6 r1c2-t6">
+<p><a href="ha.htm#BABBJIGD">Section 6.5, "Creating an OracleAS Disaster Recovery Configuration"</a>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t6" headers="r1c1-t6">
+<p><span class="bold">10.1.3 Middle Tiers with Existing 9.0.4 or 10.1.2 Environments</span>
+</p>
+<p>
+</p>
+</td>
+<td align="left" headers="r12c1-t6 r1c2-t6">
+<p>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t6" headers="r1c1-t6">
+<p><span class="bold">10.1.2 Oracle HTTP Server:</span> <a id="sthref20" name="sthref20"></a>Two middle tiers, one containing 10<span class="italic">g</span> Release 2 (10.1.2) Oracle HTTP Server and OracleAS Web Cache components and the second containing a 10<span class="italic">g</span> Release 3 (10.1.3) OC4J instance. Oracle HTTP Server and OracleAS Web Cache are installed as a part of a J2EE and Web Cache middle-tier installation. 
+</p>
+</td>
+<td align="left" headers="r13c1-t6 r1c2-t6">
+<p>"Configuring Oracle Application Server 10.1.2 with Oracle Application Server 10.1.3" in the <!A HREF="xlinkSRC ASADM002"><span class="italic">Oracle Application Server Administrator's Guide</span></a>
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t6" headers="r1c1-t6">
+<p><span class="bold">9.0.4 or 10.1.2 OracleAS Infrastructure:</span> <a id="sthref21" name="sthref21"></a>A 10<span class="italic">g</span> Release 3 (10.1.3) middle-tier instance using a 10<span class="italic">g</span> (9.0.4) or 10<span class="italic">g</span> Release 2 (10.1.2) Oracle Identity Management. This topology also supports associating a 10<span class="italic">g</span> Release 3 (10.1.3) middle-tier instance with a new 10<span class="italic">g</span> (9.0.4) or 10<span class="italic">g</span> Release 2 (10.1.2) Oracle Identity Management for the following scenarios:
+</p>
+<ul>
+<li type="disc">
+<p>Moving to a new host 
+</p>
+</li>
+<li type="disc">
+<p>Creating a failover environment
+</p>
+</li>
+<li type="disc">
+<p>Moving applications from a test environment to a new production environment
+</p>
+</li>
+</ul>
+</td>
+<td align="left" headers="r14c1-t6 r1c2-t6">
+<p>"Configuring Instances to Use a 10.1.2 or 9.0.4 Oracle Identity Management" in the <!A HREF="xlinkSRC ASADM221"><span class="italic">Oracle Application Server Administrator's Guide</span></a>
+</p>
+<p>"Moving 10.1.2 or 9.0.4 Identity Management to a New Host" in the <!A HREF="xlinkSRC ASADM023"><span class="italic">Oracle Application Server Administrator's Guide</span></a>
+</p>
+<p>"Changing from a Test to a Production Environment" in the <!A HREF="xlinkSRC ASADM050"><span class="italic">Oracle Application Server Administrator's Guide</span></a>
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t6" headers="r1c1-t6">
+<p><span class="bold">10.1.2 OracleAS Web Cache Instance: </span><a id="sthref22" name="sthref22"></a>A single 10<span class="italic">g</span> Release 2 (10.1.2) OracleAS Web Cache acting as a reverse proxy for a 10<span class="italic">g</span> Release 2 (10.1.3) middle-tier. The middle tier contains an integrated OC4J instance with Oracle HTTP Server.
+</p>
+</td>
+<td align="left" headers="r15c1-t6 r1c2-t6">
+<p>"Configuring 10.1.2 OracleAS Web Cache as a Reverse Proxy" in the <!A HREF="xlinkSRC ASADM02160"><span class="italic">Oracle Application Server Administrator's Guide</span></a>
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t6" headers="r1c1-t6">
+<p><span class="bold">10.1.2 OracleAS Web Cache Cluster:</span> <a id="sthref23" name="sthref23"></a>Two or more 10<span class="italic">g</span> Release 2 (10.1.2) OracleAS Web Cache servers configured as a cluster to reverse proxy a 10<span class="italic">g</span> Release 2 (10.1.3) middle-tier. The middle tier contains an integrated OC4J instance with Oracle HTTP Server.
+</p>
+</td>
+<td align="left" headers="r16c1-t6 r1c2-t6">
+<p>"Configuring 10.1.2 OracleAS Web Cache as a Reverse Proxy" in the <!A HREF="xlinkSRC ASADM02160"><span class="italic">Oracle Application Server Administrator's Guide</span></a>
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformalwide" -->
+
+<p>The remainder of this section addresses the recommended topologies for installing Oracle HTTP Server and OC4J instances. It contains the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CEGEECFH">Section 1.3.1, "Installing an Integrated Web Server and OC4J Middle Tier"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGICHBH">Section 1.3.2, "Installing Multiple Integrated Web Server and OC4J Middle Tiers"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGDBIFI">Section 1.3.3, "Installing a Web Server Middle Tier and OC4J Middle Tier on Separate Hosts"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJAEFA">Section 1.3.4, "Installing a Web Server Middle Tier and Multiple OC4J Middle Tiers"</a>
+</p>
+</li>
+</ul><a id="CEGEECFH" name="CEGEECFH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref24" name="sthref24"></a>
+<h3 class="sect2"><span class="secnum">1.3.1 </span>Installing an Integrated Web Server and OC4J Middle Tier<a id="sthref25" name="sthref25"></a>
+</h3>
+<p>The Basic Installation Mode combines an Oracle HTTP Server and OC4J middle-tier instance in the same Oracle home, as depicted in <a href="#BABFACBH">Figure 1-1</a>. This topology enables you to use OPMN to manage a standalone OC4J instance. 
+</p>
+<div class="figure">
+<a id="BABFACBH" name="BABFACBH"></a><a id="sthref26" name="sthref26"></a>
+
+<p class="titleinfigure">Figure 1-1 Integrated Web Server and OC4J Middle Tier</p>
+<img src="img/asadm053.gif" alt="Description of Figure 1-1  follows" title="Description of Figure 1-1  follows"/>
+<br /><a id="sthref27" name="sthref27" href="img_text/asadm053.htm">Description of  "Figure 1-1 Integrated Web Server and OC4J Middle Tier"</a>
+<br /><br />
+</div><!-- class="figure" -->
+<a id="sthref28" name="sthref28"></a>
+<p class="subhead2">Requirements</p>
+<p>The requirements are the same as those listed in <a href="reqs.htm#BABFDIBC">Chapter 2, "Requirements"</a>.
+</p><a id="sthref29" name="sthref29"></a>
+<p class="subhead2">Installation Sequence</p>
+<p>Perform a basic installation, as described in <a href="basic_install.htm#CBHHGHEE">Section 4.2.2, "Installation Steps"</a>. 
+</p>
+</div><!-- class="sect2" -->
+<a id="CEGICHBH" name="CEGICHBH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref30" name="sthref30"></a>
+<h3 class="sect2"><span class="secnum">1.3.2 </span>Installing Multiple Integrated Web Server and OC4J Middle Tiers<a id="sthref31" name="sthref31"></a><a id="sthref32" name="sthref32"></a>
+</h3>
+<p>This topology builds upon the example in the previous section, <a href="#CEGEECFH">Section 1.3.1</a>. It adds an additional combined Oracle HTTP Server and OC4J middle-tier instance, as shown in <a href="#BABJFCBJ">Figure 1-2</a>. When you install this cluster topology, you install two middle-tier instances in two different Oracle homes. During installation of the two instances, you cluster the instances using dynamic node discovery. You designate one of the OC4J instances as the Administration OC4J instance for running the Application Server Control Console. You manage both OC4J instances from this instance of Application Server Control Console. This topology provides a highly available environment for testing and production purposes. 
+</p>
+<div class="figure">
+<a id="BABJFCBJ" name="BABJFCBJ"></a><a id="sthref33" name="sthref33"></a>
+
+<p class="titleinfigure">Figure 1-2 Cluster with Integrated Web Server and OC4J Middle Tiers</p>
+<img src="img/asadm058.gif" alt="Description of Figure 1-2  follows" title="Description of Figure 1-2  follows"/>
+<br /><a id="sthref34" name="sthref34" href="img_text/asadm058.htm">Description of  "Figure 1-2 Cluster with Integrated Web Server and OC4J Middle Tiers"</a>
+<br /><br />
+</div><!-- class="figure" -->
+<a id="sthref35" name="sthref35"></a>
+<p class="subhead2">Requirements</p>
+<p>The requirements are the same as those listed in <a href="reqs.htm#BABFDIBC">Chapter 2, "Requirements"</a>.
+</p><a id="sthref36" name="sthref36"></a>
+<p class="subhead2">Installation Sequence</p>
+<p>To install this topology:
+</p>
+<ol type="1" start="1">
+<li><a id="BABHAAIB" name="BABHAAIB"></a>
+<p>For the first middle tier, install an Administration OC4J instance. 
+</p>
+<p>Perform an Integrated Web Server, J2EE Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHIEBFI">Section 5.2.4, "Installing Integrated Web Server, J2EE Server and Process Management"</a>. During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>In the Administration Instance Settings page, select <span class="bold">Configure this as an Administration OC4J Instance</span>. 
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter a password for the <code>oc4jadmin</code> account in the <span class="bold">Administrator Account Password</span> fields. Enter a name for the default OC4J instance, such as <code>home</code>, in the <span class="bold">OC4J Instance Name</span> field. 
+</p>
+<p>Make a note of the OC4J instance name and the password you enter here; you will need them later.
+</p>
+</li>
+<li type="disc">
+<p>In the Cluster Topology Configuration screen, select <span class="bold">Configure this instance to be part of an Oracle Application Server cluster topology</span> and specify a cluster discovery address for the cluster. The multicast address you enter must be within the valid address range, which is <code>224.0.0.1</code> to <code>239.255.255.255</code>. 
+</p>
+<p>Make a note of the address and port that you enter on this page; you will need them later. 
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For the second middle tier, perform an Integrated Web Server, J2EE Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHIEBFI">Section 5.2.4, "Installing Integrated Web Server, J2EE Server and Process Management"</a>.
+</p>
+<p>During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>In the Administration Instance Settings page, deselect <span class="bold">Configure this as an Administration OC4J Instance</span>. 
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter a password for the <code>oc4jadmin</code> account in the <span class="bold">Administrator Account Password</span> fields. Enter a name for the OC4J instance, such as <code>home</code>, in the <span class="bold">OC4J Instance Name</span> field. 
+</p>
+<p>If you want this OC4J instance to be part of the same group, specify the same name for the OC4J that you specified in Step <a href="#BABHAAIB">1</a> of this procedure. Similarly, enter the same password for the <span class="bold">Administrator Account Password</span> that you entered in Step <a href="#BABHAAIB">1</a> of this procedure.
+</p>
+<p>Assigning multiple OC4J instances the same instance name during installation forms a group, making it easy to deploy applications to more than one OC4J instance at time. You can simultaneously execute specific configuration operations on all OC4J instances in a group.
+</p>
+<p>In order to use a group, each OC4J instance in a group must also have the same <code>oc4jadmin</code> password. If they do not, then you will have to reset the password after the installation.
+</p>
+</li>
+<li type="disc">
+<p>In the Cluster Topology Configuration screen, select <span class="bold">Configure this instance to be part of an Oracle Application Server cluster topology</span> and specify the same cluster discovery address as you specified in Step <a href="#BABHAAIB">1</a> of this procedure.
+</p>
+</li>
+</ul>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>
+<ul>
+<li type="disc">
+<p>"Configuring Multiple OC4J Middle Tiers in a Cluster," in the <!A HREF="xlinkSRC asadm056"><span class="italic">Oracle Application Server Administrator's Guide</span></a> for further information about configuring this topology
+</p>
+</li>
+<li type="disc">
+<p>"How Groups Are Formed" in the <!A HREF="xlinkSRC ASADM0032"><span class="italic">Oracle Application Server Administrator's Guide</span></a> for more information about groups
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+<p>For larger application deployments spanning three or more nodes, consider your performance and security needs. One strategy is to install and dedicate one node to exclusively run Application Server Control Console and install the other nodes to support applications. To install for this strategy:
+</p>
+<ol type="1" start="1">
+<li><a id="BEJJBEIG" name="BEJJBEIG"></a>
+<p>For the first middle tier, install an Administration OC4J instance.
+</p>
+<p>Perform an Integrated Web Server, J2EE Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHIEBFI">Section 5.2.4, "Installing Integrated Web Server, J2EE Server and Process Management"</a>.
+</p>
+<p>During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>In the Administration Instance Settings page, select <span class="bold">Configure this as an Administration OC4J Instance</span>. 
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter a password for the <code>oc4jadmin</code> account in the <span class="bold">Administrator Account Password</span> fields. Enter a unique name for this OC4J instance, such as <code>AdminOC4J</code>, in the <span class="bold">OC4J Instance Name</span> field. 
+</p>
+</li>
+<li type="disc">
+<p>In the Cluster Topology Configuration screen, select <span class="bold">Configure this instance to be part of an Oracle Application Server cluster topology</span> and specify a cluster discovery address for the cluster. The multicast address you enter must be within the valid address range, which is <code>224.0.0.1</code> to <code>239.255.255.255</code>. 
+</p>
+<p>Make a note of the address and port that you enter on this page; you will need them later. 
+</p>
+</li>
+</ul>
+</li>
+<li><a id="BEJFEIFC" name="BEJFEIFC"></a>
+<p>For the second middle tier, perform an Integrated Web Server, J2EE Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHIEBFI">Section 5.2.4, "Installing Integrated Web Server, J2EE Server and Process Management"</a>.
+</p>
+<p>During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>In the Administration Instance Settings page, deselect <span class="bold">Configure this as an Administration OC4J Instance</span>. 
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter a password for the <code>oc4jadmin</code> account in the <span class="bold">Administrator Account Password</span> fields. Enter a name for the default OC4J instance, such as <code>home</code>, in the <span class="bold">OC4J Instance Name</span> field that is different than the one you specified in Step <a href="#BEJJBEIG">1</a> of this procedure. 
+</p>
+<p>Make a note of the OC4J instance name and the password you enter here; you will need them later.
+</p>
+</li>
+<li type="disc">
+<p>In the Cluster Topology Configuration screen, select <span class="bold">Configure this instance to be part of an Oracle Application Server cluster topology</span> and specify the same cluster discovery address as you specified in Step <a href="#BABHAAIB">1</a> of this procedure.
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For the additional middle tiers, perform an Integrated Web Server, J2EE Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHIEBFI">Section 5.2.4, "Installing Integrated Web Server, J2EE Server and Process Management"</a>.
+</p>
+<p>During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>In the Administration Instance Settings page, deselect <span class="bold">Configure this as an Administration OC4J Instance</span>. 
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter the same password for the <code>oc4jadmin</code> account in the <span class="bold">Administrator Account Password</span> field and instance name in the <span class="bold">OC4J Instance Name</span> fields as you specified in Step <a href="#BEJFEIFC">2</a> of this procedure.
+</p>
+<p>Assigning multiple OC4J instances the same instance name during installation forms a group, making it easy to deploy applications to more than one OC4J instance at time. You can simultaneously execute specific configuration operations on all OC4J instances in a group.
+</p>
+<p>In order to use a group, each OC4J instance in a group must also have the same <code>oc4jadmin</code> password. If they do not, then you will have to reset the password after the installation.
+</p>
+</li>
+<li type="disc">
+<p>In the Cluster Topology Configuration screen, select <span class="bold">Configure this instance to be part of an Oracle Application Server cluster topology</span> and specify the same cluster discovery address as you specified in Step <a href="#BABHAAIB">1</a> of this procedure.
+</p>
+</li>
+</ul>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="CEGDBIFI" name="CEGDBIFI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref37" name="sthref37"></a>
+<h3 class="sect2"><span class="secnum">1.3.3 </span>Installing a Web Server Middle Tier and OC4J Middle Tier on Separate Hosts<a id="sthref38" name="sthref38"></a><a id="sthref39" name="sthref39"></a>
+</h3>
+<p><a href="#BABBFJFG">Figure 1-3</a> shows a topology in which you install Oracle HTTP Server on one computer, and install the OC4J instance on another computer. Then, you cluster the instances using dynamic node discovery. This topology enables Oracle HTTP Server to route requests to OC4J, and OC4J to dynamically notify Oracle HTTP Server of new application bindings when an application is deployed. 
+</p>
+<div class="figure">
+<a id="BABBFJFG" name="BABBFJFG"></a><a id="sthref40" name="sthref40"></a>
+
+<p class="titleinfigure">Figure 1-3 Cluster with a Web Server Middle Tier and OC4J Middle Tier on Separate Hosts</p>
+<img src="img/asadm054.gif" alt="Description of Figure 1-3  follows" title="Description of Figure 1-3  follows"/>
+<br /><a id="sthref41" name="sthref41" href="img_text/asadm054.htm">Description of  "Figure 1-3 Cluster with a Web Server Middle Tier and OC4J Middle Tier on Separate Hosts"</a>
+<br /><br />
+</div><!-- class="figure" -->
+<a id="sthref42" name="sthref42"></a>
+<p class="subhead2">Requirements</p>
+<p>The requirements are the same as those listed in <a href="reqs.htm#BABFDIBC">Chapter 2, "Requirements"</a>.
+</p><a id="sthref43" name="sthref43"></a>
+<p class="subhead2">Installation Sequence</p>
+<p>To install this topology:
+</p>
+<ol type="1" start="1">
+<li><a id="BEJHHHBC" name="BEJHHHBC"></a>
+<p>For the first middle tier, perform a Web Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHFCFIB">Section 5.2.3, "Installing Web Server and Process Management"</a>.
+</p>
+<p>During the installation procedure, follow the prompts. In the Cluster Topology Configuration screen, select <span class="bold">Configure this HTTP Server instance to be part of an Oracle Application Server cluster topology</span> and specify a cluster discovery address for the cluster. 
+</p>
+</li>
+<li>
+<p>For the second middle tier, perform a J2EE Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHCGJCG">Section 5.2.2, "Installing J2EE Server and Process Management"</a>. 
+</p>
+<p>During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>In the Administration Instance Settings page, select <span class="bold">Configure this as an Administration OC4J Instance</span>. 
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter a name for the OC4J instance, such as <code>home</code>, in the <span class="bold">OC4J Instance Name</span> field.
+</p>
+</li>
+<li type="disc">
+<p>In the Cluster Topology Configuration screen, select <span class="bold">Configure this OC4J Server instance to be part of an Oracle Application Server cluster topology</span> and specify the same cluster discovery address as you specified in Step <a href="#BEJHHHBC">1</a> of this procedure.
+</p>
+</li>
+</ul>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>"Configuring a Web Server and J2EE on Separate Hosts," in the <!A HREF="xlinkSRC ASADM0221"><span class="italic">Oracle Application Server Administrator's Guide</span></a> for further information about configuring this topology
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="BABJAEFA" name="BABJAEFA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref44" name="sthref44"></a>
+<h3 class="sect2"><span class="secnum">1.3.4 </span>Installing a Web Server Middle Tier and Multiple OC4J Middle Tiers <a id="sthref45" name="sthref45"></a><a id="sthref46" name="sthref46"></a>
+</h3>
+<p>This topology builds upon the example in the previous section, <a href="#CEGDBIFI">Section 1.3.3</a>. It adds an additional OC4J middle-tier instance, as shown in <a href="#BABDGBAE">Figure 1-4</a>. When you install this cluster topology, you install Oracle HTTP Server on one computer, install OC4J instances on two separate computers, and specify cluster settings. You designate one of the OC4J instances as the Administration OC4J instance for running the Application Server Control Console. You manage both OC4J instances from this instance of Application Server Control Console. This topology provides a highly available environment for testing and production purposes. 
+</p>
+<p>This topology also supports using a firewall to separate Oracle HTTP Server from the OC4J instances, as shown in <a href="#BABFBBEA">Figure 1-5</a>.
+</p>
+<div class="figure">
+<a id="BABDGBAE" name="BABDGBAE"></a><a id="sthref47" name="sthref47"></a>
+
+<p class="titleinfigure">Figure 1-4 Cluster with a Web Server Middle Tier and Multiple OC4J Middle Tiers</p>
+<img src="img/asadm056.gif" alt="Description of Figure 1-4  follows" title="Description of Figure 1-4  follows"/>
+<br /><a id="sthref48" name="sthref48" href="img_text/asadm056.htm">Description of  "Figure 1-4 Cluster with a Web Server Middle Tier and Multiple OC4J Middle Tiers"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<div class="figure">
+<a id="BABFBBEA" name="BABFBBEA"></a><a id="sthref49" name="sthref49"></a>
+
+<p class="titleinfigure">Figure 1-5 Cluster with a Web Server Middle Tier and Multiple OC4J Middle Tiers Separated by a Firewall</p>
+<img src="img/asadm057.gif" alt="Description of Figure 1-5  follows" title="Description of Figure 1-5  follows"/>
+<br /><a id="sthref53" name="sthref53" href="img_text/asadm057.htm">Description of  "Figure 1-5 Cluster with a Web Server Middle Tier and Multiple OC4J Middle Tiers Separated by a Firewall<a id="sthref50" name="sthref50"></a><a id="sthref51" name="sthref51"></a><a id="sthref52" name="sthref52"></a>"</a>
+<br /><br />
+</div><!-- class="figure" -->
+<a id="sthref54" name="sthref54"></a>
+<p class="subhead2">Requirements</p>
+<p>The requirements are the same as those listed in <a href="reqs.htm#BABFDIBC">Chapter 2, "Requirements"</a>.
+</p><a id="sthref55" name="sthref55"></a>
+<p class="subhead2">Installation Sequence</p>
+<p>To install this topology:
+</p>
+<ol type="1" start="1">
+<li><a id="BEJBDJAC" name="BEJBDJAC"></a>
+<p>For the Oracle HTTP Server middle tier, perform a Web Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHFCFIB">Section 5.2.3, "Installing Web Server and Process Management"</a>.
+</p>
+<p>During the installation procedure, follow the prompts. In the Cluster Topology Configuration screen, select <span class="bold">Configure this HTTP Server instance to be part of an Oracle Application Server cluster topology</span> and specify a cluster discovery address for the cluster. The multicast address you enter must be within the valid address range, which is <code>224.0.0.1</code> to <code>239.255.255.255</code>. 
+</p>
+<p>Make a note of the address and port that you enter on this page; you will need them later. 
+</p>
+</li>
+<li><a id="BABJEBEC" name="BABJEBEC"></a>
+<p>For the first OC4J middle tier, install an Administration OC4J instance.
+</p>
+<p>Perform a J2EE Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHCGJCG">Section 5.2.2, "Installing J2EE Server and Process Management"</a>. 
+</p>
+<p>During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>In the Administration Instance Settings page, select <span class="bold">Configure this as an Administration OC4J Instance</span>. 
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter a name for the default OC4J instance, such as <code>home</code>, in the <span class="bold">OC4J Instance Name</span> field. 
+</p>
+<p>Make a note of the OC4J instance name and the password you enter here; you will need them later
+</p>
+</li>
+<li type="disc">
+<p>In the Cluster Topology Configuration screen, select <span class="bold">Configure this OC4J instance to be part of an Oracle Application Server cluster topology</span> and specify the same cluster discovery address as you specified in Step <a href="#BEJBDJAC">1</a> of this procedure. 
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For the second OC4J middle tier, perform a J2EE Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHCGJCG">Section 5.2.2, "Installing J2EE Server and Process Management"</a>. 
+</p>
+<p>During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>In the Administration Instance Settings page, deselect <span class="bold">Configure this as an Administration OC4J Instance</span>. 
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter the same OC4J instance name in the <span class="bold">OC4J Instance Name</span> field as you specified in Step <a href="#BABJEBEC">2</a> of this procedure.
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter a password for the <code>oc4jadmin</code> account in the <span class="bold">Administrator Account Password</span> fields. Enter a name for the OC4J instance, such as <code>home</code>, in the <span class="bold">OC4J Instance Name</span> field. 
+</p>
+<p>If you want this OC4J instance to be part of the same group, specify the same name for the OC4J that you specified in Step <a href="#BABJEBEC">2</a> of this procedure. Similarly, enter the same password for the <span class="bold">Administrator Account Password</span> that you entered in Step <a href="#BABJEBEC">2</a> of this procedure.
+</p>
+<p>Assigning multiple OC4J instances the same instance name during installation forms a group, making it easy to deploy applications to more than one OC4J instance at time. You can simultaneously execute specific configuration operations on all OC4J instances in a group.
+</p>
+<p>In order to use a group, each OC4J instance in a group must also have the same <code>oc4jadmin</code> password. If they do not, then you will have to reset the password after the installation.
+</p>
+</li>
+<li type="disc">
+<p>In the Cluster Topology Configuration screen, select <span class="bold">Configure this OC4J instance to be part of an Oracle Application Server cluster topology</span>, specify the same cluster discovery address as you specified in Step <a href="#BABJEBEC">2</a> of this procedure.
+</p>
+</li>
+</ul>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>
+<ul>
+<li type="disc">
+<p>"Configuring Multiple OC4J Middle Tiers in a Cluster," in the <!A HREF="xlinkSRC ASADM056"><span class="italic">Oracle Application Server Administrator's Guide</span></a> for further information about configuring this topology
+</p>
+</li>
+<li type="disc">
+<p>"How Groups Are Formed" in the <!A HREF="xlinkSRC ASADM0032"><span class="italic">Oracle Application Server Administrator's Guide</span></a> for more information about creating groups
+</p>
+</li>
+<li type="disc">
+<p>"myJ2EE" in the <!A HREF="xlinkSRC ASTED003"><span class="italic">Oracle Application Server Enterprise Deployment Guide</span></a> for further information about using a firewall in this topology
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+<p>For larger application deployments spanning three or more nodes, consider your performance and security needs. One strategy is to install and dedicate one node to exclusively run Application Server Control Console and install the other nodes to support applications. To install for this strategy:
+</p>
+<ol type="1" start="1">
+<li><a id="BEJGGCAH" name="BEJGGCAH"></a>
+<p>For the Oracle HTTP Server middle tier, perform a Web Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHFCFIB">Section 5.2.3, "Installing Web Server and Process Management"</a>.
+</p>
+<p>During the installation procedure, follow the prompts. In the Cluster Topology Configuration screen, deselect <span class="bold">Configure this HTTP Server instance to be part of an Oracle Application Server cluster topology</span> and specify a cluster discovery address for the cluster. The multicast address you enter must be within the valid address range, which is <code>224.0.0.1</code> to <code>239.255.255.255</code>. 
+</p>
+<p>Make a note of the address and port that you enter on this page; you will need them later. 
+</p>
+</li>
+<li><a id="BEJICBDG" name="BEJICBDG"></a>
+<p>For the first OC4J middle tier, install an Administration OC4J instance. 
+</p>
+<p>Perform a J2EE Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHCGJCG">Section 5.2.2, "Installing J2EE Server and Process Management"</a>. During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>In the Administration Instance Settings page, select <span class="bold">Configure this as an Administration OC4J Instance</span>. 
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter a password for the <code>oc4jadmin</code> account in the <span class="bold">Administrator Account Password</span> fields. Enter a unique name for this OC4J instance, such as <code>AdminOC4J</code>, in the <span class="bold">OC4J Instance Name</span> field. 
+</p>
+</li>
+<li type="disc">
+<p>In the Cluster Topology Configuration screen, select <span class="bold">Configure this OC4J instance to be part of an Oracle Application Server cluster topology</span> and specify the same cluster discovery address as you specified in Step <a href="#BEJGGCAH">1</a> of this procedure.
+</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>"Publishing Application Server Control Console to a Separate Web Site" in the <!A HREF="xlinkSRC ASADM019"><span class="italic">Oracle Application Server Administrator's Guide</span></a> for instructions on making Application Server Control Console accessible on a separate Web site
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</li>
+<li><a id="BEJDIDBA" name="BEJDIDBA"></a>
+<p>For the second OC4J middle tier, perform a J2EE Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHCGJCG">Section 5.2.2, "Installing J2EE Server and Process Management"</a>. 
+</p>
+<p>During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>In the Administration Instance Settings page, deselect <span class="bold">Configure this as an Administration OC4J Instance</span>. 
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter a password for the <code>oc4jadmin</code> account in the <span class="bold">Administrator Account Password</span> fields. Enter a name for the default OC4J instance, such as <code>home</code>, in the <span class="bold">OC4J Instance Name</span> field that is different than the one you specified in Step <a href="#BEJICBDG">2</a> of this procedure. 
+</p>
+<p>Make a note of the OC4J instance name and the password you enter here; you will need them later.
+</p>
+</li>
+<li type="disc">
+<p>In the Cluster Topology Configuration screen, select <span class="bold">Configure this OC4J instance to be part of an Oracle Application Server cluster topology</span>, specify the same cluster discovery address as you specified in Step <a href="#BEJGGCAH">1</a> of this procedure.
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>For the additional OC4J middle tiers, perform a J2EE Server and Process Management advanced installation, as described in <a href="advanced_install.htm#CIHCGJCG">Section 5.2.2, "Installing J2EE Server and Process Management"</a>. 
+</p>
+<p>During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>In the Administration Instance Settings page, deselect <span class="bold">Configure this as an Administration OC4J Instance</span>. 
+</p>
+</li>
+<li type="disc">
+<p>In the Administration Settings page, enter the same password for the <code>oc4jadmin</code> account in the <span class="bold">Administrator Account Password</span> field and instance name in the <span class="bold">OC4J Instance Name</span> fields as you specified in Step <a href="#BEJDIDBA">3</a> of this procedure.
+</p>
+<p>Assigning multiple OC4J instances the same instance name during installation forms a group, making it easy to deploy applications to more than one OC4J instance at time. You can simultaneously execute specific configuration operations on all OC4J instances in a group.
+</p>
+<p>In order to use a group, each OC4J instance in a group must also have the same <code>oc4jadmin</code> password. If they do not, then you will have to reset the password after the installation.
+</p>
+</li>
+<li type="disc">
+<p>In the Cluster Topology Configuration screen, select <span class="bold">Configure this OC4J instance to be part of an Oracle Application Server cluster topology</span>, specify the same cluster discovery address as you specified in Step <a href="#BEJGGCAH">1</a> of this procedure.<a id="sthref56" name="sthref56"></a>
+</p>
+</li>
+</ul>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="preface.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="reqs.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

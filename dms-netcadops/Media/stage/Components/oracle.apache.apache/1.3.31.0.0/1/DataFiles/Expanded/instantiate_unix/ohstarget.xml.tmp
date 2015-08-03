@@ -1,0 +1,20 @@
+<Target TYPE="oracle_apache" NAME="%s_ohsInstanceName%" DISPLAY_NAME="HTTP_Server" VERSION="2.0">
+       <Property NAME="version" VALUE="%s_apacheVersionNumber%"/>
+       <Property NAME="HTTPPort" VALUE="%s_apachePort%"/>
+       <Property NAME="HTTPMachine" VALUE="%s_hostName%"/>
+       <Property NAME="OracleHome" VALUE="%ORACLE_HOME%"/>
+       <AssocTargetInstance ASSOC_TARGET="ias" TYPE="oracle_ias" NAME="%s_iASInstanceName%"/>
+       <CompositeMembership>
+        <MemberOf TYPE="oracle_ias" NAME="%s_iASInstanceName%"/>
+       </CompositeMembership>
+      </Target>
+ 
+
+
+
+
+
+
+
+
+

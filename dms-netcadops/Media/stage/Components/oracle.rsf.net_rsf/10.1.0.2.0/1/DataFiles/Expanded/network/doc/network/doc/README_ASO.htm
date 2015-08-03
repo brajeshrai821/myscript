@@ -1,0 +1,901 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="EN">
+<HEAD>
+
+<META NAME="Generator" CONTENT="Quadralay WebWorks Publisher 5.0.4">
+<META NAME="WDT" CONTENT="2.1.1.5.4ID">
+<META NAME="Page" CONTENT="Default">
+<META NAME="Title" CONTENT="">
+<META NAME="Date" CONTENT="08/05/03 05:11PM PDT">
+
+<TITLE>Oracle Advanced Security README</TITLE>
+	   
+
+
+
+<LINK REL="copyright" HREF="cpyr.htm" TITLE="Copyright">
+
+
+
+
+
+</HEAD>
+       
+<BODY BGCOLOR="#ffffff">
+
+<A NAME="top"></A>
+
+
+
+
+<A HREF="#BEGIN">Skip Headers</A><BR><BR>
+<TABLE CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+<TR>
+
+ 
+<TD ALIGN="LEFT" VALIGN="TOP"><FONT COLOR="#330099" FACE="Helvetica, Arial, sans-serif"><STRONG>Oracle Advanced Security README<BR>Release 1 (10.1) - BETA 2</STRONG></FONT></TD>
+<TD VALIGN="BOTTOM" ALIGN="RIGHT" WIDTH="144">
+<TABLE CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+<TR>
+
+
+
+
+
+
+
+
+
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%"></TD>
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%"></TD>
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%"></TD>
+
+
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<HR>
+<P>
+
+
+
+    
+
+
+<A NAME="BEGIN"></A>
+
+
+
+<DIV CLASS="IND">
+<!-- End Header -->
+
+
+
+
+
+
+<STRONG CLASS="Bold">Oracle Advanced Security README Release 1 (10.1) - BETA 2</STRONG>
+<DL CLASS="A1">
+
+<DT CLASS="A1"><FONT SIZE="-1" FACE="Arial, Helvetica, sans-serif"><A NAME="477196"></A><STRONG>Copyright &#169; 1996, 2003 Oracle Corporation. All rights reserved. </STRONG></FONT>
+</DL>
+<A NAME="564940"></A>
+<P CLASS="BP">
+The Programs (which include both the software and documentation) contain proprietary information of Oracle Corporation; they are provided under a license agreement containing restrictions on use and disclosure and are also protected by copyright, patent and other intellectual and industrial property laws. Reverse engineering, disassembly or decompilation of the Programs, except to the extent required to obtain interoperability with other independently created software or as specified by law, is prohibited.
+</P>
+<A NAME="564941"></A>
+<P CLASS="BP">
+The information contained in this document is subject to change without notice. If you find any problems in the documentation, please report them to us in writing. Oracle Corporation does not warrant that this document is error-free. Except as may be expressly permitted in your license agreement for these Programs, no part of these Programs may be reproduced or transmitted in any form or by any means, electronic or mechanical, for any purpose, without the express written permission of Oracle Corporation.
+</P>
+<A NAME="564942"></A>
+<P CLASS="BP">
+If the Programs are delivered to the U.S. Government or anyone licensing or using the programs on behalf of the U.S. Government, the following notice is applicable:
+</P>
+
+<DL CLASS="A1">
+<BR><FONT SIZE="-1" FACE="Arial, Helvetica, sans-serif"><A NAME="564952"></A><STRONG>RESTRICTED RIGHTS NOTICE                                                              </STRONG></FONT>
+</DL>
+ <A NAME="564953"></A>
+<P CLASS="BP">
+Programs delivered subject to the DOD FAR Supplement are "commercial computer software" and use, duplication, and disclosure of the Programs, including documentation, shall be subject to the licensing restrictions set forth in the applicable Oracle license agreement. Otherwise, Programs delivered subject to the Federal Acquisition Regulations are "restricted computer software" and use, duplication, and disclosure of the Programs shall be subject to the restrictions in FAR 52.227-19, Commercial Computer Software - Restricted Rights (June, 1987). Oracle Corporation, 500 Oracle Parkway, Redwood City, CA 94065.
+</P>
+<A NAME="564947"></A>
+<P CLASS="BP">
+The Programs are not intended for use in any nuclear, aviation, mass transit, medical, or other inherently dangerous applications. It shall be the licensee's responsibility to take all appropriate fail-safe, backup, redundancy, and other measures to ensure the safe use of such applications if the Programs are used for such purposes, and Oracle Corporation disclaims liability for any damages caused by such use of the Programs. 
+</P>
+
+<DL CLASS="A1">
+<BR><FONT SIZE="-1" FACE="Arial, Helvetica, sans-serif"><A NAME="561792"></A><STRONG>TRADEMARKS</STRONG></FONT>
+</DL>
+ <A NAME="564986"></A>
+<P CLASS="BP">
+Oracle is a registered trademark, and Oracle Store, Oracle10<EM CLASS="Italic">i</EM>, Oracle8, Oracle8<EM CLASS="Italic">i</EM>, Oracle9<EM CLASS="Italic">i</EM>, PL/SQL, SQL*Net, SQL*Plus, and Secure Network Services are trademarks or registered trademarks of Oracle Corporation. Other names may be trademarks of their respective owners.
+</P>
+<A NAME="565015"></A>
+<P CLASS="BP">
+Portions of Oracle Advanced Security have been licensed by Oracle Corporation from RSA Data Security.
+
+
+<img src="rsaseal.gif" ALT="Text description of rsaseal.gif follows.">
+<P><A HREF="rsaseal.htm">Text description of the illustration rsaseal.gif</A></P>
+
+
+</P>
+<A NAME="565024"></A>
+<P CLASS="BP">
+
+</P>
+<A NAME="565027"></A>
+<P CLASS="BP">
+This program contains third-party code from Massachusetts Institute of Technology (M.I.T.), OpenVision Technologies, Inc., and the Regents of the University of California. Under the terms of the Kerberos license, Oracle is required to license the Kerberos software to you under the following terms. Note that the terms contained in the Oracle program license that accompanied this product do not apply to the Kerberos software, and your rights to use the software are solely as set forth below. Oracle is not responsible for the performance of the Kerberos software, does not provide technical support for the software, and shall not be liable for any damages arising out of any use of the Kerberos software.
+</P>
+<A NAME="565028"></A>
+<P CLASS="BP">
+Copyright &#169; 1985-2002 by the Massachusetts Institute of Technology.
+</P>
+<A NAME="565029"></A>
+<P CLASS="BP">
+All rights reserved.
+</P>
+<A NAME="565030"></A>
+<P CLASS="BP">
+Export of this software from the United States of America may require a specific license from the United States Government. It is the responsibility of any person or organization contemplating export to obtain such a license before exporting.
+</P>
+<A NAME="565031"></A>
+<P CLASS="BP">
+WITHIN THAT CONSTRAINT, permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation, and that the name of M.I.T. not be used in advertising or publicity pertaining to distribution of the software without specific, written prior permission. Furthermore, if you modify this software you must label your software as modified software and not distribute it in such a fashion that it might be confused with the original M.I.T. software. M.I.T. makes no representations about the suitability of this software for any purpose. It is provided "as is" without express or implied warranty.
+</P>
+<A NAME="565032"></A>
+<P CLASS="BP">
+THIS SOFTWARE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTIBILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+</P>
+<A NAME="565033"></A>
+<P CLASS="BP">
+Individual source code files are copyright M.I.T., Cygnus Support, OpenVision, Oracle, Sun Soft, FundsXpress, and others.
+</P>
+<A NAME="565034"></A>
+<P CLASS="BP">
+Project Athena, Athena, Athena MUSE, Discuss, Hesiod, Kerberos, Moira, and Zephyr are trademarks of the Massachusetts Institute of Technology (M.I.T.). No commercial use of these trademarks may be made without prior written permission of M.I.T.
+</P>
+<A NAME="565035"></A>
+<P CLASS="BP">
+"Commercial use" means use of a name in a product or other for-profit manner. It does NOT prevent a commercial firm from referring to the M.I.T. trademarks in order to convey information (although in doing so, recognition of their trademark status should be given).
+</P>
+<A NAME="565036"></A>
+<P CLASS="BP">
+----
+</P>
+<A NAME="565037"></A>
+<P CLASS="BP">
+The following copyright and permission notice applies to the OpenVision Kerberos Administration system located in kadmin/create, kadmin/dbutil, kadmin/passwd, kadmin/server, lib/kadm5, and portions of lib/rpc:
+</P>
+<A NAME="565038"></A>
+<P CLASS="BP">
+Copyright, OpenVision Technologies, Inc., 1996, All Rights Reserved
+</P>
+<A NAME="565039"></A>
+<P CLASS="BP">
+WARNING: Retrieving the OpenVision Kerberos Administration system source code, as described below, indicates your acceptance of the following terms. If you do not agree to the following terms, do not retrieve the OpenVision Kerberos administration system.
+</P>
+<A NAME="565040"></A>
+<P CLASS="BP">
+You may freely use and distribute the Source Code and Object Code compiled from it, with or without modification, but this Source Code is provided to you "AS IS" EXCLUSIVE OF ANY WARRANTY, INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, OR ANY OTHER WARRANTY, WHETHER EXPRESS OR IMPLIED. IN NO EVENT WILL OPENVISION HAVE ANY LIABILITY FOR ANY LOST PROFITS, LOSS OF DATA, OR COSTS OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, OR FOR ANY SPECIAL, INDIRECT, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THIS AGREEMENT, INCLUDING, WITHOUT LIMITATION, THOSE RESULTING FROM THE USE OF THE SOURCE CODE, OR THE FAILURE OF THE SOURCE CODE TO PERFORM, OR FOR ANY OTHER REASON.
+</P>
+<A NAME="565041"></A>
+<P CLASS="BP">
+OpenVision retains all copyrights in the donated Source Code. OpenVision also retains copyright to derivative works of the Source Code, whether created by OpenVision or by a third party. The OpenVision copyright notice must be preserved if derivative works are made based on the donated Source Code.
+</P>
+<A NAME="565042"></A>
+<P CLASS="BP">
+OpenVision Technologies, Inc., has donated this Kerberos Administration system to M.I.T. for inclusion in the standard Kerberos 5 distribution. This donation underscores our commitment to continuing Kerberos technology development and our gratitude for the valuable work which has been performed by M.I.T. and the Kerberos community.
+</P>
+<A NAME="565043"></A>
+<P CLASS="BP">
+----
+</P>
+<A NAME="565044"></A>
+<P CLASS="BP">
+Portions contributed by Matt Crawford &lt;crawdad@fnal.gov&gt; were work performed at Fermi National Accelerator Laboratory, which is operated by Universities Research Association, Inc., under contract DE-AC02-76CHO3000 with the U. S. Department of Energy.
+</P>
+<A NAME="564992"></A><FONT FACE="Arial, Helvetica, sans-serif"><STRONG CLASS="NH">Documentation Accessibility:</STRONG></FONT>
+<A NAME="557852"></A>
+<P CLASS="BP">
+
+</P>
+<A NAME="561723"></A>
+<P CLASS="BP">
+Our goal is to make Oracle products, services, and supporting documentation accessible, with good usability, to the disabled community. To that end, our documentation includes features that make information available to users of assistive technology. This documentation is available in HTML format, and contains markup to facilitate access by the disabled community. Standards will continue to evolve over time, and Oracle Corporation is actively engaged with other market-leading technology vendors to address technical obstacles so that our documentation can be accessible to all of our customers. For additional information, visit the Oracle Accessibility Program Web site at
+</P>
+    
+<PRE CLASS="CE">
+<A NAME="557821"></A>http://www.oracle.com/accessibility/
+<A NAME="557862"></A>
+</PRE>    <A NAME="557827"></A><FONT FACE="Arial, Helvetica, sans-serif"><STRONG CLASS="NH">Accessibility of Code Examples in Documentation:</STRONG></FONT>
+<A NAME="557828"></A>
+<P CLASS="BP">
+
+</P>
+<A NAME="557829"></A>
+<P CLASS="BP">
+JAWS, a Windows screen reader, may not always correctly read the code examples in this document. The conventions for writing code require that closing braces should appear on an otherwise empty line; however, JAWS may not always read a line of text that consists solely of a bracket or brace.
+</P>
+<A NAME="557834"></A><FONT FACE="Arial, Helvetica, sans-serif"><STRONG CLASS="NH">Accessibility of Links to External Web Sites in Documentation:</STRONG></FONT>
+<A NAME="557835"></A>
+<P CLASS="BP">
+
+</P>
+<A NAME="557836"></A>
+<P CLASS="BP">
+This documentation may contain links to Web sites of other companies or organizations that Oracle Corporation does not own or control. Oracle Corporation neither evaluates nor makes any representations regarding the accessibility of these Web sites. 
+</P>
+<A NAME="516936"></A>
+<P CLASS="BP">
+-----------------------------------------------
+</P>
+<A NAME="515579"></A>
+<P CLASS="BP">
+<STRONG CLASS="Bold">CONTENTS</STRONG>
+</P>
+
+<DL CLASS="LS">
+
+<DT CLASS="LSF"><A NAME="556584"></A><A HREF="README_ASO.htm#556736">1  INTRODUCTION</a>
+
+<DT CLASS="LSF"><A NAME="549491"></A><A HREF="README_ASO.htm#562660">2  NEW IN THIS RELEASE</a>
+
+<DT CLASS="LSF"><A NAME="561735"></A><A HREF="README_ASO.htm#562702">3  INSTALLATION</a>
+
+<DT CLASS="LSF"><A NAME="561744"></A><A HREF="README_ASO.htm#562707">4  DATA ENCRYPTION AND INTEGRITY</a>
+
+<DT CLASS="LSF"><A NAME="561753"></A><A HREF="README_ASO.htm#562806">5  EXTERNAL AUTHENTICATION AND SINGLE SIGN-ON</a>
+
+<DT CLASS="LSF"><A NAME="561763"></A><A HREF="README_ASO.htm#562809">6  RADIUS ADAPTER</a>
+
+<DT CLASS="LSF"><A NAME="562233"></A><A HREF="README_ASO.htm#562190">7  SECURE SOCKETS LAYER</a>
+
+<DT CLASS="LSF"><A NAME="561771"></A><A HREF="README_ASO.htm#563066">8  ORACLE WALLET MANAGER 3.0</a>
+
+<DT CLASS="LSF"><A NAME="560716"></A><A HREF="README_ASO.htm#561267">9  JAVASSL AND JSSE</a>
+
+<DT CLASS="LSF"><A NAME="563794"></A><A HREF="README_ASO.htm#563184">10  ENTRUST SUPPORT</a>
+
+<DT CLASS="LSF"><A NAME="563799"></A><A HREF="README_ASO.htm#563189">11  ENTERPRISE USER SECURITY</a>
+</DL>
+
+<A NAME="556736"></A>
+<!--TOC=h1-"556736"-->
+<H2 CLASS="H1"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">1&#32; INTRODUCTION</FONT></H2>
+
+
+<!--/TOC=h1-->
+<A NAME="561872"></A>
+<P CLASS="BP">
+This README file is relevant only to the delivered Oracle Advanced Security Release 1 (10.1) - BETA 2. This README documents any differences between Oracle Advanced Security and its documented functionality, as well as known problems and workarounds. Operating system releases, such as UNIX, Windows NT, and so on, often provide an Oracle operating system-specific README document. 
+</P>
+<A NAME="562458"></A>
+<P CLASS="BP">
+For information about upgrading, downgrading, and migration, see <EM CLASS="Italic">Oracle10i Database Upgrade Guide</EM>.
+</P>
+<A NAME="562474"></A>
+<P CLASS="BP">
+Oracle Advanced Security Release 1 (10.1) - BETA 2 bundles security services for the Oracle Database. It secures connections over all protocols into an Oracle Database and integrates a Public Key Infrastructure (PKI). Oracle Advanced Security provides data encryption and integrity for all network protocols into the database, including Oracle Net with native encryption, Oracle Net/SSL, IIOP/SSL, and Java-based encryption for Thin JDBC clients. It integrates with third-party authentication, authorization and single sign-on services. It supports public-key solutions including Secure Sockets Layer (SSL) and X.509, Version 3 certificates (provided by third party certificate servers) and bundles related tools including Oracle Wallet Manager 10.0.0. It also enables SSL-based single sign-on and certificate-based server-to-server authentication over database links.
+</P>
+<A NAME="562576"></A>
+<P CLASS="BP">
+Oracle Advanced Security utilizes LDAP v3-compliant Oracle Internet Directory for centralized user management. Oracle Enterprise Security Manager 4.0 tools are used to manage enterprise users and enterprise roles. Starting with this release, Oracle Internet Directory is delivered as part of the Oracle Identity Management infrastructure. This release of Oracle Advanced Security is certified to work with Oracle Identity Management infrastructure delivered with the Oracle Database. Directory Integration and Provisioning Platform is also a part of the infrastructure component and allows integration with other enterprise directories including Microsoft Active Directory, SunONE and iPlanet Directory Services.
+</P>
+<A NAME="562498"></A>
+<P CLASS="BP">
+For more information on the third party directory support, please review the Directory Integration Platform chapter in <EM CLASS="Italic">Oracle Internet Directory Administrator's Guide</EM>, which is available on the identity management infrastructure product CD-ROM.
+</P>
+<A NAME="562503"></A>
+<P CLASS="BP">
+In this release, Oracle Advanced Security installs automatically during Typical Install of the Enterprise Edition of the Oracle database. Oracle Advanced Security can also be installed manually using Custom Install. All components install in Typical Install except DCE, which installs in Custom Install provided the DCE software is already installed on your system.
+</P>
+<A NAME="562509"></A>
+<P CLASS="BP">
+Although installed by default, Oracle Advanced Security is an extra cost option to the Oracle Database Enterprise Edition and must be purchased when used. This licensing requirement also affects customers wishing to use security features in combination with Java Beans (EJB over IIOP/SSL) or database Enterprise Users (Oracle Net/SSL). The exclusive exception is an HTTPS (HTTP/SSL) connection to the RDBMS which does not require an Oracle Advanced Security license.
+</P>
+<A NAME="562517"></A>
+<P CLASS="BP">
+Please see the <EM CLASS="Italic">Oracle Advanced Security Administrator's Guide</EM> for this release for further information.
+</P>
+
+<A NAME="562660"></A>
+<!--TOC=h1-"562660"-->
+<H2 CLASS="H1"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">2&#32; NEW IN THIS RELEASE</FONT></H2>
+
+
+<!--/TOC=h1-->
+<A NAME="562671"></A>
+<P CLASS="BP">
+New in this release:
+</P>
+
+<UL CLASS="LB1">
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="562672"></A><STRONG CLASS="Bold">Kerberos-Enabled Enterprise Users</STRONG>
+<P>
+
+<A NAME="564637"></A>
+<P CLASS="BP1">
+Kerberos-based authentication to the database is available for the first time in this release for centrally managed directory users (in Oracle Internet Directory).
+</P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="562673"></A><STRONG CLASS="Bold">Database to Oracle Internet Directory Communication Using Passwords (SSL is no longer mandatory)</STRONG>
+<P>
+
+<A NAME="564638"></A>
+<P CLASS="BP1">
+In this release, the database can bind to Oracle Internet Directory by using password SASL-based authentication, rather than requiring PKI certificates for SSL-based authentication. This new functionality removes the overhead of setting up PKI credentials for Oracle Internet Directory and multiple databases.
+</P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="562674"></A><STRONG CLASS="Bold">Password Synchronization between Oracle9</STRONG>i<STRONG CLASS="Bold">AS Single Sign-On and Database Authentication Password</STRONG>
+<P>
+
+<A NAME="564639"></A>
+<P CLASS="BP1">
+Starting in this release of Oracle Advanced Security, users' database passwords (<CODE>orclpassword</CODE>) are synchronized with the users' Oracle9<EM CLASS="Italic">i</EM>AS Single Sign-On passwords. Thus, there is no requirement to set the <CODE>orclpassword</CODE> with Enterprise User Security tools, such as Enterprise Security Manager or Enterprise Security Manager Console.
+</P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="562675"></A><STRONG CLASS="Bold">Integration with Active Directory by Using the Directory Integration and Provisioning Services</STRONG>
+<P>
+
+<A NAME="564646"></A>
+<P CLASS="BP1">
+The Oracle Identity Management Infrastructure includes Directory Integration and Provisioning Services as a means of providing integration with third-party directories, including Microsoft Active Directory and Sun One (iPlanet).
+</P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="562677"></A><STRONG CLASS="Bold">Hardware Token Support Using PKCS#11 for SSL</STRONG>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="562678"></A><STRONG CLASS="Bold">Oracle Wallet Manager Integration with Hardware Tokens</STRONG>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="562669"></A><STRONG CLASS="Bold">CRL (Certificate Revocation Lists) and CRLDP (CRL Distribution Point) support for certificate validation</STRONG>
+<P>
+</UL>
+
+<A NAME="562702"></A>
+<!--TOC=h1-"562702"-->
+<H2 CLASS="H1"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">3&#32; INSTALLATION</FONT></H2>
+
+
+<!--/TOC=h1-->
+<A NAME="562718"></A>
+<P CLASS="BP">
+If using Oracle Advanced Security on a "client only" machine (that is, with no database present), it is mandatory to set the <CODE>TWO_TASK</CODE> environment variable before starting the installation. The <CODE>TWO_TASK</CODE> variable points to an alias representing the database on a server machine. Setting the <CODE>TWO_TASK</CODE> environment variable enables Oracle Advanced Security to be installed in "Client Only" mode. See the Oracle10<EM CLASS="Italic">i</EM> Database Administrator's Guide for more details on the <CODE>TWO_TASK</CODE> environment variable.
+</P>
+
+<A NAME="562707"></A>
+<!--TOC=h1-"562707"-->
+<H2 CLASS="H1"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">4&#32; DATA ENCRYPTION AND INTEGRITY</FONT></H2>
+
+
+<!--/TOC=h1-->
+<A NAME="562773"></A>
+<P CLASS="BP">
+In this release, the features of Multiplexing and Connection Pooling do not work if SSL transport is being used.
+</P>
+<A NAME="562776"></A>
+<P CLASS="BP">
+<EM CLASS="Italic">Oracle JDBC Developer's Guide and Reference</EM> details the encryption support available in JDBC.
+</P>
+
+<A NAME="562806"></A>
+<!--TOC=h1-"562806"-->
+<H2 CLASS="H1"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">5&#32; EXTERNAL AUTHENTICATION AND SINGLE SIGN-ON</FONT></H2>
+
+
+<!--/TOC=h1-->
+<A NAME="562813"></A>
+<P CLASS="BP">
+In order to require external authentication and disable username/password authentication, set the <CODE>sqlnet.ora</CODE> parameter <CODE>SQLNET.AUTHENTICATION_REQUIRED=TRUE</CODE>. The default is false.
+</P>
+<A NAME="562937"></A>
+<P CLASS="BP">
+The Cybersafe adapter is desupported starting with the Oracle Advanced Security Release 1 (10.1). Oracle recommends using Oracle's Kerberos adapter in its place. Kerberos authentication with the Cybersafe KDC (Trust Broker) continues to be supported when using the Kerberos adapter.
+</P>
+
+<A NAME="562938"></A>
+<!--TOC=h2-"562938"-->
+<H3 CLASS="H2"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">5.1&#32; Changes to the Startup Command</FONT></H3>
+<!--/TOC=h2-->
+<A NAME="562843"></A>
+<P CLASS="BP">
+In this release, if external authentication (using Kerberos, RADIUS) is not enabled, please verify that you have either issued the startup command with a <CODE>PFILE</CODE> option so that the parameters from your <CODE>init&lt;</CODE><EM CLASS="Variable">SID</EM><CODE>&gt;.ora</CODE> are picked up.
+</P>
+
+<A NAME="562809"></A>
+<!--TOC=h1-"562809"-->
+<H2 CLASS="H1"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">6&#32; RADIUS ADAPTER</FONT></H2>
+
+
+<!--/TOC=h1-->
+<A NAME="564725"></A>
+<P CLASS="BP">
+Oracle Advanced Security supports RADIUS-compliant servers and authentication devices. As in prior releases (Oracle Advanced Security 9.1 and 9.2), RSA ACE/Server and tokens can authenticate Oracle users only through the RADIUS adapter. To use the Java-based client interface for RADIUS, you must include <CODE>$ORACLE_HOME/JRE/lib/sparc/native_threads</CODE> in the <CODE>LD_LIBRARY_PATH</CODE> environment variable. To use RADIUS, you must use native threads. Set the variable <CODE>THREADS_FLAG</CODE> to "native" within the Java Runtime Environment.
+</P>
+<A NAME="564733"></A>
+<P CLASS="BP">
+The following bugs and workarounds apply to the RADIUS adapter in this release:
+</P>
+
+<UL CLASS="LB1">
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564734"></A>The <CODE>CHAP</CODE> (challenge-response) mode is disabled for Beta 2, so the challenge-response default interface does not function. [Reference Bugs 2793023, 2904046]
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564730"></A>On the Windows platform, during installation, if you configured the RADIUS adapter, please reboot the machine to get the JRE location. [Reference Bug 2212844]
+<P>
+</UL>
+
+<A NAME="562190"></A>
+<!--TOC=h1-"562190"-->
+<H2 CLASS="H1"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">7&#32; SECURE SOCKETS LAYER</FONT></H2>
+
+
+<!--/TOC=h1-->
+<A NAME="562977"></A>
+<P CLASS="BP">
+For the SSL adapter, dynamic specification of <CODE>sqlnet.ora</CODE> parameters such as <CODE>SSL_VERSION</CODE>, <CODE>SSL_CIPHER_SUITES</CODE>, and <CODE>SSL_CLIENT_AUTHENTICATION</CODE>, as part of TNS Aliases, will not have any effect on the redirected connections made to the database server.
+</P>
+<A NAME="562982"></A>
+<P CLASS="BP">
+There is a known bug in which an OCI client requires a wallet even when using a cipher suite with <CODE>DH_anon</CODE> which does not authenticate the client. Such cipher suites are known to be vulnerable to person-in-the-middle attacks. If you use a cipher suite with <CODE>DH_anon</CODE>, you should use Oracle Advanced Security native encryption and checksumming to protect against the attack. [Reference Bug 1661031]
+</P>
+<A NAME="563065"></A>
+<P CLASS="BP">
+<CODE>DH_anon_export</CODE> cipher suite for SSL is not supported in this release (Release 1 (10.1) - BETA 2).
+</P>
+
+<A NAME="563066"></A>
+<!--TOC=h1-"563066"-->
+<H2 CLASS="H1"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">8&#32; ORACLE WALLET MANAGER 3.0</FONT></H2>
+
+
+<!--/TOC=h1-->
+<A NAME="563085"></A>
+<P CLASS="BP">
+Oracle Wallet Manager Online Help becomes unresponsive when modal dialog boxes, such as the one to enter certificate request information, pop up. The Online Help becomes responsive once the modal dialog box is closed. [Reference Bug 1114710]
+</P>
+
+<A NAME="561267"></A>
+<!--TOC=h1-"561267"-->
+<H2 CLASS="H1"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">9&#32; JAVASSL AND JSSE</FONT></H2>
+
+
+<!--/TOC=h1-->
+<A NAME="563174"></A>
+<P CLASS="BP">
+Oracle Corporation recommends using the <CODE>jsse.jar</CODE> provided by your platform vendors for Java SSL requests. Oracle JavaSSL is desupported starting in this release 10.0.0.
+</P>
+
+<A NAME="563184"></A>
+<!--TOC=h1-"563184"-->
+<H2 CLASS="H1"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">10&#32; ENTRUST SUPPORT</FONT></H2>
+
+
+<!--/TOC=h1-->
+<A NAME="563191"></A>
+<P CLASS="BP">
+This release supports Entrust version 5.0.2, 5.1 and 6.0 components, including IPSEC Negotiator Toolkit, Entrust/Authority and Server Login. On HP-UX 64-bit, Solaris 64-bit, and Compaq Tru 64 platforms, Oracle Advanced Security supports Entrust 6.0 PKI.
+</P>
+<A NAME="563196"></A>
+<P CLASS="BP">
+On Windows, you must install Entrust Entelligence on the client.
+</P>
+<A NAME="563198"></A>
+<P CLASS="BP">
+You must have the same version of Entrust tool kits and the Entrust Authority if you are using 5.x versions of Entrust. For example, you can use 5.1 version everywhere or 5.0.2 version for the tool kits and the EA. However, you can have Entrust 6.0 IPSEC Negotiator and Server Login tool kit with 5.1 Entrust Authority.
+</P>
+<A NAME="563206"></A>
+<P CLASS="BP">
+In this release (just as in 9.0.1), you do not have to choose between Entrust or SSL upon installation. In order to enable Entrust-based connections, follow the instructions in the <EM CLASS="Italic">Oracle Advanced Security Administrator's Guide</EM>.
+</P>
+
+<A NAME="563189"></A>
+<!--TOC=h1-"563189"-->
+<H2 CLASS="H1"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11&#32; ENTERPRISE USER SECURITY</FONT></H2>
+
+
+<!--/TOC=h1-->
+<A NAME="564300"></A>
+<P CLASS="BP">
+The following issues pertain to Enterprise User Security, Release 1 (10.1) - BETA 2:
+</P>
+
+<UL CLASS="LB1">
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564304"></A><A HREF="README_ASO.htm#563882">Tool Changes and Issues</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564309"></A><A HREF="README_ASO.htm#563255">Directory Changes and Issues that Affect Enterprise User Security</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564314"></A><A HREF="README_ASO.htm#563317">Manual Creation of ldap.ora Required for Directory Access</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564357"></A><A HREF="README_ASO.htm#564045">Documentation: Enterprise User Security Troubleshooting Tables Not Updated</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564362"></A><A HREF="README_ASO.htm#564052">Enter Wallet Location into Database sqlnet.ora File for Database to Directory Password Authentication</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="565125"></A><A HREF="README_ASO.htm#565114">Enable SSL in No Authentication Mode in Oracle Internet Directory for Password Authentication between the Database and the Directory</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="565079"></A><A HREF="README_ASO.htm#565077">Error ORA-28301 Produced When Database Is Not Registered in an Enterprise Domain</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="565094"></A><A HREF="README_ASO.htm#565095">Database Must Be Restarted When Enterprise Domain Membership Changes</a>
+<P>
+</UL>
+
+<A NAME="563882"></A>
+<!--TOC=h2-"563882"-->
+<H3 CLASS="H2"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.1&#32; Tool Changes and Issues</FONT></H3>
+<!--/TOC=h2-->
+<A NAME="564299"></A>
+<P CLASS="BP">
+The following tool changes or issues are pertinent to this release:
+</P>
+
+<UL CLASS="LB1">
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564250"></A><A HREF="README_ASO.htm#564287">Enterprise Security Manager Changes, Bugs, and Workarounds</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564804"></A><A HREF="README_ASO.htm#563948">New Tool: Enterprise Security Manager Console</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564285"></A><A HREF="README_ASO.htm#563263">Enterprise Login Assistant Replaced</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564290"></A><A HREF="README_ASO.htm#564908">Oracle Net Configuration Assistant No Longer Used</a>
+<P>
+</UL>
+
+<A NAME="564287"></A>
+<!--TOC=h3-"564287"-->
+<H4 CLASS="H3"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.1.1&#32; Enterprise Security Manager Changes, Bugs, and Workarounds</FONT></H4>
+<!--/TOC=h3-->
+<A NAME="563258"></A>
+<P CLASS="BP">
+The following changes, bugs, and workarounds apply to the Release 1 (10.1) - BETA 2 version of Enterprise Security Manager:
+</P>
+
+<UL CLASS="LB1">
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564004"></A>In this release, some of the Enterprise Security Manager functionality is integrated into the Enterprise Security Manager Console, a browser-based graphical user interface tool based on the Oracle Delegated Administration Service (DAS) Framework. The Enterprise Security Manager Console is launched from the Operations menu of the Enterprise Security Manager main application window. See: <A HREF="README_ASO.htm#563948">"New Tool: Enterprise Security Manager Console"</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564017"></A>In previous releases, Enterprise Security Manager allowed login by using nickname/userid or distinguished name (DN), but in this release only login by DN is fully supported. Login by nickname will work in some circumstances only. [Reference Bug 2810000]
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564018"></A><STRONG CLASS="Bold">Do not delete the OracleDefaultDomain.</STRONG> Enterprise Security Manager allows you to delete the OracleDefaultDomain. However, this special domain is required for database registration, so do not delete it. [Reference Bug 1995553]
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564019"></A>Logging in as <CODE>cn=orcladmin</CODE> fails if anonymous binds are disallowed in Oracle Internet Directory. [Reference Bug 3030547]
+<P>
+</UL>
+
+<A NAME="563948"></A>
+<!--TOC=h3-"563948"-->
+<H4 CLASS="H3"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.1.2&#32; New Tool: Enterprise Security Manager Console</FONT></H4>
+<!--/TOC=h3-->
+<A NAME="564009"></A>
+<P CLASS="BP">
+The Enterprise Security Manager Console, which is based on the Oracle Internet Directory Delegated Administration Services (DAS), is new in this release. Administrators can use this tool to create enterprise users, enterprise user security groups, and to configure identity management realm attributes that relate to enterprise user security. See: Chapter 13 in the <EM CLASS="Italic">Oracle Advanced Security Administrator's Guide</EM> for information about using this new tool.
+</P>
+
+<A NAME="563263"></A>
+<!--TOC=h3-"563263"-->
+<H4 CLASS="H3"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.1.3&#32; Enterprise Login Assistant Replaced</FONT></H4>
+<!--/TOC=h3-->
+<A NAME="564841"></A>
+<P CLASS="BP">
+In this release, Enterprise Login Assistant functionality has been migrated to the new Enterprise Security Console and Oracle Wallet Manager. The following table lists which tool you should now use to perform tasks that were formerly performed by using Enterprise Login Assistant:
+</P>
+   
+<A NAME="564905">
+<P>
+<TABLE CLASS="InformalWide" BORDER="1" FRAME="HSIDES" RULES="GROUPS" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" dir="ltr" title="">
+<THEAD>
+<TR CLASS="Informal"><TH CLASS="Informal" align="left" valign="bottom" scope="col">
+<A NAME="564890"></A>
+<FONT FACE="Arial, Helvetica, sans-serif"><STRONG>If you used Enterprise Login Assistant to...</STRONG></FONT></TH>
+<TH CLASS="Informal" align="left" valign="bottom" scope="col">
+<A NAME="564892"></A>
+<FONT FACE="Arial, Helvetica, sans-serif"><STRONG>Then now you should use...</STRONG></FONT></TH>
+</TR>
+<TBODY>
+<TR CLASS="Informal" ALIGN="LEFT" VALIGN="TOP"><TD CLASS="Informal">
+<A NAME="564894"></A>
+<P CLASS="TB">
+change the directory-database password</TD>
+<TD CLASS="Informal">
+<A NAME="564896"></A>
+<P CLASS="TB">
+Enterprise Security Manager Console</TD>
+</TR>
+<TR CLASS="Informal" ALIGN="LEFT" VALIGN="TOP"><TD CLASS="Informal">
+<A NAME="564898"></A>
+<P CLASS="TB">
+change a wallet password</TD>
+<TD CLASS="Informal">
+<A NAME="564900"></A>
+<P CLASS="TB">
+Oracle Wallet Manager</TD>
+</TR>
+<TR CLASS="Informal" ALIGN="LEFT" VALIGN="TOP"><TD CLASS="Informal">
+<A NAME="564902"></A>
+<P CLASS="TB">
+enable auto login for a wallet</TD>
+<TD CLASS="Informal">
+<A NAME="564904"></A>
+<P CLASS="TB">
+Oracle Wallet Manager</TD>
+</TR>
+
+</TABLE>
+
+
+</A>
+   <A NAME="564906"></A>
+<P CLASS="BP">
+These tasks are documented in the <EM CLASS="Italic">Oracle Advanced Security Administrator's Guide</EM>.
+</P>
+
+<A NAME="564908"></A>
+<!--TOC=h3-"564908"-->
+<H4 CLASS="H3"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.1.4&#32; Oracle Net Configuration Assistant No Longer Used</FONT></H4>
+<!--/TOC=h3-->
+<A NAME="564909"></A>
+<P CLASS="BP">
+This tool is no longer used to set up Oracle home directory access or to create an <CODE>ldap.ora</CODE> file. The options still appear in this tool's user interface, but they do not function properly. In the future, Oracle Internet Directory Configuration Assistant will be used for this purpose, but for this release (Release 1 (10.1) - BETA 2), you must manually create an <CODE>ldap.ora</CODE> file in the <CODE>$ORACLE_HOME/network/admin</CODE> directory. See: <A HREF="README_ASO.htm#563317">"Manual Creation of ldap.ora Required for Directory Access"</a> for information about creating an <CODE>ldap.ora</CODE> file. Note: You must create the <CODE>ldap.ora</CODE> file before you register a database in the directory with Database Configuration Assistant. [Reference Bugs 2826399, 2809510]
+</P>
+
+<A NAME="563255"></A>
+<!--TOC=h2-"563255"-->
+<H3 CLASS="H2"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.2&#32; Directory Changes and Issues that Affect Enterprise User Security</FONT></H3>
+<!--/TOC=h2-->
+<A NAME="564370"></A>
+<P CLASS="BP">
+The following directory changes and issues affect Enterprise User Security in this release:
+</P>
+
+<UL CLASS="LB1">
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564371"></A><A HREF="README_ASO.htm#563319">Default Nickname Attribute Change</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564376"></A><A HREF="README_ASO.htm#563805">orcladmin User Identity Changes</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564381"></A><A HREF="README_ASO.htm#563850">User Security Admins Group Limited Functionality</a>
+<P>
+
+<LI CLASS="LB1" TYPE="DISC"><A NAME="564386"></A><A HREF="README_ASO.htm#563937">Adding Oracle Internet Directory Groups to Enterprise Roles Only Supported for GroupOfUniqueNames Objectclasses</a>
+<P>
+</UL>
+
+<A NAME="563319"></A>
+<!--TOC=h3-"563319"-->
+<H4 CLASS="H3"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.2.1&#32; Default Nickname Attribute Change</FONT></H4>
+<!--/TOC=h3-->
+<A NAME="563804"></A>
+<P CLASS="BP">
+The default nickname attribute for an Oracle Context in 9.2 Oracle Internet Directory used to be <CODE>cn</CODE>, was set in the root Oracle Context only, and applied to all Oracle Contexts in the directory. In this release, the 9.0.4 Oracle Internet Directory, the default value for this attribute is <CODE>uid</CODE>, it is set in each Identity Management Realm, and applies to that realm only.
+</P>
+
+<A NAME="563805"></A>
+<!--TOC=h3-"563805"-->
+<H4 CLASS="H3"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.2.2&#32; orcladmin User Identity Changes</FONT></H4>
+<!--/TOC=h3-->
+<A NAME="563806"></A>
+<P CLASS="BP">
+In previous releases, there was only one <CODE>orcladmin</CODE> user (<CODE>cn=orcladmin</CODE>) who was a "virtual" identity possessing root privileges in Oracle Internet Directory. It was a "virtual" identity because there was no directory entry representing this user. In the current release of Oracle Internet Directory (release 9.0.4), the "virtual" <CODE>orcladmin</CODE> user who possesses root privileges throughout the directory still exists, but each release 9.0.4 Identity Management Realm (called "Subscriber" in previous releases) now also includes, by default, an <CODE>orcladmin</CODE> user who is intended to be the root user for that realm only. These realm-specific <CODE>orcladmin</CODE> users do have directory entries that represent them: <CODE>cn=orcladmin,cn=Users,&lt;</CODE><EM CLASS="Variable">realm_DN</EM><CODE>&gt;</CODE>. 
+</P>
+<A NAME="563833"></A>
+<P CLASS="BP">
+If you use <CODE>orcladmin</CODE> as your username when you use Oracle9<EM CLASS="Italic">i</EM>AS Single Sign-On to log in to a tool that is based on Oracle Internet Directory Delegated Administration Services (DAS), then the Single Sign-On server will log you in as the realm-specific <CODE>orcladmin</CODE> for the default identity management realm (and not as the all-powerful "virtual" root user). Consequently, when you are logged in as the realm-specific <CODE>orcladmin</CODE> user, you can use a DAS-based tool to manage data only within that realm, and not in the rest of the directory. This may cause confusion if you are accustomed to <CODE>orcladmin</CODE> having full access to all data in Oracle Internet Directory. Note: Tools that are based on Oracle Internet Directory Delegated Administration Services include Enterprise Security Manager Console and Oracle Internet Directory Self-Service Console [Reference Bug 3057246]
+</P>
+
+<A NAME="563856"></A>
+<!--TOC=h4-"563856"-->
+<H5 CLASS="H4"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.2.2.1&#32; Managing Other Identity Management Realms</FONT></H5>
+<!--/TOC=h4-->
+<A NAME="563862"></A>
+<P CLASS="BP">
+If you are in the appropriate tool administrative group or you are logged in as <CODE>orcladmin</CODE>, then you can use a DAS-based tool to manage the directory data in your identity management realm, which is determined during the Oracle9<EM CLASS="Italic">i</EM>AS Single Sign-On login. If you have the appropriate Access Control List (ACL) permission in Oracle Internet Directory, then you can also view other identity management realms. To manage other identity management realms by using a DAS-based tool, then you must log out with Oracle9<EM CLASS="Italic">i</EM>AS Single Sign-On and log in as an administrative user in the other realm.
+</P>
+<A NAME="563896"></A>
+<P CLASS="BP">
+[Reference Bug 3027410]
+</P>
+
+<A NAME="563850"></A>
+<!--TOC=h3-"563850"-->
+<H4 CLASS="H3"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.2.3&#32; User Security Admins Group Limited Functionality</FONT></H4>
+<!--/TOC=h3-->
+<A NAME="563851"></A>
+<P CLASS="BP">
+This group is not fully functional in this release. [Reference Bugs 2942611, 2942598]
+</P>
+
+<A NAME="563937"></A>
+<!--TOC=h3-"563937"-->
+<H4 CLASS="H3"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.2.4&#32; Adding Oracle Internet Directory Groups to Enterprise Roles Only Supported for GroupOfUniqueNames Objectclasses</FONT></H4>
+<!--/TOC=h3-->
+<A NAME="563938"></A>
+<P CLASS="BP">
+Adding directory groups to enterprise roles is a way to grant those roles to groups of users. To enable this functionality, the directory groups must have the <CODE>GroupOfUniqueNames</CODE> objectclass with members in the <CODE>uniquemember</CODE> attribute. Note: the <CODE>GroupOfNames</CODE> objectclass and its corresponding member attribute are not supported in this, nor in previous releases. [Reference Bug 3038229]
+</P>
+
+<A NAME="563317"></A>
+<!--TOC=h2-"563317"-->
+<H3 CLASS="H2"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.3&#32; Manual Creation of ldap.ora Required for Directory Access</FONT></H3>
+<!--/TOC=h2-->
+<A NAME="563339"></A>
+<P CLASS="BP">
+No <CODE>ldap.ora</CODE> is created by Oracle Internet Directory Configuration Assistant or Oracle Net Configuration Assistant, and there is no sample <CODE>ldap.ora</CODE> available.
+</P>
+<A NAME="563341"></A>
+<P CLASS="BP">
+Workaround: Create an <CODE>ldap.ora</CODE> manually using the sample below:
+</P>
+<A NAME="563343"></A>
+<P CLASS="BP">
+<CODE># sample ldap.ora file:</CODE>
+</P>
+<A NAME="563344"></A>
+<P CLASS="BP">
+<CODE>DIRECTORY_SERVERS= (&lt;</CODE><EM CLASS="Variable">directory_host</EM><CODE>&gt;:&lt;</CODE><EM CLASS="Variable">non-SSL_port</EM><CODE>&gt;:&lt;</CODE><EM CLASS="Variable">SSL_port</EM><CODE>&gt;)</CODE>
+</P>
+<A NAME="563345"></A>
+<P CLASS="BP">
+<CODE>DEFAULT_ADMIN_CONTEXT = "</CODE><EM CLASS="Variable">realm_DN</EM><CODE>"</CODE>
+</P>
+<A NAME="563337"></A>
+<P CLASS="BP">
+<CODE>DIRECTORY_SERVER_TYPE = OID</CODE>
+</P>
+<A NAME="563351"></A>
+<P CLASS="BP">
+[Reference Bugs 2819512, 2809510, 2826399, 2923046]
+</P>
+<A NAME="564922"></A>
+<P CLASS="BP">
+Note: The <CODE>ldap.ora</CODE> file must be created before you register a database in the directory.
+</P>
+
+<A NAME="564045"></A>
+<!--TOC=h2-"564045"-->
+<H3 CLASS="H2"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.4&#32; Documentation: Enterprise User Security Troubleshooting Tables Not Updated</FONT></H3>
+<!--/TOC=h2-->
+<A NAME="564046"></A>
+<P CLASS="BP">
+The troubleshooting tables in Chapter 12 of the <EM CLASS="Italic">Oracle Advanced Security Administrator's Guide</EM> have not been updated for Release 1 (10.1) - BETA 2.
+</P>
+
+<A NAME="564052"></A>
+<!--TOC=h2-"564052"-->
+<H3 CLASS="H2"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.5&#32; Enter Wallet Location into Database sqlnet.ora File for Database to Directory Password Authentication</FONT></H3>
+<!--/TOC=h2-->
+<A NAME="564053"></A>
+<P CLASS="BP">
+In this release the database can bind to Oracle Internet Directory by using password SASL-based authentication, making it unnecessary to have PKI certificates for SSL-based authentication. Although PKI certificates are not required, the database still must have a wallet to hold its credentials for communicating with the directory. In this release, Database Configuration Assistant automatically creates an appropriate database wallet in <CODE>$ORACLE_HOME/admin/&lt;</CODE><EM CLASS="Variable">SID</EM><CODE>&gt;/wallet</CODE> during database registration, and configures it with proper credentials.
+</P>
+<A NAME="564055"></A>
+<P CLASS="BP">
+Because the wallet is required, the database <CODE>sqlnet.ora</CODE> file must contain a wallet location.
+</P>
+
+<DL CLASS="A1">
+
+<DT CLASS="A1"><FONT SIZE="-1" FACE="Arial, Helvetica, sans-serif"><A NAME="564063"></A><STRONG>To use Oracle Net Manager to set the wallet location in your database's sqlnet.ora file:</STRONG></FONT>
+</DL>
+
+<OL CLASS="LN1" TYPE="1">
+
+<LI CLASS="LN1" TYPE="1" VALUE="1"><A NAME="564058"></A>In the Oracle Net Manager navigator pane, select <STRONG CLASS="Bold">Profile</STRONG>. A drop-down list appears in the right pane.
+<P>
+
+
+<LI CLASS="LN1" TYPE="1" VALUE="2"><A NAME="564066"></A>In the right pane, choose <STRONG CLASS="Bold">Oracle Advanced Security</STRONG> from the list. A set of property sheets displays in the right pane.
+<P>
+
+<LI CLASS="LN1" TYPE="1" VALUE="3"><A NAME="564067"></A>Choose the <STRONG CLASS="Bold">SSL</STRONG> tab. The SSL property sheet displays.
+<P>
+
+<LI CLASS="LN1" TYPE="1" VALUE="4"><A NAME="564070"></A>In the SSL property sheet, check <STRONG CLASS="Bold">Configure SSL for Server</STRONG>
+<P>
+
+<LI CLASS="LN1" TYPE="1" VALUE="5"><A NAME="564073"></A>In the <STRONG CLASS="Bold">Wallet Directory</STRONG> field, change the default directory location to <CODE>$ORACLE_HOME/admin/&lt;</CODE><EM CLASS="Variable">SID</EM><CODE>&gt;/wallet</CODE>
+<P>
+
+<LI CLASS="LN1" TYPE="1" VALUE="6"><A NAME="564074"></A>Save your network configuration changes.
+<P>
+ 
+</OL>
+
+<A NAME="565114"></A>
+<!--TOC=h2-"565114"-->
+<H3 CLASS="H2"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.6&#32; Enable SSL in No Authentication Mode in Oracle Internet Directory for Password Authentication between the Database and the Directory</FONT></H3>
+<!--/TOC=h2-->
+<A NAME="565115"></A>
+<P CLASS="BP">
+For password-based authentication between the database and Oracle Internet Directory, enable SSL with no authentication in the directory by using Directory Manager. Refer to <EM CLASS="Italic">Oracle Internet Directory Administrator's Guide</EM>, which is available on the identity management infrastructure product CD-ROM, for information about how to use Directory Manager to configure this.
+</P>
+
+<A NAME="565077"></A>
+<!--TOC=h2-"565077"-->
+<H3 CLASS="H2"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.7&#32; Error ORA-28301 Produced When Database Is Not Registered in an Enterprise Domain</FONT></H3>
+<!--/TOC=h2-->
+<A NAME="565086"></A>
+<P CLASS="BP">
+If you receive the error message <CODE>ORA-28301: Domain Policy hasn't been registered for SSL authentication</CODE> during an enterprise user login to the database using SSL (client to database connection uses SSL), then ensure that the database is registered in an enterprise domain in the directory. The database must be registered in an enterprise domain for an Enterprise User Security login to work. [Reference Bug 3076879]
+</P>
+
+<A NAME="565095"></A>
+<!--TOC=h2-"565095"-->
+<H3 CLASS="H2"><FONT FACE="Arial, Helvetica, sans-serif" COLOR="#330099">11.8&#32; Database Must Be Restarted When Enterprise Domain Membership Changes</FONT></H3>
+<!--/TOC=h2-->
+<A NAME="565096"></A>
+<P CLASS="BP">
+In some cases, when a database is moved from one enterprise domain in the directory to another, the database must be restarted for the change to be reflected in an Enterprise User Security login. [Reference Bug 3076903]
+</P>
+
+
+
+
+
+
+<!-- Start Footer -->
+</DIV>
+
+<DIV CLASS="OUTD">
+<HR>
+<TABLE CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+<TR>
+<TD VALIGN="BOTTOM" WIDTH="33%">
+<TABLE CELLSPACING="0" CELLPADDING="0">
+<TR>
+
+
+
+    
+</TR>
+</TABLE>
+</TD>
+<TD ALIGN="CENTER" WIDTH="34%">
+<A HREF="cpyr.htm"><IMG SRC="oracle.gif" ALT="Oracle" BORDER="0"><BR>
+<FONT SIZE="-2">Copyright &copy; 1996&#044; 2003 Oracle Corporation.</FONT></A>
+<BR>
+<FONT SIZE="-2">All Rights Reserved.</FONT>
+</TD>
+<TD VALIGN="BOTTOM" ALIGN="RIGHT" WIDTH="33%"> 
+<TABLE CELLSPACING="0" CELLPADDING="0" WIDTH="144">
+<TR>
+
+
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%"></TD>
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%"></TD>
+<TD ALIGN="CENTER" VALIGN="TOP" WIDTH="25%"></TD>
+
+
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+  
+</DIV>
+
+</BODY>
+</HTML>
+

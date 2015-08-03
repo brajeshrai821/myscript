@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 24, 2006 11:30:33 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5 Build 274" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> General Management and Security Issues </title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="install.htm" title="Previous" />
+<link rel="next" href="ohs.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Release Notes </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25216-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="install.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="ohs.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="BABIHDFJ" name="BABIHDFJ"></a><a id="i1007645" name="i1007645"></a>
+<h1 class="chapter"><span class="secnum">3 </span> General Management and Security Issues <a id="sthref21" name="sthref21"></a></h1>
+<p>This chapter describes management and security issues associated with Oracle Application Server. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABDCDEH">Section 3.1, "General Issues and Workarounds"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABICHFC">Section 3.2, "Clustering and Replication Issues"</a>
+</p>
+</li>
+</ul><a id="BABDCDEH" name="BABDCDEH"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref22" name="sthref22"></a>
+<h2 class="sect1"><span class="secnum">3.1 </span>General Issues and Workarounds
+</h2>
+<p>This section describes general management and security issues. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CACHEIGC">Section 3.1.1, "Limited Management Support for Multiple-JVM OC4J Instances"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CACCCIIF">Section 3.1.2, "OC4J Restart Required When Changing the Name or URL of a JDBC Data Source or Connection Pool"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CACDAEFF">Section 3.1.3, "Problem Removing a Property from a Native Data Source"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CACFBJEB">Section 3.1.4, "Important Restriction When Setting Thread Pool Size on the Thread Pool Configuration Page"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CACFBCGB">Section 3.1.5, "Use the Cluster Topology Page to Restart the OC4J Instance"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CACIJGAB">Section 3.1.6, "TopLink Sessions Not Available in Application Server Control Console"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABIIHII">Section 3.1.7, "Unable to Receive MBean Notification Using OPMN to Start or Stop OC4J"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABEJAFJ">Section 3.1.8, "Using the Java Server Pages Standard Tag Libraries"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABFHDHI">Section 3.1.9, "Error While Generating Web Service"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CACBAJHG">Section 3.1.10, "Problem with Deployment of non-English Character Java Server Pages"</a>
+</p>
+</li>
+<li type="disc">
+<p>
+</p>
+</li>
+</ul><a id="CACHEIGC" name="CACHEIGC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref23" name="sthref23"></a>
+<h3 class="sect2"><span class="secnum">3.1.1 </span>Limited Management Support for Multiple-JVM OC4J Instances
+</h3>
+<p>With Oracle Application Server 10g Release 3 (10.1.3), you can configure OC4J to use multiple Java Virtual Machines (JVMs) by setting the <code>numprocs</code> argument in the <code>opmn.xml</code> file to a number greater than one (1).
+</p>
+<p>For example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;ias-component id&#061;"OC4J">   &lt;process-type id&#061;"home" module-id&#061;"OC4J" status&#061;"enabled">        .
+        .
+        .
+      &lt;process-set id&#061;"default&#095;group" <span class="bold">numprocs&#061;"2"</span>/>
+   &lt;/process-type>
+&lt;/ias-component>
+
+</pre>
+<p>However, this feature is not supported by Oracle Enterprise Manager 10<span class="italic">g</span> Application Server Control (Application Server Control). Instead, when the <code>numprocs</code> argument is set to more than one (1), you must use command line tools to manage your Oracle Application Server environment. For example, you must use:
+</p>
+<ul>
+<li type="disc">
+<p><code>admin&#095;client.jar</code> for deployment, re-deployment, undeployment, start and stop applications, and shared library management
+</p>
+</li>
+<li type="disc">
+<p>Apache Ant for deployment, redeployment, and undeployment of your applications
+</p>
+</li>
+<li type="disc">
+<p><code>opmnctl</code> commands for starting, stopping, and other life cycle operations on the Oracle Application Server
+</p>
+</li>
+</ul>
+<p>For all other administrative configuration changes, if you are using multiple JVMs, you must shut down Oracle Application Server, manually configure the relevant XML files, and then restart Oracle Application Server.
+</p>
+</div><!-- class="sect2" -->
+<a id="CACCCIIF" name="CACCCIIF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref24" name="sthref24"></a>
+<h3 class="sect2"><span class="secnum">3.1.2 </span>OC4J Restart Required When Changing the Name or URL of a JDBC Data Source or Connection Pool
+</h3>
+<p>If you modify the name or the connection URL of a JDBC data source or JDBC connection pool, then you must restart the OC4J instance; otherwise the changes you make will not take effect.
+</p>
+<p>For example, if you use the JDBC Resources page in the Application Server Control Console to change the connection URL of a JDBC connection pool, you will not be prompted to restart the OC4J instance, but the restart is required. If you do not restart the OC4J instance, any deployed applications that require the data source will attempt to use the original connection URL.
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>"Managing Data Sources and JDBC Connection Pools" in the Application Server Control online help
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="CACDAEFF" name="CACDAEFF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref25" name="sthref25"></a>
+<h3 class="sect2"><span class="secnum">3.1.3 </span>Problem Removing a Property from a Native Data Source
+</h3>
+<p>If you use the Application Server Control Console to remove a property from a native data source, Enterprise Manager does not remove the property from the underlying connection factory. As a result, the property (and its current value) is not changed.
+</p>
+<p>This is expected behavior. To set a value on the underlying connection factory, use the <code>setProperty</code> operation of the <code>JDBCDataSource</code> MBean for the native Data Source to do this. You can use the MBean Browser, which is available in the Application Server Control Console, to invoke an MBean operation.
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>"About the MBean Browser" in the Application Server Control online help
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="CACFBJEB" name="CACFBJEB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref26" name="sthref26"></a>
+<h3 class="sect2"><span class="secnum">3.1.4 </span>Important Restriction When Setting Thread Pool Size on the Thread Pool Configuration Page
+</h3>
+<p>By default, the Thread Pool Configuration page in the Application Server Control Console shows a minimum thread pool size of one (1) for an unconfigured thread pool. This value is expected, but do not click <span class="bold">OK</span> on this screen with a minimum thread pool size set to one (1) for any thread pool.
+</p>
+<p>If you are configuring OC4J thread pools using the Thread Pool Configuration Administration Task, be sure to replace the default value for the minimum thread pool size to a number that is greater than 10; otherwise, you will not be able to login to the Application Server Control Console the next time you restart the OC4J instance.
+</p>
+<p>In the event that you set the minimum thread pool size to 1 and then click <span class="bold">OK</span> on the Thread Pool Configuration page, and as a result, you cannot access the Application Server Control Console, do the following:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Stop the OC4J instance using the command line.
+</p>
+<p>For example, on a UNIX system, in a managed, Oracle Application Server environment, enter the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>/opmn/bin/opmnctl stopall
+</pre>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>"Starting and Stopping" in the <span class="italic">Oracle Application Server Administrator's Guide</span>
+<p>"Starting and Stopping OC4J" in the <span class="italic">Oracle Containers for J2EE Configuration and Administration Guide</span>
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</li>
+<li>
+<p>Edit the <code>server.xml</code> file so that all thread pools are configured with a minimum pool size that is greater than 10.
+</p>
+<p>The server.xml for the OC4J instance is located in the following directory:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">ORACLE&#095;HOME/<span class="italic">OC4J&#095;instance&#095;name</span>/config/
+
+</pre>
+<p>For example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>/home/config/
+
+</pre>
+</li>
+</ol>
+<p>Alternatively, to reset thread pool configuration to the default to factory settings, remove the <code>&lt;global-thread-pool></code> element and the <code>&lt;work-manager-thread-pool></code> element from the <code>server.xml</code> file.
+</p>
+</div><!-- class="sect2" -->
+<a id="CACFBCGB" name="CACFBCGB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref27" name="sthref27"></a>
+<h3 class="sect2"><span class="secnum">3.1.5 </span>Use the Cluster Topology Page to Restart the OC4J Instance
+</h3>
+<p>Some OC4J configuration pages in the Application Server Control Console (including the JTA Administration and Oracle Internet Directory Association pages) require a restart of the OC4J instance for changes to take affect.
+</p>
+<p>If you use the <span class="bold">Restart</span> link, which is displayed after applying changes to one of these pages, the operation may take a few minutes because it performs an internal restart of the OC4J instance. Instead of using the <span class="bold">Restart</span> link, Oracle recommends that users navigate to the Cluster Topology page, select the affected OC4J instance, and then click <span class="bold">Restart</span> to perform a full restart of the OC4J instance. In a standalone OC4J environment, Oracle recommends that users use the command line to restart the OC4J instance.
+</p>
+</div><!-- class="sect2" -->
+<a id="CACIJGAB" name="CACIJGAB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref28" name="sthref28"></a>
+<h3 class="sect2"><span class="secnum">3.1.6 </span>TopLink Sessions Not Available in Application Server Control Console
+</h3>
+<p>If the TopLink Sessions for a TopLink-enabled application are not available in Application Server Control Console, check to be sure the TopLink session is configured to create the MBeans at login time. This is done by ensuring that the application has a <code>serverPlatform</code> class defined, and that the <code>ServerPlatform</code> class has its is <code>RuntimeServicesEnabled</code> flag enabled.
+</p>
+<p>For Oracle Application Server 10g Release 3 (10.1.3), you should be using the following platform class, which can be set in the <code>sessions.xml</code> or through the session API:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">oracle.toplink.platform.server.oc4j.Oc4j&#095;10&#095;1&#095;3&#095;Platform
+
+</pre>
+<p>When developing a TopLink-enabled application using Oracle JDeveloper, make sure to use version 11 or higher.
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>"Configuring the Server Platform" in the <! a href="../../web.1013/b13593/toc.htm"><span class="italic">Oracle TopLink Developer's Guide</span></a>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="BABIIHII" name="BABIIHII"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref29" name="sthref29"></a>
+<h3 class="sect2"><span class="secnum">3.1.7 </span>Unable to Receive MBean Notification Using OPMN to Start or Stop OC4J
+</h3>
+<p>You will not be able to receive notification from the<code> ias:j2eeType&#061;J2EEServer,name...</code> MBean entity if you start or stop Oracle Containers for J2EE (OC4J) using OPMN. This happens using either the Application Server Control or the <code>opmnctl stop</code> or <code>opmnct start</code> command from the command line.
+</p>
+<p>There is presently no workaround for this issue.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABEJAFJ" name="BABEJAFJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref30" name="sthref30"></a>
+<h3 class="sect2"><span class="secnum">3.1.8 </span>Using the Java Server Pages Standard Tag Libraries
+</h3>
+<p>The Java Server Pages Standard Tag Library (JSTL) makes use of Jaxp 1.2 classes that are packaged with Java Developer Kit 1.4.
+</p>
+<p>Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) makes use of JDK 1.5 which uses Jaxp 1.3 classes. However, the JSTL still requires the Jaxp1.2 classes. If you run the JSTL with XML related tags in JDK 1.5 you may receive an error message similar to:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">: missing class org.apache.xpath.encounter failure.
+
+</pre>
+<p>To avoid JSTL failure, include the <code>xalan.jar</code> file in the required <code>.war</code> file. Add the <code>xalan.jar</code> file into your <code>/WEB-INF/lib</code> directory with the <code>.war</code> file and then re-package.
+</p>
+<p>For more information refer to the JSTL release notes at:
+</p>
+<p><code><a href="http://java.sun.com/webservices/docs/1.6/jstl/ReleaseNotes.html">http://java.sun.com/webservices/docs/1.6/jstl/ReleaseNotes.html</a></code>. 
+</p>
+</div><!-- class="sect2" -->
+<a id="BABFHDHI" name="BABFHDHI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref31" name="sthref31"></a>
+<h3 class="sect2"><span class="secnum">3.1.9 </span>Error While Generating Web Service
+</h3>
+<p>When generating a Web Service from a stored procedure including XSL transformation, and returned data contain non-English characters, an error will be thrown as follows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">java.sql.SQLException: Invalid UTF8 encoding. 
+
+</pre>
+<p>To workaround around this issue, in the <code>oracle/j2ee/ws/tools/wsa/db/webservices10literal.properties</code> file of <code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code><code>/webservices/lib/wsa.jar</code> home, modify:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">org.w3c.dom.Document &#095;tmpDocument&#095; &#061;db.parse(&#037;1.getclobval().getAsciiStream());
+
+</pre>
+<p>to:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">db.parse(new org.xml.sax.InputSource(&#095;&#095;jRt&#095;0.getclobval().getCharacterStream()));
+
+</pre>
+</div><!-- class="sect2" -->
+<a id="CACBAJHG" name="CACBAJHG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref32" name="sthref32"></a>
+<h3 class="sect2"><span class="secnum">3.1.10 </span>Problem with Deployment of non-English Character Java Server Pages
+</h3>
+<p>When you deploy an application with non-English page character set Java Server Pages (JSPs) using a Web browser, accessing the JSPs leads to corresponding modification to the encoding setting of the Java-compiler. However, if you deploy applications which use the Java-compiler to compile auto-generated codes containing non-English characters (for example, an CMP application containing non-English characters as column names), an exception will be thrown as follows: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#064; com.evermind.compiler.CompilationException: Syntax error in source or compilation failed. 
+
+</pre>
+<p>To workaround this problem:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Shutdown OC4J
+</p>
+</li>
+<li>
+<p>Remove <code>encoding&#061;"&lt;SOME-ENCODING>"</code> from the <code>&lt;java-compiler> </code>element in the <code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code><code>/j2ee/home/comfig/server.xml</code> file.
+</p>
+</li>
+<li>
+<p>Restart OC4J. 
+</p>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref33" name="sthref33"></a>
+<h3 class="sect2"><span class="secnum">3.1.11 </span>RMD Conditional Does Not Fully Evaluate
+</h3>
+<p>Affected platforms: Linux and Windows 
+</p>
+<p>As documented in the <span class="italic">Oracle Process Manager and Notification Server Administrator's Guide</span> and functional specifications for Dynamic Resource Management (DRM), a Resource Management Directive (RMD) conditional can have a fully qualified path. However, the conditional may not evaluate at all. It may fail to trigger any action or exception even though the opmn.xml file is valid. 
+</p>
+<p>If it is a hierarchical RMD, instead of a fully qualified path use a hierarchical relative reference. If it is a global RMD, use global absolute reference. 
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABICHFC" name="BABICHFC"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref34" name="sthref34"></a>
+<h2 class="sect1"><span class="secnum">3.2 </span>Clustering and Replication Issues
+</h2>
+<p>This section describes clustering and replication issues. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BADHBAEF">Section 3.2.1, "State Replication Framework"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABIJBAI">Section 3.2.2, "Using Oracle Universal Installer Provided Sample Cluster Discovery Address May Inadvertently Cluster Servers"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABGFFFH">Section 3.2.3, "Configuration of Oracle Application Server Clusters"</a>
+</p>
+</li>
+</ul><a id="BADHBAEF" name="BADHBAEF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref35" name="sthref35"></a>
+<h3 class="sect2"><span class="secnum">3.2.1 </span>State Replication Framework
+</h3>
+<p>The state replication framework that is used by Oracle Application Server has been upgraded with several fixes that resolve multicast state replication issues and enable redeployment of running applications that use the framework.
+</p>
+<p>Before deploying applications using the state replication framework in a production environment, go to Oracle<span class="italic">MetaLink</span> (<code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>) and download and apply the required patch for Bug 4685049.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABIJBAI" name="BABIJBAI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref36" name="sthref36"></a>
+<h3 class="sect2"><span class="secnum">3.2.2 </span>Using Oracle Universal Installer Provided Sample Cluster Discovery Address May Inadvertently Cluster Servers
+</h3>
+<p>Oracle Universal Installer provides an example cluster discovery address as part of the advanced installation option. The provide example discovery address is <code>225.0.0.1:6789</code>. This <span class="italic">is not</span> a recommended address; rather it is an example intended to provide the type of cluster discovery address users may ask for from their network administrator. 
+</p>
+<p>Because the cluster configuration of Oracle Application Server is fully dynamic it is possible for installations using the example cluster discovery address (<code>225.0.0.1:6789</code>) to be inadvertently clustered with other servers installed with the same example cluster discovery address. 
+</p>
+<p>The cluster discovery address of a specific Oracle Application Server instance can be set from the command line using the following <code>opmnctl</code> command: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">> &#036;ORACLE&#095;HOME/opmn/bin/opmnctl config topology update discover&#061;&lt;cluster config address> 
+
+</pre>
+<p>For example, to update a cluster discovery address in a specific Oracle Application Server instance to be <code>225.0.0.1:9876</code>, the command would be: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">> &#036;ORACLE&#095;HOME/opmn/bin/opmnctl config topology update discover&#061;"&#042;225.0.0.1:9876" 
+
+</pre>
+<p>Details on configuring topologies and the cluster discovery address can be found in Chapter 8, "Configuring and Managing Clusters" of the <span class="italic">Oracle Containers for J2EE Configuration and Administration Guide</span>. 
+</p>
+</div><!-- class="sect2" -->
+<a id="BABGFFFH" name="BABGFFFH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref37" name="sthref37"></a>
+<h3 class="sect2"><span class="secnum">3.2.3 </span>Configuration of Oracle Application Server Clusters
+</h3>
+<p>Oracle Application Server instances can be grouped together in clusters using the <code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code><code>&#092;bin&#092;opmnassociate</code> command line utility or explicitly using the more comprehensive <code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code><code>&#092;opmnctl</code> command line tool. 
+</p>
+<p>Additional information on post-installation topology and cluster configuration can be found in <a name="JICON800| How to configure and manage cluster topologies in OAS"></a>Chapter 8, "Configuring and Managing Clusters"" of the <span class="italic">Oracle Containers for J2EE Configuration and Administration Guide</span>.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="install.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="ohs.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

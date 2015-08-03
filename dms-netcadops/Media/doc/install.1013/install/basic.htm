@@ -1,0 +1,679 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 23, 2006 13:32:47 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5.1 Build 4" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Things You Should Know Before Starting the Installation</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="reqs.htm" title="Previous" />
+<link rel="next" href="basic_install.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+<link rel="index" href="index.htm" title="Index" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Installation Guide  </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25217-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="reqs.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="basic_install.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="CHDHCJEC" name="CHDHCJEC"></a><a id="sthref284" name="sthref284"></a>
+<h1 class="chapter"><span class="secnum">3 </span> Things You Should Know Before Starting the Installation</h1>
+<p>Contents:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDCECEI">Section 3.1, "Oracle Home Directory"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDBIDDF">Section 3.2, "First-Time Installation of Any Oracle Product"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDHGHJH">Section 3.3, "Installing Additional Languages"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDDGCGA">Section 3.4, "Oracle Application Server Instances and Instance Names"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDJCIJH">Section 3.5, "The oc4jadmin User and Restrictions on its Password"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDDAEHG">Section 3.6, "Where Does the Installer Write Files?"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDEIHGA">Section 3.7, "Why Do I Need to be Able to Log In as Root at Certain Times During Installation?"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDGDICJ">Section 3.8, "Running root.sh During Installation"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDCIEBA">Section 3.9, "Obtaining Software from Oracle E-Delivery"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BHCDIFJH">Section 3.10, "Setting the Mount Point for the CD-ROMor DVD-ROM"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABEIGGD">Section 3.11, "Starting theOracle Universal Installer"</a>
+</p>
+</li>
+</ul><a id="CHDCECEI" name="CHDCECEI"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref285" name="sthref285"></a>
+<h2 class="sect1"><span class="secnum">3.1 </span>Oracle Home Directory<a id="sthref286" name="sthref286"></a>
+</h2>
+<p>The directory in which you install Oracle Application Server is called the Oracle home. During installation, you specify the full path to this directory.
+</p>
+<p>For example, you can install Oracle Containers for J2EE in <code>/opt/oracle/OraHome&#095;oc4j</code>.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Notes:</p>Spaces are not allowed anywhere in the Oracle home directory path. For example, you cannot install in "<code>/opt/oracle/app server/OC4J</code>" because of the space character in "<code>app server</code>". The installer does not check for this until several screens after you have entered the path.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref287" name="sthref287"></a>
+<h3 class="sect2"><span class="secnum">3.1.1 </span>Naming Your Oracle Home<a id="sthref288" name="sthref288"></a>
+</h3>
+<p>Each Oracle home directory is automatically given a name. The Oracle home name is <code>oracleas</code><code><span class="codeinlineitalic">x</span></code>, where <code><span class="codeinlineitalic">x</span></code> is a number that depends on how many Oracle Application Server installations are on the system.
+</p>
+<p>For example, if you are performing your first installation of Oracle Application Server on this system, then your Oracle home is named <code>oracleas1</code>.
+</p>
+<p>If you deinstall Oracle Application Server, you will need to know the Oracle home name.
+</p>
+</div><!-- class="sect2" -->
+<a id="BHCGAFBG" name="BHCGAFBG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref289" name="sthref289"></a>
+<h3 class="sect2"><span class="secnum">3.1.2 </span>Installing in an Existing Oracle Home<a id="sthref290" name="sthref290"></a>
+</h3>
+<p>Generally, you cannot install Oracle Application Server in an existing Oracle home. See <a href="reqs.htm#CIHDDFIB">"Oracle home directory"</a> for a list of combinations that are not allowed.
+</p>
+</div><!-- class="sect2" -->
+
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref291" name="sthref291"></a>
+<h3 class="sect2"><span class="secnum">3.1.3 </span>Installing in a Non-Empty Oracle Home<a id="sthref292" name="sthref292"></a>
+</h3>
+<p>You cannot install Oracle Application Server in a directory that already contains some files, except for the cases mentioned in <a href="#BHCGAFBG">Section 3.1.2, "Installing in an Existing Oracle Home"</a>. For example, if you cancel an installation, or if an installation failed, you have to clean up the directory before you can reinstall Oracle Application Server in it. Also, the installer cannot "repair" an installation.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDBIDDF" name="CHDBIDDF"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref293" name="sthref293"></a>
+<h2 class="sect1"><span class="secnum">3.2 </span>First-Time Installation of Any Oracle Product<a id="sthref294" name="sthref294"></a>
+</h2>
+<p><a id="sthref295" name="sthref295"></a><a id="sthref296" name="sthref296"></a>If Oracle Application Server is the first Oracle product to be installed on a computer, the installer displays a screen where you specify an "inventory" directory (also called the "oraInventory" directory). This inventory directory is used by the installer to keep track of all Oracle products installed on the computer.
+</p>
+<p>The inventory directory is separate from the Oracle home directory for Oracle Application Server.
+</p>
+<p><a id="sthref297" name="sthref297"></a>To ensure other users in the <code>oinstall</code> group have access to the inventory directory (so that they can install Oracle products), do not use the <code>oracle</code> user&#039;s home directory as the inventory directory because home directories might not have the proper permissions set up for the <code>oinstall</code> group. Instead, you can put the inventory directory in the <code>/opt/oracle</code> directory (for example, <code>/opt/oracle/oraInventory</code>).
+</p>
+<p>If you have installed an Oracle product previously on the computer, the installer uses the existing inventory directory. Ensure that you have write permissions on that directory. The best way of ensuring this is to run the installer as the same operating system user who installed the existing Oracle products.
+</p>
+<p>Oracle recommends creating an operating system user to perform all tasks related to installation of Oracle products. See <a href="reqs.htm#CHDEBHIE">Section 2.7, "Operating System User"</a>.
+</p>
+</div><!-- class="sect1" -->
+<a id="CHDHGHJH" name="CHDHGHJH"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref298" name="sthref298"></a>
+<h2 class="sect1"><span class="secnum">3.3 </span>Installing Additional Languages<a id="sthref299" name="sthref299"></a><a id="sthref300" name="sthref300"></a><a id="sthref301" name="sthref301"></a>
+</h2>
+<p>By default, the installer installs Oracle Application Server with text in English and in the operating system language. If you need additional languages, click <a id="sthref302" name="sthref302"></a>the <span class="bold">Product Languages</span> button in the "Select Installation Type" screen.
+</p>
+<p>When you select additional languages to install, the installer installs text in the selected languages. It also installs fonts required to display the languages.
+</p>
+<p>For some components, languages are installed only if you select them during installation. In this case, if you access the application in a language that is not available, it will fall back on the server locale language.
+</p>
+<p>For other components, available languages are installed regardless of what you select during installation. In this case, however, fonts are installed only for the languages that are explicitly selected. When you access the application, it uses text in your language because the language was installed. However, if you do not have the appropriate fonts to render the text, the text appears as square boxes. This usually applies to the Chinese, Japanese, and Korean languages.
+</p>
+<p>You can install fonts after installation. See <a href="ts.htm#BABICDJH">Section E.3.6, "User Interface Does Not Display in the Desired Language, or Does Not Display Properly"</a>.
+</p>
+<p><span class="bold">Note that you cannot install additional languages after installation. </span>You must install all languages that you need during installation. If you run Oracle Application Server in an environment that uses a language that you did not install, the user interface can display text in that language and/or in English, or it can display square boxes (caused by missing fonts) instead of text.
+</p>
+</div><!-- class="sect1" -->
+<a id="CHDDGCGA" name="CHDDGCGA"></a>
+<div class="sect1">
+<a id="sthref303" name="sthref303"></a>
+<h2 class="sect1"><span class="secnum">3.4 </span>Oracle Application Server Instances and Instance Names<a id="sthref304" name="sthref304"></a>
+</h2>
+<p>When you install the middle tier, what you get is an Oracle Application Server instance. The installer prompts you to provide a name for the Oracle Application Server instance you are installing. For example, you can name an instance "J2EE". This name can be different from the Oracle home name.
+</p>
+<p>You cannot change this name after installation.
+</p>
+<p>Oracle Application Server appends the hostname and domain name to the given instance name to form a complete instance name. For example, if you are installing an instance on a computer named <code>c1</code>, and you name the instance <code>Oc4j1</code>, then the full name of the instance is <code>Oc4j1.c1.mydomain.com</code>, assuming the domain name is <code>mydomain.com</code>.
+</p><a id="sthref305" name="sthref305"></a>
+<p class="subhead2">Valid Characters in Instance Names<a id="sthref306" name="sthref306"></a></p>
+<p>Instance names can consist only of the alphanumeric characters (<code>A</code>-<code>Z</code>, <code>a</code>-<code>z</code>, <code>0</code>-<code>9</code>) and the <code>&#095;</code> (underscore) character.
+</p>
+<p>There is no maximum length restriction for instance names.
+</p><a id="sthref307" name="sthref307"></a>
+<p class="subhead2">Restrictions on Oracle Application Server Instance Names<a id="sthref308" name="sthref308"></a></p>
+<p>Do not use the hostname of the computer when naming Oracle Application Server instances.
+</p>
+<p>If you are planning to place the Oracle Application Server instance in an OracleAS Cluster, the instance name must not contain the following:
+</p>
+<ul>
+<li type="disc">
+<p>hostname or IP address of any computer in the OracleAS Cluster
+</p>
+</li>
+<li type="disc">
+<p>Oracle home of any Oracle Application Server installation in the OracleAS Cluster
+</p>
+</li>
+</ul><a id="sthref309" name="sthref309"></a>
+<p class="subhead2">How Oracle Application Server Uses Instance Names<a id="sthref310" name="sthref310"></a></p>
+<p>Instance names are important because Oracle Application Server uses them to uniquely identify instances. This means that if you install multiple Oracle Application Server instances on the same computer, you must give them different names.
+</p>
+<p>When you administer Oracle Application Server using Oracle Enterprise Manager 10<span class="italic">g</span> Application Server Control (or Application Server Control for short), the instance name appears on the screens. You can click the instance name to see details about the instance, such as the components that are installed in that instance, if the components are running or stopped, and the log files for the components. The Application Server Control is a browser-based administration tool for Oracle Application Server. See the <span class="italic">Oracle Application Server Administrator's Guide</span> for details about this administration tool.
+</p>
+</div><!-- class="sect1" -->
+<a id="CHDJCIJH" name="CHDJCIJH"></a>
+<div class="sect1">
+<a id="sthref311" name="sthref311"></a>
+<h2 class="sect1"><span class="secnum">3.5 </span><a name="ASINS117|oc4jadmin user and restrictions on its password"></a>The oc4jadmin User and Restrictions on its <a id="sthref312" name="sthref312"></a><a id="sthref313" name="sthref313"></a><a id="sthref314" name="sthref314"></a>Password
+</h2>
+<p>If you select one of the following installation types, the installer prompts you to specify the password for the <code>oc4jadmin</code> user:
+</p>
+<ul>
+<li type="disc">
+<p>Basic Installation
+</p>
+</li>
+<li type="disc">
+<p>Advanced Installation: J2EE Server and Process Management
+</p>
+</li>
+<li type="disc">
+<p>Advanced Installation: Integrated Web Server, J2EE Server and Process Management
+</p>
+</li>
+</ul>
+<p>The <code>oc4jadmin</code> user is the administrative user for Oracle Application Server instances. To manage Oracle Application Server instances using Application Server Control, you log in as <code>oc4jadmin</code>.
+</p>
+<p>On a computer, you can install multiple Oracle Application Server instances, each with its own unique instance name, but the name of the administrative user is <code>oc4jadmin</code> for all instances. The password for the <code>oc4jadmin</code> user can be different for each instance.
+</p><a id="sthref315" name="sthref315"></a>
+<p class="subhead2">Password for the oc4jadmin User</p>
+<p>The password for the <code>oc4jadmin</code> user has these restrictions:
+</p>
+<ul>
+<li type="disc">
+<p>The minimum length is 5 characters.
+</p>
+</li>
+<li type="disc">
+<p>The maximum length is 30 characters.
+</p>
+</li>
+<li type="disc">
+<p>At least one of the characters must be a number.
+</p>
+</li>
+<li type="disc">
+<p>Passwords can contain only alphanumeric characters from your database character set, the underscore (<code>&#095;</code>), the dollar sign (<code>&#036;</code>), and the number sign (<code>&#035;</code>).
+</p>
+</li>
+<li type="disc">
+<p>Passwords must begin with an alphabetic character. Passwords cannot begin with a number, the underscore (<code>&#095;</code>), the dollar sign (<code>&#036;</code>), or the number sign (<code>&#035;</code>).
+</p>
+</li>
+<li type="disc">
+<p>Passwords cannot be Oracle reserved words. The <span class="italic">Oracle Database SQL Reference</span> lists the reserved words. You can find this guide on Oracle Technology Network (<code><a href="http://www.oracle.com/technology/documentation">http://www.oracle.com/technology/documentation</a></code>). Or you can just avoid using words that sound like they might be reserved words.
+</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>When entering your password, check that the state of the Caps Lock key is what you want it to be. Passwords are case-sensitive.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>You must remember the password because you need to enter it to perform the following task:
+</p>
+<ul>
+<li type="disc">
+<p>When you log on to Application Server Control to manage Oracle Application Server, you log on as the <code>oc4jadmin</code> user.
+</p>
+</li>
+</ul>
+<p>If you forget the password, you can reset it. See the <span class="italic">Oracle Application Server Administrator's Guide</span> for details.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>If you intend to register your installation with Oracle Internet Directory after you finish installing, the password for the <code>oc4jadmin</code> user must conform to Oracle Internet Directory&#039;s password policy. Check with your Oracle Internet Directory administrator to verify the password policy. 
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>
+</p>
+</div><!-- class="sect1" -->
+<a id="CHDDAEHG" name="CHDDAEHG"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref316" name="sthref316"></a>
+<h2 class="sect1"><span class="secnum">3.6 </span>Where Does the Installer Write Files?<a id="sthref317" name="sthref317"></a>
+</h2>
+<p>The installer writes files to the following directories:
+</p>
+<div class="tblhruleformal">
+<a id="sthref318" name="sthref318"></a><a id="sthref319" name="sthref319"></a>
+<p class="titleintable">Table 3-1 Directories Where the Installer Writes Files</p>
+<table class="HRuleFormal" title="Directories Where the Installer Writes Files" summary="Directories Where the Installer Writes Files" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5">Directory
+</th>
+<th align="left" valign="bottom" id="r1c2-t5">Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p>Oracle home directory
+</p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>This directory contains Oracle Application Server files. You specify this directory when you install Oracle Application Server.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p>Inventory directory<a id="sthref320" name="sthref320"></a>
+</p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>When you install the first Oracle product on a computer, you specify this directory, which the installer uses to keep track of which Oracle products are installed on the computer. In subsequent installations, the installer uses the same inventory directory.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
+<p><code>/var/opt/oracle</code> directory<a id="sthref321" name="sthref321"></a>
+</p>
+</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">
+<p>This directory contains information on locations of Oracle homes on the computer.
+</p>
+<p>If you installed Oracle9<span class="italic">i</span>AS Release 2 (9.0.2) on your computer, this directory also contains files that provide information for Oracle Enterprise Manager 10<span class="italic">g</span>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t5" headers="r1c1-t5">
+<p><code>/tmp</code> directory<a id="sthref322" name="sthref322"></a>
+</p>
+</td>
+<td align="left" headers="r5c1-t5 r1c2-t5">
+<p>The installer writes files needed only during installation to a "temporary" directory. By default, the "temporary" directory is <code>/tmp</code>. To specify a different directory, set the TMP and TMPDIR environment variables. See <a href="reqs.htm#BABBFAJD">Section 2.8.6, "TMP and TMPDIR"</a> for details.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformal" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDEIHGA" name="CHDEIHGA"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref323" name="sthref323"></a>
+<h2 class="sect1"><span class="secnum">3.7 </span>Why Do I Need to be Able to Log In as Root at Certain Times During Installation?<a id="sthref324" name="sthref324"></a>
+</h2>
+<p>At least once during installation, the installer prompts you to log in as the root user and run a script. You need to be root because the script edits files in the <code>/var/opt/oracle</code> directory.
+</p>
+</div><!-- class="sect1" -->
+<a id="CHDGDICJ" name="CHDGDICJ"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref325" name="sthref325"></a>
+<h2 class="sect1"><span class="secnum">3.8 </span>Running root.sh During Installation<a id="sthref326" name="sthref326"></a>
+</h2>
+<p>The installer prompts you to run the <code>root.sh</code> script in a separate window. This script creates files in the local bin directory (<code>/usr/local/bin</code>, by default).
+</p>
+<p>If the script finds files of the same name, it prompts you if you want to override the existing files. You should back up these files (you can do this from another window), then overwrite them.
+</p>
+<p>The following lines show the prompts from the <code>root.sh</code> script. The default values are enclosed in square brackets.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Enter the full pathname of the local bin directory: &#091;/usr/local/bin&#093;:
+The file "dbhome" already exists in /usr/local/bin.  Overwrite it? (y/n)&#091;n&#093;:  <span class="bold">y</span>
+ Copying dbhome to /usr/local/bin ...
+The file "oraenv" already exists in /usr/local/bin.  Overwrite it? (y/n)&#091;n&#093;:  <span class="bold">y</span>
+ Copying oraenv to /usr/local/bin ...
+The file "coraenv" already exists in /usr/local/bin.  Overwrite it? (y/n)&#091;n&#093;: <span class="bold">y</span>
+ Copying coraenv to /usr/local/bin ...
+
+</pre>
+</div><!-- class="sect1" -->
+<a id="CHDCIEBA" name="CHDCIEBA"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref327" name="sthref327"></a>
+<h2 class="sect1"><span class="secnum">3.9 </span>Obtaining Software from Oracle E-Delivery<a id="sthref328" name="sthref328"></a>
+</h2>
+<p>You can obtain Oracle products from Oracle E-Delivery at <code><a href="http://edelivery.oracle.com/">http://edelivery.oracle.com/</a></code>. Oracle products are distributed as "E-Packs". An E-Pack is an electronic version of the software that is also available to Oracle Customers on CD-ROM or DVD-ROM.
+</p>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref329" name="sthref329"></a>
+<h3 class="sect2"><span class="secnum">3.9.1 </span>Finding and Downloading the Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) E-Pack
+</h3>
+<p>Refer to the CD/Media Pack description or the list of products that you purchased on your Oracle Ordering Document. Then, view the License List to help you decide which Product Pack you need to select in order to search for the appropriate E-Pack(s) to download. Prior to downloading, verify that the product you are looking for is in the License and Options section of the E-Pack README. Oracle recommends that you print the README for reference.
+</p>
+</div><!-- class="sect2" -->
+
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref330" name="sthref330"></a>
+<h3 class="sect2"><span class="secnum">3.9.2 </span>Finding Required and Optional Downloads
+</h3>
+<p>Refer to the README link that is on each E-Pack Download page. In addition to listing the licensable products and options contained in the pack, the README lists downloadable files that are required to run each product and which downloadable files are optional. Oracle recommends that you print the README for reference.
+</p>
+</div><!-- class="sect2" -->
+
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref331" name="sthref331"></a>
+<h3 class="sect2"><span class="secnum">3.9.3 </span>Disk Space Requirements
+</h3>
+<p>In addition to having the required disk space necessary to install and run your Oracle software, you'll need to have sufficient disk space to download all the required software files and have enough disk space to extract them.
+</p>
+<p>After extracting the software from the Zip files, you can burn them onto CD-ROM and install from them, or install from your computer's hard drive. 
+</p>
+</div><!-- class="sect2" -->
+
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref332" name="sthref332"></a>
+<h3 class="sect2"><span class="secnum">3.9.4 </span>Software Requirements for Unzipping Files
+</h3>
+<p>All Oracle E-Delivery files have been archived using Info-ZIP's highly portable Zip utility. After downloading one or more of the archives, you will need the UnZip utility to extract the files.You must unzip the archive on the platform for which it was intended. For example, if you download the file for the Solaris Operating System (SPARC) version of Oracle Application Server, you must unzip the file on a Solaris Operating System (SPARC) computer. If you unzip the file on a Windows computer, and then move the stage area to a Solaris Operating System (SPARC) machine, the stage area files will be corrupted because Windows will not preserve the case sensitivity or the permission bits of UNIX file names.
+</p>
+</div><!-- class="sect2" -->
+
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref333" name="sthref333"></a>
+<h3 class="sect2"><span class="secnum">3.9.5 </span>Extracting Software from the Zip Files
+</h3>
+<p>Verify that the file size of your downloaded file matches the file size displayed on E-Delivery. Unzip each Zip file to its own temporary directory. For example, create a directory structure called oraAS10g on your hard drive:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><code>c:&#092;oraAS10g</code>
+
+</pre>
+<p>Then create a new directory for each Zip file you downloaded:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><code>c:&#092;oraAS10g&#092;Disk1</code>
+<code>c:&#092;oraAS10g&#092;Disk2</code>
+
+</pre>
+<p>etc.
+</p>
+<p>If you plan burn the files on a CD-ROM, create a separate CD-ROM from the contents of each directory. Do not burn a CD-ROM containing the Zip file itself; you need the unzipped contents of the Zip files to do the installation. When you burn the files to CD-ROM, the contents of each disc must be at the root of the CD image.
+</p>
+<p>To install from CD-ROM or from your hard drive, see <a href="#BABEIGGD">Section 3.11, "Starting theOracle Universal Installer"</a>. 
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BHCDIFJH" name="BHCDIFJH"></a>
+<div class="sect1">
+<a id="sthref334" name="sthref334"></a>
+<h2 class="sect1"><span class="secnum">3.10 </span><a name="ASINS104|setting the mount point for the cdrom"></a>Setting the Mount Point for the CD-ROM<a id="sthref335" name="sthref335"></a><a id="sthref336" name="sthref336"></a><a id="sthref337" name="sthref337"></a><a id="sthref338" name="sthref338"></a> or DVD-ROM
+</h2>
+<p><a id="sthref339" name="sthref339"></a><a id="sthref340" name="sthref340"></a>The Oracle Application Server CD-ROMs are in RockRidge format. The DVD-ROM is in DVD-ROM format.
+</p>
+<p>On most Linux systems, the disk mounts automatically when you insert it into the disk drive. To mount the first disk, follow these steps:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Insert Oracle Application Server disk 1 into the disk drive.
+</p>
+</li>
+<li><a id="BHCJDJGE" name="BHCJDJGE"></a>
+<p>To verify that the disk mounted automatically, run the following command:
+</p>
+<ul>
+<li type="disc">
+<p>Red Hat:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">ls /mnt/cdrom</span>
+
+</pre>
+</li>
+<li type="disc">
+<p>SUSE Linux Enterprise Server:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">ls /media/cdrom</span>
+
+</pre>
+</li>
+</ul>
+</li>
+<li>
+<p>If the command in step <a href="#BHCJDJGE">2</a> fails to display the contents of the disk, run the following command:
+</p>
+<ul>
+<li type="disc">
+<p>Red Hat:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">mount -t iso9660 /dev/cdrom /mnt/cdrom</span>
+
+</pre>
+</li>
+<li type="disc">
+<p>SUSE Linux Enterprise Server:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">mount -t iso9660 /dev/cdrom /media/cdrom</span>
+
+</pre>
+</li>
+</ul>
+</li>
+</ol>
+</div><!-- class="sect1" -->
+<a id="BABEIGGD" name="BABEIGGD"></a>
+<div class="sect1">
+<a id="sthref341" name="sthref341"></a>
+<h2 class="sect1"><span class="secnum">3.11 </span><a name="ASINS121|starting the Oracle Universal Installer"></a>Starting <a id="sthref342" name="sthref342"></a><a id="sthref343" name="sthref343"></a>the Oracle Universal Installer
+</h2>
+<ol type="1" start="1">
+<li>
+<p>If your computer does not mount CD-ROMs or DVDs automatically, you need to set the mount point manually. See <a href="#BHCDIFJH">Section 3.10, "Setting the Mount Point for the CD-ROMor DVD-ROM"</a> for details.
+</p>
+</li>
+<li>
+<p>Log in as the <code>oracle</code> user.
+</p>
+</li>
+<li>
+<p>CD-ROM users: Insert Oracle Application Server Disk 1 into the CD-ROM drive.
+</p>
+<p>DVD-ROM users: Insert the Oracle Application Server DVD-ROM into the DVD-ROM drive.
+</p>
+</li>
+<li>
+<p>Run the Oracle Universal Installer using the command shown after the notes:
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Notes:</p>
+<ul>
+<li type="disc">
+<p>Be sure you are not logged in as the root user when you start the Oracle Universal Installer. The installer gives an error message if you try to run it as the root user.
+</p>
+</li>
+<li type="disc">
+<p>Do not start the installation inside the mount&#095;point directory. If you do, then you may not be able to eject the installation disk. The <code>cd</code> command below changes your current directory to your home directory.
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p><a id="sthref344" name="sthref344"></a>CD-ROM:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">cd</span>
+prompt> <span class="bolditalic">mount&#095;point</span><span class="bold">/runInstaller</span>
+
+</pre>
+<p><a id="sthref345" name="sthref345"></a>DVD-ROM:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">cd</span>
+prompt> <span class="bolditalic">mount&#095;point</span><span class="bold">/application&#095;server/runInstaller</span>
+
+</pre>
+</li>
+</ol>
+<p>This launches Oracle Universal Installer, through which you install Oracle Application Server.
+</p>
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="reqs.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="basic_install.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

@@ -1,0 +1,2521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 24, 2006 11:30:33 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5 Build 274" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Oracle Application Server Containers for J2EE </title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="ohs.htm" title="Previous" />
+<link rel="next" href="portal.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Release Notes </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25216-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="ohs.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="portal.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="sthref43" name="sthref43"></a>
+<h1 class="chapter"><span class="secnum">5 </span> Oracle Application Server Containers for J2EE </h1>
+<p>This chapter discusses release notes for Oracle Containers for J2EE (OC4J) for 10.1.3. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABEDBEF">Section 5.1, "Configuration, Deployment, and Administration"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABHIFHH">Section 5.2, "Release Notes for Servlets"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABFEFFC">Section 5.3, "Release Notes for EJB"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDGIHEA">Section 5.4, "Release Notes for Web Services"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDCIGBG">Section 5.5, "Release Notes for Web Services Security"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABEBBBG">Section 5.6, "Release Notes for OC4J Services"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABGBEGH">Section 5.7, "Release Notes for J2EE Connector Architecture (J2CA)"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CCHIAHDE">Section 5.8, "Release Notes for OracleAS JAAS Provider and Security"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABGABJJ">Section 5.9, "Release Notes for Documentation Errata"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BGBGJBAD">Section 5.10, "Oracle Application Server Containers for J2EE Job Scheduler"</a>
+</p>
+</li>
+</ul>
+<p>You can access Oracle manuals mentioned in this document at the following URL:
+</p>
+<p><code><a href="http://www.oracle.com/technology/index.html">http://www.oracle.com/technology/index.html</a></code> 
+</p><a id="BABEDBEF" name="BABEDBEF"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref44" name="sthref44"></a>
+<h2 class="sect1"><span class="secnum">5.1 </span>Configuration, Deployment, and Administration 
+</h2>
+<p>This section describes configuration, deployment, and administration issues for Oracle Application Server Containers for J2EE (OC4J). This section covers the following topic(s): 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABGHJHC">Section 5.1.1, "Deprecated Environment Variables dedicated.connection, dedicated.rmicontext, and LoadBalanceOnLookup"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABEIGIE">Section 5.1.2, "Deprecated Environment Variable ejb.batch.compile"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDDBIDD">Section 5.1.3, "Deprecated orion-ejb-jar.xml Attributes"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDGHIIG">Section 5.1.4, "Web-Site-Related Options No Longer Available"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABCAIAD">Section 5.1.5, "Unsupported Methods in JMX MBeanServer and MBeanServerConnection Interfaces"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BADICHGD">Section 5.1.6, "Upgrade to Latest J2SE Release"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABECBJC">Section 5.1.7, "Workaround for ORA-604/ORA-12705 Error Using a Not-Fully Supported Locale"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BACFGEEJ">Section 5.1.8, "Upgrading data-sources.xml to 10.1.3"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BACEIFIF">Section 5.1.9, "Incompatibility When Moving Between JDK 1.5 and 1.4"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BACGGBIE">Section 5.1.10, "Configuring a Machine to Work With and Without a Network Connection"</a>
+</p>
+</li>
+</ul>
+<p>For information on configuring OC4J, see the Configuration Guide for OC4J at: 
+</p>
+<p><code><a href="http://www.oracle.com/technology/index.html ">http://www.oracle.com/technology/index.html </a></code>
+</p><a id="BABGHJHC" name="BABGHJHC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref45" name="sthref45"></a>
+<h3 class="sect2"><span class="secnum">5.1.1 </span>Deprecated Environment Variables dedicated.connection, dedicated.rmicontext, and LoadBalanceOnLookup
+</h3>
+<p>Environment variables <code>dedicated.connection</code>, <code>dedicated.rmicontext</code>, and <code>LoadBalanceOnLookup</code> are deprecated.
+</p>
+<p>To configure replication-based load balancing, use environment variable <code>oracle.j2ee.rmi.loadBalance</code> with the settings that <a href="#BABFFBGG">Table 5-1</a> lists.
+</p>
+<div class="tblruleformal">
+<a id="sthref46" name="sthref46"></a><a id="BABFFBGG" name="BABFFBGG"></a>
+<p class="titleintable">Table 5-1 Settings for Environment Variable oracle.j2ee.rmi.loadBalance</p>
+<table class="RuleFormal" title="Settings for Environment Variable oracle.j2ee.rmi.loadBalance" summary="This table lists the settings that the oracle.j2ee.rmi.loadBalance environment variable supports." dir="ltr" border="1" width="100%" frame="border" rules="all" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2">Setting
+</th>
+<th align="left" valign="bottom" id="r1c2-t2">Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p><code>client</code>
+</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p>The client interacts with the OC4J process that was initially chosen at the first lookup for the entire conversation (Default)
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p><code>context</code>
+</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p>The client goes to a new server when a separate context is used (similar to deprecated <code>dedicated.rmicontext</code>).
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t2" headers="r1c1-t2">
+<p><code>lookup</code>
+</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c2-t2">
+<p>The client goes to a new server for every lookup.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblruleformal" -->
+
+</div><!-- class="sect2" -->
+<a id="BABEIGIE" name="BABEIGIE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref47" name="sthref47"></a>
+<h3 class="sect2"><span class="secnum">5.1.2 </span>Deprecated Environment Variable ejb.batch.compile
+</h3>
+<p>Environment variable <code>ejb.batch.compile</code> is deprecated.
+</p>
+<p>To enable or disable batch compilation, use the <code>orion-application.xml</code> file <code>&lt;orion-application></code> element <code>batch-compile</code> attribute.
+</p>
+</div><!-- class="sect2" -->
+<a id="CHDDBIDD" name="CHDDBIDD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref48" name="sthref48"></a>
+<h3 class="sect2"><span class="secnum">5.1.3 </span>Deprecated orion-ejb-jar.xml Attributes 
+</h3>
+<p>The following <code>orion-ejb-jar.xml</code> file attributes are deprecated:
+</p>
+<ul>
+<li type="disc">
+<p><code>max-instances-per-pk</code>
+</p>
+</li>
+<li type="disc">
+<p><code>min-instances-per-pk</code>
+</p>
+</li>
+<li type="disc">
+<p><code>disable-wrapper-cache</code>
+</p>
+</li>
+<li type="disc">
+<p><code>instance-cache-timeout</code>
+</p>
+</li>
+<li type="disc">
+<p><code>locking-mode&#061;"old&#095;pessimistic"</code>
+</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Do not use these attributes in this release. Doing so will lead to deployment failure.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="CHDGHIIG" name="CHDGHIIG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref49" name="sthref49"></a>
+<h3 class="sect2"><span class="secnum">5.1.4 </span>Web-Site-Related Options No Longer Available 
+</h3>
+<p>The OC4J web-site-related options (accessible with the <code>-site</code> command) that were provided in the <code>admin.jar</code> utility in previous releases are no longer available. 
+</p>
+<p>For information on how to create and manage OC4J web site configurations see the"Managing Web Sites in OC4J" chapter in the <span class="italic"><! a href="../../web.1013/b14432/toc.htm">Oracle Containers for J2EE Configuration and Administration Guide</a> </span>. 
+</p>
+</div><!-- class="sect2" -->
+<a id="BABCAIAD" name="BABCAIAD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref50" name="sthref50"></a>
+<h3 class="sect2"><span class="secnum">5.1.5 </span>Unsupported Methods in JMX MBeanServer and MBeanServerConnection Interfaces
+</h3>
+<p>A number of methods from the JMX <code>MBeanServer</code> interface are not available to J2EE applications when they use the <code>MBeanServer</code> object obtained from the following operation:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">MBeanServer mbsrv &#061; MBeanServerFactory.newMBeanServer();
+
+</pre>
+<p>The use of any of the following methods on the returned <code>MBeanServer</code> object will throw an <code>UnsupportedOperationException</code> exception:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">public final ClassLoader getClassLoaderFor(ObjectName <span class="italic">mbeanName</span>)
+
+public final ClassLoader getClassLoader(ObjectName <span class="italic">loaderName</span>)
+
+public final ClassLoaderRepository getClassLoaderRepository()
+
+public final Object instantiate(String <span class="italic">className</span>)
+
+public final Object instantiate(String <span class="italic">className</span>, ObjectName <span class="italic">loaderName</span>)
+
+public final Object instantiate(String <span class="italic">className</span>, Object&#091;&#093; <span class="italic">params</span>, String&#091;&#093; <span class="italic">signature</span>)
+
+public final Object instantiate(String <span class="italic">className</span>, ObjectName <span class="italic">loaderName</span>, Object&#091;&#093; <span class="italic">params</span>, String&#091;&#093; <span class="italic">signature</span>)
+
+public final ObjectInstance createMBean(String <span class="italic">className</span>, ObjectName <span class="italic">name</span>)
+
+public final ObjectInstance createMBean(String <span class="italic">className</span>, ObjectName <span class="italic">name</span>, ObjectName <span class="italic">loaderName</span>)
+
+public final ObjectInstance createMBean(String <span class="italic">className</span>, ObjectName <span class="italic">name</span>, Object&#091;&#093; <span class="italic">params</span>, String&#091;&#093; <span class="italic">signature</span>)
+
+public final ObjectInstance createMBean(String <span class="italic">className</span>, ObjectName <span class="italic">name</span>, ObjectName <span class="italic">loader</span>, Object&#091;&#093; <span class="italic">params</span>, String&#091;&#093; <span class="italic">signature</span>)
+
+public final ObjectInputStream deserialize(ObjectName <span class="italic">name</span>, byte&#091;&#093; <span class="italic">data</span>)
+
+public final ObjectInputStream deserialize(String <span class="italic">className</span>, byte&#091;&#093; <span class="italic">data</span>)
+
+public final ObjectInputStream deserialize(String <span class="italic">className</span>, ObjectName <span class="italic">loaderName</span>, byte&#091;&#093; <span class="italic">data</span>)
+
+</pre>
+<p>A number of methods from the <code>MBeanServerConnection</code> interface are not supported when an application uses the Oracle JMX connectors. The use of any of the following methods on the <code>MBeanServerConnection</code> object that is created will throw an <code>UnsupportedOperationException</code> exception:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">public final ObjectInstance createMBean(String <span class="italic">className</span>, ObjectName <span class="italic">name</span>)
+
+public final ObjectInstance createMBean(String <span class="italic">className</span>, ObjectName <span class="italic">name</span>, ObjectName <span class="italic">loaderName</span>)
+
+public final ObjectInstance createMBean(String <span class="italic">className</span>, ObjectName <span class="italic">name</span>, Object&#091;&#093; <span class="italic">params</span>, String&#091;&#093; <span class="italic">signature</span>)
+
+public final ObjectInstance createMBean(String <span class="italic">className</span>, ObjectName <span class="italic">name</span>, ObjectName <span class="italic">loader</span>, Object&#091;&#093; <span class="italic">params</span>, String&#091;&#093; <span class="italic">signature</span>)
+
+</pre>
+</div><!-- class="sect2" -->
+<a id="BADICHGD" name="BADICHGD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref51" name="sthref51"></a>
+<h3 class="sect2"><span class="secnum">5.1.6 </span>Upgrade to Latest J2SE Release
+</h3>
+<p>Currently Oracle Application Server 10.1.3.0.0 is certified with JDK 1.4.2&#095;09 and JDK 1.5.0&#095;05 and JDK 1.5.0&#095;06. The product installs with JDK 1.5.0&#095;05 by default.
+</p>
+<p>In general, J2SE releases are number <span class="italic">a.b.c&#095;d</span>, where "<span class="italic">a.b.c</span>" is the major release number, as in 1.4.2 or 1.5.0, and "<span class="italic">d</span>" is the minor release number, as in "05" or "06". As a general practice, Oracle recommends that customers upgrade to the latest minor release number of J2SE to ensure that they benefit from any bugs resolved in those specific J2SE upgrades. Oracle explicitly restates the certification matrix for major release numbers of J2SE.
+</p>
+<p>Currently there is a known J2SE bug in J2SE 1.5.0&#095;05 and J2SE 1.5.0&#095;06 that manifests itself in an out-of-memory error in long-running stress tests involving <code>BigDecimals</code> numeric types. This bug is tracked by Sun at:
+</p>
+<br /><code><a href="http://bugs.sun.com/bugdatabase/view&#095;bug.do?bug&#095;id&#061;6360541">http://bugs.sun.com/bugdatabase/view&#095;bug.do?bug&#095;id&#061;6360541</a></code>
+<br /><code><a href="http://bugs.sun.com/bugdatabase/view&#095;bug.do?bug&#095;id&#061;6372116">http://bugs.sun.com/bugdatabase/view&#095;bug.do?bug&#095;id&#061;6372116</a></code>
+<br />
+<p>The workaround for this bug is to upgrade to J2SE 1.5.0&#095;06 and set the JVM startup parameters for the impacted Oracle Containers for J2EE instance with this additional parameter:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">-XX:CompileCommand&#061;exclude,oracle/jdbc/driver/NumberCommonaccessor.getBigdecim
+
+</pre>
+<p>Information on configuring the J2SE runtime in Oracle Application Server can be found in the <span class="italic">Oracle Containers for J2EE Configuration and Administration Guide</span> at:
+</p>
+<br /><code><a href="http://www.oracle.com/technology/index.html">http://www.oracle.com/technology/index.html</a></code> 
+</div><!-- class="sect2" -->
+<a id="BABECBJC" name="BABECBJC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref52" name="sthref52"></a>
+<h3 class="sect2"><span class="secnum">5.1.7 </span>Workaround for ORA-604/ORA-12705 Error Using a Not-Fully Supported Locale 
+</h3>
+<p>When you try to get a connection on a Locale that is not supported in JDBC, JDBC throws a SQLException. - Bug 4704421 
+</p>
+<p>Use the following to verify runtime Java's locale: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">System.out.println(Locale.getDefault().toString()) 
+
+</pre>
+<p>Unsupported Locales include any Locale that is NOT listed in the "Fully Supported Locales" table in on the Java 5.0 Java Supported Locales page at the following URL: <code><a href="http://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html">http://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html</a></code> 
+</p>
+<p>For example, Locales that are "Provided but not Tested" include the following: 
+</p>
+<ul>
+<li type="disc">
+<p>ab&#095;CD
+</p>
+</li>
+<li type="disc">
+<p>fr&#095;FR&#095;EURO
+</p>
+</li>
+<li type="disc">
+<p>it&#095;IT&#095;EURO
+</p>
+</li>
+<li type="disc">
+<p>th&#095;TH&#095;TH, Thai (Thailand,TH) 
+</p>
+</li>
+<li type="disc">
+<p>be, Belarusian 
+</p>
+</li>
+<li type="disc">
+<p>be&#095;BY, Belarusian (Belarus) 
+</p>
+</li>
+<li type="disc">
+<p>es&#095;AR, Spanish (Argentina) 
+</p>
+</li>
+<li type="disc">
+<p>es&#095;BO, Spanish (Bolivia) 
+</p>
+</li>
+<li type="disc">
+<p>es&#095;DO, Spanish (Dominican Republic) 
+</p>
+</li>
+<li type="disc">
+<p>es&#095;EC, Spanish (Ecuador) 
+</p>
+</li>
+<li type="disc">
+<p>es&#095;HN, Spanish (Honduras) 
+</p>
+</li>
+<li type="disc">
+<p>es&#095;PY, Spanish (Paraguay) 
+</p>
+</li>
+<li type="disc">
+<p>es&#095;UY, Spanish (Uruguay) 
+</p>
+</li>
+<li type="disc">
+<p>mk, Macedonian 
+</p>
+</li>
+<li type="disc">
+<p>mk&#095;MK, Macedonian (Macedonia) 
+</p>
+</li>
+<li type="disc">
+<p>no&#095;NO&#095;NY, Norwegian (Norway,Nynorsk) 
+</p>
+</li>
+<li type="disc">
+<p>sq, Albanian 
+</p>
+</li>
+<li type="disc">
+<p>sq&#095;AL, Albanian (Albania) 
+</p>
+</li>
+</ul>
+<p>The workaround for this problem is to update your default Locale setting of Java. You can do any of the following: 
+</p>
+<ul>
+<li type="disc">
+<p>Change default Locale from the unsupported <code>es&#095;AR</code>, to the fully supported <code>es</code> (Spanish):
+</p>
+<pre xml:space="preserve" class="oac_no_warn"> Locale.setDefault(new Locale("es")); 
+
+</pre>
+</li>
+<li type="disc">
+<p>When Locale has variant code such as <code>fr&#095;FR&#095;EURO</code>, remove variant code (EURO) and set default: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Locale.setDefault(new Locale("fr", "FR")); 
+
+</pre>
+</li>
+<li type="disc">
+<p>Set English as the default Locale: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Locale.setDefault(Locale.ENGLISH); 
+
+</pre>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="BACFGEEJ" name="BACFGEEJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref53" name="sthref53"></a>
+<h3 class="sect2"><span class="secnum">5.1.8 </span>Upgrading data-sources.xml to 10.1.3 
+</h3>
+<p>For pointers about data source JNDI location conversion from 10.1.2 to 10.1.3, see the release note at <a href="#BACCHHFI">Section 5.6.3.3, "Data Source JNDI Location Conversion"</a>. 
+</p>
+</div><!-- class="sect2" -->
+<a id="BACEIFIF" name="BACEIFIF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref54" name="sthref54"></a>
+<h3 class="sect2"><span class="secnum">5.1.9 </span>Incompatibility When Moving Between JDK 1.5 and 1.4 
+</h3>
+<p>When you deploy an application (including the OC4J default application) to OC4J running JDK 1.5 (Java 5), you cannot re-use that deployment on OC4J running JDK 1.4.
+</p>
+<p>Code compiled with JDK 1.5 (Java 5) cannot be read by the JDK 1.4 VM. When OC4J is running under JDK 1.4 and tries to load a class which was compiled with JDK 1.5, a class loading exception will be thrown with the following message:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Unsupported major.minor version 49.0
+
+</pre>
+<p>This can occur in scenarios such as:
+</p>
+<ul>
+<li type="disc">
+<p>You deploy an application that contains EJBs to OC4J running under JDK 1.5, then, without undeploying the application, you restart OC4J under JDK 1.4. The problem is that the generated code associated with the EJBs will have been compiled with the same JDK version that was used to start the server and that the generated code is cached between server restarts on the file system in the <code>&lt;</code><code>OC4J&#095;HOME</code><code>>/j2ee/home/application-deployments</code> directory.
+</p>
+<p>The workaround for this is to shutdown the server, remove either the contents of the <code>&lt;</code><code>OC4J&#095;HOME</code><code>>/j2ee/home/application-deployments</code> directory (or just the offending application's sub-directory) and restart the server with JDK 1.4.
+</p>
+</li>
+<li type="disc">
+<p>You deploy an EAR file which contains classes that were compiled with and targeted to JDK 1.5 to OC4J running under JDK 1.4.
+</p>
+<p>The workaround for this is to recompile the contents of the EAR using JDK 1.4 and redeploy.
+</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>To simplify this discussion, we assume that no cross compilations are being used to target code to specific JDK versions.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>
+</p>
+</div><!-- class="sect2" -->
+<a id="BACGGBIE" name="BACGGBIE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref55" name="sthref55"></a>
+<h3 class="sect2"><span class="secnum">5.1.10 </span>Configuring a Machine to Work With and Without a Network Connection
+</h3>
+<p>When you work on a single machine using <code>localhost</code>, add the IP address in the <code>&lt;ipaddr></code> subelement of the <code>&lt;notification-server></code> element and explicitly set up a discover list in the <code>&lt;discover></code> element to refer to the <code>localhost</code> OPMN remote port, as defined in the cluster <code>&lt;port></code> element. An example of this configuration follows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">   &lt;notification-server>
+      &lt;ipaddr remote&#061;"127.0.0.1" request&#061;"127.0.0.1"/>
+      &lt;port local&#061;"6101" remote&#061;"6201" request&#061;"6004"/>
+      &lt;ssl enabled&#061;"true"
+wallet-file&#061;"&#036;ORACLE&#095;HOME&#092;opmn&#092;conf&#092;ssl.wlt&#092;default"/>      &lt;topology>
+         &lt;discover list&#061;"localhost:6201"/>
+      &lt;/topology>
+   &lt;/notification-server>
+
+</pre>
+<p>If you supply the <code>localhost</code> IP address, 127.0.0.1, the machine can work with or without a network.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABHIFHH" name="BABHIFHH"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref56" name="sthref56"></a>
+<h2 class="sect1"><span class="secnum">5.2 </span>Release Notes for Servlets
+</h2>
+<p>This section describes release notes for servlets. It covers the following topic(s): 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABDEAED">Section 5.2.1, "Servlet Invocation by Classname Disabled by Default"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABFCIEC">Section 5.2.2, "Physical File Required for Welcome File"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BADGGDIE">Section 5.2.3, "Warning Issued for servlet.init() Not Working with run-as"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BADBBIHA">Section 5.2.4, "Request Parameters Not Available During Filter Execution"</a>
+</p>
+</li>
+</ul><a id="BABDEAED" name="BABDEAED"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref57" name="sthref57"></a>
+<h3 class="sect2"><span class="secnum">5.2.1 </span>Servlet Invocation by Classname Disabled by Default
+</h3>
+<p>In the 10.1.3 implementation, servlet invocation by class name is not enabled by default. Therefore, in default mode, you must use standard servlet configuration in <code>web.xml</code> before a servlet can be invoked. For example: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">  &lt;servlet> 
+     &lt;servlet-name>mytest&lt;/servlet-name> 
+     &lt;servlet-class>mypackage.MyTestClass&lt;/servlet-class> 
+  &lt;/servlet> 
+  ... 
+  &lt;servlet-mapping> 
+     &lt;servlet-name>mytest&lt;/servlet-name> 
+     &lt;url-pattern>/servlet/mytest&lt;/url-pattern> 
+  &lt;/servlet-mapping> 
+
+</pre>
+<p>Without this configuration, attempts to invoke the servlet will result in a <code>404 NOT FOUND</code> error. This differs from the default behavior in previous releases, where invocation by class name was enabled. 
+</p>
+<p>Alternatively, customers can choose to enable invocation by class name when they start OC4J, by setting the <code>http.webdir.enable</code> property as follows: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">-Dhttp.webdir.enable&#061;true 
+
+</pre>
+</div><!-- class="sect2" -->
+<a id="BABFCIEC" name="BABFCIEC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref58" name="sthref58"></a>
+<h3 class="sect2"><span class="secnum">5.2.2 </span>Physical File Required for Welcome File
+</h3>
+<p>A physical file must be present for a welcome file to dispatch to a servlet. To create a servlet mapped to <code>/index.html</code> that maps to the JSP <code>/index.jsp</code> and have it serve as a welcome file, the <code>web.xml</code> file should include the following entries:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;servlet> 
+   &lt;servlet-name> index&#095;jsp &lt;/servlet-name> 
+   &lt;jsp-file> /index.jsp &lt;/jsp-file> 
+&lt;/servlet> 
+
+&lt;servlet-mapping> 
+   &lt;servlet-name>index&#095;jsp&lt;/servlet-name> 
+   &lt;url-pattern>/index.html&lt;/url-pattern> 
+&lt;/servlet-mapping> 
+
+</pre>
+<p>This works <span class="italic">only</span> if there is a physical file, <code>/index.html</code>, in the Web application. The file can be zero length. As long as the file exists, this servlet will be loaded as the welcome file. Otherwise, a <code>java.lang.StringIndexOutOfBoundsException</code> exception will be thrown.
+</p>
+</div><!-- class="sect2" -->
+<a id="BADGGDIE" name="BADGGDIE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref59" name="sthref59"></a>
+<h3 class="sect2"><span class="secnum">5.2.3 </span>Warning Issued for servlet.init() Not Working with run-as
+</h3>
+<p>For a Web application, when <code>run-as</code> <code><span class="codeinlineitalic">user</span></code> is specified in the <code>web.xml</code> file, all method invocations except the <code>Servlet.init()</code> method will be invoked as the specified user. With the JMS Router being the default application of OC4J, calls need to be authorized to the router's EJBs. This is done by defining the application role <code>"jmsRouter"</code>, which is mapped to the JAAS <code>"oc4j-administrators"</code> role, and specifying <code>&lt;method-permission></code> for all methods of the router's EJBs.
+</p>
+<p>The <code>init()</code> method of the servlet within the router's Web model creates a router EJB object. Regardless of whether <code>run-as</code> is specified in <code>web.xml</code> for the servlet, a security exception is thrown:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#064; oracle.oc4j.rmi.OracleRemoteException: anonymous is not allowed to call this EJB method, check your security settings (method-permission in ejb-jar.xml and security-role-mapping in orion-application.xml).
+</pre><a id="sthref60" name="sthref60"></a>
+<p class="subhead2">Workaround</p>
+<p>The security warning can be removed by commenting out <code>'&#042;'</code> in the <code>&lt;method-name></code> element of <code>&lt;method-permission></code> in <code>ejb-jar.xml</code> and explicitly enumerating all methods in <code>AdminMgrBean</code> that the <code>jmsRouter</code> role can access, as follows.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;!-- 
+    &lt;method-permission> 
+      &lt;role-name>jmsRouter&lt;/role-name> 
+      &lt;method> 
+         &lt;ejb-name>AdminMgrBean&lt;/ejb-name> 
+         &lt;method-name>&#042;&lt;/method-name> 
+      &lt;/method> 
+    &lt;/method-permission> 
+--> 
+    &lt;method-permission> 
+      &lt;role-name>jmsRouter&lt;/role-name> 
+      &lt;method> 
+         &lt;ejb-name>AdminMgrBean&lt;/ejb-name> 
+         &lt;method-name>getConfig&lt;/method-name> 
+      &lt;/method> 
+    &lt;/method-permission> 
+    ... 
+
+</pre>
+<p><code>runAsRoleName</code> is correctly parsed in <code>ServletDescriptor.java</code>, stored in <code>info</code> and <code>thread</code> in <code>HttpApplication.loadServlet()</code>. 
+</p>
+</div><!-- class="sect2" -->
+<a id="BADBBIHA" name="BADBBIHA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref61" name="sthref61"></a>
+<h3 class="sect2"><span class="secnum">5.2.4 </span>Request Parameters Not Available During Filter Execution
+</h3>
+<p>HTTP request parameters will not be available to servlet filters that are meant to be executed before dispatch of the request to a static resource (an <code>.html</code> file, for example). Note that filters that execute before dynamic resources, such as a servlet or JSP, will have access to the parameters.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABFEFFC" name="BABFEFFC"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref62" name="sthref62"></a>
+<h2 class="sect1"><span class="secnum">5.3 </span>Release Notes for EJB 
+</h2>
+<p>This section describes release notes for EJB. It covers the following topics: 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDJIBFI">Section 5.3.1, "EJB 3.0 Support"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDHAGJA">Section 5.3.2, "Orion CMP is Deprecated"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDCIBCD">Section 5.3.3, "Orion CMP and Non-Oracle Databases"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDHIEII">Section 5.3.4, "Stateful Session Bean Replication Trigger Configuration"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDJCGDB">Section 5.3.5, "EJB 3.0 Entities and Application Server Control"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDCGFHD">Section 5.3.6, "Entity and Session Deployment Attribute tx-retry-wait"</a>
+</p>
+</li>
+</ul><a id="CHDJIBFI" name="CHDJIBFI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref63" name="sthref63"></a>
+<h3 class="sect2"><span class="secnum">5.3.1 </span>EJB 3.0 Support
+</h3>
+<p>In this release, OC4J supports a subset of the functionality specified in the EJB 3.0 public review draft at <code><a href="http://jcp.org/aboutJava/communityprocess/pr/jsr220/index.html">http://jcp.org/aboutJava/communityprocess/pr/jsr220/index.html</a></code> 
+</p>
+<p>For example, support for some EJB 3.0 features such as persistence API, external lifecycle listener class, and interceptors may not be compliant with the latest EJB 3.0 specification.
+</p>
+<p>You may need to make code changes to your EJB 3.0 OC4J application after the EJB 3.0 specification is finalized and OC4J is updated to full EJB 3.0 compliance.
+</p>
+</div><!-- class="sect2" -->
+<a id="CHDHAGJA" name="CHDHAGJA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref64" name="sthref64"></a>
+<h3 class="sect2"><span class="secnum">5.3.2 </span>Orion CMP is Deprecated
+</h3>
+<p>The Orion persistence manager is deprecated. Oracle recommends that you use OC4J and the TopLink persistence manager for new development. Using the migration tool, you can easily migrate an existing OC4J application that uses EJB 2.0 entity beans with the Orion persistence manager to use EJB 2.0 entity beans with the TopLink persistence manager.
+</p>
+<p>For more information, see "Migrating OC4J Orion Persistence to OC4J TopLink Persistence" in the <!A HREF="xlinkSRC JITDG00013"><span class="italic">Oracle TopLink Developer's Guide</span></a>.
+</p>
+</div><!-- class="sect2" -->
+<a id="CHDCIBCD" name="CHDCIBCD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref65" name="sthref65"></a>
+<h3 class="sect2"><span class="secnum">5.3.3 </span>Orion CMP and Non-Oracle Databases
+</h3>
+<p>When using the (deprecated) Orion persistence manager with CMP and a non-Oracle database, OC4J does not read the schema XML file specified by the <code>data-sources.xml</code> file <code>managed-data-source</code> element <code>schema</code> attribute.
+</p>
+<p>For example, consider the <code>data-sources.xml</code> and <code>orion-ejb-jar.xml</code> files shown in the following examples:
+</p>
+<div class="example">
+<a id="CHDIBBJH" name="CHDIBBJH"></a><a id="sthref66" name="sthref66"></a>
+<p class="titleinexample">Example 5-1 Non-Oracle Database data-sources.xml</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;connection-pool
+&nbsp;&nbsp;&nbsp;&nbsp;name&#061;"ConnectionDB2"
+&nbsp;&nbsp;&nbsp;&nbsp;max-connections&#061;"20"
+&nbsp;&nbsp;&nbsp;&nbsp;min-connections&#061;"1">
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;connection-factory
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;factory-class&#061;"com.oracle.ias.jdbcx.db2.DB2DataSource"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user&#061;"jdoe"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;password&#061;"password"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url&#061;"jdbc:oracle:db2://server.foo.com:50000;...>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name&#061;"databaseName" value&#061;"appdb"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name&#061;"packageName" value&#061;"JDBCPKG"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name&#061;"serverName" value&#061;"server.foo.com"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;property name&#061;"portNumber" value&#061;"50000"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;xa-recovery-config>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;password-credential>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;username>jdoe&lt;/username>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;password>password&lt;/password>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/password-credential>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/xa-recovery-config>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/connection-factory>
+&lt;/connection-pool>
+ 
+&lt;managed-data-source
+&nbsp;&nbsp;&nbsp;&nbsp;connection-pool-name&#061;"ConnectionDB2"
+&nbsp;&nbsp;&nbsp;&nbsp;schema&#061;"database-schemas/db2.xml"
+&nbsp;&nbsp;&nbsp;&nbsp;jndi-name&#061;"jdbc/OracleDS"
+&nbsp;&nbsp;&nbsp;&nbsp;name&#061;"OracleDS"
+/> 
+
+</pre>
+</div><!-- class="example" -->
+
+<div class="example">
+<a id="CHDFCAEI" name="CHDFCAEI"></a><a id="sthref67" name="sthref67"></a>
+<p class="titleinexample">Example 5-2 orion-ejb-jar.xml</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;enterprise-beans>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;persistence-manager name&#061;"orion"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;entity-deployment name&#061;"EmployeeBean" max-tx-retries&#061;"0" location&#061;"EmployeeBean">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;primkey-mapping>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cmp-field-mapping
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&#061;"empNo" persistence-name&#061;"empNo" persistence-type&#061;"integer"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/primkey-mapping>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cmp-field-mapping
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&#061;"empName" persistence-name&#061;"empName"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cmp-field-mapping
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&#061;"salary" persistence-name&#061;"salary"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;finder-method lazy-loading&#061;"true">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;method>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ejb-name>EmployeeBean&lt;/ejb-name>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;method-name>findAll&lt;/method-name>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;method-params>&lt;/method-params>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/method>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/finder-method>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/entity-deployment>
+&lt;/enterprise-beans>
+
+</pre>
+</div><!-- class="example" -->
+
+<p>Deploying this application will raise an error like:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Error creating table: &#091;oias&#093;&#091;DB2 JDBC Driver&#093;&#091;DB2&#093;ILLEGAL SYMBOL
+
+</pre>
+<p>To work around this problem, update the <code>orion-ejb-jar.xml</code> to manually define the mapping data types as <a href="#CHDIFFFA">Example 5-3</a> shows.
+</p>
+<div class="example">
+<a id="CHDIFFFA" name="CHDIFFFA"></a><a id="sthref68" name="sthref68"></a>
+<p class="titleinexample">Example 5-3 Updated orion-ejb-jar.xml</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;enterprise-beans>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;persistence-manager name&#061;"orion"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;entity-deployment name&#061;"EmployeeBean" max-tx-retries&#061;"0" location&#061;"EmployeeBean">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;primkey-mapping>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cmp-field-mapping
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&#061;"empNo" persistence-name&#061;"empNo" persistence-type&#061;"integer"
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/primkey-mapping>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cmp-field-mapping
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&#061;"empName" persistence-name&#061;"empName" <code><span class="codeinlinebold">persistence-type&#061;"varchar(255)"</span></code>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;cmp-field-mapping
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name&#061;"salary" persistence-name&#061;"salary" <code><span class="codeinlinebold">persistence-type&#061;"double"</span></code>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;finder-method lazy-loading&#061;"true">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;method>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ejb-name>EmployeeBean&lt;/ejb-name>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;method-name>findAll&lt;/method-name>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;method-params>&lt;/method-params>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/method>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/finder-method>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/entity-deployment>
+&lt;/enterprise-beans>
+
+</pre>
+</div><!-- class="example" -->
+
+</div><!-- class="sect2" -->
+<a id="CHDHIEII" name="CHDHIEII"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref69" name="sthref69"></a>
+<h3 class="sect2"><span class="secnum">5.3.4 </span>Stateful Session Bean Replication Trigger Configuration
+</h3>
+<p>In this release, for stateful session beans, OC4J supports <code>session-deployment</code> attribute <code>replication</code> settings of:
+</p>
+<ul>
+<li type="disc">
+<p><code>inherited</code> (default)
+</p>
+</li>
+<li type="disc">
+<p><code>onShutdown</code>
+</p>
+</li>
+<li type="disc">
+<p><code>onRequestEnd</code>
+</p>
+</li>
+<li type="disc">
+<p><code>none</code>
+</p>
+</li>
+</ul>
+<p>The <code>replication</code> attribute for stateful session beans cannot be configured in Application Server Control. The <code>inherited</code> value is never displayed and the value cannot be reset to <code>none</code>.
+</p>
+<p>To work around this problem, for all stateful session beans, you must manually configure the <code>orion-ejb-jar.xml</code> file <code>session-deployment</code> element <code>replication</code> attribute. 
+</p>
+</div><!-- class="sect2" -->
+<a id="CHDJCGDB" name="CHDJCGDB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref70" name="sthref70"></a>
+<h3 class="sect2"><span class="secnum">5.3.5 </span>EJB 3.0 Entities and Application Server Control 
+</h3>
+<p>When you deploy EJB 3.0 entities to OC4J, you cannot manage them using Application Server Control: when you use Application Server Control to view your EJB module, the Entity Beans area will display "No entity beans found".
+</p>
+<p>You can manage all other EJB 3.0 beans such as session beans. For example, if you deploy an EJB module that contains both EJB 3.0 entities and EJB 3.0 session beans, your session beans will be visible through Application Server Control.
+</p>
+</div><!-- class="sect2" -->
+<a id="CHDCGFHD" name="CHDCGFHD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref71" name="sthref71"></a>
+<h3 class="sect2"><span class="secnum">5.3.6 </span>Entity and Session Deployment Attribute tx-retry-wait
+</h3>
+<p>The <code>orion-ejb-jar.xml</code> file <code>entity-deployment</code> and <code>session-deployment</code> element tx<code>-retry-wait</code> attribute is not in <code>orion-ejb-jar-10&#095;0.xsd</code> (nor in <code>orion-ejb-jar.dtd</code>).
+</p>
+<p>You can still use this attribute in your <code>orion-ejb-jar.xml</code> file but if you do, do not configure OC4J to perform XML file validation (using the <code>-validateXML</code> option on the OC4J startup command line).
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDGIHEA" name="CHDGIHEA"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref72" name="sthref72"></a>
+<h2 class="sect1"><span class="secnum">5.4 </span>Release Notes for Web Services 
+</h2>
+<p>This section describes release notes for Web Services. It covers the following topics: 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BEHICCBF">Section 5.4.1, "Long File Names Cause Deployment to Fail"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHJBBBC">Section 5.4.2, "SoapFaultException Will Not Invoke a Handler&#039;s handleFault Method"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHEHEGE">Section 5.4.3, "Clients Cannot Deserialize SOAP-Encoded anyType Arrays"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHBHIDE">Section 5.4.4, "Arrays in Document-Literal Encoding May Not be Supported when Mapped to a Single Array Parameter"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHFIHAE">Section 5.4.5, "NLS Characters in SYS.XMLTYPE Values May Not be Supported"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHGCFAC">Section 5.4.6, "Self Referential WSDL Imports Fail to Load in the Test Page"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHEGEID">Section 5.4.7, "SOAP 1.2 Results May Not be Properly Deserialized"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHIAHCD">Section 5.4.8, "WSIF Mapping of Nillable XSD Types"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHEHBCJ">Section 5.4.9, "Support for NLS Characters in the WSDL"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHECDFC">Section 5.4.10, "Multiple Service Elements in Top Down Web Service Assembly"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHGACGA">Section 5.4.11, "Multiple Message Formats in a WSDL Application"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHIHEGG">Section 5.4.12, "Invalid Configuration Not Detected for EJB 2.1 Web Services"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHIFJIB">Section 5.4.13, "Schema Features Limitations"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHJAACG">Section 5.4.14, "Limitations on Top Down Processing of Type Mappings"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHGFHGA">Section 5.4.15, "REST-Enabled Web Services Cannot be Deployed with Application Server Control"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHEEABE">Section 5.4.16, "Explicit HTTP Data Chunking is Not Supported"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHJBHFH">Section 5.4.17, "Runtime Exception Masked By java.io.NotSerializableException"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHBJGHG">Section 5.4.18, "Get NodeLists by Using getFirstChild and getNextSibling Instead of getChildNode"</a>
+</p>
+</li>
+</ul><a id="BEHICCBF" name="BEHICCBF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref73" name="sthref73"></a>
+<h3 class="sect2"><span class="secnum">5.4.1 </span>Long File Names Cause Deployment to Fail
+</h3>
+<p>If the combined length of the generated file and directory names passes a certain size limit, then deployment will fail and throw an error. This size limit varies for different operating systems. For example, on the Windows operating system, the size limit is 255 characters. - Bug 4673270
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>You can avoid this problem by upgrading to a more recent version of the J2SE 5.0 JDK (<code>jdk-1&#095;5&#095;0&#095;06</code> or later).
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>The length of the names is controlled by WebServicesAssembler and the deployment code. WebServicesAssembler generates file names based on the method name in the Java class or the operation name in the WSDL. The deployment code creates directories for code generation based on the names of the EAR and the WAR files. 
+</p>
+<p>To avoid the generation of file and directory names that are too long, limit the number of characters in the following names to a reasonable length. 
+</p>
+<ul>
+<li type="disc">
+<p>Method names in Java classes
+</p>
+</li>
+<li type="disc">
+<p>Operation names in the WSDL
+</p>
+</li>
+<li type="disc">
+<p>Directory name for the location of the OC4J installation (also be aware that the JDeveloper's built-in OC4J instance is typically placed in a directory below the JDeveloper installation)
+</p>
+</li>
+<li type="disc">
+<p>File name for a WAR file
+</p>
+</li>
+<li type="disc">
+<p>File name for an EAR file
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="BEHJBBBC" name="BEHJBBBC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref74" name="sthref74"></a>
+<h3 class="sect2"><span class="secnum">5.4.2 </span>SoapFaultException Will Not Invoke a Handler&#039;s handleFault Method
+</h3>
+<p>On the server, a <code>SoapFaultException()</code> thrown by an implementation class will not invoke a handler's <code>handleFault()</code> method. The <code>handleResponse()</code> method is called instead. 
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHEHEGE" name="BEHEHEGE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref75" name="sthref75"></a>
+<h3 class="sect2"><span class="secnum">5.4.3 </span>Clients Cannot Deserialize SOAP-Encoded anyType Arrays
+</h3>
+<p>Clients of SOAP-encoded services are not able to deserialize arrays of type <code>anyType</code>.
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHBHIDE" name="BEHBHIDE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref76" name="sthref76"></a>
+<h3 class="sect2"><span class="secnum">5.4.4 </span>Arrays in Document-Literal Encoding May Not be Supported when Mapped to a Single Array Parameter
+</h3>
+<p>Arrays may not be supported in document-literal encoding when mapped directly to a Java method parameter. This issue has been seen in DII and WSIF clients.
+</p>
+<p>It also occurs in document-literal Web services that map <code>base64Binary</code> (or <code>hexBinary</code>) arrays to the type <code>byte&#091;&#093;&#091;&#093;</code>. 
+</p>
+<p>There are two possible ways to work around this issue:
+</p>
+<ul>
+<li type="disc">
+<p>Keep the wrapper by specifying the WebServicesAssembler argument <code>unwrapParam&#061;"false"</code>. 
+</p>
+</li>
+<li type="disc">
+<p>Use RCP-encoded or RPC-literal styles. 
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="BEHFIHAE" name="BEHFIHAE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref77" name="sthref77"></a>
+<h3 class="sect2"><span class="secnum">5.4.5 </span>NLS Characters in SYS.XMLTYPE Values May Not be Supported
+</h3>
+<p>In Database Web Services, NLS characters that occur in a <code>SQL SYS.XMLTYPE</code> value may not be properly handled.
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHGCFAC" name="BEHGCFAC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref78" name="sthref78"></a>
+<h3 class="sect2"><span class="secnum">5.4.6 </span>Self Referential WSDL Imports Fail to Load in the Test Page
+</h3>
+<p>The test page (Web Services Home Page) fails to load when using self-referential WSDL imports to the same application. For example: 
+</p>
+<p><code>location&#061;"http://samebox:8888/sameapp/import.wsdl"</code> 
+</p>
+<p>Since the WSDL is available locally in the application, it should be referenced with a relative path instead. For example: 
+</p>
+<p><code>location&#061;"./import.wsdl"</code> 
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHEGEID" name="BEHEGEID"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref79" name="sthref79"></a>
+<h3 class="sect2"><span class="secnum">5.4.7 </span>SOAP 1.2 Results May Not be Properly Deserialized
+</h3>
+<p>In certain cases, the SOAP 1.2 response may not be properly deserialized, resulting in an element-name-mismatch exception. Specifically, this happens if the Web services returns output parameters and a result value, but this result element does not immediately follow after an <code>http://www.w3.org/2003/05/soap-rpc</code> result element.
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHIAHCD" name="BEHIAHCD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref80" name="sthref80"></a>
+<h3 class="sect2"><span class="secnum">5.4.8 </span>WSIF Mapping of Nillable XSD Types
+</h3>
+<p>WSIF invocations will map the primitive and nillable XML schema types to primitive Java types. This does not permit the representation of XML nil values.
+</p>
+<p>As a work around, you may want to use SOAP-encoded XML types in the WSDL. 
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHEHBCJ" name="BEHEHBCJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref81" name="sthref81"></a>
+<h3 class="sect2"><span class="secnum">5.4.9 </span>Support for NLS Characters in the WSDL
+</h3>
+<p>NLS characters that occur in names in the WSDL, such as in the name of a service, port type, operation, binding or port, are not supported. This may also result in errors on the test page (Web Services Home Page). 
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHECDFC" name="BEHECDFC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref82" name="sthref82"></a>
+<h3 class="sect2"><span class="secnum">5.4.10 </span>Multiple Service Elements in Top Down Web Service Assembly
+</h3>
+<p>WebServicesAssembler does not support multiple service elements for the <code>topDownAssemble</code> command.
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHGACGA" name="BEHGACGA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref83" name="sthref83"></a>
+<h3 class="sect2"><span class="secnum">5.4.11 </span>Multiple Message Formats in a WSDL Application
+</h3>
+<p>Multiple message formats, such as RPC-encoded and document-literal, are not supported in a single Web application.
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHIHEGG" name="BEHIHEGG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref84" name="sthref84"></a>
+<h3 class="sect2"><span class="secnum">5.4.12 </span>Invalid Configuration Not Detected for EJB 2.1 Web Services
+</h3>
+<p>EJB 2.1 Web services will be deployed during server side code generation even if the configuration is incorrect. 
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHIFJIB" name="BEHIFJIB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref85" name="sthref85"></a>
+<h3 class="sect2"><span class="secnum">5.4.13 </span>Schema Features Limitations
+</h3>
+<p>This section describes Web Services schema features limitations. It covers the following topic(s): 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BEHHADDI">Section 5.4.13.1, "Schema Features that are Mapped to a SOAPElement"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHCEAEB">Section 5.4.13.2, "Derived complexTypes Are Not Handled Properly"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHCICBA">Section 5.4.13.3, "RPC Encoded Does Not Support Complex Types With Attributes"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEHIIFDG">Section 5.4.13.4, "XML Types xsd:choice and xsd:group are Not Supported for Proxy or Top Down Web Service Assembly"</a>
+</p>
+</li>
+</ul><a id="BEHHADDI" name="BEHHADDI"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref86" name="sthref86"></a>
+<h4 class="sect3"><span class="secnum">5.4.13.1 </span>Schema Features that are Mapped to a SOAPElement
+</h4>
+<p>If any of the following schema features are encountered in the WSDL, they will be mapped to a <code>SOAPElement</code>.
+</p>
+<ul>
+<li type="disc">
+<p>Any model group with multiple <code>xsd:any</code> elements 
+</p>
+</li>
+<li type="disc">
+<p><code>xsd:choice</code> elements
+</p>
+</li>
+<li type="disc">
+<p>Mixed content
+</p>
+</li>
+<li type="disc">
+<p>Substitution groups 
+</p>
+</li>
+<li type="disc">
+<p>A type with multiple <code>xsd:anyAttribute</code> 
+</p>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+<a id="BEHCEAEB" name="BEHCEAEB"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref87" name="sthref87"></a>
+<h4 class="sect3"><span class="secnum">5.4.13.2 </span>Derived complexTypes Are Not Handled Properly
+</h4>
+<p>If a <code>complexType</code> derives from another by adding some attributes, then once the complexType is run through the OC4J WSDL2Java tool, all of the attributes in the subtype will be deleted. If the subtype does not have additional elements, it will be presented as a <code>SOAPElement</code> in the generated Java code. 
+</p>
+<p>If you are able to edit the WSDL, then you can work around this problem in either of the following ways: 
+</p>
+<ul>
+<li type="disc">
+<p>Move the attribute definitions from the sub type to the supertype. 
+</p>
+</li>
+<li type="disc">
+<p>Avoid using type extensions. 
+</p>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+<a id="BEHCICBA" name="BEHCICBA"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref88" name="sthref88"></a>
+<h4 class="sect3"><span class="secnum">5.4.13.3 </span>RPC Encoded Does Not Support Complex Types With Attributes
+</h4>
+<p>If the schema contains a binding with an RPC-encoded message format and WebServicesAssembler encounters a complexType with attributes, then it will throw an "unsupported type encountered" error message. 
+</p>
+</div><!-- class="sect3" -->
+<a id="BEHIIFDG" name="BEHIIFDG"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref89" name="sthref89"></a>
+<h4 class="sect3"><span class="secnum">5.4.13.4 </span>XML Types xsd:choice and xsd:group are Not Supported for Proxy or Top Down Web Service Assembly
+</h4>
+<p>If you are assembling Web Services top down or assembling Web service proxies, WebServicesAssembler cannot consume WSDLs that contain the <code>xsd:choice</code> or <code>xsd:group</code> XML types. If you want to consume a WSDL that contains these XML types, set the WebServicesAssembler <code>dataBinding</code> argument to <code>false</code> and code the <code>SOAPElement</code> so that the payload conforms to the schema definition in the WSDL file. 
+</p>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="BEHJAACG" name="BEHJAACG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref90" name="sthref90"></a>
+<h3 class="sect2"><span class="secnum">5.4.14 </span>Limitations on Top Down Processing of Type Mappings 
+</h3>
+<p>You can specify the WebServicesAssembler <code>ddFileName</code> argument to define type mappings. A type mapping maps a schema type to an existing Java class and allows an optional custom serializer. In the top down use case, if you do not supply a custom serializer, then WebServicesAssembler will always generate a bean for the type. 
+</p>
+<p>The work around for this limitation is to ensure that the existing Java class is in the classpath given to WebServicesAssembler and that the <code>overwriteBeans</code> argument is set to <code>false</code>.
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHGFHGA" name="BEHGFHGA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref91" name="sthref91"></a>
+<h3 class="sect2"><span class="secnum">5.4.15 </span>REST-Enabled Web Services Cannot be Deployed with Application Server Control
+</h3>
+<p>Application Server Control cannot successfully deploy EAR files containing REST-enabled Web services. Instead of using Application Server Control, you can use JDeveloper, Ant, or <code>admin&#095;client.jar</code> to deploy the EAR file.
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHEEABE" name="BEHEEABE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref92" name="sthref92"></a>
+<h3 class="sect2"><span class="secnum">5.4.16 </span>Explicit HTTP Data Chunking is Not Supported 
+</h3>
+<p>Enabling chunked data transfer for HTTP as described in Chapter 13 of the <span class="italic">Oracle Application Server Web Services Developer's Guide</span> by explicitly setting <code>DO&#095;NOT&#095;CHUNK</code> or <code>CHUNK&#095;SIZE</code> properties will not have any effect. However, chunking will still be implicitly enabled when using attachments.
+</p>
+</div><!-- class="sect2" -->
+<a id="BEHJBHFH" name="BEHJBHFH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref93" name="sthref93"></a>
+<h3 class="sect2"><span class="secnum">5.4.17 </span>Runtime Exception Masked By java.io.NotSerializableException
+</h3>
+<p>When the Web Service client is invoked by an EJB, the RMI protocol requires that the client parameter, return, and exception implement <code>java.io.Serializable</code>.In the current release, however, the <code>oracle.j2ee.ws.common.util.localization.</code><code>LocalizableSupport</code> class does not implement <code>java.io.Serializable</code>. Consequently, exceptions thrown by a Web service client invoked by EJB are not properly returned to the invoker. Instead, the invoker receives the description below.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Error deserializing return-value: writing aborted;java.io.NotSerializableException:/&#064; oracle.j2ee.ws.common.util.localization.LocalizableSupport; nested /exception is:java.io.WriteAbortedException: writing aborted;java.io.NotSerializableException:/&#064; oracle.j2ee.ws.common.util.localization.LocalizableSupport/java.rmi.UnmarshalException: Error deserializing return-value: writingaborted; java.io.NotSerializableException:
+</pre>
+</div><!-- class="sect2" -->
+<a id="BEHBJGHG" name="BEHBJGHG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref94" name="sthref94"></a>
+<h3 class="sect2"><span class="secnum">5.4.18 </span>Get NodeLists by Using getFirstChild and getNextSibling Instead of getChildNode
+</h3>
+<p>You may see a performance degradation when iterating over a <code>NodeList</code> obtained by using <code>node.getChildNode</code>. This degradation will only be significant for <code>NodeList</code>s with very long lengths.
+</p>
+<p>Instead of using the <code>NodeList</code> obtained by <code>node.getChildNode</code>s, the current Oracle XDK implementation offers an optimization of navigating a list of child nodes by using <code>node.getFirstChild</code> and looping over <code>node.getNextSibling</code>. The following code sample illustrates this technique.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Node n &#061; ...;
+if (n.hasChildNodes()) &#123;
+   for(Node nd&#061;n.getFirstChild(); nd!&#061;null; nd&#061;nd.getNextSibling())&#123;
+         nd.getValue(); // do something with nd       
+      &#125;
+&#125;
+</pre>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDCIGBG" name="CHDCIGBG"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref95" name="sthref95"></a>
+<h2 class="sect1"><span class="secnum">5.5 </span>Release Notes for Web Services Security 
+</h2>
+<p>This section describes release notes for Web Services Security. It covers the following topic(s): 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BEHFFHJJ">Section 5.5.1, "Stale Indirect User Accounts Must be Removed Manually"</a>
+</p>
+</li>
+</ul><a id="BEHFFHJJ" name="BEHFFHJJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref96" name="sthref96"></a>
+<h3 class="sect2"><span class="secnum">5.5.1 </span>Stale Indirect User Accounts Must be Removed Manually
+</h3>
+<p>In release 10.1.3, you must use Application Server Control to obfuscate the keystore, signature key, and encryption key passwords. During obfuscation, an indirect user account is created in the <code>system-jazn-data.xml</code> file.
+</p>
+<p>If you undeploy the application, these indirect user accounts are not removed. You must manually delete the them by using Application Server Control.
+</p>
+<p>The following list describes how you can identify the names of indirect user accounts for global-level and port-level keystores and keys. 
+</p>
+<ul>
+<li type="disc">
+<p>For a port-level keystore, the name of the indirect user account is created with the following format: 
+</p>
+<p><code><span class="codeinlineitalic">applicationName.portName.</span></code><code>keystore</code><code><span class="codeinlineitalic">.actual-keystore-name</span></code>
+</p>
+<p>For example:
+</p>
+<p><code>my-security-sample.myport.keystore.myks.jks</code>
+</p>
+</li>
+<li type="disc">
+<p>For a global-level keystore, the name of the indirect user account is created with the following format: 
+</p>
+<p><code>default.keystore.</code><code><span class="codeinlineitalic">actual-keystore-name</span></code>
+</p>
+<p>For example:
+</p>
+<p><code>default.keystore.myks.jks</code>
+</p>
+</li>
+<li type="disc">
+<p>For port-level keys, the name of the indirect user account is created with the following format:
+</p>
+<p><code><span class="codeinlineitalic">applicationName.portName.</span></code><code>key</code><code><span class="codeinlineitalic">.actual-key-alias</span></code>
+</p>
+<p>For example: 
+</p>
+<p><code>my-security-sample.myport.key.mysignkey</code>
+</p>
+</li>
+<li type="disc">
+<p>For global-level keys, the name of the indirect user account is created with the following format: 
+</p>
+<p><code>default.</code><code>key</code><code><span class="codeinlineitalic">.actual-key-alias</span></code>
+</p>
+<p>For example: 
+</p>
+<p><code>default.key.mysignkey</code>
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABEBBBG" name="BABEBBBG"></a>
+<div class="sect1">
+<a id="sthref97" name="sthref97"></a>
+<h2 class="sect1"><span class="secnum">5.6 </span>Release Notes for OC4J Services
+</h2>
+<p>This section describes release notes for OC4J Services. OC4J Services include: Java Naming and Directory Interface (JNDI), Oracle Enterprise Messaging Service (OEMS), Data Sources, Remote Method Invocation (ORMI and IIOP), OC4J Transaction Support, Java Object Cache (JOC), and XML Query Service (XQS). 
+</p>
+<p>The section contains release notes for the following OC4J Services: 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABCEFGJ">Section 5.6.1, "JNDI"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABBJABB">Section 5.6.2, "Oracle Enterprise Messaging Service (OEMS)"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABHDJHA">Section 5.6.3, "Data Sources"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABECFEB">Section 5.6.4, "OC4J Transaction Support"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABBEFDH">Section 5.6.5, "RMI"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABBBFBI">Section 5.6.6, "XQS"</a>
+</p>
+</li>
+</ul><a id="BABCEFGJ" name="BABCEFGJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref98" name="sthref98"></a>
+<h3 class="sect2"><span class="secnum">5.6.1 </span>JNDI
+</h3>
+<p>This section describes release notes for JNDI. It covers the following topic(s): 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABDDBCG">Section 5.6.1.1, "New Package Names for RMI and Application Client Initial Context Factories"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDFCBGH">Section 5.6.1.2, "These Environment Properties Are No Longer Supported"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDBFCCC">Section 5.6.1.3, "Context Factory Restructuring"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDIGFFG">Section 5.6.1.4, "Objects that Implement javax.naming.Referenceable Interface"</a>
+</p>
+</li>
+</ul><a id="BABDDBCG" name="BABDDBCG"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref99" name="sthref99"></a>
+<h4 class="sect3"><span class="secnum">5.6.1.1 </span>New Package Names for RMI and Application Client Initial Context Factories
+</h4>
+<p>In this release, note the following new package names for the initial context factories:
+</p>
+<ul>
+<li type="disc">
+<p><code>oracle.j2ee.rmi.RMIInitialContextFactory</code>
+</p>
+</li>
+<li type="disc">
+<p><code>oracle.j2ee.naming.ApplicationClientInitialContextFactory</code>
+</p>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+<a id="CHDFCBGH" name="CHDFCBGH"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref100" name="sthref100"></a>
+<h4 class="sect3"><span class="secnum">5.6.1.2 </span>These Environment Properties Are No Longer Supported 
+</h4>
+<p>The following environment properties are no longer supported as of release 10.1.3: 
+</p>
+<p><code>dedicated.connection</code> 
+</p>
+<p><code>dedicated.rmicontext</code> 
+</p>
+<p>In release 10.1.3, the known ORMI /JNDI bugs that required these flags have been resolved. To enable client-side ORMI load-balancing in 10.1.3, use the <code>oracle.j2ee.rmi.loadBalance</code> property described in the "Load Balancing" section of the JNDI chapter of the <span class="italic"><! a href="../../web.1013/b14427/toc.htm">Oracle Containers for J2EE Services Guide</a></span>. 
+</p>
+</div><!-- class="sect3" -->
+<a id="CHDBFCCC" name="CHDBFCCC"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref101" name="sthref101"></a>
+<h4 class="sect3"><span class="secnum">5.6.1.3 </span>Context Factory Restructuring 
+</h4>
+<p>The package structure for context factories provided by previous releases of OC4J is deprecated, and is replaced by a more consistent naming structure. The following context factories are deprecated in release 10.1.3: 
+</p>
+<ul>
+<li type="disc">
+<p><code>com.evermind.server.rmi.RMIInitialContextFactory</code>
+</p>
+</li>
+<li type="disc">
+<p><code>com.evermind.server.ApplicationClientInitialContext Factory</code> 
+</p>
+</li>
+<li type="disc">
+<p> <code>com.oracle.iiop.server.IIOPInitialContextFactory</code> 
+</p>
+</li>
+</ul>
+<p>For the new context factory names that replace the deprecated ones, see the <code>java.naming.factory.initial</code> initial context property described in the "Constructing a JNDI Context" section of the JNDI chapter of the <! a href="../../web.1013/b14427/toc.htm"><span class="italic">Oracle Containers for J2EE Services Guide</span></a>. 
+</p>
+</div><!-- class="sect3" -->
+<a id="CHDIGFFG" name="CHDIGFFG"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref102" name="sthref102"></a>
+<h4 class="sect3"><span class="secnum">5.6.1.4 </span>Objects that Implement javax.naming.Referenceable Interface 
+</h4>
+<p>OC4J JNDI in 10.1.3 now provides full support for binding objects that implement the <code>javax.naming.Referenceable</code> interface
+</p>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="BABBJABB" name="BABBJABB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref103" name="sthref103"></a>
+<h3 class="sect2"><span class="secnum">5.6.2 </span>Oracle Enterprise Messaging Service (OEMS) 
+</h3>
+<p>This section describes release notes for the Oracle Enterprise Messaging Service (OEMS). It covers the following topic(s): 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDDDABG">Section 5.6.2.1, "Special Considerations For Undeploying the Default Instance of the Oracle gJRA Resource Adapter"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDJACHH">Section 5.6.2.2, "OC4J May Fail to Restart after Abnormal OC4J Shutdown"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDEDDEH">Section 5.6.2.3, "getconfigProperties() Lists Some Unsupported Properties"</a>
+</p>
+</li>
+</ul><a id="CHDDDABG" name="CHDDDABG"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref104" name="sthref104"></a>
+<h4 class="sect3"><span class="secnum">5.6.2.1 </span>Special Considerations For Undeploying the Default Instance of the Oracle gJRA Resource Adapter
+</h4>
+<p>OC4J cannot be started with OracleASjms, the pre-packaged standalone JMS Connector, undeployed without certain changes. This note deals with additional changes necessary to start OC4J while the default instance of the Oracle gJRA resource adapter, OracleASjms, is undeployed. For general undeployment of a resource adapter, see the <! a href="../../web.1013/b14427/toc.htm">Oracle Containers for J2EE Services Guide</a>. The following additional changes must be made: 
+</p>
+<ul>
+<li type="disc">
+<p>In <code>&#036;J2EE&#095;HOME/config/application.xml</code> comment out the following lines: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;web-module id&#061;"jmsrouter&#095;web" path&#061;"../../home/applications/jmsrouter.war" />
+&lt;ejb-module id&#061;"jmsrouter&#095;ejb" path&#061;"../../home/applications/jmsrouter-ejb.jar" />
+
+</pre>
+</li>
+<li type="disc">
+<p>In <code>&#036;J2EE&#095;HOME/config/default-web-site.xml</code>, comment out the following line
+</p>
+<pre xml:space="preserve" class="oac_no_warn">  &lt;web-app application&#061;"default" name&#061;"jmsrouter&#095;web" root&#061;"/jmsrouter" load-on-startup&#061;"true" />
+
+</pre>
+</li>
+</ul>
+<p>If these changes are made, OC4J may be started, but the OracleAS JMS Router will not work.
+</p>
+<p>To reinstate the JMS Router: 
+</p>
+<ol type="1" start="1">
+<li>
+<p>Fully redeploy the OracleASjms resource adapter instance.
+</p>
+</li>
+<li>
+<p>Uncomment the lines mentioned above in <code>&#036;J2EE&#095;HOME/config/application.xml</code> and <code>&#036;J2EE&#095;HOME/config/default-web-site.xml</code>. 
+</p>
+</li>
+</ol>
+<p>When OC4J is restarted, the OracleAS JMS Router should be available.
+</p>
+</div><!-- class="sect3" -->
+<a id="CHDJACHH" name="CHDJACHH"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref105" name="sthref105"></a>
+<h4 class="sect3"><span class="secnum">5.6.2.2 </span>OC4J May Fail to Restart after Abnormal OC4J Shutdown 
+</h4>
+<p>If you encounter OC4J JMS Server startup problems after an abnormalOC4J shutdown, first check that no other OC4J JMS Server is running and using the same persistence files. Then remove any.lock files from the
+</p>
+<pre xml:space="preserve" class="oac_no_warn"> <span class="italic">ORACLE&#095;HOME</span>/j2ee/<span class="italic">instance&#095;name</span>/persistence 
+
+</pre>
+<p>directory and try restarting again. 
+</p>
+<p>If problems persist, confirm that the <code>jms.xml</code> file is valid. 
+</p>
+<p>If problems still persist, remove the <code>jms.state</code> file from the persistence directory and try again, but be aware that removing this file may result in loss of transaction information. For additional information, see the section "Abnormal Termination" in the "Oracle Enterprise Messaging Service" chapter of the <span class="italic"><! a href="../../web.1013/b14427/toc.htm">Oracle Containers for J2EE Services Guide</a></span>. 
+</p>
+</div><!-- class="sect3" -->
+<a id="CHDEDDEH" name="CHDEDDEH"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref106" name="sthref106"></a>
+<h4 class="sect3"><span class="secnum">5.6.2.3 </span>getconfigProperties() Lists Some Unsupported Properties 
+</h4>
+<p>The list of properties returned by the JMS Administrator MBean's <code>getconfigProperties()</code> method includes the following properties that are neither documented nor supported: 
+</p>
+<ul>
+<li type="disc">
+<p><code>oc4j.jms.checkPermissions</code>
+</p>
+</li>
+<li type="disc">
+<p><code>oc4j.jms.j2ee14</code>
+</p>
+</li>
+<li type="disc">
+<p><code>oc4j.jms.noJmx</code>
+</p>
+</li>
+<li type="disc">
+<p><code>oc4j.jms.printStackTrace</code>
+</p>
+</li>
+<li type="disc">
+<p><code>oc4j.jms.rememberAllXids</code> 
+</p>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="BABHDJHA" name="BABHDJHA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref107" name="sthref107"></a>
+<h3 class="sect2"><span class="secnum">5.6.3 </span>Data Sources 
+</h3>
+<p>This section describes release notes for Data Sources. It covers the following topics: 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABFBFDE">Section 5.6.3.1, "New Syntax for Data Source Configuration"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABCDGFJ">Section 5.6.3.2, "OracleConnectionCacheImpl Deprecated"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BACCHHFI">Section 5.6.3.3, "Data Source JNDI Location Conversion"</a>
+</p>
+</li>
+</ul><a id="BABFBFDE" name="BABFBFDE"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref108" name="sthref108"></a>
+<h4 class="sect3"><span class="secnum">5.6.3.1 </span>New Syntax for Data Source Configuration 
+</h4>
+<p>The data sources subsystem has been completely rewritten. Part of the rewrite includes a new syntax for the configuration using the <code>data-sources.xml</code> file. The pre-10.1.3 syntax is still supported but users are encouraged to use the new syntax. Also users are encouraged to convert their existing application <code>data-sources.xml</code> files to the new syntax. See the <span class="italic"><! a href="../../web.1013/b14427/toc.htm">Oracle Containers for J2EE Services Guide</a></span> for details on converting <code>data-sources.xml</code>. 
+</p>
+</div><!-- class="sect3" -->
+<a id="BABCDGFJ" name="BABCDGFJ"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref109" name="sthref109"></a>
+<h4 class="sect3"><span class="secnum">5.6.3.2 </span>OracleConnectionCacheImpl Deprecated 
+</h4>
+<p>The class <code>oracle.jdbc.pool.OracleConnectionCacheImpl</code> has been deprecated because it does not support multiple schemas. When defining the <code>factory-class</code> for connection factories and <code>data-source-class</code> for native data sources, use <code>oracle.jdbc.pool.OracleDataSource</code> instead of <code>oracle.jdbc.pool.OracleConnectionCacheImpl</code>. 
+</p>
+</div><!-- class="sect3" -->
+<a id="BACCHHFI" name="BACCHHFI"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref110" name="sthref110"></a>
+<h4 class="sect3"><span class="secnum">5.6.3.3 </span>Data Source JNDI Location Conversion 
+</h4>
+<p>Oracle recommends using the <code>admin.jar</code> tool to convert <code>data-sources.xml</code> files from the 10.1.2 format to the 10.1.3 format, as described in the "Using the admin.jar Utility" chapter of the <span class="italic"><! a href="../../web.1013/b14432/toc.htm">Oracle Containers for J2EE Configuration and Administration Guide</a></span>. After conversion, visually inspect the new <code>data-sources.xml</code> file and confirm that there is consistency between your application and the <code>data-sources.xml</code> file regarding the JNDI location used to refer to a data source. 
+</p>
+<p>You can also refer to examples of the new <code>data-sources.xml</code> format in the "Data Sources" chapter of the <span class="italic"><! a href="../../web.1013/b14427/toc.htm">Oracle Containers for J2EE Services Guide</a></span>. 
+</p>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="BABECFEB" name="BABECFEB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref111" name="sthref111"></a>
+<h3 class="sect2"><span class="secnum">5.6.4 </span>OC4J Transaction Support 
+</h3>
+<p>This section describes release notes for OC4J Transaction Support. It covers the following topics: 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CEGFEJEH">Section 5.6.4.1, "Change the Default JTA Recovery Password Immediately"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGFCGAG">Section 5.6.4.2, "New Configuration File for Transaction Manager"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGEAICI">Section 5.6.4.3, "The In-DB Coordinator Is Deprecated"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGEFBFC">Section 5.6.4.4, "The Mid-Tier Coordinator Does Not Use a Persistent Store By Default"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGCCHJH">Section 5.6.4.5, "DMS must be enabled to obtain JTA statistics"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDIDIEG">Section 5.6.4.6, "Transaction Propagation Between 10.1.3 Instances Only"</a>
+</p>
+</li>
+</ul><a id="CEGFEJEH" name="CEGFEJEH"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref112" name="sthref112"></a>
+<h4 class="sect3"><span class="secnum">5.6.4.1 </span>Change the Default JTA Recovery Password Immediately
+</h4>
+<p>The default JTA recovery password should be changed immediately. OC4J is shipped with a default password, which should be changed after install. The recovery password is configured in the configuration file <code>jazn-data.xml</code>, which is in the <code>&#036;J2EE&#095;HOME/config</code> directory. To modify the transaction recovery password, change the credentials value for the user <code>JtaAdmin</code> in the <code>jazn-data.xml</code> file. 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;user>
+    &lt;name>JtaAdmin&lt;/name>
+    &lt;display-name>JTA Recovery User&lt;/display-name>
+    &lt;description>Used to recover propagated OC4J transactions&lt;/description>
+    &lt;credentials>!newJtapassword&lt;/credentials>
+&lt;/user>
+
+</pre>
+<p>Even if OC4J is configured to use a security service other than JAZN, such as OID, the transaction recovery password must still be configured in <code>jazn-data.xml</code>.
+</p>
+</div><!-- class="sect3" -->
+<a id="CEGFCGAG" name="CEGFCGAG"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref113" name="sthref113"></a>
+<h4 class="sect3"><span class="secnum">5.6.4.2 </span>New Configuration File for Transaction Manager
+</h4>
+<p>All transaction-manager-related configuration is now done in the <code>transaction-manager.xml</code>file. 
+</p>
+</div><!-- class="sect3" -->
+<a id="CEGEAICI" name="CEGEAICI"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref114" name="sthref114"></a>
+<h4 class="sect3"><span class="secnum">5.6.4.3 </span>The In-DB Coordinator Is Deprecated 
+</h4>
+<p>The use of the in-database transaction coordinator by OC4J is deprecated as of release 10.1.3. Oracle recommends that the middle-tier transaction coordinator be used going forward.
+</p>
+</div><!-- class="sect3" -->
+<a id="CEGEFBFC" name="CEGEFBFC"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref115" name="sthref115"></a>
+<h4 class="sect3"><span class="secnum">5.6.4.4 </span>The Mid-Tier Coordinator Does Not Use a Persistent Store By Default
+</h4>
+<p>The mid-tier coordinator does not use a persistent store by default. Prior to use in production, the mid-tier coordinator should be configured to use a persistent store which will enable transaction recovery.
+</p>
+</div><!-- class="sect3" -->
+<a id="CEGCCHJH" name="CEGCCHJH"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref116" name="sthref116"></a>
+<h4 class="sect3"><span class="secnum">5.6.4.5 </span>DMS must be enabled to obtain JTA statistics
+</h4>
+<p>To obtain JTA statistics, ensure that DMS is enabled. 
+</p>
+</div><!-- class="sect3" -->
+<a id="CHDIDIEG" name="CHDIDIEG"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref117" name="sthref117"></a>
+<h4 class="sect3"><span class="secnum">5.6.4.6 </span>Transaction Propagation Between 10.1.3 Instances Only 
+</h4>
+<p>Transaction propagation is only supported between 10.1.3 instances. 
+</p>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="BABBEFDH" name="BABBEFDH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref118" name="sthref118"></a>
+<h3 class="sect2"><span class="secnum">5.6.5 </span>RMI 
+</h3>
+<p>This section describes release notes for OC4J Remote Method Invocation (RMI and IIOP). It covers the following topics: 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDBDCBH">Section 5.6.5.1, "RMI Recommendations"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDDEGEJ">Section 5.6.5.2, "Excessive ORMI Connections Created"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJIEHH">Section 5.6.5.3, "Workaround for HTTP Tunnelling Failover"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJGDFE">Section 5.6.5.4, "Incorrect "Provider URL..." Error Message"</a>
+</p>
+</li>
+</ul><a id="CHDBDCBH" name="CHDBDCBH"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref119" name="sthref119"></a>
+<h4 class="sect3"><span class="secnum">5.6.5.1 </span>RMI Recommendations 
+</h4>
+<p>In this release, note the following recommendations: 
+</p>
+<ul>
+<li type="disc">
+<p>Environment variables <code>dedicated.connection</code> and <code>dedicated.rmicontext</code> are not required for lookup using EJBs in 10.1.3 
+</p>
+<p>The <code>dedicated.connection</code> environment variable is still required for EJBs hosted in 10.1.2 being looked up from 10.1.3 - Bug 4895256 
+</p>
+</li>
+<li type="disc">
+<p>The RMI port may not be released immediately sometimes. - Bug 4892487
+</p>
+</li>
+<li type="disc">
+<p>Old tunneling is deprecated. Use the new URL, as described in the "Configuring ORMI Tunneling through HTTP" section of the "RMI" chapter of the <span class="italic"><! a href="../../web.1013/b14427/toc.htm">Oracle Containers for J2EE Services Guide</a></span>. 
+</p>
+</li>
+<li type="disc">
+<p>Old package names for context factories deprecated and new names are recommended to be used, as described in the "Constructing JNDI Context" section of the "JNDI" chapter of the <span class="italic"><! a href="../../web.1013/b14427/toc.htm">Oracle Containers for J2EE Services Guide</a></span>. 
+</p>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+<a id="CHDDEGEJ" name="CHDDEGEJ"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref120" name="sthref120"></a>
+<h4 class="sect3"><span class="secnum">5.6.5.2 </span>Excessive ORMI Connections Created 
+</h4>
+<p>Setting the JNDI property <code>oracle.j2ee.rmi.loadBalance</code> to either <code>context</code> or <code>lookup</code> currently creates separate ORMI connections for each call to new <code>InitialContext</code>. Closing the context does not cause the connection to be closed. Doing this repeatedly will result in performance degredation. - Bug 4902304 
+</p>
+</div><!-- class="sect3" -->
+<a id="BABJIEHH" name="BABJIEHH"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref121" name="sthref121"></a>
+<h4 class="sect3"><span class="secnum">5.6.5.3 </span>Workaround for HTTP Tunnelling Failover 
+</h4>
+<p>The following workaround is necessary for HTTP Tunnelling failover to work in iAS mode. This workaround applies to iAS mode, where the provider URL points to OHS using <code>mod&#095;oc4j</code>. The workaround is not needed in standalone mode, where the provider URL lists multiple OC4J instances.- Bug 4599521 
+</p>
+<p>The workaround must be done for all OC4J server instances in the cluster, such as home1, home2, and so on. 
+</p>
+<ol type="1" start="1">
+<li>
+<p>Go to Application Server Control Console. 
+</p>
+</li>
+<li>
+<p>Select a server instance, such as "home". 
+</p>
+</li>
+<li>
+<p>In the instance window, select the Applications tab. 
+</p>
+</li>
+<li>
+<p>Select the "default" application. 
+</p>
+</li>
+<li>
+<p>In the Application:default window, select the Administration tab. 
+</p>
+</li>
+<li>
+<p>Select the Clustering Properties task. 
+</p>
+</li>
+<li>
+<p>Select the "Override parent application clustering settings" radio button. Specify Clustering Enable. 
+</p>
+</li>
+<li>
+<p>Click the OK button. 
+</p>
+</li>
+<li>
+<p>Repeat for each OC4J server instance. 
+</p>
+</li>
+<li>
+<p>Add the <code>&lt;distributable /></code> element to the <code>&lt;ORACLE&#095;HOME>/j2ee/home/default-web-app/WEB-INF/web.xml</code> file. 
+</p>
+</li>
+<li>
+<p>Restart the server using <code>opmnctl stopall</code> and then <code>opmnctl startall</code>. 
+</p>
+</li>
+</ol>
+</div><!-- class="sect3" -->
+<a id="BABJGDFE" name="BABJGDFE"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref122" name="sthref122"></a>
+<h4 class="sect3"><span class="secnum">5.6.5.4 </span>Incorrect "Provider URL..." Error Message 
+</h4>
+<p>In certain cases when there is something wrong with the provider url format, the following incorrect error message is displayed: 
+</p>
+<p><code>" Provider URL must be of the form &#091;opmn:&#093;corbaname::host:port&#035;/appname"</code> 
+</p>
+<p>The URL format in the error message is incorrect. The correct URL format is:
+</p>
+<p><code> &#091;opmn:&#093;corbaname::host:port&#035;&#091;instancename&#035;&#093;appname</code> 
+</p>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="BABBBFBI" name="BABBBFBI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref123" name="sthref123"></a>
+<h3 class="sect2"><span class="secnum">5.6.6 </span>XQS 
+</h3>
+<p>This section describes release notes for XML Query Service (XQS). It covers the following topic(s): 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDHIDJD">Section 5.6.6.1, "Implementation Restriction on the fn:doc() and fn:collection() Functions"</a>
+</p>
+</li>
+</ul><a id="CHDHIDJD" name="CHDHIDJD"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref124" name="sthref124"></a>
+<h4 class="sect3"><span class="secnum">5.6.6.1 </span>Implementation Restriction on the fn:doc() and fn:collection() Functions
+</h4>
+<p>The only arguments that the current implementation of the built-in XQuery functions <code>fn:doc</code> and <code>fn:collection</code> support are URLs with the "<code>file</code>" protocol that specify a path to a file on the local file system, as in this function call:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">   fn:doc("C:/MyDocuments/XQS/myView.xq")
+
+</pre>
+<p>The protocol part of the URL is always assumed to be "<code>file</code>" and can be omitted. 
+</p>
+<p>As an alternative to the <code>fn:doc()</code> function, you can use an XQS document function to access a document via any URL that Oracle Application Server supports. For example, a <code>&lt;document-source></code> element has the following configuration:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">   &lt;document-source>
+         &lt;function-name prefix&#061;"ns"> genericFile &lt;/function-name>
+   &lt;/document-source>
+
+</pre>
+<p>The XQS function <code>genericFile()</code> can be used in a query expression, as follows: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">   declare namespace ns &#061; "&#8230;"; 
+   declare function ns:genericFile() external; 
+</pre>
+<p>
+</p>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABGBEGH" name="BABGBEGH"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref125" name="sthref125"></a>
+<h2 class="sect1"><span class="secnum">5.7 </span>Release Notes for J2EE Connector Architecture (J2CA) 
+</h2>
+<p>This section describes release notes for J2EE Connector Architecture (J2CA). It covers the following topics: 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABDJCJA">Section 5.7.1, "J2CA Lifecycle Issues"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABIJFCB">Section 5.7.2, "Cannot Cast a Connection Handle to a Concrete Type"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJFAHG">Section 5.7.3, "RAR Name Must Be Unique"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABBGBEC">Section 5.7.4, "Set inactivity-timeout-check in oc4j-ra.xml"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABDDIHF">Section 5.7.5, "Stop the Resource Adapter Before Redeploying It"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABGJBHF">Section 5.7.6, "Explicit Configuration Is Necessary For Resource Adapter To Support XA Transaction Recovery"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABGGJCG">Section 5.7.7, "ASControl Changes to Work Manager Thread Pool Not Persisted If &lt;work-manager-thread-pool> Not Defined"</a>
+</p>
+</li>
+</ul><a id="BABDJCJA" name="BABDJCJA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref126" name="sthref126"></a>
+<h3 class="sect2"><span class="secnum">5.7.1 </span>J2CA Lifecycle Issues 
+</h3>
+<ul>
+<li type="disc">
+<p>Unable to deploy multiple versions of a standalone RAR - Bug 4253861
+</p>
+</li>
+<li type="disc">
+<p>A standalone RAR takes precedence over one in an application. When the same fully-qualified class exists in both a standalone RAR and also in a RAR deployed in an EAR, the class will always be loaded from the standalone RAR. - Bug 4415389 
+</p>
+</li>
+<li type="disc">
+<p>When stopping a resource adapter, OC4J does not always properly stop dependent applications. 
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="BABIJFCB" name="BABIJFCB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref127" name="sthref127"></a>
+<h3 class="sect2"><span class="secnum">5.7.2 </span>Cannot Cast a Connection Handle to a Concrete Type 
+</h3>
+<p>OC4J wraps all connection handles with connection handle proxies to perform connection association and therefore connection handles can only be cast to interfaces implemented by the connection handle. An attempt to cast a connection handle to a concrete class will cause a <code>ClassCastException</code>. 
+</p>
+</div><!-- class="sect2" -->
+<a id="BABJFAHG" name="BABJFAHG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref128" name="sthref128"></a>
+<h3 class="sect2"><span class="secnum">5.7.3 </span>RAR Name Must Be Unique 
+</h3>
+<p><code>NullPointerException</code> occurs if an attempt is made to deploy an RAR when there is already an RAR deployed with the same name. - Bug 4884317 
+</p>
+</div><!-- class="sect2" -->
+<a id="BABBGBEC" name="BABBGBEC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref129" name="sthref129"></a>
+<h3 class="sect2"><span class="secnum">5.7.4 </span>Set inactivity-timeout-check in oc4j-ra.xml 
+</h3>
+<p>Set <code>inactivity-timeout-check</code> in the <code>oc4j-ra.xml</code> file. Changing the <code>inactivity-timeout-check</code> property for an RAR connection pool with ASControl does not work properly. This property should be set to the proper value in the <code>oc4j-ra.xml</code> file prior to deploying the resource adapter. - Bug 4455421
+</p>
+</div><!-- class="sect2" -->
+<a id="BABDDIHF" name="BABDDIHF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref130" name="sthref130"></a>
+<h3 class="sect2"><span class="secnum">5.7.5 </span>Stop the Resource Adapter Before Redeploying It 
+</h3>
+<p>When a resource adapter with active endpoints is redeployed without stopping it first, OC4J throws a <code>DeployerException</code> due to active endpoints. To work around this issue, stop the resource adapter prior to redeploying it. - Bug 4740441
+</p>
+</div><!-- class="sect2" -->
+<a id="BABGJBHF" name="BABGJBHF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref131" name="sthref131"></a>
+<h3 class="sect2"><span class="secnum">5.7.6 </span>Explicit Configuration Is Necessary For Resource Adapter To Support XA Transaction Recovery 
+</h3>
+<p>XA transaction recovery can be configured using Application Server Control using the following steps: 
+</p>
+<ol type="1" start="1">
+<li>
+<p>In the <code>Connection Factories</code> tab accessed from the <code>Resource Adapter Home</code> page for the appropriate resource adapter, choose the JNDI location of the connection factory that you want to configure. 
+</p>
+</li>
+<li>
+<p>In the <code>Options</code> tab of the resulting <code>Edit Connection Factory</code> page, you can do any of the following: 
+</p>
+<ul>
+<li type="disc">
+<p>Add a new user name. 
+</p>
+<p>After specifying the user name, you can specify a password directly or indirectly. For a direct password, choose <code>Password</code> and type the password itself. 
+</p>
+<p>For an indirect password, choose <code>Indirect Password</code> and type a key (which might just be the user name, for example). OC4J uses the key to do a lookup in the User Manager (specifically, in the jazn-data.xml file). 
+</p>
+</li>
+<li type="disc">
+<p>Change an existing user name or password
+</p>
+</li>
+</ul>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="BABGGJCG" name="BABGGJCG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref132" name="sthref132"></a>
+<h3 class="sect2"><span class="secnum">5.7.7 </span>ASControl Changes to Work Manager Thread Pool Not Persisted If &lt;work-manager-thread-pool> Not Defined 
+</h3>
+<p>Changes to work manager thread pool properties from ASControl are not persisted to the <code>server.xml</code> file if there is no <code>&lt;work-manager-thread-pool></code> element defined. - Bug 4871940
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CCHIAHDE" name="CCHIAHDE"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref133" name="sthref133"></a>
+<h2 class="sect1"><span class="secnum">5.8 </span>Release Notes for OracleAS JAAS Provider and Security
+</h2>
+<p>This section describes release notes for the OracleAS JAAS Provider in Release 10.1.3.0.0. It covers the following topics: 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BCFHFFDJ">Section 5.8.1, "Status of COREid Access with 10.1.3 OC4J and Oracle HTTP Server"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BCFFHEHA">Section 5.8.2, "Restart Application After Configuring Through Security Provider MBean"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BCFFJJFH">Section 5.8.3, "Necessary Permission Grants When Using Security Manager"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BCFGHBDD">Section 5.8.4, "Indirect Users for Password Indirection"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BCFCGECB">Section 5.8.5, "JAAS Policy Configuration with Custom Realms"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BCFDBCAI">Section 5.8.6, "User Manager Delegation for the File-Based Provider"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BCFCJEFD">Section 5.8.7, "JNDI Context Pool Timeout Property for Oracle Internet Directory"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABCGEJI">Section 5.8.8, "Miscellaneous OracleAS JAAS Provider and Security Release Notes"</a>
+</p>
+</li>
+</ul><a id="BCFHFFDJ" name="BCFHFFDJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref134" name="sthref134"></a>
+<h3 class="sect2"><span class="secnum">5.8.1 </span>Status of COREid Access with 10.1.3 OC4J and Oracle HTTP Server
+</h3>
+<p>As of the 10.1.3.0.0 release, you cannot use the COREid Access security provider for J2EE Web applications deployed in 10.1.3 OC4J. However, COREid integration is still operational for Web services and EJBs deployed in 10.1.3 OC4J. Refer to OracleMetaLink to check the status of a future patch to remedy this problem for Web applications. - Bugs 4887466, 4772443, 4745790
+</p>
+</div><!-- class="sect2" -->
+<a id="BCFFHEHA" name="BCFFHEHA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref135" name="sthref135"></a>
+<h3 class="sect2"><span class="secnum">5.8.2 </span>Restart Application After Configuring Through Security Provider MBean
+</h3>
+<p>Whenever a configuration change is made using Application Server Control or the OC4J security provider MBean, the application must be restarted. Until the application is restarted, all other operations of the security provider MBean are invalidated and will return the following message: "The security provider has been changed. Operation temporarily invalidated till application or OC4J restart."
+</p>
+</div><!-- class="sect2" -->
+<a id="BCFFJJFH" name="BCFFJJFH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref136" name="sthref136"></a>
+<h3 class="sect2"><span class="secnum">5.8.3 </span>Necessary Permission Grants When Using Security Manager
+</h3>
+<p>Users running with a <code>SecurityManager</code> in an Oracle Application Server environment should be aware that if an OC4J instance name other than <code>home</code> is used, adding the following permission grants to <code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code><code>/j2ee/</code><code><span class="codeinlineitalic">instance&#095;name</span></code><code>/config/java2.policy</code> will be necessary for proper operation of OC4J: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">grant codebase
+"file:&#036;&#123;oracle.home&#125;/j2ee/&#036;&#123;oracle.oc4j.instancename&#125;/connectors/OracleASjms/OracleASjms/gjra.jar" &#123;
+    permission java.security.AllPermission;
+&#125;;
+
+grant codebase "file:
+&#036;&#123;oracle.home&#125;/j2ee/&#036;&#123;oracle.oc4j.instancename&#125;/connectors/datasources/datasources/datasources.jar"
+&#123;
+    permission java.security.AllPermission;
+&#125;;
+
+</pre>
+<p>(Failure to add these does not compromise security but may hinder OC4J operations.) - Bug 4942880 
+</p>
+</div><!-- class="sect2" -->
+<a id="BCFGHBDD" name="BCFGHBDD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref137" name="sthref137"></a>
+<h3 class="sect2"><span class="secnum">5.8.4 </span>Indirect Users for Password Indirection
+</h3>
+<p>If you choose to use indirect passwords in the OC4J 10.1.3.0.0 implementation, an indirect user is created in the <code>system-jazn-data.xml</code> file when you use this feature. Be aware that these indirect user accounts are not removed automatically when an application is undeployed; you must use Application Server Control Console to delete any stale indirect user accounts manually.
+</p>
+</div><!-- class="sect2" -->
+<a id="BCFCGECB" name="BCFCGECB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref138" name="sthref138"></a>
+<h3 class="sect2"><span class="secnum">5.8.5 </span>JAAS Policy Configuration with Custom Realms
+</h3>
+<p>When you use custom realms, and JAAS policies are granted to users or roles in the custom realm, you should do the following:
+</p>
+<ol type="1" start="1">
+<li>
+<p>In the <code>&lt;jazn></code> element of your application <code>orion-application.xml</code> file, specify a <code>default-realm</code> setting of "<code><span class="codeinlineitalic">custom&#095;realm&#095;name</span></code>". 
+</p>
+</li>
+<li>
+<p>Do <span class="italic">not</span> specify a <code>location</code> attribute setting in the <code>&lt;jazn></code> element.
+</p>
+</li>
+<li>
+<p>Set the <code>jaas.username.simple</code> property to "<code>false</code>" in <code>jazn.xml</code>, using a <code>&lt;property></code> subelement of the <code>&lt;jazn></code> element.
+</p>
+</li>
+</ol>
+<p>These steps allow the custom realm and its users, roles, and policies to be persisted in <code>system-jazn-data.xml</code>.
+</p>
+<p>Note that to use JAAS authorization, in particular to grant permissions to users or roles in a custom realm, the custom realm and its users and groups must be defined and persisted in <code>system-jazn-data.xml</code>, not in a <code>jazn-data.xml</code> file deployed in the application EAR file.
+</p>
+</div><!-- class="sect2" -->
+<a id="BCFDBCAI" name="BCFDBCAI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref139" name="sthref139"></a>
+<h3 class="sect2"><span class="secnum">5.8.6 </span>User Manager Delegation for the File-Based Provider
+</h3>
+<p>Before HTTP requests can be dispatched to the target servlet, the OracleAS JAAS Provider <code>JAZNUserManager</code> coordinates authentication. <code>JAZNUserManager</code> supports the OC4J <code>UserManager</code> delegation model, but effectively this applies only to the file-based provider. With delegation, if a user or group is not found at the application-level <code>JAZNUserManager</code> instance, the request is delegated to the parent user manager. 
+</p>
+<p>Specifically, note the following restrictions and additional details:
+</p>
+<ul>
+<li type="disc">
+<p>If the application and parent application are both configured to use the file-based provider, delegation goes up through the parent hierarchy as far as necessary, until a parent is not configured to use the file-based provider. Delegation is not propagated beyond that point.
+</p>
+</li>
+<li type="disc">
+<p>If the application is configured to use the file-based provider, and the parent is configured to use the LDAP-based provider, an external LDAP provider, or a custom login module, there is no delegation support.
+</p>
+</li>
+<li type="disc">
+<p>If the application itself is configured to use the LDAP-based provider, an external LDAP provider, or a custom login module, there is no delegation support.
+</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>In OC4J, the <code>system</code> application is at the root of the hierarchy, but the <code>default</code> application is the default parent of any deployed application. Both use <code>system-jazn-data.xml</code> as the user repository.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="BCFCJEFD" name="BCFCJEFD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref140" name="sthref140"></a>
+<h3 class="sect2"><span class="secnum">5.8.7 </span>JNDI Context Pool Timeout Property for Oracle Internet Directory
+</h3>
+<p>For the LDAP-based provider (Oracle Internet Directory), the OC4J 10.1.3 implementation includes a new property, <code>JNDI&#095;CTX&#095;POOL&#095;TIMEOUT</code>, that you can set in order to specify a timeout for the JNDI context pool. This may be useful, for example, when there is a firewall between the middle tier, including OracleAS JAAS Provider, and the Oracle Internet Directory. The timeout on the firewall connection could be coordinated with the timeout of the directory context. 
+</p>
+<p>Set this property through a <code>&lt;property></code> subelement of the <code>&lt;jazn></code> element in the <code>jazn.xml</code> file, specifying the timeout in milliseconds. The following example specifies a timeout of 5 seconds.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;jazn ... >
+   &lt;property name&#061;"JNDI&#095;CTX&#095;POOL&#095;TIMEOUT" value&#061;"5000">
+   ...
+&lt;/jazn>
+</pre>
+</div><!-- class="sect2" -->
+<a id="BABCGEJI" name="BABCGEJI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref141" name="sthref141"></a>
+<h3 class="sect2"><span class="secnum">5.8.8 </span>Miscellaneous OracleAS JAAS Provider and Security Release Notes
+</h3>
+<ul>
+<li type="disc">
+<p>Although it is already stated in the 10.1.3.0.0 OC4J Security Guide, make special note of the fact that the OC4J administration account, <code>admin</code> in previous releases, has changed to <code>oc4jadmin</code>.
+</p>
+</li>
+<li type="disc">
+<p>Security context propagation is supported only between OC4J 10.1.3 instances.
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABGABJJ" name="BABGABJJ"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref142" name="sthref142"></a>
+<h2 class="sect1"><span class="secnum">5.9 </span>Release Notes for Documentation Errata 
+</h2>
+<p>This section describes known errors in the OC4J documentation in Oracle Application Server 10g Release 3 (10.1.3). It covers the following book(s): 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABEAHAI">Section 5.9.1, "Web Services Documentation Errata"</a>
+</p>
+</li>
+</ul><a id="BABEAHAI" name="BABEAHAI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref143" name="sthref143"></a>
+<h3 class="sect2"><span class="secnum">5.9.1 </span>Web Services Documentation Errata 
+</h3>
+<p>This section describes Web Services documentation errata. It covers the following topic(s): 
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CEGIBFFI">Section 5.9.1.1, "WebServicesAssembler Command genInterface Does Not Use the use and style Arguments"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGEBGHH">Section 5.9.1.2, "Error in Ant Task for Assembling JMS Web Services"</a>
+</p>
+</li>
+</ul><a id="CEGIBFFI" name="CEGIBFFI"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref144" name="sthref144"></a>
+<h4 class="sect3"><span class="secnum">5.9.1.1 </span>WebServicesAssembler Command genInterface Does Not Use the use and style Arguments
+</h4>
+<p>Book: <span class="italic"><! a href="../../web.1013/b14434/toc.htm">Oracle Application Server Web Services Developer's Guide</a></span>
+</p>
+<p>Chapter 4, "OracleAS Web Services message Formats", Section: "Selecting Message Formats"
+</p>
+<p>The list of WebServicesAssembler commands that can use the <code>use</code> and <code>style</code> arguments includes <code>genInterface</code>. This is an error. The <code>genInterface</code> command cannot use these arguments.
+</p>
+</div><!-- class="sect3" -->
+<a id="CEGEBGHH" name="CEGEBGHH"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref145" name="sthref145"></a>
+<h4 class="sect3"><span class="secnum">5.9.1.2 </span>Error in Ant Task for Assembling JMS Web Services 
+</h4>
+<p>Book: <span class="italic"><! a href="../../web.1013/b25603/toc.htm">Oracle Application Server Web Services Advanced Developer&#039;s Guide</a></span>
+</p>
+<p>Chapter 8, "Using JMS as a Web Service Transport", Section: "Assembling a Web Service Bottom Up that Uses JMS Transport"
+</p>
+<p>In Step 1, there is a missing closing angle bracket in the <code>&lt;oracle:porttype</code> clause, at the end of the <code>sendConnectionFactoryLocation</code> attribute. The <code>&lt;oracle:porttype</code> clause should read as follows: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">...
+   &lt;oracle:porttype
+       interfaceName&#061;"oracle.j2ee.ws.jmstransport.Echo"
+       className&#061;"oracle.j2ee.ws.jmstransport.EchoImpl"
+       >
+       &lt;oracle:port
+          uri&#061;"/echo"
+          sendQueueLocation&#061;"jms/senderQueue"
+          name&#061;"EchoPort"
+          sendConnectionFactoryLocation&#061;"jms/senderQueueConnectionFactory"<span class="bold">></span>
+      &lt;/oracle:port>
+...
+</pre>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BGBGJBAD" name="BGBGJBAD"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref146" name="sthref146"></a>
+<h2 class="sect1"><span class="secnum">5.10 </span>Oracle Application Server Containers for J2EE Job Scheduler
+</h2>
+<p>This section describes issues associated with Oracle Application Server Containers for J2EE Job Scheduler. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABCBJCD">Section 5.10.1, "Invalid Data Source Configuration May Result in Initialization Exception"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABGIJGA">Section 5.10.2, "Cancel API is not Transactional"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABHAIDB">Section 5.10.3, "Lower Than Expected Throughput may be Experienced for Large Number of Jobs"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABEBJII">Section 5.10.4, "Removing a Job May Impact Job Scheduler Event Listener Processing"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJCHDF">Section 5.10.5, "Preemptory Shutdown of OC4J Container may Prevent Subsequent Restart"</a>
+</p>
+</li>
+</ul><a id="BABCBJCD" name="BABCBJCD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref147" name="sthref147"></a>
+<h3 class="sect2"><span class="secnum">5.10.1 </span>Invalid Data Source Configuration May Result in Initialization Exception
+</h3>
+<p>In the JDBC persistence configuration, a null pointer exception results on container startup if the associated data source is improperly configured or the database server is not up.
+</p>
+<p>There is no workaround for this issue; make sure the data sources are configured correctly and the target database is up.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABGIJGA" name="BABGIJGA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref148" name="sthref148"></a>
+<h3 class="sect2"><span class="secnum">5.10.2 </span>Cancel API is not Transactional
+</h3>
+<p>If the Cancel API is invoked within a JTA transaction, all outstanding executions are canceled synchronously, not after the transaction is committed.
+</p>
+<p>There is no workaround for this issue.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABHAIDB" name="BABHAIDB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref149" name="sthref149"></a>
+<h3 class="sect2"><span class="secnum">5.10.3 </span>Lower Than Expected Throughput may be Experienced for Large Number of Jobs
+</h3>
+<p>Lower than expected execution throughput may be observed when there are large burst jobs with concurrent schedules.
+</p>
+<p>To work around this issue, disable the management bean and DMS statistics publication in order to increase throughput. This can be accomplished by setting the value of the following environment entries in the Job Scheduler configuration to false:
+</p>
+<ul>
+<li type="disc">
+<p><code>oracle.ias.scheduler.dms</code>
+</p>
+</li>
+<li type="disc">
+<p><code>oracle.ias.scheduler.jmx</code>
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="BABEBJII" name="BABEBJII"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref150" name="sthref150"></a>
+<h3 class="sect2"><span class="secnum">5.10.4 </span>Removing a Job May Impact Job Scheduler Event Listener Processing
+</h3>
+<p>Removing a job in the JMS persistence configuration may result in event processing delays. This behavior is exacerbated in a deployment where jobs are created and removed with high frequency.
+</p>
+<p>To work around this issue, disable the management bean and DMS statistics publication in order to increase throughput. This can be accomplished by setting the value of the following environment entries in the Job Scheduler configuration to false:
+</p>
+<ul>
+<li type="disc">
+<p><code>oracle.ias.scheduler.dms</code>
+</p>
+</li>
+<li type="disc">
+<p><code>oracle.ias.scheduler.jmx</code>
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="BABJCHDF" name="BABJCHDF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref151" name="sthref151"></a>
+<h3 class="sect2"><span class="secnum">5.10.5 </span>Preemptory Shutdown of OC4J Container may Prevent Subsequent Restart
+</h3>
+<p>The JMS server creates recover lock files in the <code><span class="codeinlineitalic">&#036;ORACLE&#095;HOME</span></code><code>/j2ee/home/persistence</code> directory. As a result of a preemptory shutdown, these files may not be properly cleaned up and may prevent the container from restarting. Refer to the JMS release notes for more information.
+</p>
+<p>This issue is only pertinent to Job Scheduler running in a JMS persistence environment.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="ohs.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="portal.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

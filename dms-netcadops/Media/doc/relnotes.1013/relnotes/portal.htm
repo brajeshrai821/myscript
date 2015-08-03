@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 24, 2006 11:30:33 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5 Build 274" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Oracle Application Server Portal</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="oc4j.htm" title="Previous" />
+<link rel="next" href="toplink.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Release Notes </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25216-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="oc4j.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="toplink.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="sthref152" name="sthref152"></a>
+<h1 class="chapter"><span class="secnum">6 </span>Oracle Application Server Portal<a id="sthref153" name="sthref153"></a></h1>
+<p>This chapter describes issues associated with OracleAS Portal. It includes the following topic:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#i1090040">Section 6.1, "General Issues and Workarounds"</a>
+</p>
+</li>
+</ul><a id="i1090040" name="i1090040"></a>
+<div class="sect1">
+<a id="sthref154" name="sthref154"></a>
+<h2 class="sect1"><span class="secnum">6.1 </span>General Issues and Workarounds
+</h2>
+<p>This section describes general issues and workarounds. It includes the following topic:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CCHHGDJA">Section 6.1.1, "Ensure Correct JDK Version in Compiler Settings"</a>
+</p>
+</li>
+</ul><a id="CCHHGDJA" name="CCHHGDJA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref155" name="sthref155"></a>
+<h3 class="sect2"><span class="secnum">6.1.1 </span>Ensure Correct JDK Version in Compiler Settings
+</h3>
+<p>Java classes compiled using JDK 1.5 will not run in JDK 1.4. The default JDK version used to compile code depends on the JDK version used by the Oracle JDeveloper IDE.
+</p>
+<p>If you create a portlet using Oracle JDeveloper 10<span class="italic">g</span> Release 3 (10.1.3) running on JDK 1.5, and plan to deploy it to an OC4J instance that uses JDK 1.4, then you must ensure that the compiler settings are set to 1.4. To set the project compiler settings, perform the following steps: 
+</p>
+<ol type="1" start="1">
+<li>
+<p>In Oracle JDeveloper, right-click your project in the Applications Navigator tab, and select <span class="bold">Project Properties</span> from the context menu.
+</p>
+</li>
+<li>
+<p>From the Project Properties dialog box, click <span class="bold">Compiler</span> in the left pane.
+</p>
+</li>
+<li>
+<p>From the <span class="bold">Source</span> list, select <span class="bold">1.4</span>.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.
+</p>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="oc4j.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="toplink.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

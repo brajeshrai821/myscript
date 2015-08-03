@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cache-configuration xmlns="http://www.oracle.com/oracle/ias/cache/configuration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.oracle.com/oracle/ias/cache/configuration
+ora-cache.xsd">
+  <logging>
+    <location>%s_javacacheAdmin%/logs/javacache.log</location>
+  </logging>
+  <communication>
+    <isDistributed>true</isDistributed>
+    <coordinator discovery-port="%s_cachePort%"/>
+  </communication>
+  <persistence>
+    <location>%s_diskPath%</location>
+  </persistence>
+</cache-configuration>

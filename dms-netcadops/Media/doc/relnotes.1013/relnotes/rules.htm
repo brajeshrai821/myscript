@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 24, 2006 11:30:33 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5 Build 274" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Oracle Business Rules</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="toplink.htm" title="Previous" />
+<link rel="next" href="hadr.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Release Notes </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25216-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="toplink.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="hadr.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="sthref163" name="sthref163"></a>
+<h1 class="chapter"><span class="secnum">8 </span>Oracle Business Rules<a id="sthref164" name="sthref164"></a></h1>
+<p>This chapter describes issues associated with Oracle Business Rules. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CACDIHHI">Section 8.1, "Using RL Reserved Words in Java Package Names"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CACGHCBE">Section 8.2, "Ancestor Methods are not Visible from Sub-Classes"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CACCDIGJ">Section 8.3, "New and Deleted Patterns are not Immediately Available"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHDBDAI">Section 8.4, "Changes to the Bind Variable Name are not Immediately Reflected"</a>
+</p>
+</li>
+</ul><a id="CACDIHHI" name="CACDIHHI"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref165" name="sthref165"></a>
+<h2 class="sect1"><span class="secnum">8.1 </span>Using RL Reserved Words in Java Package Names
+</h2>
+<p>Invalid RL Language is generated if an RL Language reserved word (for example, the word <code>rule</code> in <code>mypkg.rule.com</code>) is part of the Java package name. If an RL Language reserved word is used in a Java package name, an error message like the following appears:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Oracle RL 1.0: syntax error PareseException: encountered 'rule' when expectingone of: &lt;XML&#095;IDENTIFIER> ...&lt;IDENTIFIER> ... "&#042;" at line 11 column 19 in main
+
+</pre>
+<p>There is no workaround for this issue; do not use RL Language reserved words in Java package names.
+</p>
+</div><!-- class="sect1" -->
+<a id="CACGHCBE" name="CACGHCBE"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref166" name="sthref166"></a>
+<h2 class="sect1"><span class="secnum">8.2 </span>Ancestor Methods are not Visible from Sub-Classes
+</h2>
+<p>The properties of a superclass are visible in the appropriate choice lists, but the methods of the ancestor classes are not visible.
+</p>
+<p>There is no workaround for this issue.
+</p>
+</div><!-- class="sect1" -->
+<a id="CACCDIGJ" name="CACCDIGJ"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref167" name="sthref167"></a>
+<h2 class="sect1"><span class="secnum">8.3 </span>New and Deleted Patterns are not Immediately Available
+</h2>
+<p>When you use Rule Author to add a pattern to a rule, the list of actions does not immediately reflect the existence of the new pattern instance. Similarly, when you use Rule Author to delete a pattern from a rule, the list of actions does not immediately reflect this change.
+</p>
+<p>To work around this issue, you can do either of the following:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Update the rule by clicking either <span class="bold">OK</span> or <span class="bold">Apply</span>, then re-select the rule from the navigation pane.
+</p>
+</li>
+<li>
+<p>Create a new action.
+</p>
+</li>
+</ol>
+</div><!-- class="sect1" -->
+<a id="CIHDBDAI" name="CIHDBDAI"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref168" name="sthref168"></a>
+<h2 class="sect1"><span class="secnum">8.4 </span>Changes to the Bind Variable Name are not Immediately Reflected
+</h2>
+<p>If you change the bind variable name on the Pattern Definition page, this change is not immediately reflected on the parent page (the Rule Author Rule page). In order to see your changes, you must close the Pattern Definition page before continuing your work on the Rule Author Rule page.
+</p>
+<p>There is no workaround for this issue.
+</p>
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="toplink.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="hadr.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

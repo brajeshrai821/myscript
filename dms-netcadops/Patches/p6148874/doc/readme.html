@@ -1,0 +1,3796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = June 21, 2007 13:20:00 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5 Build 274" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Oracle&#174; Application Server Patch Set Notes</title>
+<style>
+@charset "utf-8";
+/*
+  blafdoc.css
+  Release 4.5
+  Copyright 2002, 2005, Oracle. All rights reserved.
+*/
+
+body, p, table, td, th, ol, ul, a, dl, dt, dd, blockquote, caption {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.25;
+  color: black;
+  background-color: white;
+  /* Fahrner Method. See Zeldman. Working with Web Standards. pp. 323-5. */
+  font-size: x-small;
+  voice-family: "\"}\"";
+  voice-family: inherit;
+  font-size: small;
+}
+html > body {
+  font-size: small;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:link {
+  color: #630;
+  background-color: white;
+}
+
+a:visited {
+  color: #963;
+  background-color: white;
+}
+
+a:hover {
+  color: #f60;
+  background-color: white;
+}
+
+a:active {
+  color: #f60;
+  background-color: white;
+}
+
+a.glossary-link {
+  border-bottom: 1px dotted;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #369;
+  background-color: white;
+}
+
+h1 {
+  font-size: 1.6em;
+  font-weight: bold;
+  border: solid #cc9;
+  border-width: 0px 0px 1px 0px;
+  width: 100%;
+}
+
+h2 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+pre, code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+}
+
+code {
+  color: #369;
+  background-color: white;
+}
+
+code *.code-comment {
+  color: black;
+  background-color: white;
+}
+
+a:link code {
+  color: #630;
+  background-color: white;
+}
+
+a:visited code {
+  color: #963;
+  background-color: white;
+}
+
+a:hover code {
+  color: #f60;
+  background-color: white;
+}
+
+a:active code {
+  color: #f60;
+  background-color: white;
+}
+
+caption {
+  text-align: center;
+  font-weight: bold;
+  width: auto;
+}
+
+dt {
+  font-weight: bold;
+}
+
+td {
+  vertical-align: top;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+  vertical-align: bottom;
+  color: #369;
+  background-color: white;
+}
+
+table.table-border {
+  border: 1px solid #cc9;
+}
+
+table.table-border td,
+table.table-border th {
+  padding: 2px 4px 2px 4px;
+  color: black;
+  background-color: white;
+  border: 1px solid #cc9;
+}
+
+table.table-border th.table-header-border-left,
+table.table-border th.table-header-border-middle,
+table.table-border th.table-header-border-right {
+  color: #369;
+  background-color: #cc9;
+}
+
+table.table-border th.table-header-border-left {
+  border-left: 1px solid #cc9;
+  border-right: 1px solid white;
+  color: black;
+  background-color: #cc9;
+}
+
+table.table-border th.table-header-border-middle {
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  color: black;
+  background-color: #cc9;
+}
+
+table.table-border th.table-header-border-right {
+  border-left: 1px solid white;
+  border-right: 1px solid #cc9;
+  color: black;
+  background-color: #cc9;
+}
+
+span.gui-object, span.gui-object-action {
+  font-weight: bold;
+}
+
+span.gui-object-title { }
+
+p.horizontal-rule {
+  width: 100%;
+  border: solid #cc9;
+  border-width: 0px 0px 1px 0px;
+  margin-bottom: 4ex;
+}
+
+div.zz-skip-header {
+  margin-bottom: 0px;
+  margin-top: -2px;
+  padding: 0px;
+  text-align: center;
+  line-height: 1px;
+}
+
+div.zz-skip-header a:link,
+div.zz-skip-header a:visited,
+div.zz-skip-header a:hover,
+div.zz-skip-header a:active {
+  color: white;
+  background-color: white;
+  text-decoration: none;
+  font-size: 0.2ex;
+  line-height: 1px;
+}
+
+td.zz-nav-header-cell {
+  text-align: left;
+  font-size: 0.95em;
+  width: 99%;
+  color: black;
+  background-color: white;
+  font-weight: normal;
+  vertical-align: top;
+  margin-top: 0ex;
+  padding-top: 0ex;
+}
+
+a.zz-nav-header-link {
+  font-size: 0.95em;
+}
+
+td.zz-nav-button-cell {
+  white-space: nowrap;
+  text-align: center;
+  width: 1%;
+  vertical-align: top;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 0ex;
+  padding-top: 0ex;
+}
+
+a.zz-nav-button-link {
+  font-size: 0.9em;
+}
+
+div.zz-nav-footer-menu {
+  width: 100%;
+  text-align: center;
+  margin-top: 2ex;
+  margin-bottom: 4ex;
+}
+
+p.zz-legal-notice, a.zz-legal-notice-link {
+  font-size: 0.85em;
+  /* display: none; */  /* Uncomment to hide legal notice */
+}
+
+/*************************************/
+/*  Begin DARB Formats          */
+/*************************************/
+
+h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #369;
+  background-color: white;
+  font-size: 0.95em;
+  font-weight: bold;
+}
+
+h6 {
+  font-weight: normal;
+}
+
+td li p {
+  display: inline;
+}
+
+/* lose the h1 underscore */
+/*
+h1 {
+  border-width : 0px 0px 0px 0px;
+}
+*/
+
+/* Increase contrast between visited and unvisited links. */
+/*
+a:visited {
+  color: #a30;
+  background-color: white;
+}
+*/
+
+.bold, .codeinlinebold, .syntaxinlinebold, .term, .glossterm,
+.glossaryterm, .keyword, .msg, .msgexplankw, .msgactionkw, .notep1 {
+  font-weight: bold;
+}
+
+.italic, .codeinlineitalic, .syntaxinlineitalic, .variable {
+  font-style: italic;
+}
+
+.bolditalic, .codeinlineboldital, .syntaxinlineboldital,
+.titleinfigure, .titleinexample, .titleintable, .titleinequation {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.bridgehead, .titleinrefsubsect, .subhead1, .subhead2, .subhead3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #369;
+  background-color: white;
+  font-weight: bold;
+}
+
+.titleinrefsubsect, .subhead1 {
+  font-size: 1.1em;
+}
+
+.subhead2 {
+  font-size: 1.0em;
+}
+
+.subhead3 {
+  font-size: 0.95em;
+  display: inline;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.superscript {
+  vertical-align: super;
+}
+
+.subscript {
+  vertical-align: sub;
+}
+
+.listofeft {
+  border: none;
+}
+
+.betadraft {
+  color: #f00;
+  background-color: white;
+}
+
+.betadraftsubtitle {
+  text-align: center;
+  font-weight: bold;
+  color: #f00;
+  background-color: white;
+}
+
+.comment {
+  color: #080;
+  background-color: white;
+  font-weight: bold;
+}
+
+.copyrightlogo {
+  text-align: center;
+  font-size: 0.85em;
+  border-style: none;
+}
+
+.tocsubheader {
+  list-style-type: none;
+}
+
+/*************************************/
+/*  End DARB Formats                 */
+/*************************************/
+
+@media all {
+  * {
+    background-color: transparent;
+    line-height: 1.2;
+  }
+  body {
+    color: black;
+    background-color: white;
+  }
+/*
+  dd {
+    margin-bottom: 2ex;
+  }
+  dl:first-child {
+    margin-top: 2ex;
+  }
+*/
+}
+
+@media print {
+  body, p, table, td, th, ol, ul, a, dl, dt, dd, blockquote, caption {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11pt;
+  }
+
+  h1, h2, h3, h4, h5, h6, th, thead td {
+    font-family: Arial, Helvetica, serif;
+    color: black;
+    background-color: white;
+  }
+
+  div.zz-skip-header {
+    display: none;
+  }
+
+  code, a:link, a:visited, a:hover, a:active {
+    color: black;
+    background-color: white;
+    text-decoration: none;
+  }
+}
+</style>
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Patch Set Notes </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) for Linux and Microsoft Windows</b>
+<br />
+ 
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header -->
+<h1>Oracle&#174; Application Server</h1>
+<p class="booktitle">
+Patch Set Notes
+</p class="booktitle">
+<p>
+<span class="revnumber">
+10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0)
+</span>
+<span class="platform">
+for Linux and Microsoft Windows
+</span>
+</p>
+<p class="invpartnumber"></p>
+<p class="date">June 2007</p>
+<p>This document accompanies Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0).
+</p>
+<p>This document contains the following sections:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDHGBED">Section 1, "What is a Patch Set?"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDHGCFI">Section 2, "About This Patch Set"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDEJIIE">Section 3, "Patch Set Documentation"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDEDDJB">Section 4, "Patch Set Requirements"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDIFFIC">Section 5, "Patch Set Application"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDIIEFD">Section 6, "Postapplication Tasks"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDGCBFH">Section 7, "Known Issues"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDEGCCA">Section 8, "Fixed Platform-Specific Bugs for Microsoft Windows"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDBCIDE">Section 9, "Patch Set Components"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#IAIFFACE">Section 10, "Documentation Accessibility"</a>
+</p>
+</li>
+</ul><a id="CHDHGBED" name="CHDHGBED"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref1" name="sthref1"></a>
+<h2 class="sect1"><span class="secnum">1 </span>What is a Patch Set?
+</h2>
+<p>Patch sets are a mechanism for delivering fully tested and integrated product fixes. Patch sets include all files that have been rebuilt to implement the bug fixes. All of the fixes in the patch set have been tested and are certified to work with one another. Because this patch set includes only low impact fixes, you are not required to certify applications or tools against the server (unless specifically instructed by your software vendor).
+</p>
+<p>This patch set is cumulative and includes all of the fixes from Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 1 (10.1.3.1.0) and Oracle Application Server 10g Release 3 (10.1.3) Patch Set 2 (10.1.3.2.0). 
+</p>
+<p>Patch sets contain generic fixes that apply to all platforms and may also include platform-specific fixes. 
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>To download free installation documentation, release notes, white papers, or other collateral, go to Oracle Technology Network (OTN). You must register online before using OTN; registration is free and can be done at:
+<p><a href="http://www.oracle.com/technology/membership"><code>http://www.oracle.com/technology/membership</code></a>
+</p>
+<p>If you already have a username and password for OTN, then you can go directly to the documentation section of the OTN Web site at:
+</p>
+<p><a href="http://www.oracle.com/technology/documentation"><code>http://www.oracle.com/technology/documentation</code></a>
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</div><!-- class="sect1" -->
+<a id="CHDHGCFI" name="CHDHGCFI"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref2" name="sthref2"></a>
+<h2 class="sect1"><span class="secnum">2 </span>About This Patch Set
+</h2>
+<p>This section provides the following important information about Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0):
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDIDDJB">Section 2.1, "Oracle Application Server Releases Supported by This Patch Set"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDBDBAH">Section 2.2, "What Happens When You Install the Patch Set"</a>
+</p>
+</li>
+</ul><a id="CHDIDDJB" name="CHDIDDJB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref3" name="sthref3"></a>
+<h3 class="sect2"><span class="secnum">2.1 </span>Oracle Application Server Releases Supported by This Patch Set
+</h3>
+<p>Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) is not a complete software distribution. You must install this patch set over an existing installation. Specifically, this patch set can be applied only to the following Oracle Application Server releases:
+</p>
+<ul>
+<li type="disc">
+<p>Oracle Application Server 10g Release 3 (10.1.3.0.0)
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server 10g Release 3 (10.1.3.1.0), which included the Oracle SOA Suite
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server 10g Release 3 (10.1.3.2.0), which included the Oracle WebCenter Suite
+</p>
+</li>
+<li type="disc">
+<p>Any Oracle Application Server 10g Release 3 (10.1.3.n) standalone installation
+</p>
+</li>
+<li type="disc">
+<p>Any Oracle Application Server 10g Release 3 (10.1.3.n) that has been patched with 10g Release 3 (10.1.3) Patch Set 1 (10.1.3.1.0) or 10g Release 3 (10.1.3) Patch Set 2 (10.1.3.2.0)
+</p>
+</li>
+</ul>
+<p>Refer to the following sections for specific information about applying the patch set to each supported Oracle Application Server release:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDEAEBC">Section 2.1.1, "Notes When Applying the Patch Set to a 10g Release 3 (10.1.3.0.0) Oracle Home"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDDGBIF">Section 2.1.2, "Notes When Applying the Patch Set to a 10g Release 3 (10.1.3.1.0) Oracle Home"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDGEIBG">Section 2.1.3, "Notes When Applying the Patch Set to a 10g Release 3 (10.1.3.2.0) Oracle Home"</a>
+</p>
+</li>
+</ul><a id="CHDEAEBC" name="CHDEAEBC"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref4" name="sthref4"></a>
+<h4 class="sect3"><span class="secnum">2.1.1 </span>Notes When Applying the Patch Set to a 10g Release 3 (10.1.3.0.0) Oracle Home
+</h4>
+<p>Oracle Application Server 10g Release 3 (10.1.3.0.0) was a significant new release that provided a complete Java 2 Platform, Enterprise Edition (J2EE) 1.4-compliant environment.
+</p>
+<p>Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) updates specific software and configuration files contained in your existing 10g Release 3 (10.1.3.0.0) Oracle home. The result is improvements to the reliability and performance of the software. 
+</p>
+<p>In addition, Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) provides additional functionality to several key Oracle Application Server 10g Release 3 (10.1.3.0.0) features. For example, the -Xm&#091;sx&#125; flag specifies the initial size, in bytes, of the memory allocation pool for each OC4J instance. This value must be a multiple of 1024, and greater than 1MB. Append the letter k or K to indicate kilobytes, or m or M to indicate megabytes. The default value is 2MB if nothing is specified. It is the same as specifying &#8211;Xms2M. Note there is no space between &#8211;Xms, the number and the letter.
+</p>
+<p><a href="#CEGIDHEG">Table 1</a> provides a summary of the additional features available after you apply this patch set to a 10g Release 3 (10.1.3.0.0) Oracle home.
+</p>
+<div class="tblformal">
+<a id="sthref5" name="sthref5"></a><a id="CEGIDHEG" name="CEGIDHEG"></a>
+<p class="titleintable">Table 1 New Features and Benefits for Oracle Application Server 10g Release 3 (10.1.3.0.0) Users</p>
+<table class="Formal" title="New Features and Benefits for Oracle Application Server 10g Release 3 (10.1.3.0.0) Users" summary="This table summarizes the features added for 10g Release 3 (10.1.3.1.0)." dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t3">Feature Description
+</th>
+<th align="left" valign="bottom" id="r1c2-t3">More Information
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t3" headers="r1c1-t3">
+<p>New Application Server Control Console features, including the ability to create OC4J instances, organize them into OC4J groups, and the ability to review and configure ports, routing IDs, and application server instances in a cluster topology.
+</p>
+</td>
+<td align="left" headers="r2c1-t3 r1c2-t3">
+<p>"Introduction to Administration Tools" in the <span class="italic">Oracle Application Server Administrator's Guide</span>
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t3" headers="r1c1-t3">
+<p>Support for OC4J Java Single Sign-On (Java SSO), a lightweight single sign-on solution supplied with OC4J.
+</p>
+</td>
+<td align="left" headers="r3c1-t3 r1c2-t3">
+<p>"Configuring Instances to Use OC4J Java Single Sign-On" in the <span class="italic">Oracle Application Server Administrator's Guide</span>
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t3" headers="r1c1-t3">
+<p>Support for Web Services Inspection Language (WSIL), a lightweight Web services directory protocol that provides an extensible schema for a single document catalog of services
+</p>
+</td>
+<td align="left" headers="r4c1-t3 r1c2-t3">
+<p>"Web Service Inspection Language 1.0" in the <span class="italic">Oracle Application Server Web Services Developer's Guide</span>
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblformal" -->
+
+<p>In addition, after you apply Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) to your 10g Release 3 (10.1.3.0.0) Oracle home, you have the option of installing a set of Service Oriented Architecture (SOA) components (the Oracle SOA Suite) that developers can use to build and deploy industry-standard, SOA applications.
+</p>
+<p>To support the new features provided by Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0), the patch set installation automatically updates the <code>opmn.xml</code> file in the 10g Release 3 (10.1.3.0.0) Oracle home as follows:
+</p>
+<ul>
+<li type="disc">
+<p>The default group name is changed from <code>OC4J</code> to <code>default&#095;group</code>.
+</p>
+</li>
+<li type="disc">
+<p>The <code>rmi</code> entries are changed to <code>rmis</code>.
+</p>
+</li>
+<li type="disc">
+<p>Each instance (except home) is put into a group of the same name as the instance.
+</p>
+</li>
+</ul>
+<p>For more information about managing Oracle Application Server instances, OC4J instances, and groups in 10g Release 3 (10.1.3.3.0), refer to the <span class="italic">Oracle Application Server Administrator's Guide</span> in the 10g Release 3 (10.1.3.2.0) Documentation Library on the Oracle Technology Network (OTN):
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><a href="http://www.oracle.com/technology/documentation">http://www.oracle.com/technology/documentation</a>
+
+</pre>
+<p>You can also refer to the Oracle Enterprise Manager 10<span class="italic">g</span> Application Server Control online help.
+</p>
+</div><!-- class="sect3" -->
+<a id="CHDDGBIF" name="CHDDGBIF"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref6" name="sthref6"></a>
+<h4 class="sect3"><span class="secnum">2.1.2 </span>Notes When Applying the Patch Set to a 10g Release 3 (10.1.3.1.0) Oracle Home
+</h4>
+<p>Oracle Application Server 10g Release 3 (10.1.3.1.0) was an update to the 10g Release 3 (10.1.3.0.0) release that improved the reliability and performance of 10g Release 3 (10.1.3.0.0) and provided some additional functionality.
+</p>
+<p>Oracle Application Server 10g Release 3 (10.1.3.1.0) was designed specifically:
+</p>
+<ul>
+<li type="disc">
+<p>For administrators who are using OC4J to deploy and manage J2EE applications
+</p>
+</li>
+<li type="disc">
+<p>As a platform for developing and deploying service-oriented architecture (SOA) applications
+</p>
+</li>
+</ul>
+<p>You can apply Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) to a 10g Release 3 (10.1.3.1.0) Oracle home or to a 10g Release 3 (10.1.3.0.0) Oracle home that has been patched to 10g Release 3 (10.1.3.1.0).
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>If you performed an Oracle Application Server 10g Release 3 (10.1.3.n) standalone installation on top of a 10g Release 3 (10.1.3.n) installation, then this patch updates the core and standalone products only.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect3" -->
+<a id="CHDGEIBG" name="CHDGEIBG"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref7" name="sthref7"></a>
+<h4 class="sect3"><span class="secnum">2.1.3 </span>Notes When Applying the Patch Set to a 10g Release 3 (10.1.3.2.0) Oracle Home
+</h4>
+<p>Oracle Application Server 10g Release 3 (10.1.3.2.0) provides the 10g Release 3 (10.1.3.1.0) core J2EE functionality (OC4J, its related technologies and Oracle HTTP Server), and also provides support for the Oracle WebCenter Suite. Oracle WebCenter Suite includes Oracle WebCenter Services and Oracle Content DB.
+</p>
+<p>If you installed Oracle Application Server 10g Release 3 (10.1.3.2.0) and the Oracle WebCenter Suite, then Oracle recommends that you apply Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) to update the core J2EE components.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>If you performed an Oracle Application Server 10g Release 3 (10.1.3.n) standalone installation on top of a 10g Release 3 (10.1.3.n) installation, then this patch updates the core and standalone products only.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="CHDBDBAH" name="CHDBDBAH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref8" name="sthref8"></a>
+<h3 class="sect2"><span class="secnum">2.2 </span>What Happens When You Install the Patch Set
+</h3>
+<p>When you install Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0), the installation program updates specific software and configuration files contained in the selected Oracle Application Server middle-tier Oracle home. The Oracle home is the full path of the Oracle directory that contains the Oracle Application Server installation. <code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code> will be used in this documentation to refer to the directory where the product is installed.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p><code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code> should be replaced with the full path name of the installed Oracle Application Server instance.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>This patch set updates the J2EE software for all the installation types for each of the supported releases. The patch set installation procedure automatically determines which set of software patches is appropriate for your installation.
+</p>
+<p>For a list of products included in this patch set, see the <a href="#CHDBCIDE">Section 9, "Patch Set Components"</a> section.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDEJIIE" name="CHDEJIIE"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref9" name="sthref9"></a>
+<h2 class="sect1"><span class="secnum">3 </span>Patch Set Documentation 
+</h2>
+<p>There are two documents related to this release of the Oracle Application Server patch set:
+</p>
+<ul>
+<li type="disc">
+<p><span class="italic">Oracle Application Server Patch Set Notes 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) for Linux and Microsoft Windows</span> (this document). It provides the following information:
+</p>
+<ul>
+<li type="disc">
+<p>System requirements and instructions needed to apply or remove the patch set.
+</p>
+</li>
+<li type="disc">
+<p>A list of known issues related to the Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0).
+</p>
+</li>
+</ul>
+<p>The Linux document is contained in the file <code>/OracleAppServer10g&#095;10.1.3.3&#095;Linux&#095;Patchset/doc/readme.html</code> in the patch set distribution.
+</p>
+<p>The Microsoft Windows document is contained in the file <code>&#092;OracleAppServer10g&#095;10.1.3.3&#095;Windows&#095;Patchset&#092;doc&#092;readme.html</code> in the patch set distribution.
+</p>
+</li>
+<li type="disc">
+<p><span class="italic">Oracle Application Server Fixed Bugs List 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0)</span>. It provides a list of all generic (common to all operating systems) bugs related to Oracle Application Server that have been fixed in this release, sorted by product group.
+</p>
+<p>The Linux document is contained in the file <code>/OracleAppServer10g&#095;10.1.3.3&#095;Linux&#095;Patchset/doc/bugsfixed.html</code> in the patch set distribution. 
+</p>
+<p>This Microsoft Windows document is contained in the file <code>&#092;OracleAppServer10g&#095;10.1.3.3&#095;Windows&#095;Patchset&#092;doc&#092;bugsfixed.html</code> in the patch set distribution.
+</p>
+</li>
+</ul>
+<p>These documents are also available on Oracle<span class="italic">MetaLink</span> at
+</p>
+<p>In addition, the following Oracle<span class="italic">MetaLink</span> notes have information related to this patch set:
+</p>
+<ul>
+<li type="disc">
+<p>Oracle<span class="italic">MetaLink</span> Note 435108.1 <span class="italic">Oracle Application Server Patch Set Notes Addendum 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0)</span>
+</p>
+</li>
+<li type="disc">
+<p>Oracle<span class="italic">MetaLink</span> Note 397022.1 <span class="italic">Oracle Application Server 10g Release 3 (10.1.3) Support Status and Alerts</span>
+</p>
+</li>
+</ul>
+<p>OracleMetaLink is available at
+</p>
+<p><code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>
+</p>
+</div><!-- class="sect1" -->
+<a id="CHDEDDJB" name="CHDEDDJB"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref10" name="sthref10"></a>
+<h2 class="sect1"><span class="secnum">4 </span>Patch Set Requirements
+</h2>
+<p>Refer to your installation guide and release notes for the base requirements for your system.
+</p>
+<p>Refer to the following sections for detailed patch set requirements:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDGBCJF">Section 4.1, "Required Software"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDCBEFD">Section 4.2, "Preinstallation Requirements"</a>
+</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblinformal">
+
+<br /><table class = "Informal oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr align="left" valign="top">
+<td align="left">
+<p class="notep1">Note:</p>If your system does not meet one of the minimum requirements listed in this section, then log a service request to request assistance with this patch set.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblinformal -->
+
+</div><a id="CHDGBCJF" name="CHDGBCJF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref11" name="sthref11"></a>
+<h3 class="sect2"><span class="secnum">4.1 </span>Required Software
+</h3>
+<p>The following is a list of the required system software that must be installed before installing this patch set:
+</p>
+<ul>
+<li type="disc">
+<p>Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3.0.0), 10g Release 3 (10.1.3.1.0), or 10g Release 3 (10.1.3.2.0)
+</p>
+<p>You can verify the release number by checking the release number in the following properties file:
+</p>
+<ul>
+<li type="disc">
+<p>For Linux:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>/config/ias.properties
+
+</pre>
+</li>
+<li type="disc">
+<p>For Microsoft Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>&#092;config&#092;ias.properties
+
+</pre>
+</li>
+</ul>
+</li>
+<li type="disc">
+<p>One of the following supported operating systems:
+</p>
+<ul>
+<li type="circle">
+<p>Linux
+</p>
+</li>
+<li type="circle">
+<p>Microsoft Windows
+</p>
+</li>
+</ul>
+</li>
+<li type="disc">
+<p>The latest release of Oracle Opatch, patch number 2617419, from Oracle<span class="italic">MetaLink</span> at 
+</p>
+<p><code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>
+</p>
+<p>This requirement is for Microsoft Windows systems only with non-English installations. The Opatch utility should be unzipped in the Oracle home directory.
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="CHDCBEFD" name="CHDCBEFD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref12" name="sthref12"></a>
+<h3 class="sect2"><span class="secnum">4.2 </span>Preinstallation Requirements
+</h3>
+<p>The following list is the preinstallation requirements for this patch set:
+</p>
+<ul>
+<li type="disc">
+<p>Ensure the system configuration meets the recommended system configuration described in your documentation.
+</p>
+</li>
+<li type="disc">
+<p>Ensure the environment variables for the <code>tmp</code> and <code>temp</code> directories for Microsoft Windows are set as described in the <span class="italic">Oracle Application Server Administrator's Guide</span>. 
+</p>
+</li>
+<li type="disc">
+<p>Back up your Oracle software and inventory before applying this patch set, or before making any other changes to your existing Oracle software. Refer to your administrator&#039;s guide for instructions on backing up your Oracle software and inventory.
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDIFFIC" name="CHDIFFIC"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref13" name="sthref13"></a>
+<h2 class="sect1"><span class="secnum">5 </span>Patch Set Application
+</h2>
+<p>This section contains the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDCFIAF">Section 5.1, "Applying Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0)"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDGGGIA">Section 5.2, "Silent and Non-Interactive Patch Application"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDHEFGB">Section 5.3, "Applying the Patch Set in a Clustered Environment"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDHFFDH">Section 5.4, "Re-application of the Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0)"</a>
+</p>
+</li>
+</ul><a id="CHDCFIAF" name="CHDCFIAF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref14" name="sthref14"></a>
+<h3 class="sect2"><span class="secnum">5.1 </span>Applying Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0)
+</h3>
+<p>This section describes the application procedure for the Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0). It includes the following steps:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDIHBFH">Section 5.1.1, "Back up Your Existing Environment"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDJBEIC">Section 5.1.2, "Apply Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0)"</a>
+</p>
+</li>
+</ul><a id="CHDIHBFH" name="CHDIHBFH"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref15" name="sthref15"></a>
+<h4 class="sect3"><span class="secnum">5.1.1 </span>Back up Your Existing Environment
+</h4>
+<p>Oracle recommends that you make a backup of your existing environment before you install Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0). If you choose to remove Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0), or if you encounter a problem with application of the patch, then you can restore your original environment.
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>"Introduction to Backup and Recovery" in the <span class="italic">Oracle Application Server Administrator's Guide</span> for complete information about Oracle Application Server Backup and Recovery.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</div><!-- class="sect3" -->
+<a id="CHDJBEIC" name="CHDJBEIC"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref16" name="sthref16"></a>
+<h4 class="sect3"><span class="secnum">5.1.2 </span>Apply Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) 
+</h4>
+<p>The following procedure describes how to apply the patch set:
+</p>
+<ol type="1" start="1">
+<li>
+<p>If you are applying 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) to a 10g Release 3 (10.1.3.0.0) Oracle home and your system uses Enterprise Javabeans 3.0 applications, then you must undeploy your applications before applying the patch.
+</p>
+<p>This step is not necessary if you are applying the patch set to a 10g Release 3 (10.1.3.1.0) or 10g Release 3 (10.1.3.2.0) Oracle home.
+</p>
+<p>The following procedure describes how to undeploy the applications:
+</p>
+<ol type="a">
+<li>
+<p>Log in to the Application Server Control Console as the same user name as the one used for the original installation. If the application is deployed to a specific OC4J instance, then navigate to the OC4J Home page for the OC4J instance. If the application is deployed to a group, then navigate to the Group page.
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>'Introduction to Administration Tools" in the <span class="italic">Oracle Application Server Administrator's Guide</span> for more information about Application Server Control
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</li>
+<li>
+<p>Click <span class="bold">Applications</span> to display a list of the applications.
+</p>
+</li>
+<li>
+<p>Select the EJB 3.0 applications.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Undeploy</span>.
+</p>
+</li>
+</ol>
+</li>
+<li>
+<p>If you are applying Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) to a 10g Release 3 (10.1.3.0.0) Oracle home and your environment uses OracleAS Cold Failover Cluster topology, then you will need to perform the following steps:
+</p>
+<ol type="a">
+<li>
+<p>Open the <code>opmn.xml</code> file and search for the following line in the notification-server section:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;ipaddr remote&#061;"<span class="italic">virtual&#095;hostname</span>" request&#061;"<span class="italic">virtual&#095;hostname</span>"/>
+
+</pre>
+<p>If this entry does not appear, then add it to the <code>opmn.xml</code> file. In the preceding example, <code><span class="codeinlineitalic">virtual&#095;hostname</span></code> is the actual virtual hostname. It should be the same as the VIRTUAL&#095;HOSTNAME variable.
+</p>
+</li>
+<li>
+<p>Restart Oracle Process Manager and Notification Server (OPMN).
+</p>
+</li>
+</ol>
+</li>
+<li><a id="CEGDIABH" name="CEGDIABH"></a>
+<p>If you have edited the <code>dsa.conf</code> file, then make a copy of it. The file will be over-written during patch application.
+</p>
+</li>
+<li><a id="CEGJAHHE" name="CEGJAHHE"></a>
+<p>If you use adapters, then make copies of the oc4j-ra.xml files. The files will be over-written during patch application.
+</p>
+</li>
+<li>
+<p>Ensure the following values are set in the <code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code><code>/owsm/bin/install.properties</code> file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">install.http.host&#061;<code><span class="codeinlineitalic">hostname</span></code>
+install.http.port&#061;7777
+
+</pre>
+</li>
+<li>
+<p>Ensure the OC4J instances are running. You can check the status using the following command:
+</p>
+<ul>
+<li type="disc">
+<p>For UNIX:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>/opmn/bin/opmnctl status
+
+</pre>
+</li>
+<li type="disc">
+<p>For Microsoft Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>&#092;opmn&#092;bin&#092;opmnctl status
+
+</pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Insert Disk1 of the Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) media, or navigate to the Disk1 subdirectory in the directory that contains the unpacked patch set software.
+</p>
+</li>
+<li>
+<p>Start Oracle Universal Installer:
+</p>
+<ul>
+<li type="disc">
+<p>For Linux:
+</p>
+<p>Run the <code>runInstaller</code> command.
+</p>
+</li>
+<li type="disc">
+<p>For Microsoft Windows:
+</p>
+<p>Double-click <code>setup.exe</code>.
+</p>
+</li>
+</ul>
+<p><a href="#CHDGJHAB">Table 2</a> describes the steps and screens you will encounter during the application of the patch set.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>The online help available during the installation procedure provides information for both a full installation of Oracle Application Server 10g Release 3 (10.1.3.1.0), as well as the patch set installation. As a result, it is not specific to the patch set installation procedure. Refer to <a href="#CHDGJHAB">Table 2</a> for specific information on using the Oracle Universal Installer screens to install 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0). 
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<div class="tblhruleformal">
+<a id="sthref17" name="sthref17"></a><a id="CHDGJHAB" name="CHDGJHAB"></a>
+<p class="titleintable">Table 2 Screens Displayed while Applying Oracle Application Server Patch </p>
+<table class="HRuleFormal" title="Screens Displayed while Applying Oracle Application Server Patch " summary="Steps for Updating Oracle Application Server 10g Software" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t11">Screen
+</th>
+<th align="left" valign="bottom" id="r1c2-t11">Action
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t11" headers="r1c1-t11">
+<p>Specify File Locations
+</p>
+</td>
+<td align="left" headers="r2c1-t11 r1c2-t11">
+<p>The Specify File Locations screen allows you to verify the full path for the source and select a destination location for Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0):
+</p>
+<ul>
+<li type="disc">
+<p><span class="bold">Source</span>: This is the full path to the <code>products.jar</code> file from which the product will be installed. If you started the installer by using the <code>runInstaller</code> command or the <code>setup.exe</code> file, then the installer detects and uses the default values of the <code>products.jar</code> file. Do not change the path.
+</p>
+</li>
+<li type="disc">
+<p><span class="bold">Name</span>: Select the name of the Oracle home you want to patch.
+</p>
+<p>Oracle homes are identified by name. When you select a name from the drop-down menu, the <span class="bold">Path</span> field is updated automatically to show the location of the selected Oracle home.
+</p>
+</li>
+<li type="disc">
+<p><span class="bold">Path</span>: This field is filled in automatically when you select an existing Oracle home from the <span class="bold">Name </span>drop-down menu. 
+</p>
+</li>
+<li type="disc">
+<p><span class="bold">Browse</span>: Use this button to navigate the file system and select the source or destination locations.
+</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t11" headers="r1c1-t11">
+<p>Administrator (oc4jadmin) Password
+</p>
+</td>
+<td align="left" headers="r3c1-t11 r1c2-t11">
+<p>Enter the <code>oc4jadmin</code> user password for the Oracle Application Server instance that is being patched.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t11" headers="r1c1-t11">
+<p>Prompt
+</p>
+</td>
+<td align="left" headers="r4c1-t11 r1c2-t11">
+<p>This screen informs you that the middle tier will be shutdown.
+</p>
+<p>Click <span class="bold">OK</span>. 
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t11" headers="r1c1-t11">
+<p>Summary
+</p>
+</td>
+<td align="left" headers="r5c1-t11 r1c2-t11">
+<p>Verify your selections and click <span class="bold">Install</span>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t11" headers="r1c1-t11">
+<p>Install Progress
+</p>
+</td>
+<td align="left" headers="r6c1-t11 r1c2-t11">
+<p>This screen shows the progress of the patch set installation.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t11" headers="r1c1-t11">
+<p>Configuration Assistants
+</p>
+</td>
+<td align="left" headers="r7c1-t11 r1c2-t11">
+<p>This screen shows the progress of the configuration assistants. Configuration assistants configure components automatically at the end of the installation.
+</p>
+<p>The locations for specific Oracle Application Server configuration assistant log files are described in the <span class="italic">Oracle Application Server Installation Guide</span>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t11" headers="r1c1-t11">
+<p>End of Installation
+</p>
+</td>
+<td align="left" headers="r8c1-t11 r1c2-t11">
+<p>Click <span class="bold">Exit</span> to quit the installer.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformal" -->
+
+</li>
+<li>
+<p>Replace the current <code>dsa.conf</code> file with the copy made in step <a href="#CEGDIABH">3</a>.
+</p>
+</li>
+<li>
+<p>Replace the oc4j-ra.xml files with the copies made in step <a href="#CEGJAHHE">4</a>.
+</p>
+</li>
+</ol>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="CHDGGGIA" name="CHDGGGIA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref18" name="sthref18"></a>
+<h3 class="sect2"><span class="secnum">5.2 </span>Silent and Non-Interactive Patch Application
+</h3>
+<p>This section describes how to apply Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) either by silent or non-interactive methods:
+</p>
+<ul>
+<li type="disc">
+<p>Use silent patch application when you want to do similar applications to more than one computer. You can also use silent patch application to apply the patch from a remote location using the command line. 
+</p>
+</li>
+<li type="disc">
+<p>Use non-interactive patch application when you want to see specific screens, or when you want to enter some information interactively. 
+</p>
+</li>
+</ul>
+<p>To do a silent or non-interactive patch application, you supply the installer with a text file called a response file. The installer uses the variables and parameter values in the response file to provide responses to some or all of the installer prompts. 
+</p>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref19" name="sthref19"></a>
+<h4 class="sect3"><span class="secnum">5.2.1 </span>Silent Installation
+</h4>
+<p>With silent installation, you do not need to monitor the installation because you do not enter information, and you do not have a graphical user interface to watch. 
+</p>
+<p>To do a silent installation, supply the installer with a response file and specify the <code>-silent</code> flag on the command line. 
+</p>
+</div><!-- class="sect3" -->
+
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref20" name="sthref20"></a>
+<h4 class="sect3"><span class="secnum">5.2.2 </span>Non-interactive Installation
+</h4>
+<p>With non-interactive installation, the installer displays a graphical user interface as in a normal installation. If your response file does not have an entry for a particular installer prompt, then you must provide the response during the installation.
+</p>
+</div><!-- class="sect3" -->
+
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref21" name="sthref21"></a>
+<h4 class="sect3"><span class="secnum">5.2.3 </span>Response Files
+</h4>
+<p>You must create a response file before you apply the patch set. You can edit the response files with any text editor. Start by copying the response file template <code>oracle.as.j2ee.patchset.Custom.rsp</code> provided in the following directory of your Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0):
+</p>
+<ul>
+<li type="disc">
+<p>For Linux: <code>stage/Response</code>
+</p>
+</li>
+<li type="disc">
+<p>For Microsoft Windows: <code>stage&#092;Response</code> 
+</p>
+</li>
+</ul>
+<p>In the template, parameters have three types of values:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BEIHAJGI">Constants</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEIHGBJB">Optional Values</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEICBJCJ">Required Values</a>
+</p>
+</li>
+</ul>
+<p>The following sections describe the parameters.
+</p>
+<ul>
+<li type="disc"><a id="BEIHAJGI" name="BEIHAJGI"></a>
+<p>Constants
+</p>
+<p>These are text or Boolean values that are pre-set to give you a successful patch set application. Unless you are an advanced user, do not change these values.
+</p>
+<p>Examples:
+</p>
+<ul>
+<li type="circle">
+<p>Linux example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">FROM&#095;LOCATION&#061;"../stage/products.xml"
+SHOW&#095;SUMMARY&#095;PAGE&#061;false
+
+</pre>
+</li>
+<li type="circle">
+<p>Microsoft Windows example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">FROM&#095;LOCATION&#061;"E:&#092;Disk1&#092;stage&#092;products.xml"
+SHOW&#095;SUMMARY&#095;PAGE&#061;false
+
+</pre>
+</li>
+</ul>
+</li>
+<li type="disc"><a id="BEIHGBJB" name="BEIHGBJB"></a>
+<p>Optional Values
+</p>
+<p>When a parameter is set to the string <code>&lt;Value Unspecified></code>, the installer ignores the parameter. The installer either uses the default value for the parameter, or obtains the value from your current Oracle Application Server installation. Unless you are an advanced user, do not change these values.
+</p>
+<p>Examples:
+</p>
+<ul>
+<li type="circle">
+<p>Linux example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">UNIX&#095;GROUP&#095;NAME&#061;&lt;Value Unspecified>
+
+</pre>
+</li>
+<li type="circle">
+<p>Microsoft Windows example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">RESTART&#095;SYSTEM&#061;&lt;Value Unspecified>
+
+</pre>
+</li>
+</ul>
+</li>
+<li type="disc"><a id="BEICBJCJ" name="BEICBJCJ"></a>
+<p>Required Values
+</p>
+<p>When a parameter is set to the string <code>&lt;Value&#095;Required></code>, you must replace the string with a text or Boolean value. For a silent patch application, if you do not supply a value, then the process will fail. For a non-interactive patch application, if you do not replace the string with a text or Boolean value, then the process will pause and display the normal screen that prompts for this value.
+</p>
+<p>The Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) application requires values for the following parameter:
+</p>
+<ul>
+<li type="circle">
+<p><code>ORACLE&#095;HOME</code>
+</p>
+<p>This is the full path of the Oracle home directory that contains the Oracle Application Server installation you want to patch.
+</p>
+<ul>
+<li type="square">
+<p>For a silent patch application, you must update the entry
+</p>
+<pre xml:space="preserve" class="oac_no_warn">ORACLE&#095;HOME&#061;&lt;Value&#095;Required>
+
+</pre>
+<p>with the path to your Oracle home, as follows:
+</p>
+<p>For Linux: <code>ORACLE&#095;HOME&#061;"/private/oracle/AppSrvHome"</code>
+</p>
+<p>For Microsoft Windows: <code>ORACLE&#095;HOME&#061;"C:&#092;privateoracle&#092;AppSrvHome"</code>
+</p>
+<p>If you do not update the entry, then the process will fail.
+</p>
+</li>
+<li type="square">
+<p>For a non-interactive patch application, if you do not update the entry, then the installer will pause and display the <span class="bold">File Locations</span> dialog.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref22" name="sthref22"></a>
+<h4 class="sect3"><span class="secnum">5.2.4 </span>Performing Silent or Non-interactive Patch Application
+</h4>
+<p>The following procedure describes how to perform silent or non-interactive patch application:
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>If any files are in use during a silent patch application, such as a user has an open file, then the process may terminate. If that happens, then the open file must be determined and its corresponding process shut down. The patch application can be restarted after shutting down the process. 
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<ol type="1" start="1">
+<li>
+<p>Copy the response file template from the product installation media to your computer.
+</p>
+</li>
+<li>
+<p>Make the necessary changes to the copy of the file, and save it.
+</p>
+</li>
+<li><a id="CEGHCGCD" name="CEGHCGCD"></a>
+<p>If you have edited the <code>dsa.conf</code> file, then make a copy of it. The file will be over-written during patch application.
+</p>
+</li>
+<li>
+<p>Start the patch application. Specify the response file path and filename as the value of the installer&#039;s <code>responseFile</code> parameter. For a silent installation, also specify the <code>silent</code> parameter. In the following Microsoft Windows examples, E is the installation media drive.
+</p>
+<p>Examples:
+</p>
+<ul>
+<li type="disc">
+<p>Silent patch application:
+</p>
+<ul>
+<li type="circle">
+<p>For Linux:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">> ./runInstaller -silent -responseFile <code><span class="codeinlineitalic">absolute&#095;path&#095;and&#095;filename</span></code>
+
+</pre>
+</li>
+<li type="circle">
+<p>For Microsoft Windows: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">E:&#092;> setup.exe -silent -responseFile <code><span class="codeinlineitalic">absolute&#095;path&#095;and&#095;filename</span></code>
+
+</pre>
+</li>
+</ul>
+</li>
+<li type="disc">
+<p>Non-interactive patch application
+</p>
+<ul>
+<li type="circle">
+<p>For Linux:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">> ./runInstaller -responseFile <code><span class="codeinlineitalic">absolute&#095;path&#095;and&#095;filename</span></code>
+
+</pre>
+</li>
+<li type="circle">
+<p>For Microsoft Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">E:&#092;> setup.exe -responseFile <code><span class="codeinlineitalic">absolute&#095;path&#095;and&#095;filename</span></code>
+
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Check the log files in your inventory directory for any errors. The log files are located in the following directory:
+</p>
+<ul>
+<li type="disc">
+<p>For Linux:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">/<span class="italic">oracle&#095;inventory&#095;path</span>/logs/<code><span class="codeinlineitalic">installAction</span></code><code><span class="codeinlineitalic">todays&#095;date&#095;time</span></code>.log
+/<span class="italic">oracle&#095;inventory&#095;path</span>/logs/silentinstall<code><span class="codeinlineitalic">timestamp</span></code>.log
+
+</pre>
+<p>The value of <code><span class="codeinlineitalic">oracle&#095;inventory&#095;path</span></code> is stored in the following file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">/var/opt/oracle/oraInst.loc
+
+</pre>
+</li>
+<li type="disc">
+<p>For Microsoft Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">C:&#092;<span class="italic">oracle&#095;inventory&#095;path&#092;</span>logs&#092;<code><span class="codeinlineitalic">installAction</span></code><code><span class="codeinlineitalic">todays&#095;date&#095;time</span></code>.log
+C:&#092;<span class="italic">oracle&#095;inventory&#095;path&#092;</span>logs&#092;<code><span class="codeinlineitalic">installAction</span></code>&#092;silentinstall<code><span class="codeinlineitalic">timestamp</span></code>.log
+
+</pre>
+<p>The value of <code><span class="codeinlineitalic">oracle&#095;inventory&#095;path</span></code> is stored in the following file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">C:&#092;Program Files&#092;Oracle&#092;Inventory
+
+</pre>
+<p>In the preceding examples, the C:&#092; drive is assumed to be the location of the file. To determine the location of the file, check the HKEY&#095;LOCAL&#095;MACHINE&#092;SOFTWARE&#092;Oracle&#092;inst&#095;loc registry entry.
+</p>
+</li>
+</ul>
+<p>The log file name has the format <code>installActions</code><code><span class="codeinlineitalic">todays&#095;date&#095;time</span></code>.<code>log</code>. 
+</p>
+</li>
+<li>
+<p>Replace the current <code>dsa.conf</code> file with the copy made in step <a href="#CEGHCGCD">3</a>.
+</p>
+</li>
+</ol>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="CHDHEFGB" name="CHDHEFGB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref23" name="sthref23"></a>
+<h3 class="sect2"><span class="secnum">5.3 </span>Applying the Patch Set in a Clustered Environment
+</h3>
+<p>If you are managing a 10g Release 3 (10.1.3.0.0), 10g Release 3 (10.1.3.1.0), or 10g Release 3 (10.1.3.2.0) cluster topology, then you can apply Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) to each application server instance in the cluster, as follows:
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>Refer to <span class="italic">Oracle Application Server Enterprise Deployment Guide 10g Release 3 (10.1.3.1.0)</span> for more information about configuring ESB runtime instances.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+<ol type="1" start="1">
+<li>
+<p>Review the information in <a href="#CHDHGCFI">Section 2, "About This Patch Set"</a> that applies specifically to the release you are updating. 
+</p>
+<p>For example, if you are applying the patch set to a 10g Release 3 (10.1.3.0.0) environment, then be sure to carefully review the information in <a href="#CHDEAEBC">Section 2.1.1, "Notes When Applying the Patch Set to a 10g Release 3 (10.1.3.0.0) Oracle Home"</a>.
+</p>
+</li>
+<li>
+<p>Use the instructions in <a href="#CHDCFIAF">Section 5.1, "Applying Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0)"</a> to apply the patch set to one application server instance in the cluster.
+</p>
+</li>
+<li>
+<p>After the patch is applied, verify that the newly patched instance is up and running.
+</p>
+<p>For example, navigate to the Application Server Control Console and verify that the newly patched instance is listed as a member of the cluster. Verify that the instance is up and drill down to the application server home page or the OC4J Home page for that instance. 
+</p>
+</li>
+<li>
+<p>Perform any tasks described in <a href="#CHDIIEFD">Section 6, "Postapplication Tasks"</a> that apply to your environment.
+</p>
+</li>
+<li>
+<p>Repeat steps 2 through 4 for the remaining application server instances in the cluster.
+</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>If you are patching a 10g Release 3 (10.1.3.0.0) cluster, then be sure to refer to the <span class="italic">Oracle Application Server Upgrade and Compatibility Guide</span> in the 10g Release 3 (10.1.3.1.0) documentation library for more information.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="CHDHFFDH" name="CHDHFFDH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref24" name="sthref24"></a>
+<h3 class="sect2"><span class="secnum">5.4 </span>Re-application of the Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0)
+</h3>
+<p>During re-application of Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0), the <span class="bold">Available Product Components</span> screen is displayed. To continue with patch application, you must expand the component tree and manually select all of the components for patch re-application. Failure to do so will prevent successful re-application of Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0).
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDIIEFD" name="CHDIIEFD"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref25" name="sthref25"></a>
+<h2 class="sect1"><span class="secnum">6 </span>Postapplication Tasks
+</h2>
+<p>This section describes postapplication tasks for Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0). It contains the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BEIGHHBE">Section 6.1, "Perform a Complete Backup"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGJIBCH">Section 6.2, "Run Upgrade Script on Patched Oracle Application Server 10g Release 3 (10.1.3.1.0)"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDBJIHG">Section 6.3, "Enable PHP"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABFFBDJ">Section 6.4, "Redeploy Applications that Use Custom Security Settings"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGIFHCC">Section 6.5, "Enable Java Single Sign-On"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDHAGGJ">Section 6.6, "Deploy Your Enterprise Javabeans 3.0 Applications"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDHDHDA">Section 6.7, "Deploy the WSIL Application Manually"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGGBBIH">Section 6.8, "Update Oracle Enterprise Service Bus Services"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGCBDIB">Section 6.9, "Migrate and Redeploy Oracle ADF Applications"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGHHHAJ">Section 6.10, "Postapplication Tasks For Oracle WebCenter Applications"</a>
+</p>
+</li>
+</ul><a id="BEIGHHBE" name="BEIGHHBE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref26" name="sthref26"></a>
+<h3 class="sect2"><span class="secnum">6.1 </span>Perform a Complete Backup
+</h3>
+<p>It is necessary to perform a complete backup of your Oracle Application Server environment after installing the patch set. This will ensure you can restore the newly patched environment. 
+</p>
+<p>In addition, if you are patching a 10g Release 3 (10.1.3.0.0) environment, then note that earlier backups will not work with the 10g Release 3 (10.1.3.2.0) Oracle Application Server Backup and Recovery Tool.
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>"Introduction to Backup and Recovery" in the <span class="italic">Oracle Application Server Administrator's Guide</span> for complete information about Oracle Application Server Backup and Recovery.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="CEGJIBCH" name="CEGJIBCH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref27" name="sthref27"></a>
+<h3 class="sect2"><span class="secnum">6.2 </span>Run Upgrade Script on Patched Oracle Application Server 10g Release 3 (10.1.3.1.0)
+</h3>
+<p>If you applied 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) to a Oracle Application Server 10g Release 3 (10.1.3.1.0) instance, then you must do the following procedure:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Connect to the Oracle database as the orabpel user.
+</p>
+</li>
+<li>
+<p>Run the following script based on your database and operating system:
+</p>
+<ul>
+<li type="disc">
+<p>For Linux: <code>upgrade&#095;10131&#095;10133&#095;oracle.sql</code>
+</p>
+<p>The preceding script is located in the <code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code><code>/bpel/system/database/scripts</code> directory. 
+</p>
+</li>
+<li type="disc">
+<p>For Microsoft Windows with Oracle Database: <code>upgrade&#095;10131&#095;10133&#095;oracle.sql</code>
+</p>
+<p>The preceding script is located in the <code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code><code>&#092;bpel&#092;system&#092;database&#092;scripts</code> directory.
+</p>
+</li>
+<li type="disc">
+<p>For Microsoft Windows with Oracle Database Lite: <code>upgrade&#095;10131&#095;10133&#095;olite.sql</code>
+</p>
+<p>The preceding script is located in the<code><span class="codeinlineitalic"> ORACLE&#095;HOME</span></code><code>&#092;bpel&#092;system&#092;database&#092;scripts</code> directory. 
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Restart the instance.
+</p>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="CHDBJIHG" name="CHDBJIHG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref28" name="sthref28"></a>
+<h3 class="sect2"><span class="secnum">6.3 </span>Enable PHP
+</h3>
+<p>After applying Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0), you should enable PHP. The following procedure describes how to enable PHP:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Make the following modifications to the Oracle HTTP Server <code>httpd.conf</code> configuration file:
+</p>
+<ol type="a">
+<li>
+<p>Locate and open the Oracle HTTP Server configuration file:
+</p>
+<p>For Linux:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>/Apache/Apache/conf/httpd.conf
+
+</pre>
+<p>For Microsoft Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>&#092;Apache&#092;Apache&#092;conf&#092;httpd.conf
+
+</pre>
+</li>
+<li>
+<p>Use the comment character (&#035;) to comment the following PHP 4.0 directive:
+</p>
+<p>For Linux:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035;LoadModule php4&#095;module libexec/libphp4.so
+&#035;AddModule mod&#095;php4.c
+
+</pre>
+<p>For Microsoft Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035;LoadModule php4&#095;module modules/php4apache.dll
+&#035;AddModule mod&#095;php4.c
+
+</pre>
+</li>
+<li>
+<p>Add the following PHP 5.0 <code>LoadModule</code> directive:
+</p>
+<p>For Linux:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">LoadModule php5&#095;module libexec/libphp5.so
+AddModule mod&#095;php5.c
+
+</pre>
+<p>For Microsoft Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">LoadModule php5&#095;module modules/php5apache.dll
+AddModule mod&#095;php5.c
+
+</pre>
+</li>
+<li>
+<p>Add the following <code>AddType</code> directives:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">AddType application/x-httpd-php .php .php5 
+AddType application/x-httpd-php-source .phps 
+
+</pre>
+</li>
+<li>
+<p>Save and close the <code>httpd.conf</code> file.
+</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Set the PHPRC environment variable to point to the <code>php5.ini</code> file:
+</p>
+<ul>
+<li type="disc">
+<p>For Linux:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">setenv PHPRC <span class="italic">ORACLE&#095;HOME</span>/Apache/Apache/conf/php5.ini
+
+</pre>
+</li>
+<li type="disc">
+<p>For Microsoft Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">set PHPRC &#061; <span class="italic">ORACLE&#095;HOME</span>&#092;Apache&#092;Apache&#092;conf&#092;php5.ini 
+</pre>
+</li>
+</ul>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="BABFFBDJ" name="BABFFBDJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref29" name="sthref29"></a>
+<h3 class="sect2"><span class="secnum">6.4 </span>Redeploy Applications that Use Custom Security Settings
+</h3>
+<p>If your applications were configured with custom security settings, such as using Oracle Single Sign-On, then you must reconfigure the applications and redeploy them after applying 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0).
+</p>
+</div><!-- class="sect2" -->
+<a id="CEGIFHCC" name="CEGIFHCC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref30" name="sthref30"></a>
+<h3 class="sect2"><span class="secnum">6.5 </span>Enable Java Single Sign-On
+</h3>
+<p>If you apply 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) to Oracle Application Server 10g Release 3 (10.1.3.0.0) installation, then you will need to edit the <code>jazn.xml</code> file enable Java Single Sign-On. After editing the <code>jazn.xml</code> file, you will need to restart the instance. Detailed instructions are provided in "Chapter 14 OC4J Java Single Sign-On" in <span class="italic">Oracle Containers for J2EE Security Guide 10g (10.1.3.1.0)</span>. 
+</p>
+</div><!-- class="sect2" -->
+<a id="CHDHAGGJ" name="CHDHAGGJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref31" name="sthref31"></a>
+<h3 class="sect2"><span class="secnum">6.6 </span>Deploy Your Enterprise Javabeans 3.0 Applications
+</h3>
+<p>If you are patching a 10g Release 3 (10.1.3.0.0) environment and you undeployed Enterprise Javabeans 3.0 applications before applying the patch set, then you must deploy them again after applying the patch set. The following procedure describes how to deploy an application:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Log in to the Application Server Control Console. 
+</p>
+</li>
+<li>
+<p>If the application will be deployed on a specific OC4J instance, then navigate to the OC4J Home page for the OC4J instance. If the application will be deployed to a group, then navigate to the Group page.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Applications</span>.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Deploy</span> and follow the instructions on the screen. If you need more information, then click <span class="bold">Help</span>.
+</p>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="CHDHDHDA" name="CHDHDHDA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref32" name="sthref32"></a>
+<h3 class="sect2"><span class="secnum">6.7 </span>Deploy the WSIL Application Manually
+</h3>
+<p>Oracle Application Server 10g Release 3 (10.1.3.1.0) and later support Web Services Inspection Language (WSIL). WSIL allows you to inspect all the Web services deployed on your instance. 
+</p>
+<p>If you are patching a 10g Release 3 (10.1.3.0.0) environment and you want to take advantage of WSIL, then you will need to deploy it manually. The following procedure describes how to deploy the WSIL application. It is assumed that you have a running instance of OC4J.
+</p>
+<ol type="1" start="1">
+<li>
+<p>Log in to the Application Server Control Console.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Applications</span> on the OC4J Home Page. This allows you to view the list of deployed applications.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Deploy</span> to display the Deploy: Select Archive page.
+</p>
+</li>
+<li>
+<p>Perform the following steps on the Deploy: Select Archive page:
+</p>
+<ol type="a">
+<li>
+<p>Select <span class="bold">Archive is already present on the server where Application Server Control is running</span>.
+</p>
+</li>
+<li>
+<p>Enter the following path to the <code>wsil-ias.ear</code> file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">../../webservices/lib/wsil-ias.ear
+
+</pre>
+</li>
+<li>
+<p>Click <span class="bold">Next</span> to display the Deploy: Application Attributes page.
+</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Perform the following steps on the Deploy: Application Attributes page:
+</p>
+<ol type="a">
+<li>
+<p>Enter a name for the WSIL application in the <span class="bold">Application Name</span> field.
+</p>
+</li>
+<li>
+<p>Ensure that <span class="bold">Parent Application</span> is set to default.
+</p>
+</li>
+<li>
+<p>Ensure that <span class="bold">Bind Web Module to Site</span> is set to default-web-site.
+</p>
+</li>
+<li>
+<p>Ensure that <span class="bold">Context Root</span> is set to <code>/inspection.wsil</code>.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span> to open the Deploy: Deployment Settings page.
+</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Click <span class="bold">Next</span> to deploy the WSIL application. The Confirmation Page will report that the WSIL application deployed successfully.
+</p>
+</li>
+<li>
+<p>You can now access the WSIL application at the following Web address:
+</p>
+<p><code>http://</code><code><span class="codeinlineitalic">hostname</span></code><code>:</code><code><span class="codeinlineitalic">port</span></code><code>/inspection.wsil</code>
+</p>
+<p>In the preceding URL, <span class="italic">hostname</span> is the host name of the server running OracleAS Web Services and <span class="italic">port</span> is the port number of the server running OracleAS Web Services.
+</p>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="CEGGBBIH" name="CEGGBBIH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref33" name="sthref33"></a>
+<h3 class="sect2"><span class="secnum">6.8 </span>Update Oracle Enterprise Service Bus Services
+</h3>
+<p>If Oracle Enterprise Service Bus is installed, and you plan to clone or change the IP or hostname of the machine that is hosting any of your middle-tier installations, then you must perform the following procedure:
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>For more information about updating Oracle Enterprise Service Bus services, refer to <span class="italic">Oracle Application Server Administrator's Guide 10g Release 3 (10.1.3.1.0)</span>.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+<ol type="1" start="1">
+<li><a id="CEGGEIDI" name="CEGGEIDI"></a>
+<p>Run the following script to set the Oracle Home and system variables:
+</p>
+<ul>
+<li type="disc">
+<p>For UNIX:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>/integration/esb/bin/esbdevprompt.sh
+
+</pre>
+</li>
+<li type="disc">
+<p>For Microsoft Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>&#092;integration&#092;esb&#092;bin&#092;esbdevprompt.bat
+
+</pre>
+</li>
+</ul>
+</li>
+<li><a id="CEGHACJD" name="CEGHACJD"></a>
+<p>In the command-line window from which you ran the script, run the following command to export the Oracle Enterprise Service Bus services:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">ant export-params 
+-Dparamfile <span class="italic">ORACLE&#095;HOME</span>&#092;integration&#092;<span class="italic">DateTimeStamp</span>&#092;esbparam.properties 
+-DDB&#095;URL&#061;<span class="italic">jdbc&#095;connectString</span>:&#064;//<span class="italic">hostname:port</span>/<span class="italic">db&#095;service&#095;name</span>
+-DDB&#095;USER&#061;oraesb -DDB&#095;PASSWORD&#061;<span class="italic">esb&#095;pwd</span>
+-DDB&#095;DRIVER&#061;oracle.jdbc.driver.OracleDriver
+
+</pre>
+<p>In the preceding command, <span class="italic">hostname</span> is the host containing the repository for Oracle Enterprise Service Bus, <span class="italic">port</span> is the port for the repository, <span class="italic">db&#095;service&#095;name</span> is the database service name, and <span class="italic">esb&#095;pwd</span> is the password for the ORAESB user. For example, on Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">ant export-params 
+-Dparamfile <span class="italic">ORACLE&#095;HOME</span>&#092;integration&#092;20060828&#095;1503&#092;esbparam.properties 
+-DDB&#095;URL&#061;jdbc:oracle:thin:&#064;//sta.example.com:1521/oexam.us.example.com
+-DDB&#095;USER&#061;oraesb -DDB&#095;PASSWORD&#061;ORAESB123
+-DDB&#095;DRIVER&#061;oracle.jdbc.driver.OracleDriver
+
+</pre>
+</li>
+<li>
+<p>Make the updates to your operating system to properly change the hostname, domain name, or both.
+</p>
+</li>
+<li>
+<p>Restart the host, if necessary for your operating system.
+</p>
+</li>
+<li>
+<p>Verify that you can ping the host from another host in your network. Be sure to ping using the new hostname to make sure everything is resolving properly.
+</p>
+</li>
+<li>
+<p>Edit the <code>esbparam.properties</code> file as follows:
+</p>
+<ul>
+<li type="disc">
+<p>If you are changing the IP address or hostname, then change the DT&#095;OC4J&#095;HOST property to the new hostname. For example, if the new hostname is <code>newhost.oracle.com</code>, then the value of the property would be:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">DT&#095;OC4J&#095;HOST&#061;newhost.example.com
+
+</pre>
+</li>
+<li type="disc">
+<p>If you are cloning a local machine, then update the DT&#095;OC4J&#095;HTTP&#095;PORT to the new port. 
+</p>
+</li>
+<li type="disc">
+<p>If you are cloning a remote machine, then update the DT&#095;OC4J&#095;HOST property to the new hostname and the DT&#095;OC4J&#095;HTTP&#095;PORT property to the new port. 
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Run the following command from the same command-line window used in step <a href="#CEGHACJD">2</a>:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">ant import-params 
+-Dparamfile <span class="italic">ORACLE&#095;HOME</span>&#092;integration&#092;<span class="italic">DateTimeStamp</span>&#092;esbparam.properties 
+-DDB&#095;URL&#061;<span class="italic">jdbc&#095;connectString</span>:&#064;//<span class="italic">hostname:port</span>/<span class="italic">db&#095;service&#095;name</span>
+-DDB&#095;USER&#061;oraesb -DDB&#095;PASSWORD&#061;<span class="italic">esb&#095;pwd</span> 
+-DDB&#095;DRIVER&#061;oracle.jdbc.driver.OracleDriver
+
+</pre>
+<p>In the preceding command, <span class="italic">hostname</span> is the host containing the repository for Oracle Enterprise Service Bus, <span class="italic">port</span> is the port for the repository, <span class="italic">db&#095;service&#095;name</span> is the database service name, and <span class="italic">esb&#095;pwd</span> is the password for the ORAESB user. For example, on Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">ant import-params
+-Dparamfile <span class="italic">ORACLE&#095;HOME</span>&#092;integration&#092;20060828&#095;1503&#092;esbparam.properties 
+-DDB&#095;URL&#061;jdbc:oracle:thin:&#064;//sta.example.com:1521/oexam.us.example.com
+-DDB&#095;USER&#061;oraesb -DDB&#095;PASSWORD&#061;ORAESB123 
+-DDB&#095;DRIVER&#061;oracle.jdbc.driver.OracleDriver&#092;
+
+</pre>
+</li>
+<li>
+<p>Start each middle-tier instance on your host by running the following command in each Oracle home:
+</p>
+<ul>
+<li type="disc">
+<p>For UNIX:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>/opmn/bin/opmnctl startall
+
+</pre>
+</li>
+<li type="disc">
+<p>For Microsoft Windows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>&#092;opmn&#092;bin&#092;opmnctl startall
+
+</pre>
+</li>
+</ul>
+</li>
+<li>
+<p>If you disabled any processes to automatically start Oracle Application Server at the beginning of this procedure, then enable them.
+</p>
+</li>
+<li>
+<p>Verify that the services are listed in the ESB Console and the applications run correctly.
+</p>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="CEGCBDIB" name="CEGCBDIB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref34" name="sthref34"></a>
+<h3 class="sect2"><span class="secnum">6.9 </span>Migrate and Redeploy Oracle ADF Applications
+</h3>
+<p>To ensure you apply all the bug fixes available with this patch, you must migrate and redeploy your Oracle ADF applications after applying Oracle Application Server 10<span class="italic">g</span> Release (10.1.3) Patch Set 3 (10.1.3.3.0). The following procedure describes how to migrate and redeploy the applications:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Download Oracle JDeveloper 10.1.3.3.0 from Oracle Technology Network (OTN) at
+</p>
+<p><code><a href="http://www.oracle.com/technology/index.html">http://www.oracle.com/technology/index.html</a></code>
+</p>
+</li>
+<li>
+<p>Migrate the workspaces as follows:
+</p>
+<ul>
+<li type="disc">
+<p>If you are installing Oracle JDeveloper 10.1.3.3.0 on the same system as Oracle JDeveloper 10.1.3.2.0, then click <span class="bold">Yes</span> at the prompt, "Do you want to migrate from a previous version of JDeveloper?", and point to the <code><span class="codeinlineitalic">JDEV&#095;HOME</span></code><code>/jdev/system</code> folder. All Oracle ADF application workspaces will be migrated at once.
+</p>
+</li>
+<li type="disc">
+<p>If you are installing Oracle JDeveloper 10.1.3.3.0 on a different system than Oracle JDeveloper 10.1.3.2.0, then click <span class="bold">No</span> at the prompt, "Do you want to migrate from a previous version of JDeveloper?". Copy the workspaces for any Oracle ADF applications from the Oracle JDeveloper 10.1.3.2.0 instance to the Oracle JDeveloper 10.1.3.3.0 environment, and open the application workspaces. When the prompt, "Do you want to migrate the workspace from a previous version?", is displayed, click <span class="bold">Yes</span>.
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Repackage the Oracle ADF applications to new EAR files using Oracle JDeveloper. This will update the contained JAR files.
+</p>
+</li>
+<li>
+<p>Deploy the EAR files to the target instance. See the <span class="italic">Oracle Application Development Framework Developer&#039;s Guide</span> for the deployment steps to be performed.
+</p>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="CEGHHHAJ" name="CEGHHHAJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref35" name="sthref35"></a>
+<h3 class="sect2"><span class="secnum">6.10 </span>Postapplication Tasks For Oracle WebCenter Applications
+</h3>
+<p>After applying Oracle Application Server 10<span class="italic">g</span> Release (10.1.3) Patch Set 3 (10.1.3.3.0), you must perform the following tasks before using your Oracle WebCenter applications:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CEGBAFIB">Section 6.10.1, "Migrate and Redeploy Oracle WebCenter Applications that Use JCR Data Controls"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDDFFJJ">Section 6.10.2, "Redefine Page Permissions for Migrated Applications"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGBCACJ">Section 6.10.3, "Copy Portlet Customizations from a 10<span class="italic">g</span> Release 3(10.1.3.2.0) Instance"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGDJIAF">Section 6.10.4, "Migrate Applications that Consume Portlets from Preconfigured OC4J"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGGHGIC">Section 6.10.5, "Migrate Applications that Consume OmniPortlets and WSRP Portlets from Preconfigured OC4J"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGJCCJF">Section 6.10.6, "Reconfigure Proxy Settings for Omniportlet and Web Clipping Producers"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGJDIDF">Section 6.10.7, "Re-create Export EAR Files with 10.1.3.3.0 Predeployment Tool"</a>
+</p>
+</li>
+</ul><a id="CEGBAFIB" name="CEGBAFIB"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref36" name="sthref36"></a>
+<h4 class="sect3"><span class="secnum">6.10.1 </span>Migrate and Redeploy Oracle WebCenter Applications that Use JCR Data Controls
+</h4>
+<p>If you have used JCR Data Controls to integrate and publish decentralized content in your Oracle WebCenter application, then to ensure that you can access the content repositories after applying Oracle Application Server 10<span class="italic">g</span> Release (10.1.3) Patch Set 3 (10.1.3.3.0), you must perform the following steps:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Perform steps 1 and 2 in <a href="#CEGCBDIB">Section 6.9, "Migrate and Redeploy Oracle ADF Applications"</a>.
+</p>
+</li>
+<li>
+<p>Create an application server connection by performing the following steps:
+</p>
+<ol type="a">
+<li>
+<p>In the Connections Navigator, right-click <span class="bold">Application Server</span> and select <span class="bold">New Application Server Connection</span>.
+</p>
+</li>
+<li>
+<p>If you are on the Welcome page, click <span class="bold">Next</span> to display the Type page.
+</p>
+</li>
+<li>
+<p>In the Connection Name field, specify a name for your connection.
+</p>
+</li>
+<li>
+<p>From the Connection Type list, select <span class="bold">Standalone OC4J 10g 10.1.3</span>.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span> to display the Authentication page.
+</p>
+</li>
+<li>
+<p>Specify the user name and password to be used for authentication to the OC4J instance.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span> to display the Connection page.
+</p>
+</li>
+<li>
+<p>Specify the host name and port number to be used for accessing the OC4J instance. Specify the host name to be <code>localhost</code> if the OC4J instance is installed on the same computer as Oracle JDeveloper.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Finish</span>.
+</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Repackage the Oracle WebCenter application to a new EAR file using Oracle JDeveloper. This will update the contained JAR files.
+</p>
+</li>
+<li>
+<p>Deploy the EAR file to the target instance. See the <span class="italic">Oracle WebCenter Framework Developer&#039;s Guide</span> for the deployment steps to be performed.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>You must first associate the new application server connection with the Oracle WebCenter application. To do this, perform the following steps:
+<ol type="a">
+<li>
+<p>Under the Resources node, right-click the deployment profile that was created for the Oracle WebCenter application.
+</p>
+</li>
+<li>
+<p>In the WAR Deployment Profile Properties dialog box, select <span class="bold">Platform</span> in the left pane, and under Target Connection, select the application server connection you just created.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">OK</span>.
+</p>
+</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</li>
+</ol>
+</div><!-- class="sect3" -->
+<a id="CHDDFFJJ" name="CHDDFFJJ"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref37" name="sthref37"></a>
+<h4 class="sect3"><span class="secnum">6.10.2 </span>Redefine Page Permissions for Migrated Applications
+</h4>
+<p>When you migrate your applications to 10<span class="italic">g</span> Release 3 (10.1.3.3.0), authorization information about secured pages is not migrated along with the applications. Therefore, if you had defined ADF security for the application before upgrading, then you must redefine page permissions in the 10<span class="italic">g</span> Release 3 (10.1.3.3.0) instance. See <span class="italic">Oracle WebCenter Framework Developer&#039;s Guide</span> for the steps to be performed.
+</p>
+</div><!-- class="sect3" -->
+<a id="CEGBCACJ" name="CEGBCACJ"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref38" name="sthref38"></a>
+<h4 class="sect3"><span class="secnum">6.10.3 </span>Copy Portlet Customizations from a 10<span class="italic">g</span> Release 3(10.1.3.2.0) Instance
+</h4>
+<p>Customizations made to PDK-Java portlets deployed to the preconfigured OC4J, are stored within the PDK-Java application. Therefore, when you patch the Oracle Application Server instance from 10g Release 3 (10.1.3) Patch Set 2 (10.1.3.2.0) to 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0), the customizations you made for 10g Release 3 (10.1.3) Patch Set 2 (10.1.3.2.0) are not available. If you want these customizations to be available for 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) environments, you must perform the following steps:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Export the customizations using the <code>portlet-client-deploy.jar</code>. 
+</p>
+<p>See <span class="italic">Oracle WebCenter Framework Developer&#039;s Guide</span> for the steps to export and import customizations.
+</p>
+</li>
+<li>
+<p>Re-run the <code>portlet-client-deploy.jar</code> on EAR file and import the customizations.
+</p>
+</li>
+<li>
+<p>Restart the OC4J&#095;WebCenter instance.
+</p>
+</li>
+</ol>
+</div><!-- class="sect3" -->
+<a id="CEGDJIAF" name="CEGDJIAF"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref39" name="sthref39"></a>
+<h4 class="sect3"><span class="secnum">6.10.4 </span>Migrate Applications that Consume Portlets from Preconfigured OC4J
+</h4>
+<p>Perform this task if you clicked <span class="bold">No</span> to the prompt, "Do you want to migrate from a previous version of JDeveloper?" when you started the Oracle JDeveloper after applying 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0). 
+</p>
+<p>Customizations made to PDK-Java portlets that are deployed to the preconfigured OC4J, are stored within the PDK-Java application. Therefore, when you migrate portlets from a 10<span class="italic">g</span> Release 3 (10.1.3.2.0) instance and add them to your application page in a 10<span class="italic">g</span> Release 3 (10.1.3.3.0) instance, the customizations you made for 10g Release 3 (10.1.3) Patch Set 2 (10.1.3.2.0) are not available. If you want these customizations to be available for 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) environments, then you must manually copy the customizations to the application in the 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) instance.
+</p>
+<p>Similarly, customizations made to Omniportlet and WSRP portlets in a 10g Release 3 (10.1.3) Patch Set 2 (10.1.3.2.0) instance must be manually copied from the <code>/portletdata</code> directory to the 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) instance. This ensures that the customizations made to these portlets are preserved in the 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) environment.
+</p>
+</div><!-- class="sect3" -->
+<a id="CEGGHGIC" name="CEGGHGIC"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref40" name="sthref40"></a>
+<h4 class="sect3"><span class="secnum">6.10.5 </span>Migrate Applications that Consume OmniPortlets and WSRP Portlets from Preconfigured OC4J
+</h4>
+<p>Perform this task steps if you clicked <span class="bold">Yes</span> at the prompt, "Do you want to migrate from a previous version of JDeveloper?" when you started the Oracle JDeveloper after applying 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0).
+</p>
+<p>In this case, customizations made to Omniportlet and WSRP Portlets will be migrated as a part of entire Oracle JDeveloper migration. However, customizations made to PDK-Java portlets must be manually copied to the 10.1.3.3.0 instance.
+</p>
+</div><!-- class="sect3" -->
+<a id="CEGJCCJF" name="CEGJCCJF"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref41" name="sthref41"></a>
+<h4 class="sect3"><span class="secnum">6.10.6 </span>Reconfigure Proxy Settings for Omniportlet and Web Clipping Producers
+</h4>
+<p>If your application contains OmniPortlet and Web Clipping portlets, then you must reconfigure proxy settings for these portlets after applying Oracle Application Server 10<span class="italic">g</span> Release (10.1.3) Patch Set 3 (10.1.3.3.0). This must be done because the provider configuration information is not migrated from the 10<span class="italic">g</span> Release 3 (10.1.3.2.0) instance.
+</p>
+<p>Refer to the appendix "Additional Portlet Configuration" in the <span class="italic">Oracle WebCenter Framework Developer&#039;s Guide</span> for information about configuring HTTP proxy settings for OmniPortlet and Web Clipping producers.
+</p>
+</div><!-- class="sect3" -->
+<a id="CEGJDIDF" name="CEGJDIDF"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref42" name="sthref42"></a>
+<h4 class="sect3"><span class="secnum">6.10.7 </span>Re-create Export EAR Files with 10.1.3.3.0 Predeployment Tool
+</h4>
+<p>If you have imported customizations from 10<span class="italic">g</span> Release 3 (10.1.3.2.0) by creating the export EAR in 10<span class="italic">g</span> Release 3 (10.1.3.2.0), then the page is also exported with the customizations. As a result, when you make changes to your page in 10<span class="italic">g</span> Release 3 (10.1.3.3.0) and import customizations, you may lose the changes you made to the page before performing the import. To avoid pages being overwritten after an import, you must use the 10<span class="italic">g</span> Release 3 (10.1.3.3.0) predeployment tool and re-create all your exports EAR files that were created with a 10<span class="italic">g</span> Release 3 (10.1.3.2.0) predeployment tool.
+</p>
+<p>See <span class="italic">Oracle WebCenter Framework Developer&#039;s Guide</span> for the steps to be performed.
+</p>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDGCBFH" name="CHDGCBFH"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref43" name="sthref43"></a>
+<h2 class="sect1"><span class="secnum">7 </span>Known Issues
+</h2>
+<p>The following sections are known issues for Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0):
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDCCDEG">Section 7.1, "Incompatibility Between Web Service and Client"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDEBFDA">Section 7.2, "Web Services Based on EJB 3.0"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGHDBIH">Section 7.3, "Testing Web Modules and Web Services When Using Oracle HTTP Server 10.1.2"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDEHBFF">Section 7.4, "File Name Change for bc4j.ear File"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGCHDCE">Section 7.5, "Applying 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) More than Once"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDJDFEF">Section 7.6, "Installation Message"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDDEBHE">Section 7.7, "OC4J Transaction Support"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDHJEFI">Section 7.8, "Displaying Application Server Control Console After Applying the Patch Set"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGFBIAD">Section 7.9, "Accessing Oracle Enterprise Manager after Applying Patch"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGGDFGF">Section 7.10, "Redo Log Directories in a High Availability Disaster Recovery Setup"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGJJBIA">Section 7.11, "TaskManager Is Not Listed Under Deployed Processes in Oracle BPEL Control"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGEGGJG">Section 7.12, "BPEL Error Message during Shutdown"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGBDGCH">Section 7.13, "OC4J&#095;WebCenter Instance Log Error"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGIDGBI">Section 7.14, "Display of BC4J -JSP Application Error Page"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGHEJBB">Section 7.15, "Oracle Process Manager and Notification Server Log Error s During Patch Application"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CEGIIDEC">Section 7.16, "Oracle Business Rules Help Error Messages (Microsoft Windows only)"</a>
+</p>
+</li>
+</ul><a id="CHDCCDEG" name="CHDCCDEG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref44" name="sthref44"></a>
+<h3 class="sect2"><span class="secnum">7.1 </span>Incompatibility Between Web Service and Client
+</h3>
+<p>After you apply Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) to a 10g Release 3 (10.1.3.0.0) environment, note the following. 
+</p>
+<ul>
+<li type="disc">
+<p>If you regenerate and redeploy the Web service, then there will be changes to the generated WSDL. 
+</p>
+</li>
+<li type="disc">
+<p>If you try to use the 10g Release 3 (10.1.3.0.0) client against the service, then communications will fail with compiler errors.
+</p>
+</li>
+</ul>
+<p>You can work around these issues in the following ways:
+</p>
+<ul>
+<li type="disc">
+<p>Do not reassemble the Web service EAR file. The WSDL will remain unchanged and the client will still be able to communicate with the service.
+</p>
+</li>
+<li type="disc">
+<p>If you must regenerate the Web service EAR file, then regenerate the client and add the suffix "<code>Element</code>" to the names of the classes that use the wrapper. It is assumed that the client uses the wrapper classes that were assembled with <code>unwrapParameters</code> set to <code>false</code>.
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="CHDEBFDA" name="CHDEBFDA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref45" name="sthref45"></a>
+<h3 class="sect2"><span class="secnum">7.2 </span>Web Services Based on EJB 3.0
+</h3>
+<p>If you apply Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) to a 10g Release 3 (10.1.3.0.0) environment, and you are working with a release 3 (10.1.3.0.0) Web service assembled from EJB 3.0, then the WSDL will change when you redeploy the service. In this case, you must regenerate the client code in order for it to communicate with the service.
+</p>
+</div><!-- class="sect2" -->
+<a id="CEGHDBIH" name="CEGHDBIH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref46" name="sthref46"></a>
+<h3 class="sect2"><span class="secnum">7.3 </span>Testing Web Modules and Web Services When Using Oracle HTTP Server 10.1.2
+</h3>
+<p>Oracle Enterprise Manager Application Server Control provides test pages, which allow you to test the Web Modules and Web Services that you have deployed to your application server environment. In most cases, the test page provides a list of the Web sites and ports currently configured in your environment so you can select which Web site to use when testing the Web module or Web service URL.
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>"Testing a Web Service" and "Overview of Managing Web Modules" in the Enterprise Manager online help
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+<p>If you are using Oracle HTTP Server 10<span class="italic">g</span> Release 2 (10.1.2) as a front end to OC4J, then the list of Discovered Web sites on the test page may be empty. In those cases, you cannot use Application Server Control to test the Web module or Web service URL. Instead, open a new browser window and enter the URL for the Web module or Web service in the Address field of the browser.
+</p>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>"Configuring Oracle Application Server 10.1.2 with Oracle Application Server 10.1.3" in the <span class="italic">Oracle Application Server Administrator's Guide</span> in the 10<span class="italic">g</span> Release 2 (10.1.3.2) documentation library
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="CHDEHBFF" name="CHDEHBFF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref47" name="sthref47"></a>
+<h3 class="sect2"><span class="secnum">7.4 </span>File Name Change for bc4j.ear File
+</h3>
+<p>Oracle Application Server 10g Release 3 (10.1.3.0.0) uses and deploys the <code>bc4j.ear</code> file with the default home instance. After applying Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0), the default file name for newly-created instances will be <code>datatags.ear</code>. There is no change in the content or functionality of the file. 
+</p>
+</div><!-- class="sect2" -->
+<a id="CEGCHDCE" name="CEGCHDCE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref48" name="sthref48"></a>
+<h3 class="sect2"><span class="secnum">7.5 </span>Applying 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) More than Once
+</h3>
+<p>If you have applied 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0), then you should not apply the patch again. If you do, then you may get errors. For example, the following scenario is not supported by Oracle:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Installed Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) with the J2EE and Webserver option.
+</p>
+</li>
+<li>
+<p> Installed Oracle Enterprise Service Bus 10<span class="italic">g</span> (10.1.3.1.0) standalone middle-tier option.
+</p>
+</li>
+<li>
+<p>Applied 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0). 
+</p>
+</li>
+<li>
+<p>Installed Oracle BPEL Process Manager 10g (10.1.3.1) standalone middle-tier option or Oracle Web Services Manager 10g (10.1.3.1) middle-tier option.
+</p>
+</li>
+<li>
+<p>Applied 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) to upgrade Oracle BPEL Process Manager to 110<span class="italic">g</span> Release 3 (10.1.3.3.0).
+</p>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="CHDJDFEF" name="CHDJDFEF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref49" name="sthref49"></a>
+<h3 class="sect2"><span class="secnum">7.6 </span>Installation Message
+</h3>
+<p>If you apply the patch to a system that has a standalone Oracle Containers for J2EE (OC4J) instance that is associated with Oracle Internet Directory 10<span class="italic">g</span> Release 2 (10.1.2.0.2) infrastructure, then the following messages may be displayed during patch application when prompting for the OC4J administrator&#039;s password:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">The operation is unsupported. 
+
+</pre>
+<p>This message can be ignored. 
+</p>
+</div><!-- class="sect2" -->
+<a id="CHDDEBHE" name="CHDDEBHE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref50" name="sthref50"></a>
+<h3 class="sect2"><span class="secnum">7.7 </span>OC4J Transaction Support
+</h3>
+<p>The OC4J transaction manager for Oracle Application Server 10g Release 3 (10.1.3.1.0) contains a new feature called Recoverable Last Resource Commit (RLRC). The feature provides an enhanced recovery mechanism for Last Resource Commit (LRC) transactions and increases the overall performance of such transactions.
+</p>
+<p>RLRC uses a database table to maintain a commit record of transaction IDs. This removes the need for a commit record in the OC4J transaction logs in the middle-tier. Writing commit records accounts for a large part of the performance cost of two-phase commit processing.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Currently RLRC is available only when the non-XAResource participant is a database. In addition, because the commit record is maintained in this database, the database must be accessible in the event that recovery of such RLRC transactions is necessary.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>Do the following procedure to set up the RLRC feature:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Stop the server if it is currently started.
+</p>
+</li>
+<li>
+<p>Connect to the database that will persist the commit record, and run the following SQL script to install the required schema:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">J2EE&#095;HOME</span>/database/j2ee/jta/oracle/last&#095;resource&#095;commit.sql
+
+</pre>
+</li>
+<li>
+<p>Open the <code><span class="codeinlineitalic">J2EE&#095;HOME</span></code><code>/config/data-sources.xml</code> file. Edit or create a connection pool to access the commit record database and specify the commit-record-table-name attribute as part of the connection factory element.
+</p>
+<p>For example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#091;...&#093;
+&lt;connection-pool name&#061;"Example Connection Pool"
+num-cached-statements&#061;'10'>
+   &lt;connection-factory factory-class&#061;"oracle.jdbc.pool.OracleDataSource"
+      user&#061;"scott"
+      password&#061;"tiger"
+      url&#061;"jdbc:oracle:thin:&#064;myServer:5521:main"
+      commit-record-table-name&#061;"scott.OC4J&#095;TX&#095;RLRC&#095;LOG">
+        &lt;property name&#061;"connectionCachingEnabled"  value&#061;"false"/>
+        &lt;property name&#061;"implicitCachingEnabled"  value&#061;"true"/>
+        &lt;property name&#061;"maxStatements" value&#061;"50"/>
+    &lt;/connection-factory>
+  &lt;/connection-pool>
+&#091;...&#093;
+</pre>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>The name value for the <code>commit-record-table-name</code> attribute must be fully qualified, and the user credentials you specify must have delete and select privileges on this table.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</li>
+<li>
+<p>(Optional). Open the <code><span class="codeinlineitalic">J2EE&#095;HOME</span></code><code>/config/transaction-manager.xml</code> file and modify the runtime behavior of the RLRC feature. 
+</p>
+<p>For example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#091;...&#093;
+&lt;commit-coordinator>
+   &lt;middle-tier>
+      &lt;recovery retry-interval &#061; "300" rlrc-min-purge-interval&#061;"10"
+                rlrc-purge-size&#061;"1000">
+   &lt;/middle-tier>
+&lt;/commit-coordinator>
+&#091;...&#093;
+
+</pre>
+<p>In the preceding example, the following parameters were used:
+</p>
+<ul>
+<li type="disc">
+<p><code>nrlrc-purge-interval</code> is the interval (in milliseconds) in which the batch purge of commit records in the database occurs.
+</p>
+</li>
+<li type="disc">
+<p><code>nrlrc-purge-size</code> is the size of the batch that will be deleted during the batch purge of commit records in the database.
+</p>
+</li>
+</ul>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="CHDHJEFI" name="CHDHJEFI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref51" name="sthref51"></a>
+<h3 class="sect2"><span class="secnum">7.8 </span>Displaying Application Server Control Console After Applying the Patch Set
+</h3>
+<p>If you are patching a 10g Release 3 (10.1.3.1.0) Oracle home and you selected the following installation options when you installed the 10g Release 3 (10.1.3.1.0) Oracle home, then you may have trouble displaying Application Server Control Console:
+</p>
+<ul>
+<li type="disc">
+<p>You selected the <span class="bold">Advanced Install</span> option
+</p>
+</li>
+<li type="disc">
+<p>You selected the <span class="bold">J2EE Server, Web Server and SOA Suite</span> installation type
+</p>
+</li>
+<li type="disc">
+<p>You configured the instance to serve as an Administration OC4J instance
+</p>
+</li>
+</ul>
+<p>If you cannot display the Application Server Control Console after installing 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) with these options selected, then the <code>server.xml</code> files in your application server instance may have become corrupted during the installation.
+</p>
+<p>Do the following to correct the problem:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Use a text editor to open the <code>server.xml</code> file for the <code>home</code> OC4J instance:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>/j2ee/home/config/server.xml
+
+</pre>
+</li>
+<li>
+<p>Make sure that the following entry exists in the <code>server.xml</code> file for the home instance:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;global-application name&#061;"default" path&#061;"application.xml" parent&#061;"system" start&#061;"true" />
+
+</pre>
+</li>
+<li>
+<p>Save and close the <code>server.xml</code> file for the home instance.
+</p>
+</li>
+<li>
+<p>Use a text editor to open the <code>server.xml</code> file for the oc4j&#095;soa OC4J instance:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">ORACLE&#095;HOME</span>/j2ee/oc4j&#095;soa/config/server.xml
+</pre>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>oc4j&#095;soa is the default name of the second OC4J instance installed by the <span class="bold">Advanced Install</span> option. If you entered a different name for this instance on the Administration Settings screen of the installer, then replace oc4j&#095;soa in the preceding example with the name you entered on the Administration Settings page.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</li>
+<li>
+<p>Make sure that the following entry exists in the <code>server.xml</code> file for the oc4j&#095;soa instance:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;application name&#061;"ascontrol" path&#061;"../../home/applications/ascontrol.ear" parent&#061;"system" start&#061;"false" />
+
+</pre>
+</li>
+<li>
+<p>Save and close the <code>server.xml</code> file for the oc4j&#095;soa instance.
+</p>
+</li>
+<li>
+<p>Stop and then start both the home instance and the oc4j&#095;soa instance.
+</p>
+<div align="center">
+
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a caution" title="This is a layout table to format a caution" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Caution:</p>To prevent this problem from happening again, do not use the <code>opmnctl startall</code> command to start the application server instance. Instead, each time you need to restart the application server instance, be sure to use the following separate commands to stop and restart each component of the application server:
+<pre xml:space="preserve" class="oac_no_warn">opmnctl start
+opmnctl startproc process-type&#061;&lt;<span class="italic">OC4J instance name 1</span>>
+opmnctl startproc process-type&#061;&lt;<span class="italic">OC4J instance name 2</span>>
+opmnctl startproc process-type&#061;&lt;<span class="italic">Oracle HTTP Server instance name</span>> 
+</pre>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>"Starting and Stopping" in the <span class="italic">Oracle Application Server Administrator's Guide</span>
+<p>The latest <span class="italic">Oracle Application Server 10g Release 3 (10.1.3.1.0) Release Notes</span> is available in the 10g Release 3 (10.1.3.1.0) documentation library on the Oracle Technology Network
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="CEGFBIAD" name="CEGFBIAD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref52" name="sthref52"></a>
+<h3 class="sect2"><span class="secnum">7.9 </span>Accessing Oracle Enterprise Manager after Applying Patch
+</h3>
+<p>In rare cases, you may be unable to display the Oracle Enterprise Manager Application Server Control Console after applying the patch set. If this problem occurs, then verify that at least one of the Application Server Control applications deployed in your cluster topology is configured to receive requests from your Web browser and to start automatically whenever the application server is started.
+</p>
+<p>In order to access Oracle Enterprise Manager after applying the patch, you may need to update the ohs&#095;routable property in the <code>ORACLE&#095;HOME/j2ee/home/config/default-web-site.xml</code> file. The property should be set to true, as shown in the following:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">ohs-routable&#061;true
+
+</pre>
+<div align="center">
+<div class="inftblnotealso">
+
+<br /><table class = "NoteAlso oac_no_warn" summary="This is a layout table to format a tip" title="This is a layout table to format a tip" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p>Identifying and Configuring a New Active Application Server Control" in <span class="italic">Oracle Application Server Administrator's Guide 10g Release 3 (10.1.3.2.0)</span>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnotealso -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="CEGGDFGF" name="CEGGDFGF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref53" name="sthref53"></a>
+<h3 class="sect2"><span class="secnum">7.10 </span>Redo Log Directories in a High Availability Disaster Recovery Setup
+</h3>
+<p>If the redo logs for the primary database are located in several directories, then the standby database must include the similar directories. If the standby database does not include the directories, then the <code>create standby database</code> command gives the following error: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">standby: -->ASG&#095;ORACLE-300: ORA-00301: error in adding log file 
+'/oradata/test123/redo010.log' - file cannot be created 
+standby: -->ASG&#095;ORACLE-300: ORA-27040: file create error, unable to create
+file 
+standby: -->ASG&#095;DUF-3700: Failed in SQL&#042;Plus executing SQL statement:  
+ALTER DATABASE ADD STANDBY LOGFILE GROUP 10 
+'/oradata/test123/redo010.log' SIZE 52428800 /&#042; 
+ASG&#095;DGA &#042;/;. 
+standby: -->ASG&#095;DUF-3535: Failed to create standby redo log. 
+standby: -->ASG&#095;DUF-3535: Failed to create standby redo log. 
+
+</pre>
+<p>If this error occurs, then ensure that all the directories for the redo logs in the primary database also exist on the standby. This is applicable for Real Application Clusters (RAC) databases and non-RAC databases used with Oracle SOA Suite and Oracle WebCenter Suite installations.
+</p>
+</div><!-- class="sect2" -->
+<a id="CEGJJBIA" name="CEGJJBIA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref54" name="sthref54"></a>
+<h3 class="sect2"><span class="secnum">7.11 </span>TaskManager Is Not Listed Under Deployed Processes in Oracle BPEL Control
+</h3>
+<p>TaskActionHandler and TaskManager should appear as deployed processes in OracleBPEL Control. If TaskManager does not appear, then refer to Section 8.3.4 in<span class="italic"> Oracle Application Server Release Notes 10g Release 3 (10.1.3.1.0)</span>.
+</p>
+</div><!-- class="sect2" -->
+<a id="CEGEGGJG" name="CEGEGGJG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref55" name="sthref55"></a>
+<h3 class="sect2"><span class="secnum">7.12 </span>BPEL Error Message during Shutdown
+</h3>
+<p>After applying the patch set, the following BPEL error may appear during shutdown. This message can be ignored.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">May 6, 2007 9:38:48 AM org.apache.axis.transport.http.AxisServlet 
+processAxisFault 
+INFO: AxisFault: 
+AxisFault 
+faultCode: &#123;http://schemas.xmlsoap.org/soap/envelope/&#125;Server.userException 
+faultSubcode: 
+faultString: java.lang.NullPointerException 
+faultActor: 
+faultNode: 
+faultDetail: 
+(http://xml.apache.org/axis/&#125;stackTrace: java.lang.NullPointerException 
+at 
+oracle.classloader.CodeSourceSearchPolicy&#036;Linear.firstEntry(CodeSourceSearch
+Policy.java:189) 
+at 
+oracle.classloader.CodeSourceSearchPolicy.findResourceBytes(CodeSourceSearch
+Policy.java:53) 
+at 
+oracle.classloader.PolicyClassLoader.findLocalClass(PolicyClassLoaderjava:
+1455) 
+at oracle.classloader.SearchPolicy&#036;FindLocal.getClass(SearchPolicy.java:167) 
+at oracle.classloader.SearchSequence.getClass(SearchSequence.java:119) 
+at oracle.classloader.SearchPolicy.loadClass(SearchPolicy.java:645) 
+at 
+oracle.classloader.SearchPolicy&#036;CheckSharedLibraries.getClass
+(SearchPolicyjava:396) 
+</pre>
+</div><!-- class="sect2" -->
+<a id="CEGBDGCH" name="CEGBDGCH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref56" name="sthref56"></a>
+<h3 class="sect2"><span class="secnum">7.13 </span>OC4J&#095;WebCenter Instance Log Error
+</h3>
+<p>The following error may appear in the OC4J WebCenter instance log. This message can be ignored.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">WARNING: Code-source 
+/scratch/aime1/work/portal3861/j2ee/OC4J&#095;
+WebCenter/applications/jpdk/pdkstruts 
+/WEB-INF/lib/commons-logging.jar (from WEB-INF/lib/ directory in 
+/scratch/aime1/work/portal3861/j2ee/OC4J&#095;
+WebCenter/applications/jpdk/pdkstruts 
+/WEB-INF/lib) has the same filename but is not identical to 
+/scratch/aime1/work/portal3861/webservices/lib/commons-logging.jar (from 
+&lt;code-source> (ignore manifest Class-Path) in META-INF/boot.xml in 
+/scratch/aime1/work/portal3861/j2ee/home/oc4j.jar). If it contains different 
+versions of the same classes, it will be masked as the latter is already 
+visible in the search path of loader jpdk.web.pdkstruts:0.0.0. 
+Apr 25, 2007 2:37:27 AM org.apache.struts.util.PropertyMessageResources 
+&lt;init> 
+INFO: Initializing, config&#061;'org.apache.struts.util.LocalStrings', 
+returnNull&#061;true 
+Apr 25, 2007 2:37:27 AM org.apache.struts.util.PropertyMessageResources 
+&lt;init> 
+INFO: Initializing, config&#061;'org.apache.struts.action.ActionResources', 
+returnNull&#061;true 
+Apr 25, 2007 2:37:28 AM org.apache.struts.util.PropertyMessageResources 
+&lt;init> 
+INFO: Initializing, 
+config&#061;'oracle.portal.sample.v2.devguide.struts.messages', returnNull&#061;true 
+/scratch/aime1/work/portal3861/j2ee/OC4J&#095;
+WebCenter/application-deployments/portletapp/wsrp-samples/oasis/names/tc/wsrp
+/v2/bind/runtime/WSRP&#095;v2&#095;PortletManage 
+ment&#095;Binding&#095;SOAP&#095;Tie.java:930: cannot find symbol 
+symbol  : method getPortletLifetime(javax.xml.soap.SOAPElement) 
+location: interface 
+oracle.portlet.wsrp.v2.soap.WSRP&#095;v2&#095;PortletManagement&#095;PortType 
+                &#095;response &#061; 
+((oracle.portlet.wsrp.v2.soap.WSRP&#095;v2&#095;PortletManagement&#095;PortType) 
+getTarget()).getPortletLifetime(mySOAPElement); 
+                            ^ 
+1 error 
+WARNING: Code-source 
+/scratch/aime1/work/portal3861/j2ee/OC4J&#095;
+WebCenter/applications/richtextportle 
+t/richtextportlet/WEB-INF/lib/adfshare.jar (from WEB-INF/lib/ directory in 
+/scratch/aime1/work/portal3861/j2ee/OC4J&#095;WebCenter/applications/richtextportle 
+t/richtextportlet/WEB-INF/lib) has the same filename but is not identical to 
+/scratch/aime1/work/portal3861/BC4J/lib/adfshare.jar (from &lt;code-source> in 
+/scratch/aime1/work/portal3861/j2ee/OC4J&#095;WebCenter/config/server.xml). If it 
+contains different versions of the same classes, it will be masked as the 
+latter is already visible in the search path of loader 
+richtextportlet.web.richtextportlet:0.0.0. 
+/scratch/aime1/work/portal3861/j2ee/OC4J&#095;
+WebCenter/application-deployments/richtextportlet/richtextportlet/oasis/names
+/tc/wsrp/v2/bind/runtime/WSRP&#095;v2&#095;Portl 
+etManagement&#095;Binding&#095;SOAP&#095;Tie.java:1256: cannot find symbol 
+symbol  : method getPortletLifetime(javax.xml.soap.SOAPElement) 
+location: interface 
+oracle.portlet.wsrp.v2.soap.WSRP&#095;v2&#095;PortletManagement&#095;PortType 
+                &#095;response &#061; 
+((oracle.portlet.wsrp.v2.soap.WSRP&#095;v2&#095;PortletManagement&#095;PortType) 
+getTarget()).getPortletLifetime(mySOAPElement); 
+1 error" 
+</pre>
+</div><!-- class="sect2" -->
+<a id="CEGIDGBI" name="CEGIDGBI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref57" name="sthref57"></a>
+<h3 class="sect2"><span class="secnum">7.14 </span>Display of BC4J -JSP Application Error Page 
+</h3>
+<p>When running a BC4J-JSP application which includes charts, an application error may display an error page with unneeded system information / directory paths. The system information should not be displayed to the user.
+</p><a id="sthref58" name="sthref58"></a>
+<p class="subhead2">Workaround</p>
+<p>There are two options for the application programmer. One option is to edit the error page to remove the system information. The other option is to edit the error page and provide an appropriate error message. Both options are described in the following:
+</p>
+<ul>
+<li type="disc">
+<p>To remove the system information, edit the error-page.jsp page to comment out the error message, such as the following:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;&#037;-- Error Message: &#061; exception.getMessage() --&#037;> 
+
+</pre>
+</li>
+<li type="disc">
+<p>To provide an appropriate error message, edit the error-page.jsp page to include the message such as the following:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Error Message: This error is due to a problem with the chart.Please contact support for more information.
+</pre>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="CEGHEJBB" name="CEGHEJBB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref59" name="sthref59"></a>
+<h3 class="sect2"><span class="secnum">7.15 </span>Oracle Process Manager and Notification Server Log Error s During Patch Application
+</h3>
+<p>The following errors may appear in the Oracle Process Manager and Notification Server log. These messages can be ignored.
+</p>
+<ul>
+<li type="disc">
+<p>Error when database is being patched to 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0):
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Syntax error on line 278 of c:/work/portal2959/apache/apache/conf/httpd.conf: 
+Cannot load c:/work/portal2959/apache/apache/modules/apachemoduleossl.dll 
+into server: (127) The specified procedure could not be found: 
+
+</pre>
+</li>
+<li type="disc">
+<p>Error when Oracle BPEL is being patched to 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0): 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">"07/05/27 16:21:21 java.lang.NullPointerException 07/05/27 16:21:21 at
+com.evermind.server.ejb.StatelessSessionBeanPool.beforePassToClient
+(StatelessSessionBeanPool.java:52) 07/05/27 16:21:21 at 
+com.evermind.server.ejb.StatelessSessionBeanPool.createContextImpl
+(StatelessSessionBeanPool.java:35) 07/05/27 16:21:21 at
+com.evermind.server.ejb.BeanPool.createContext(BeanPool.java:418)
+07/05/27 16:21:21 at
+com.evermind.server.ejb.BeanPool.allocateContext(BeanPool.java:244)
+07/05/27 16:21:21 at " 
+</pre>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="CEGIIDEC" name="CEGIIDEC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref60" name="sthref60"></a>
+<h3 class="sect2"><span class="secnum">7.16 </span>Oracle Business Rules Help Error Messages (Microsoft Windows only)
+</h3>
+<p>During application of 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) on Microsoft Windows, an error similar to the following will be logged when undeploying Oracle Business Rules help. Warning messages will be logged when redeploying Oracle Business Rules help. These error messages and warnings can be ignored. 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">WARNING: ApplicationUnDeployer.removeFiles WARNING: Unable to remove appDir
+C:&#092;WORK&#092;soa623&#092;j2ee&#092;home&#092;applications&#092;rulehelp : Unable to remove
+C:&#092;WORK&#092;soa623&#092;j2ee&#092;home&#092;applications&#092;rulehelpjava.io.IOException: Unable to
+remove C:&#092;WORK&#092;soa623&#092;j2ee&#092;home&#092;applications&#092;rulehelp at
+oracle.oc4j.util.FileUtils.recursiveRemove(FileUtils.java:258)
+
+</pre>
+<p>Also during installation, the following error will be logged for the OC4J instance running Oracle Business Rules. This error can be ignored.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">critical error in OHW configuration. Config URL:
+file:/C:/WORK/soa3597/j2ee/home/applications/rulehelp/rulehelp/helpsets/
+ohwcon fig.xml:HelpSet 'ruleauthor' : Unknown error when parsing hs file: 
+No toplevel tag in helpset file"
+</pre>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDEGCCA" name="CHDEGCCA"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref61" name="sthref61"></a>
+<h2 class="sect1"><span class="secnum">8 </span>Fixed Platform-Specific Bugs for Microsoft Windows
+</h2>
+<p><a href="#CHDBBBHA">Table 3</a> describes the bugs fixed for Microsoft Windows in the Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0).
+</p>
+<div class="tblhruleformal">
+<a id="sthref62" name="sthref62"></a><a id="CHDBBBHA" name="CHDBBBHA"></a>
+<p class="titleintable">Table 3 Fixed Platform-Specific Bugs for Microsoft Windows</p>
+<table class="HRuleFormal" title="Fixed Platform-Specific Bugs for Microsoft Windows" summary="Fixed Platform Specific Bugs for Microsoft Windows" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t26">Bug Number
+</th>
+<th align="left" valign="bottom" id="r1c2-t26">Fixed in Release
+</th>
+<th align="left" valign="bottom" id="r1c3-t26">Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t26" headers="r1c1-t26">
+<p>10.1.3.1
+</p>
+</td>
+<td align="left" headers="r2c1-t26 r1c2-t26">
+<p>4496308
+</p>
+</td>
+<td align="left" headers="r2c1-t26 r1c3-t26">
+<p>Timeouts occur erroneously or do not occur at the correct time 
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t26" headers="r1c1-t26">
+<p>10.1.3.1
+</p>
+</td>
+<td align="left" headers="r3c1-t26 r1c2-t26">
+<p>6047201
+</p>
+</td>
+<td align="left" headers="r3c1-t26 r1c3-t26">
+<p>Custom exception in a SOAP message did not get deserialized in a jaxws client, resulted in a SOAPFaultException. 
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformal" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDBCIDE" name="CHDBCIDE"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref63" name="sthref63"></a>
+<h2 class="sect1"><span class="secnum">9 </span>Patch Set Components
+</h2>
+<p>The following table provides a list of patch set components. Note that the components updated by 10g Release 3 Patch Set 1 (10.1.3.1.0) are also included here because this is a cumulative patch set.
+</p>
+<div class="tblhruleformal">
+<a id="sthref64" name="sthref64"></a><a id="CHDBABID" name="CHDBABID"></a>
+<p class="titleintable">Table 4 Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) Components</p>
+<table class="HRuleFormal" title="Oracle Application Server 10g Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) Components" summary="9.0.3.1.0 Patch Set Components" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t27">Component Name
+</th>
+<th align="left" valign="bottom" id="r1c2-t27">Release
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t27" headers="r1c1-t27">
+<p>Apache Module for Oracle Distributed Authoring and Versioning
+</p>
+</td>
+<td align="left" headers="r2c1-t27 r1c2-t27">
+<p>10.1.3.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t27" headers="r1c1-t27">
+<p>HTTP Server Files for 2.0
+</p>
+</td>
+<td align="left" headers="r3c1-t27 r1c2-t27">
+<p>2.2.0.0.0
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t27" headers="r1c1-t27">
+<p>Java Runtime Environment
+</p>
+</td>
+<td align="left" headers="r4c1-t27 r1c2-t27">
+<p>1.4.2.0.4
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t27" headers="r1c1-t27">
+<p>LDAP Required Support Files 
+</p>
+</td>
+<td align="left" headers="r5c1-t27 r1c2-t27">
+<p>10.1.4.0.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t27" headers="r1c1-t27">
+<p>Oracle Apache Modules
+</p>
+</td>
+<td align="left" headers="r6c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t27" headers="r1c1-t27">
+<p>Oracle Application Development Framework
+</p>
+</td>
+<td align="left" headers="r7c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t27" headers="r1c1-t27">
+<p>Oracle Application Development Framework Library
+</p>
+</td>
+<td align="left" headers="r8c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t27" headers="r1c1-t27">
+<p>Oracle Application Server
+</p>
+<br />
+</td>
+<td align="left" headers="r9c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t27" headers="r1c1-t27">
+<p>Oracle Application Server Guard
+</p>
+<br />
+</td>
+<td align="left" headers="r10c1-t27 r1c2-t27">
+<p>10.1.3.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t27" headers="r1c1-t27">
+<p>Oracle Application Server High Availability Components
+</p>
+</td>
+<td align="left" headers="r11c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t27" headers="r1c1-t27">
+<p>Oracle Application Server Middle Tier
+</p>
+</td>
+<td align="left" headers="r12c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t27" headers="r1c1-t27">
+<p>Oracle Application Server Port Tunnel
+</p>
+</td>
+<td align="left" headers="r13c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t27" headers="r1c1-t27">
+<p>Oracle Application Server Welcome Pages
+</p>
+</td>
+<td align="left" headers="r14c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t27" headers="r1c1-t27">
+<p>Oracle BPEL Process Manager and Enterprise Service Bus
+</p>
+</td>
+<td align="left" headers="r15c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t27" headers="r1c1-t27">
+<p>Oracle Business Rules
+</p>
+<br />
+</td>
+<td align="left" headers="r16c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t27" headers="r1c1-t27">
+<p>Oracle Containers for J2EE (OC4J)
+</p>
+</td>
+<td align="left" headers="r17c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t27" headers="r1c1-t27">
+<p>Oracle Distributed Software Assistant Client Patch
+</p>
+</td>
+<td align="left" headers="r18c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t27" headers="r1c1-t27">
+<p>Oracle Distributed Software Assistant Common Patch
+</p>
+</td>
+<td align="left" headers="r19c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t27" headers="r1c1-t27">
+<p>Oracle Distributed Software Assistant Patch 
+</p>
+</td>
+<td align="left" headers="r20c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t27" headers="r1c1-t27">
+<p>Oracle Distributed Software Assistant Server Patch
+</p>
+</td>
+<td align="left" headers="r21c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r22c1-t27" headers="r1c1-t27">
+<p>Oracle Dynamic Monitoring Service
+</p>
+</td>
+<td align="left" headers="r22c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r23c1-t27" headers="r1c1-t27">
+<p>Oracle Enterprise Manager 10<span class="italic">g</span> Application Server Control
+</p>
+<br />
+</td>
+<td align="left" headers="r23c1-t27 r1c2-t27">
+<p>10.1.3.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r24c1-t27" headers="r1c1-t27">
+<p>Oracle Enterprise Manager 10<span class="italic">g</span> Change IP 
+</p>
+</td>
+<td align="left" headers="r24c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r25c1-t27" headers="r1c1-t27">
+<p>Oracle Enterprise Manager Application Server Control
+</p>
+</td>
+<td align="left" headers="r25c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r26c1-t27" headers="r1c1-t27">
+<p>Oracle Enterprise Service Bus Process Manager
+</p>
+</td>
+<td align="left" headers="r26c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r27c1-t27" headers="r1c1-t27">
+<p>Oracle Extended Windowing Toolkit
+</p>
+</td>
+<td align="left" headers="r27c1-t27 r1c2-t27">
+<p>3.4.43.0.0
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r28c1-t27" headers="r1c1-t27">
+<p>Oracle HTTP Server
+</p>
+</td>
+<td align="left" headers="r28c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r29c1-t27" headers="r1c1-t27">
+<p>Oracle HTTP Server Files
+</p>
+</td>
+<td align="left" headers="r29c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r30c1-t27" headers="r1c1-t27">
+<p>Oracle iappcore
+</p>
+</td>
+<td align="left" headers="r30c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r31c1-t27" headers="r1c1-t27">
+<p>Oracle Identity Management Support Files
+</p>
+</td>
+<td align="left" headers="r31c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r32c1-t27" headers="r1c1-t27">
+<p>Oracle Java Object Cache 
+</p>
+</td>
+<td align="left" headers="r32c1-t27 r1c2-t27">
+<p>10.1.3.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r33c1-t27" headers="r1c1-t27">
+<p>Oracle LogLoader
+</p>
+</td>
+<td align="left" headers="r33c1-t27 r1c2-t27">
+<p>10.1.3.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r34c1-t27" headers="r1c1-t27">
+<p>Oracle mod&#095;plsql Gateway
+</p>
+</td>
+<td align="left" headers="r34c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r35c1-t27" headers="r1c1-t27">
+<p>Oracle Notification Service 
+</p>
+</td>
+<td align="left" headers="r35c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r36c1-t27" headers="r1c1-t27">
+<p>Oracle One-off Patch Installer
+</p>
+</td>
+<td align="left" headers="r36c1-t27 r1c2-t27">
+<p>10.1.0.6.0
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r37c1-t27" headers="r1c1-t27">
+<p>Oracle Process Management and Notification Server (OPMN) 
+</p>
+</td>
+<td align="left" headers="r37c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r38c1-t27" headers="r1c1-t27">
+<p>Oracle Real Application Clusters High Availability Support Files (Microsoft Windows only)
+</p>
+</td>
+<td align="left" headers="r38c1-t27 r1c2-t27">
+<p>10.1.0.5.0
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r39c1-t27" headers="r1c1-t27">
+<p>Oracle Real Application Clusters Support Files (Microsoft Windows only)
+</p>
+</td>
+<td align="left" headers="r39c1-t27 r1c2-t27">
+<p>10.1.0.5.0
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r40c1-t27" headers="r1c1-t27">
+<p>Oracle Security Developer Tools
+</p>
+</td>
+<td align="left" headers="r40c1-t27 r1c2-t27">
+<p>10.1.4.0.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r41c1-t27" headers="r1c1-t27">
+<p>Oracle TopLink
+</p>
+</td>
+<td align="left" headers="r41c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r42c1-t27" headers="r1c1-t27">
+<p>Oracle TopLink Developer
+</p>
+</td>
+<td align="left" headers="r42c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r43c1-t27" headers="r1c1-t27">
+<p>Oracle TopLink Runtime
+</p>
+</td>
+<td align="left" headers="r43c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r44c1-t27" headers="r1c1-t27">
+<p>Oracle Universal Installer
+</p>
+<br />
+</td>
+<td align="left" headers="r44c1-t27 r1c2-t27">
+<p>10.1.0.6.0
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r45c1-t27" headers="r1c1-t27">
+<p>Oracle Web Services Manager
+</p>
+</td>
+<td align="left" headers="r45c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r46c1-t27" headers="r1c1-t27">
+<p>Oracle XML Developer's Kit
+</p>
+<br />
+</td>
+<td align="left" headers="r46c1-t27 r1c2-t27">
+<p>10.1.3.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r47c1-t27" headers="r1c1-t27">
+<p>Oracle XML Query Service
+</p>
+<br />
+</td>
+<td align="left" headers="r47c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r48c1-t27" headers="r1c1-t27">
+<p>Oracle XML SQL Utility
+</p>
+</td>
+<td align="left" headers="r48c1-t27 r1c2-t27">
+<p>10.1.3.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r49c1-t27" headers="r1c1-t27">
+<p>OracleAS Guard Client
+</p>
+</td>
+<td align="left" headers="r49c1-t27 r1c2-t27">
+<p>10.1.3.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r50c1-t27" headers="r1c1-t27">
+<p>OracleAS Guard Common
+</p>
+</td>
+<td align="left" headers="r50c1-t27 r1c2-t27">
+<p>10.1.3.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r51c1-t27" headers="r1c1-t27">
+<p>OracleAS Guard Server
+</p>
+</td>
+<td align="left" headers="r51c1-t27 r1c2-t27">
+<p>10.1.3.1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r52c1-t27" headers="r1c1-t27">
+<p>OracleAS J2EE
+</p>
+</td>
+<td align="left" headers="r52c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r53c1-t27" headers="r1c1-t27">
+<p>OracleAS Kernel Common
+</p>
+</td>
+<td align="left" headers="r53c1-t27 r1c2-t27">
+<p>10.1.3.3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r54c1-t27" headers="r1c1-t27">
+<p>Sun JDK 
+</p>
+</td>
+<td align="left" headers="r54c1-t27 r1c2-t27">
+<p>1.5.0.0.6
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r55c1-t27" headers="r1c1-t27">
+<p>XML Parser for Java
+</p>
+</td>
+<td align="left" headers="r55c1-t27 r1c2-t27">
+<p>10.1.3.1
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformal" -->
+
+</div><!-- class="sect1" -->
+<a id="IAIFFACE" name="IAIFFACE"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref65" name="sthref65"></a>
+<h2 class="sect1"><span class="secnum">10 </span>Documentation Accessibility
+</h2>
+<p>Our goal is to make Oracle products, services, and supporting documentation accessible, with good usability, to the disabled community. To that end, our documentation includes features that make information available to users of assistive technology. This documentation is available in HTML format, and contains markup to facilitate access by the disabled community. Accessibility standards will continue to evolve over time, and Oracle is actively engaged with other market-leading technology vendors to address technical obstacles so that our documentation can be accessible to all of our customers. For more information, visit the Oracle Accessibility Program Web site at <code><a href="http://www.oracle.com/accessibility/">http://www.oracle.com/accessibility/</a></code>.
+</p><a id="sthref66" name="sthref66"></a>
+<p class="subhead2">Accessibility of Code Examples in Documentation</p>
+<p>Screen readers may not always correctly read the code examples in this document. The conventions for writing code require that closing braces should appear on an otherwise empty line; however, some screen readers may not always read a line of text that consists solely of a bracket or brace.
+</p><a id="sthref67" name="sthref67"></a>
+<p class="subhead2">Accessibility of Links to External Web Sites in Documentation</p>
+<p>This documentation may contain links to Web sites of other companies or organizations that Oracle does not own or control. Oracle neither evaluates nor makes any representations regarding the accessibility of these Web sites.
+</p><a id="sthref68" name="sthref68"></a>
+<p class="subhead2">TTY Access to Oracle Support Services</p>
+<p>Oracle provides dedicated Text Telephone (TTY) access to Oracle Support Services within the United States of America 24 hours a day, seven days a week. For TTY support, call 800.446.2398.
+</p>
+</div><!-- class="sect1" -->
+<a id="sthref69" name="sthref69"></a>
+<hr />
+<p>
+Oracle Application Server Patch Set Notes, 10<span class="italic">g</span> Release 3 (10.1.3) Patch Set 3 (10.1.3.3.0) for Linux and Microsoft Windows 
+</p>
+<p>
+ 
+</p>
+<p>
+Copyright &#169; 2006, 2007,&nbsp;Oracle. All rights reserved.
+</p>
+<p>The Programs (which include both the software and documentation) contain proprietary information; they are provided under a license agreement containing restrictions on use and disclosure and are also protected by copyright, patent, and other intellectual and industrial property laws. Reverse engineering, disassembly, or decompilation of the Programs, except to the extent required to obtain interoperability with other independently created software or as specified by law, is prohibited.
+</p>
+<p>The information contained in this document is subject to change without notice. If you find any problems in the documentation, please report them to us in writing. This document is not warranted to be error-free. Except as may be expressly permitted in your license agreement for these Programs, no part of these Programs may be reproduced or transmitted in any form or by any means, electronic or mechanical, for any purpose.
+</p>
+<p>If the Programs are delivered to the United States Government or anyone licensing or using the Programs on behalf of the United States Government, the following notice is applicable:
+</p>
+<p>U.S. GOVERNMENT RIGHTS Programs, software, databases, and related documentation and technical data delivered to U.S. Government customers are "commercial computer software" or "commercial technical data" pursuant to the applicable Federal Acquisition Regulation and agency-specific supplemental regulations. As such, use, duplication, disclosure, modification, and adaptation of the Programs, including documentation and technical data, shall be subject to the licensing restrictions set forth in the applicable Oracle license agreement, and, to the extent applicable, the additional rights set forth in FAR 52.227-19, Commercial Computer Software&#8212;Restricted Rights (June 1987). Oracle Corporation, 500 Oracle Parkway, Redwood City, CA 94065
+</p>
+<p>The Programs are not intended for use in any nuclear, aviation, mass transit, medical, or other inherently dangerous applications. It shall be the licensee's responsibility to take all appropriate fail-safe, backup, redundancy and other measures to ensure the safe use of such applications if the Programs are used for such purposes, and we disclaim liability for any damages caused by such use of the Programs.
+</p>
+<p>Oracle, JD Edwards, PeopleSoft, and Retek are registered trademarks of Oracle Corporation and/or its affiliates. Other names may be trademarks of their respective owners.
+</p>
+<p>The Programs may provide links to Web sites and access to content, products, and services from third parties. Oracle is not responsible for the availability of, or any content provided on, third-party Web sites. You bear all risks associated with the use of such content. If you choose to purchase any products or services from a third party, the relationship is directly between you and the third party. Oracle is not responsible for: (a) the quality of third-party products or services; or (b) fulfilling any of the terms of the agreement with the third party, including delivery of products or services and warranty obligations related to purchased products or services. Oracle is not responsible for any loss or damage of any sort that you may incur from dealing with any third party. 
+</p>
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<! a href="../../dcommon/html/cpyr.htm">
+<! img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006, 2007,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

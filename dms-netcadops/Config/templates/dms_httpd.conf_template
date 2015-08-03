@@ -1,0 +1,21 @@
+Listen 2200
+ 
+<VirtualHost <web_server_ip_addr>:2200>
+    ServerName <web_server_name>
+    ServerAlias <web_server_name>
+    DocumentRoot <cadops_path>/netcadops/htm
+    DirectoryIndex index.htm
+    ServerAdmin webmaster@<web_server_name>
+    Redirect /netcadops http://<web_server_name>:2000/pls/<instance_name>
+    Alias /includes <cadops_path>/netcadops/includes
+    Alias /classes <cadops_path>/netcadops/classes
+    Alias /htm <cadops_path>/netcadops/htm
+    Alias /doc <cadops_path>/netcadops/doc
+    Alias /menu <cadops_path>/netcadops/menu
+    Alias /js <cadops_path>/netcadops/js
+    Alias /maps <cadops_path>/netcadops/maps
+    Alias /help <cadops_path>/netcadops/help
+    Alias /img <cadops_path>/netcadops/img
+    Alias /landbase <cadops_path>/landbaseSync/distFiles
+</VirtualHost>
+

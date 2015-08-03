@@ -1,0 +1,786 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 23, 2006 13:32:48 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5.1 Build 4" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Silent and Non-Interactive Installation</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="post.htm" title="Previous" />
+<link rel="next" href="ports.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+<link rel="index" href="index.htm" title="Index" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Installation Guide  </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25217-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="post.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="ports.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="CIHHHEHH" name="CIHHHEHH"></a><a id="i1003960" name="i1003960"></a>
+<h1 class="appendix"><span class="secnum">A </span> <a id="sthref615" name="sthref615"></a>Silent and Non-Interactive Installation</h1>
+<p>This appendix describes how to install Oracle Application Server in silent mode. This appendix contains the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#i1039530">Section A.1, "Silent Installation"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#i1053017">Section A.2, "Non-Interactive Installation"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#DAFFEEBI">Section A.3, "Preinstallation"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJBIAG">Section A.4, "Create the Response File"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#i1046736">Section A.5, "Start the Installation"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#i1047551">Section A.6, "Postinstallation"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#DAFFEAEH">Section A.7, "Security Tips for Silent and Non-Interactive Installations"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDHCGBI">Section A.8, "Deinstallation"</a>
+</p>
+</li>
+</ul><a id="i1039530" name="i1039530"></a>
+<div class="sect1">
+<a id="sthref616" name="sthref616"></a>
+<h2 class="sect1"><span class="secnum">A.1 </span>Silent Installation<a id="sthref617" name="sthref617"></a>
+</h2>
+<p>Silent installation eliminates the need to monitor the Oracle Application Server installation because there is no graphical output and no input by the user. 
+</p>
+<p>Silent installation of Oracle Application Server is accomplished by supplying the Oracle Universal Installer with a <a id="sthref618" name="sthref618"></a>response file and specifying the <code>-silent</code> flag on the command line. The response file is a text file containing variables and parameter values which provide answers to the installer prompts.
+</p>
+<p>If this is a first time installation of Oracle Application Server, you must create the oraInst.loc file before starting. File creation is described in <a href="#DAFFEEBI">Section A.3, "Preinstallation"</a>.
+</p>
+<p>Following installation of Oracle Application Server, you need to run the <code>root.sh</code> script as the root user. The <code>root.sh</code> script detects settings of environment variables and enables you to enter the full path of the local bin directory.
+</p>
+<p>Use silent installation of Oracle Application Server when there are similar installations on more than one computer. Additionally, use silent install when performing the Oracle Application Server installation from a remote location using the command line. 
+</p>
+</div><!-- class="sect1" -->
+<a id="i1053017" name="i1053017"></a>
+<div class="sect1">
+<a id="sthref619" name="sthref619"></a>
+<h2 class="sect1"><span class="secnum">A.2 </span>Non-Interactive Installation<a id="sthref620" name="sthref620"></a>
+</h2>
+<p>Non-interactive installations also use a response file to automate the Oracle Application Server installation. In non-interactive installations, there is graphical output and users may enter input.
+</p>
+<p>Non-interactive installation of Oracle Application Server is also accomplished by supplying the Oracle Universal Installer with a response file but without specifying the <code>-silent</code> flag on the command line. The response file is a text file containing variables and parameter values which provide answers to the installer prompts. If you have not provided responses to all of the installer prompts, you need to enter information during the installation.
+</p>
+<p>If this is a first time installation of Oracle Application Server, you must create the oraInst.loc file before starting. File creation is described in <a href="#DAFFEEBI">Section A.3, "Preinstallation"</a>.
+</p>
+<p>Following installation of Oracle Application Server, you need to run the <code>root.sh</code> script as the root user. The <code>root.sh</code> script detects settings of environment variables and enables you to enter the full path of the local bin directory.
+</p>
+<p>Use non-interactive installation of Oracle Application Server when there are specific screens you want to observe during installation.
+</p>
+</div><!-- class="sect1" -->
+<a id="DAFFEEBI" name="DAFFEEBI"></a>
+<div class="sect1">
+<a id="sthref621" name="sthref621"></a>
+<h2 class="sect1"><span class="secnum">A.3 </span>Preinstallation<a id="sthref622" name="sthref622"></a><a id="sthref623" name="sthref623"></a><a id="sthref624" name="sthref624"></a>
+</h2>
+<ol type="1" start="1">
+<li>
+<p>Log in as the root user.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">su</span>
+
+</pre>
+</li>
+<li>
+<p>As root user, create the <code>/var/opt/oracle</code> directory, if it does not already exist.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">mkdir /var/opt/oracle</span>
+
+</pre>
+</li>
+<li>
+<p>Create the <code>/var/opt/oracle/oraInst.loc</code> file. This file specifies the inventory directory that the installer will use.<a id="sthref625" name="sthref625"></a>
+</p>
+<p>Using a text editor such as vi or emacs, enter the following line in the file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">inventory&#095;loc&#061;<span class="italic">oui&#095;inventory&#095;directory</span>
+
+</pre>
+<p>Replace <span class="italic">oui&#095;inventory&#095;directory</span> with the full path to the directory where you want the installer to create the inventory directory. For example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">inventory&#095;loc&#061;/opt/oracle/oraInventory
+
+</pre>
+<p>Make sure that the <code>oinstall</code> operating system group has write permissions to this directory. For more information about the inventory directory and the group that owns it, see <a href="reqs.htm#BABFIDCH">Section 2.6.1, "Create a Group for the Inventory Directory"</a>.
+</p>
+</li>
+<li>
+<p>Create an empty <code>/var/opt/oracle/oratab</code> file.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">touch /var/opt/oracle/oratab</span>
+
+</pre>
+</li>
+<li>
+<p>Exit from the root user.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">exit</span>
+
+</pre>
+</li>
+</ol>
+</div><!-- class="sect1" -->
+<a id="BABJBIAG" name="BABJBIAG"></a>
+<div class="sect1">
+<a id="sthref626" name="sthref626"></a>
+<h2 class="sect1"><span class="secnum">A.4 </span>Create the Response File<a id="sthref627" name="sthref627"></a>
+</h2>
+<p>Before doing a silent or non-interactive installation, you must provide information specific to your installation in a response file. The installer will fail if you attempt an installation using a response file that is not configured correctly. Response files are text files that you can create or edit in a text editor.
+</p>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref628" name="sthref628"></a>
+<h3 class="sect2"><span class="secnum">A.4.1 </span>Creating Response Files from Templates<a id="sthref629" name="sthref629"></a>
+</h3>
+<p>Templates for response files are available in the <code>stage/Response</code> directory on Disk 1 of the Oracle Application Server CD-ROM. Response file templates are available for the following installation types:
+</p>
+<div class="tblhruleformalwide">
+<a id="sthref630" name="sthref630"></a><a id="sthref631" name="sthref631"></a>
+<p class="titleintable">Table A-1 Response File Templates in the stage/Response Directory</p>
+<table class="HRuleFormalWide" title="Response File Templates in the stage/Response Directory" summary="Response file templates in the stage/Response directory" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2">Installation Type
+</th>
+<th align="left" valign="bottom" id="r1c2-t2">Filename
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p>Integrated Web Server, J2EE Server and Process Management
+</p>
+<br />
+</td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p><code>oracle.as.j2ee.top.allProducts.rsp</code>
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p>J2EE Server and Process Management
+</p>
+<br />
+</td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p><code>oracle.as.j2ee.top.core.rsp</code>
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t2" headers="r1c1-t2">
+<p>Web Server and Process Management
+</p>
+<br />
+</td>
+<td align="left" headers="r4c1-t2 r1c2-t2">
+<p><code>oracle.as.j2ee.top.httpServer.rsp</code>
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t2" headers="r1c1-t2">
+<p>Oracle TopLink
+</p>
+<br />
+</td>
+<td align="left" headers="r5c1-t2 r1c2-t2">
+<p><code>oracle.as.j2ee.top.toplink.rsp</code>
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformalwide" -->
+
+<p>See the template files for descriptions of the parameters in the file.
+</p>
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>For Boolean parameters, specify either "true" or "false".
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div><!-- class="sect2" -->
+<a id="DAFFAFIA" name="DAFFAFIA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref632" name="sthref632"></a>
+<h3 class="sect2"><span class="secnum">A.4.2 </span>Creating Response Files by Using the <a id="sthref633" name="sthref633"></a><a id="sthref634" name="sthref634"></a>Record Mode in the Installer
+</h3>
+<p>You can run the installer in record mode to save your inputs to a file that you can use later as a response file. This feature is useful if you need to perform the same installation on different computers.
+</p>
+<p>To run the installer in record mode:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Start up the installer with the <code>-record</code> and <code>-destinationFile</code> parameters.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="italic">/path/to/</span><span class="bold">runInstaller -record -destinationFile </span><span class="italic">newResponseFile</span>
+
+</pre>
+<p>Replace <span class="italic">newResponseFile</span> with the full path to the response file that you want the installer to create. Example: <code>/opt/oracle/myJ2EEResponse.rsp</code>.
+</p>
+</li>
+<li>
+<p>Enter your values in the installer screens. The installer will write these values to the file specified in the <code>-destinationFile</code> parameter.
+</p>
+<p>When you click the <span class="bold">Install</span> button, the installer automatically writes all your values to the specified file. At this point, you can complete the installation on this computer, or you can exit without performing the installation.
+</p>
+</li>
+</ol>
+<p>Secure information, such as passwords, is not written to the file, so you must modify the response file before you can use it. To set the password, modify the <code>sl&#095;adminDialogReturn</code> parameter. See the generated response file for a description of the parameter.
+</p>
+</div><!-- class="sect2" -->
+
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref635" name="sthref635"></a>
+<h3 class="sect2"><span class="secnum">A.4.3 </span>Variables to Modify in the Response Files<a id="sthref636" name="sthref636"></a>
+</h3>
+<p>For all installation types, modify the following variables:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">UNIX&#095;GROUP&#095;NAME
+FROM&#095;LOCATION
+ORACLE&#095;HOME
+
+</pre>
+<p>For the J2EE Server and Process Management install type, modify the following variables:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">szl&#095;PortListSelect
+sl&#095;DlgClusterInfoReturn
+sl&#095;AdminInstanceSettingsSelections
+b&#095;autoPortDetect
+sl&#095;adminDialogReturn
+
+</pre>
+<p>For the Web Server and Process Management install type, modify the following variables:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">szl&#095;PortListSelect
+szl&#095;InstanceInformation
+sl&#095;DlgClusterInfoWebReturn
+b&#095;autoPortDetect
+
+</pre>
+<p>For the Integrated Web Server, J2EE Server and Process Management install type, modify the following variables:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">szl&#095;PortListSelect
+sl&#095;DlgClusterInfoWebReturn
+sl&#095;AdminInstanceSettingsSelections
+b&#095;autoPortDetect
+sl&#095;adminDialogReturn
+
+</pre>
+</div><!-- class="sect2" -->
+<a id="i1043620" name="i1043620"></a>
+<div class="sect2">
+<a id="sthref637" name="sthref637"></a>
+<h3 class="sect2"><span class="secnum">A.4.4 </span>Example Response Files<a id="sthref638" name="sthref638"></a>
+</h3>
+<p>The following sections shows example response files for the following Oracle Application Server installation types:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#DAFBDAJD">Section A.4.4.1, "Example Response File for Standalone J2EE Server and Process Management"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#DAFDCAAD">Section A.4.4.2, "Example Response File for Web Server and Process Management"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#DAFDHJII">Section A.4.4.3, "Example Response File for Integrated Web Server, J2EE Server and Process Management"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#DAFBCIJF">Section A.4.4.4, "Example Response File for Oracle TopLink"</a>
+</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Be sure that you read the description of each <span class="italic">parameter</span>&#061;<span class="italic">value</span> in the provided sample files, and edit <span class="italic">value</span> accordingly for your environment.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div><a id="DAFBDAJD" name="DAFBDAJD"></a>
+<div class="sect3">
+<a id="sthref639" name="sthref639"></a>
+<h4 class="sect3"><span class="secnum">A.4.4.1 </span>Example Response File for Standalone J2EE Server and Process Management
+</h4>
+<p>The following shows an example of a response file for a <span class="bold">silent</span> installation of standalone instance of J2EE Server and Process Management as described in <a href="advanced_install.htm#CIHCGJCG">Section 5.2.2, "Installing J2EE Server and Process Management"</a>.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">RESPONSEFILE&#095;VERSION&#061;2.2.1.0.0
+UNIX&#095;GROUP&#095;NAME&#061;"install"
+FROM&#095;LOCATION&#061;"/mount&#095;point/Disk1/stage/products.xml"
+FROM&#095;LOCATION&#095;CD&#095;LABEL&#061;"LABEL1"
+NEXT&#095;SESSION&#095;RESPONSE&#061;&lt;Value Unspecified>
+ORACLE&#095;HOME&#061;"/local&#095;location/oracle&#095;home"
+ORACLE&#095;HOME&#095;NAME&#061;"OHOME1"
+TOPLEVEL&#095;COMPONENT&#061;&#123;"oracle.as.j2ee.top","10.1.3.0.0"&#125;
+DEINSTALL&#095;LIST&#061;&#123;"oracle.as.j2ee.top","10.1.3.0.0"&#125;
+SHOW&#095;SPLASH&#095;SCREEN&#061;true
+SHOW&#095;WELCOME&#095;PAGE&#061;false
+SHOW&#095;COMPONENT&#095;LOCATIONS&#095;PAGE&#061;false
+SHOW&#095;CUSTOM&#095;TREE&#095;PAGE&#061;false
+SHOW&#095;SUMMARY&#095;PAGE&#061;true
+SHOW&#095;INSTALL&#095;PROGRESS&#095;PAGE&#061;true
+SHOW&#095;REQUIRED&#095;CONFIG&#095;TOOL&#095;PAGE&#061;true
+SHOW&#095;CONFIG&#095;TOOL&#095;PAGE&#061;true
+SHOW&#095;XML&#095;PREREQ&#095;PAGE&#061;true
+SHOW&#095;RELEASE&#095;NOTES&#061;true
+SHOW&#095;END&#095;OF&#095;INSTALL&#095;MSGS&#061;true
+SHOW&#095;ROOTSH&#095;CONFIRMATION&#061;true
+SHOW&#095;END&#095;SESSION&#095;PAGE&#061;true
+SHOW&#095;EXIT&#095;CONFIRMATION&#061;true
+NEXT&#095;SESSION&#061;true
+NEXT&#095;SESSION&#095;ON&#095;FAIL&#061;true
+SHOW&#095;DEINSTALL&#095;CONFIRMATION&#061;true
+SHOW&#095;DEINSTALL&#095;PROGRESS&#061;true
+ACCEPT&#095;LICENSE&#095;AGREEMENT&#061;true
+RESTART&#095;SYSTEM&#061;&lt;Value Unspecified>
+CLUSTER&#095;NODES&#061;&lt;Value Unspecified>
+OUI&#095;HOSTNAME&#061;&lt;Value Unspecified>
+REMOVE&#095;HOMES&#061;&lt;Value Unspecified>
+COMPONENT&#095;LANGUAGES&#061;&#123;"en"&#125;
+INSTALL&#095;TYPE&#061;"core"
+szl&#095;PortListSelect&#061;&#123;"YES","/private/jdoe/mystaticports.ini"&#125;
+szl&#095;InstanceInformation&#061;&lt;Value Unspecified>
+sl&#095;DlgClusterInfoWebReturn&#061;&lt;Value Unspecified>
+sl&#095;DlgClusterInfoReturn&#061;&#123;"YES","NO","225.0.0.20","8001"&#125;
+sl&#095;AdminInstanceSettingsSelections&#061;&#123;"true"&#125;
+s&#095;asInstanceName&#061;&lt;Value Unspecified>
+s&#095;adminPassword&#061;&lt;Value Unspecified>
+b&#095;useLocalInstance&#061;&lt;Value Unspecified>
+b&#095;autoPortDetect&#061;false
+sl&#095;adminDialogReturn&#061;&#123;"appserver","oc4jadmin","welcome1","welcome1","OHOME1",""&#125;
+nValidationInstanceInfo&#061;&lt;Value Unspecified>
+n&#095;DlgClusterInfoWebValidate&#061;&lt;Value Unspecified>
+nValidationPortListSelect&#061;&lt;Value Unspecified>
+n&#095;DlgClusterInfoValidate&#061;&lt;Value Unspecified>
+n&#095;validateAdminDialogInfo&#061;&lt;Value Unspecified>
+
+</pre>
+</div><!-- class="sect3" -->
+<a id="DAFDCAAD" name="DAFDCAAD"></a>
+<div class="sect3">
+<a id="sthref640" name="sthref640"></a>
+<h4 class="sect3"><span class="secnum">A.4.4.2 </span>Example Response File for Web Server and Process Management
+</h4>
+<p>The following shows an example of a response file for a <span class="bold">silent</span> installation of Web Server and Process Management as described in <a href="advanced_install.htm#CIHFCFIB">Section 5.2.3, "Installing Web Server and Process Management"</a>.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">RESPONSEFILE&#095;VERSION&#061;2.2.1.0.0
+UNIX&#095;GROUP&#095;NAME&#061;"install"
+FROM&#095;LOCATION&#061;"/mount&#095;point/Disk1/stage/products.xml"
+FROM&#095;LOCATION&#095;CD&#095;LABEL&#061;"LABEL1"
+NEXT&#095;SESSION&#095;RESPONSE&#061;&lt;Value Unspecified>
+ORACLE&#095;HOME&#061;"/local&#095;location/oracle&#095;home"
+ORACLE&#095;HOME&#095;NAME&#061;"OHOME1"
+TOPLEVEL&#095;COMPONENT&#061;&#123;"oracle.as.j2ee.top","10.1.3.0.0"&#125;
+DEINSTALL&#095;LIST&#061;&#123;"oracle.as.j2ee.top","10.1.3.0.0"&#125;
+SHOW&#095;SPLASH&#095;SCREEN&#061;true
+SHOW&#095;WELCOME&#095;PAGE&#061;false
+SHOW&#095;COMPONENT&#095;LOCATIONS&#095;PAGE&#061;false
+SHOW&#095;CUSTOM&#095;TREE&#095;PAGE&#061;false
+SHOW&#095;SUMMARY&#095;PAGE&#061;true
+SHOW&#095;INSTALL&#095;PROGRESS&#095;PAGE&#061;true
+SHOW&#095;REQUIRED&#095;CONFIG&#095;TOOL&#095;PAGE&#061;true
+SHOW&#095;CONFIG&#095;TOOL&#095;PAGE&#061;true
+SHOW&#095;XML&#095;PREREQ&#095;PAGE&#061;true
+SHOW&#095;RELEASE&#095;NOTES&#061;true
+SHOW&#095;END&#095;OF&#095;INSTALL&#095;MSGS&#061;true
+SHOW&#095;ROOTSH&#095;CONFIRMATION&#061;true
+SHOW&#095;END&#095;SESSION&#095;PAGE&#061;true
+SHOW&#095;EXIT&#095;CONFIRMATION&#061;true
+NEXT&#095;SESSION&#061;true
+NEXT&#095;SESSION&#095;ON&#095;FAIL&#061;true
+SHOW&#095;DEINSTALL&#095;CONFIRMATION&#061;true
+SHOW&#095;DEINSTALL&#095;PROGRESS&#061;true
+ACCEPT&#095;LICENSE&#095;AGREEMENT&#061;true
+RESTART&#095;SYSTEM&#061;&lt;Value Unspecified>
+CLUSTER&#095;NODES&#061;&lt;Value Unspecified>
+OUI&#095;HOSTNAME&#061;&lt;Value Unspecified>
+REMOVE&#095;HOMES&#061;&lt;Value Unspecified>
+COMPONENT&#095;LANGUAGES&#061;&#123;"en"&#125;
+INSTALL&#095;TYPE&#061;"httpServer"
+szl&#095;PortListSelect&#061;&#123;"YES","/private/jdoe/mystaticports.ini"&#125;
+szl&#095;InstanceInformation&#061;&#123;"appserver"&#125;
+sl&#095;DlgClusterInfoWebReturn&#061;&#123;"NO","",""&#125;
+sl&#095;DlgClusterInfoReturn&#061;&lt;Value Unspecified>
+sl&#095;AdminInstanceSettingsSelections&#061;&lt;Value Unspecified>
+s&#095;asInstanceName&#061;&lt;Value Unspecified>
+s&#095;adminPassword&#061;&lt;Value Unspecified>
+b&#095;useLocalInstance&#061;&lt;Value Unspecified>
+b&#095;autoPortDetect&#061;false
+sl&#095;adminDialogReturn&#061;&lt;Value Unspecified>
+nValidationInstanceInfo&#061;&lt;Value Unspecified>
+n&#095;DlgClusterInfoWebValidate&#061;&lt;Value Unspecified>
+nValidationPortListSelect&#061;&lt;Value Unspecified>
+n&#095;DlgClusterInfoValidate&#061;&lt;Value Unspecified>
+n&#095;validateAdminDialogInfo&#061;&lt;Value Unspecified>
+s&#095;group&#061;&lt;Value Unspecified>
+OPTIONAL&#095;CONFIG&#095;TOOLS&#061;&lt;Value Unspecified>
+
+</pre>
+</div><!-- class="sect3" -->
+<a id="DAFDHJII" name="DAFDHJII"></a>
+<div class="sect3">
+<a id="sthref641" name="sthref641"></a>
+<h4 class="sect3"><span class="secnum">A.4.4.3 </span>Example Response File for Integrated Web Server, J2EE Server and Process Management
+</h4>
+<p>The following shows an example of a response file for a <span class="bold">silent</span> installation of Integrated Web Server, J2EE Server and Process Management as described in <a href="advanced_install.htm#CIHIEBFI">Section 5.2.4, "Installing Integrated Web Server, J2EE Server and Process Management"</a>.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">RESPONSEFILE&#095;VERSION&#061;2.2.1.0.0
+UNIX&#095;GROUP&#095;NAME&#061;"install"
+FROM&#095;LOCATION&#061;"/mount&#095;point/Disk1/stage/products.xml"
+FROM&#095;LOCATION&#095;CD&#095;LABEL&#061;"LABEL1"
+NEXT&#095;SESSION&#095;RESPONSE&#061;&lt;Value Unspecified>
+ORACLE&#095;HOME&#061;"/local&#095;location/oracle&#095;home"
+ORACLE&#095;HOME&#095;NAME&#061;"OHOME1"
+TOPLEVEL&#095;COMPONENT&#061;&#123;"oracle.as.j2ee.top","10.1.3.0.0"&#125;
+DEINSTALL&#095;LIST&#061;&#123;"oracle.as.j2ee.top","10.1.3.0.0"&#125;
+SHOW&#095;SPLASH&#095;SCREEN&#061;true
+SHOW&#095;WELCOME&#095;PAGE&#061;false
+SHOW&#095;COMPONENT&#095;LOCATIONS&#095;PAGE&#061;false
+SHOW&#095;CUSTOM&#095;TREE&#095;PAGE&#061;false
+SHOW&#095;SUMMARY&#095;PAGE&#061;true
+SHOW&#095;INSTALL&#095;PROGRESS&#095;PAGE&#061;true
+SHOW&#095;REQUIRED&#095;CONFIG&#095;TOOL&#095;PAGE&#061;true
+SHOW&#095;CONFIG&#095;TOOL&#095;PAGE&#061;true
+SHOW&#095;XML&#095;PREREQ&#095;PAGE&#061;true
+SHOW&#095;RELEASE&#095;NOTES&#061;true
+SHOW&#095;END&#095;OF&#095;INSTALL&#095;MSGS&#061;true
+SHOW&#095;ROOTSH&#095;CONFIRMATION&#061;true
+SHOW&#095;END&#095;SESSION&#095;PAGE&#061;true
+SHOW&#095;EXIT&#095;CONFIRMATION&#061;true
+NEXT&#095;SESSION&#061;true
+NEXT&#095;SESSION&#095;ON&#095;FAIL&#061;true
+SHOW&#095;DEINSTALL&#095;CONFIRMATION&#061;true
+SHOW&#095;DEINSTALL&#095;PROGRESS&#061;true
+ACCEPT&#095;LICENSE&#095;AGREEMENT&#061;true
+RESTART&#095;SYSTEM&#061;&lt;Value Unspecified>
+CLUSTER&#095;NODES&#061;&lt;Value Unspecified>
+OUI&#095;HOSTNAME&#061;&lt;Value Unspecified>
+REMOVE&#095;HOMES&#061;&lt;Value Unspecified>
+COMPONENT&#095;LANGUAGES&#061;&#123;"en"&#125;
+INSTALL&#095;TYPE&#061;"allProducts"
+szl&#095;PortListSelect&#061;&#123;"YES","/private/jdoe/mystaticports.ini"&#125;
+szl&#095;InstanceInformation&#061;&lt;Value Unspecified>
+sl&#095;DlgClusterInfoWebReturn&#061;&#123;"YES","225.0.0.20","8001"&#125;
+sl&#095;DlgClusterInfoReturn&#061;&lt;Value Unspecified>
+sl&#095;AdminInstanceSettingsSelections&#061;&#123;"false"&#125;
+s&#095;asInstanceName&#061;&lt;Value Unspecified>
+s&#095;adminPassword&#061;&lt;Value Unspecified>
+b&#095;useLocalInstance&#061;&lt;Value Unspecified>
+b&#095;autoPortDetect&#061;false
+sl&#095;adminDialogReturn&#061;&#123;"appserver","oc4jadmin","welcome1","welcome1","OHOME1",""&#125;
+nValidationInstanceInfo&#061;&lt;Value Unspecified>
+n&#095;DlgClusterInfoWebValidate&#061;&lt;Value Unspecified>
+nValidationPortListSelect&#061;&lt;Value Unspecified>
+n&#095;DlgClusterInfoValidate&#061;&lt;Value Unspecified>
+n&#095;validateAdminDialogInfo&#061;&lt;Value Unspecified>
+s&#095;group&#061;&lt;Value Unspecified>
+OPTIONAL&#095;CONFIG&#095;TOOLS&#061;&lt;Value Unspecified>
+
+</pre>
+</div><!-- class="sect3" -->
+<a id="DAFBCIJF" name="DAFBCIJF"></a>
+<div class="sect3">
+<a id="sthref642" name="sthref642"></a>
+<h4 class="sect3"><span class="secnum">A.4.4.4 </span>Example Response File for Oracle TopLink
+</h4>
+<p>The following shows an example of a response file for a <span class="bold">silent</span> installation of Oracle TopLink as described in <a href="advanced_install.htm#CIHCDBCD">Section 5.2.5, "Installing Oracle TopLink"</a>.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">RESPONSEFILE&#095;VERSION&#061;2.2.1.0.0
+UNIX&#095;GROUP&#095;NAME&#061;"install"
+FROM&#095;LOCATION&#061;"/mount&#095;point/Disk1/stage/products.xml"
+FROM&#095;LOCATION&#095;CD&#095;LABEL&#061;"LABEL1"
+NEXT&#095;SESSION&#095;RESPONSE&#061;&lt;Value Unspecified>
+ORACLE&#095;HOME&#061;"/local&#095;location/oracle&#095;home"
+ORACLE&#095;HOME&#095;NAME&#061;"OHOME1"
+TOPLEVEL&#095;COMPONENT&#061;&#123;"oracle.as.j2ee.top","10.1.3.0.0"&#125;
+DEINSTALL&#095;LIST&#061;&#123;"oracle.as.j2ee.top","10.1.3.0.0"&#125;
+SHOW&#095;SPLASH&#095;SCREEN&#061;true
+SHOW&#095;WELCOME&#095;PAGE&#061;false
+SHOW&#095;COMPONENT&#095;LOCATIONS&#095;PAGE&#061;false
+SHOW&#095;CUSTOM&#095;TREE&#095;PAGE&#061;false
+SHOW&#095;SUMMARY&#095;PAGE&#061;true
+SHOW&#095;INSTALL&#095;PROGRESS&#095;PAGE&#061;true
+SHOW&#095;REQUIRED&#095;CONFIG&#095;TOOL&#095;PAGE&#061;true
+SHOW&#095;CONFIG&#095;TOOL&#095;PAGE&#061;true
+SHOW&#095;XML&#095;PREREQ&#095;PAGE&#061;true
+SHOW&#095;RELEASE&#095;NOTES&#061;true
+SHOW&#095;END&#095;OF&#095;INSTALL&#095;MSGS&#061;true
+SHOW&#095;ROOTSH&#095;CONFIRMATION&#061;true
+SHOW&#095;END&#095;SESSION&#095;PAGE&#061;true
+SHOW&#095;EXIT&#095;CONFIRMATION&#061;true
+NEXT&#095;SESSION&#061;true
+NEXT&#095;SESSION&#095;ON&#095;FAIL&#061;true
+SHOW&#095;DEINSTALL&#095;CONFIRMATION&#061;true
+SHOW&#095;DEINSTALL&#095;PROGRESS&#061;true
+ACCEPT&#095;LICENSE&#095;AGREEMENT&#061;true
+RESTART&#095;SYSTEM&#061;&lt;Value Unspecified>
+CLUSTER&#095;NODES&#061;&lt;Value Unspecified>
+OUI&#095;HOSTNAME&#061;&lt;Value Unspecified>
+REMOVE&#095;HOMES&#061;&lt;Value Unspecified>
+COMPONENT&#095;LANGUAGES&#061;&#123;"en"&#125;
+INSTALL&#095;TYPE&#061;"toplink"
+szl&#095;PortListSelect&#061;&lt;Value Unspecified>
+szl&#095;InstanceInformation&#061;&lt;Value Unspecified>
+sl&#095;DlgClusterInfoWebReturn&#061;&lt;Value Unspecified>
+sl&#095;DlgClusterInfoReturn&#061;&lt;Value Unspecified>
+sl&#095;AdminInstanceSettingsSelections&#061;&lt;Value Unspecified>
+s&#095;asInstanceName&#061;&lt;Value Unspecified>
+s&#095;adminPassword&#061;&lt;Value Unspecified>
+b&#095;useLocalInstance&#061;&lt;Value Unspecified>
+b&#095;autoPortDetect&#061;&lt;Value Unspecified>
+sl&#095;adminDialogReturn&#061;&lt;Value Unspecified>
+nValidationInstanceInfo&#061;&lt;Value Unspecified>
+n&#095;DlgClusterInfoWebValidate&#061;&lt;Value Unspecified>
+nValidationPortListSelect&#061;&lt;Value Unspecified>
+n&#095;DlgClusterInfoValidate&#061;&lt;Value Unspecified>
+n&#095;validateAdminDialogInfo&#061;&lt;Value Unspecified>
+
+</pre>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="i1046736" name="i1046736"></a>
+<div class="sect1">
+<a id="sthref643" name="sthref643"></a>
+<h2 class="sect1"><span class="secnum">A.5 </span>Start the Installation<a id="sthref644" name="sthref644"></a>
+</h2>
+<p>To make the installer use the response file, specify the location of the response file that you want to use as a parameter when starting the installer.
+</p>
+<p>To perform a non-interactive installation:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">setenv DISPLAY</span> <span class="italic">hostname:0.0</span>
+prompt> <span class="bold">runInstaller -responseFile</span> <span class="italic">absolute&#095;path&#095;and&#095;filename</span>
+
+</pre>
+<p>To perform a silent installation, use the <code>-silent</code> parameter:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">runInstaller -silent -responseFile</span> <span class="italic">absolute&#095;path&#095;and&#095;filename</span>
+
+</pre>
+</div><!-- class="sect1" -->
+<a id="i1047551" name="i1047551"></a>
+<div class="sect1">
+<a id="sthref645" name="sthref645"></a>
+<h2 class="sect1"><span class="secnum">A.6 </span>Postinstallation<a id="sthref646" name="sthref646"></a><a id="sthref647" name="sthref647"></a><a id="sthref648" name="sthref648"></a>
+</h2>
+<p><a id="sthref649" name="sthref649"></a><a id="sthref650" name="sthref650"></a><a id="sthref651" name="sthref651"></a>The success or failure of the non-interactive and silent installations is logged in the <code><a id="sthref652" name="sthref652"></a>installActions&lt;time&#095;stamp>.log</code> file. Additionally, the silent installation creates the <code>silentInstall&lt;time&#095;stamp>.log</code> file. The log files are created in the <code>oraInventory/logs</code> directory.
+</p>
+<p>The <code><a id="sthref653" name="sthref653"></a>silentInstall&lt;time&#095;stamp>.log</code> file contains the following line if the installation was successful:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">The installation of OracleAS &lt;Installation Type> was successful.
+
+</pre>
+<p>The <code>installActions&lt;time&#095;stamp>.log</code> file contains specific information for each Oracle Application Server installation type.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">See Also:</p><a href="ca.htm#BABDIJHH">Appendix D, "Configuration Assistants"</a>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect1" -->
+<a id="DAFFEAEH" name="DAFFEAEH"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref654" name="sthref654"></a>
+<h2 class="sect1"><span class="secnum">A.7 </span>Security Tips for Silent and Non-Interactive Installations<a id="sthref655" name="sthref655"></a><a id="sthref656" name="sthref656"></a><a id="sthref657" name="sthref657"></a>
+</h2>
+<p>One of the pieces of information in the response file is the installation password. The password information is in clear text.
+</p>
+<p>To minimize security issues regarding the password in the response file, follow these guidelines:
+</p>
+<ul>
+<li type="disc">
+<p>Set the permissions on the response files so that they are readable only by the operating system user who will be performing the silent or non-interactive installation.
+</p>
+</li>
+<li type="disc">
+<p>If possible, remove the response files from the system after the silent or non-interactive installation is completed.
+</p>
+</li>
+</ul>
+</div><!-- class="sect1" -->
+<a id="CHDHCGBI" name="CHDHCGBI"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref658" name="sthref658"></a>
+<h2 class="sect1"><span class="secnum">A.8 </span>Deinstallation<a id="sthref659" name="sthref659"></a><a id="sthref660" name="sthref660"></a><a id="sthref661" name="sthref661"></a>
+</h2>
+<p>You can perform a silent deinstallation of Oracle Application Server by supplying a silent deinstallation parameter to the response file you used for installation.
+</p>
+<p>Modify the following parameter in your installation response file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">REMOVE&#095;HOMES&#061;&#123;"&lt;ORACLE&#095;HOME to be removed>"&#125; 
+
+</pre>
+<p>For example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">REMOVE&#095;HOME&#061;"/local&#095;location/oracle&#095;home"
+
+</pre>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>You still need to follow the clean up steps described in <a href="deinst.htm#CHDHFGDA">Appendix C, "Deinstallation and Reinstallation"</a>. The silent deinstallation command only replaces the step where you run the installer interactively to deinstall the instance.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>To perform a silent deinstallation, use the <code>-deinstall</code> parameter when entering the command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">runInstaller -silent -deinstall -responseFile</span> <span class="italic">absolute&#095;path&#095;and&#095;filename</span>
+
+</pre>
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="post.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="ports.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

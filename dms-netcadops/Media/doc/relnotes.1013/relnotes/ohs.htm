@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 24, 2006 11:30:33 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5 Build 274" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Oracle HTTP Server</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="manage.htm" title="Previous" />
+<link rel="next" href="oc4j.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Release Notes </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25216-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="manage.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="oc4j.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="CHDFFFGC" name="CHDFFFGC"></a><a id="sthref38" name="sthref38"></a>
+<h1 class="chapter"><span class="secnum">4 </span>Oracle HTTP Server<a id="sthref39" name="sthref39"></a></h1>
+<p>This chapter describes issues associated with Oracle HTTP Server. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#i1092308">Section 4.1, "Documentation Errata"</a>
+</p>
+</li>
+</ul><a id="i1092308" name="i1092308"></a>
+<div class="sect1">
+<a id="sthref40" name="sthref40"></a>
+<h2 class="sect1"><span class="secnum">4.1 </span>Documentation Errata
+</h2>
+<p>This section describes documentation errata. It includes the following topic:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#i1092382">Section 4.1.1, "Default Values for Oc4jCacheSize"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDDEDBF">Section 4.1.2, "UseOutputStreamSize"</a>
+</p>
+</li>
+</ul><a id="i1092382" name="i1092382"></a>
+<div class="sect2">
+<a id="sthref41" name="sthref41"></a>
+<h3 class="sect2"><span class="secnum">4.1.1 </span>Default Values for Oc4jCacheSize
+</h3>
+<p>The "Understanding Modules" chapter of the <span class="italic">Oracle HTTP Server Administrator's Guide</span> contains default values for <code>Oc4jCacheSize</code> that are 1 for UNIX and 32 for Microsoft Windows. 
+</p>
+<p>The default value for <code>Oc4jCacheSize</code> should be 1 on Unix and 75&#037; of <code>MaxThreadsPerChild</code> on Microsoft Windows. 
+</p>
+</div><!-- class="sect2" -->
+<a id="CHDDEDBF" name="CHDDEDBF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref42" name="sthref42"></a>
+<h3 class="sect2"><span class="secnum">4.1.2 </span>UseOutputStreamSize
+</h3>
+<p>The "Using Oracle Containers for J2EE" appendix of the <span class="italic">Oracle HTTP Server Administrator's Guide</span> has a "Configuring OC4J Plug-in on Sun ONE" section that has the following example: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Service type&#061;"oracle/opii" fn&#061;"opii&#095;service" UseOutStreamSize&#061;8192
+
+</pre>
+<p>It should be:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Service type&#061;"oracle/opii" fn&#061;"opii&#095;service" UseOutputStreamSize&#061;8192
+</pre>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="manage.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="oc4j.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

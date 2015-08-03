@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 24, 2006 11:30:33 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5 Build 274" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Oracle TopLink</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="portal.htm" title="Previous" />
+<link rel="next" href="rules.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Release Notes </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25216-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="portal.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="rules.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="sthref156" name="sthref156"></a>
+<h1 class="chapter"><span class="secnum">7 </span>Oracle TopLink<a id="sthref157" name="sthref157"></a></h1>
+<p>This chapter describes issues associated with Oracle TopLink (TopLink). It includes the following topic:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CIHCDAJB">Section 7.1, "General Issues and Workarounds"</a>
+</p>
+</li>
+</ul><a id="CIHCDAJB" name="CIHCDAJB"></a>
+<div class="sect1">
+<a id="sthref158" name="sthref158"></a>
+<h2 class="sect1"><span class="secnum">7.1 </span>General Issues and Workarounds
+</h2>
+<p>This section describes general issue and workaround. It includes the following topic:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BCGEBEBF">Section 7.1.1, "Links to Hosted Documentation and Web-Based Resources from TopLink Workbench"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BCGDJICF">Section 7.1.2, "Using Non-ASCII Characters with a JAXB 1.0 TopLink Project"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BCGEDHAA">Section 7.1.3, "TopLink Workbench Look and Feel With Linux GTK"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BCGHAFAF">Section 7.1.4, "Unit of Work and JTA Transactions"</a>
+</p>
+</li>
+</ul><a id="BCGEBEBF" name="BCGEBEBF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref159" name="sthref159"></a>
+<h3 class="sect2"><span class="secnum">7.1.1 </span>Links to Hosted Documentation and Web-Based Resources from TopLink Workbench
+</h3>
+<p>When using the online help and the hosted documentation, TopLink Workbench requires an internet connection to OTN (Oracle Technology Network). Your PC must have a network connection (including any required proxy information) and an internet browser for use with the TopLink Workbench. If the TopLink Workbench is unable to connect to OTN, some links in the online help or the Welcome page may not work properly. 
+</p>
+<p>To configure preferences for an external browser for use with the TopLink Workbench, select <span class="bold">Tools</span> > <span class="bold">Preferences</span> > <span class="bold">Help</span>. Click <span class="bold">Browse</span> and select the location of your default Web browser. For more information on Help preferences, go to the Help menu and select <span class="italic">Working With TopLink Workbench Preferences</span>.
+</p>
+</div><!-- class="sect2" -->
+<a id="BCGDJICF" name="BCGDJICF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref160" name="sthref160"></a>
+<h3 class="sect2"><span class="secnum">7.1.2 </span>Using Non-ASCII Characters with a JAXB 1.0 TopLink Project
+</h3>
+<p>When you generate class and method names that include non-ASCII characters, TopLink will throw an exception. This problem occurs when creating a JAXB 1.0 TopLink project from an XML schema that contains non-ASCII characters. Ensure that your XML schema does not contain any non-ASCII characters.
+</p>
+</div><!-- class="sect2" -->
+<a id="BCGEDHAA" name="BCGEDHAA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref161" name="sthref161"></a>
+<h3 class="sect2"><span class="secnum">7.1.3 </span>TopLink Workbench Look and Feel With Linux GTK
+</h3>
+<p>When using TopLink Workbench on a PC using the Linux GTK look and feel, do not set the TopLink Workbench Look and Feel Preference to <span class="bold">GTK&#043;</span>. Doing so may cause unexpected complications. Oracle recommends using the <span class="bold">Metal</span>, <span class="bold">Oracle</span>, or <span class="bold">CD/Motif</span> look and feel instead. Refer to "Working with TopLink Workbench Preferences" in <span class="italic">Oracle TopLink Developer's Guide </span>for complete information.
+</p>
+</div><!-- class="sect2" -->
+<a id="BCGHAFAF" name="BCGHAFAF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref162" name="sthref162"></a>
+<h3 class="sect2"><span class="secnum">7.1.4 </span>Unit of Work and JTA Transactions
+</h3>
+<p>If a unit of work is synchronized with a Java Transaction API (JTA), an exception will be thrown if it is released. If the current transaction requires that changes not be persisted, the JTA transaction must be rolled back. If you wish to have the transaction rolled back, do so with its API.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="portal.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="rules.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

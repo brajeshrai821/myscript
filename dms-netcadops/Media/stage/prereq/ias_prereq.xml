@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Bharat Paliwal (Oracle Corporation) -->
+<!-- do w retain the resource Ids in the results file? -->
+<!-- advantage is that the results file can be used as input for pre-req checks -->
+<!-- thus avoiding to ask the user for the override conditions -->
+<PREREQUISITETESTS >
+  <!-- 
+      A PREREQUISITE set is set of pre-requisites / pre-requiste sets to be executed
+      on a particular set of conditions. Each pre-requisite set has a unique NAME
+      and list of platforms on which to be performed.
+      -->
+  <PREREQUISITESET NAME="oracle.as.j2ee.top_allProducts">
+    <!--PREREQUISITESETREF NAME="genericTests"/-->
+    <PREREQUISITESETREF NAME="minimalTests"/>
+  </PREREQUISITESET> 
+  <PREREQUISITESET NAME="oracle.as.j2ee.top_core">
+    <!--PREREQUISITESETREF NAME="genericTests"/-->
+    <PREREQUISITESETREF NAME="minimalTests"/>
+  </PREREQUISITESET> 
+  <PREREQUISITESET NAME="oracle.as.j2ee.top_http">
+    <!--PREREQUISITESETREF NAME="genericTests"/-->
+    <PREREQUISITESETREF NAME="minimalTests"/>
+  </PREREQUISITESET>
+  
+
+  
+  <PREREQUISITESET NAME="minimalTests">
+  <!--
+       We are not using the "Kernel" since the external name of this prereq
+       is wrong and we don't want to rename the kernel pre-req check to be
+       something else in case we need to use this kernel pre-req in the 
+       future. Adding a new prereq type in the java code which is referenced
+       by the "Security" name.
+       We are not doing swap space through this prereq checks.
+       The install code in oracle.rdbms does this starting 10g and it has a
+       step function in which the swap calculation, etc. is done.
+    <PREREQUISITEREF NAME="Kernel" SEVERITY="Warning"/>
+    <PREREQUISITEREF NAME="SwapSpace" SEVERITY="Warning"/>
+   -->
+    <PREREQUISITEREF NAME="CertifiedVersions" SEVERITY="Warning"/>
+    <PREREQUISITEREF NAME="Security" SEVERITY="Warning"/>
+    <PREREQUISITEREF NAME="Packages" SEVERITY="Warning"/>
+    <PREREQUISITEREF NAME="GLIBC" SEVERITY="Warning"/>
+       <PREREQUISITEREF NAME="OracleBase" SEVERITY="Warning"/>
+  </PREREQUISITESET>
+
+ 
+
+  <!-- 
+  	A PREREQUISITE set is set of pre-requisites / pre-requiste sets to be executed
+      on a particular set of conditions. Each pre-requisite set has a unique NAM
+      and list of platforms on which to be performed.
+  	 -->
+  <PREREQUISITESET NAME="genericTests">
+    <PREREQUISITEREF NAME="CertifiedVersions" SEVERITY="Warning"/>
+    <PREREQUISITEREF NAME="Patches" SEVERITY="Warning"/>
+    <PREREQUISITEREF NAME="Packages" SEVERITY="Warning"/>
+    <PREREQUISITEREF NAME="Kernel" SEVERITY="Warning"/>
+    <PREREQUISITEREF NAME="TotalMemory" SEVERITY="Warning"/>
+    <PREREQUISITEREF NAME="AvailableMemory" SEVERITY="Warning"/>
+    <PREREQUISITEREF NAME="SwapSpace" SEVERITY="Warning"/>
+    <PREREQUISITEREF NAME="OracleBase" SEVERITY="Warning"/>
+  </PREREQUISITESET>
+
+ 
+
+  <PREREQUISITE NAME="CertifiedVersions"
+                EXTERNALNAME="Is the Oracle software certified on the current O/S?"
+                EXTERNALNAMEID="S_CHECK_CERTIFIED_VERSIONS@resources.PrereqRes" SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    Oracle software is certified on the current O/S or not."
+                 TEXTID="S_CHECK_CERTIFIED_VERSIONS_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="OSChecks" RULE="CertifiedVersions" FILE="refhost.xml"
+                RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="This Oracle software is not certified on the current O/S."
+             TEXTID="S_CHECK_CERTIFIED_VERSIONS_ERROR@resources.PrereqRes"/>
+    <RECOMMENDATION TEXT="Make sure you are installing the software on a certifid platform." 
+                    TEXTID="S_CHECK_CERTIFIED_VERSIONS_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="Patches"
+                EXTERNALNAME="Are the required patches applied to the O/S?"
+                EXTERNALNAMEID="S_CHECK_PATCHES@resources.PrereqRes" SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    the minimum required patches are available on the system."
+                 TEXTID="S_CHECK_PATCHES_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="PatchesChecks" RULE="CheckPatches" FILE="refhost.xml"
+                RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="Some required patches are missing." TEXTID="S_CHECK_PATCHES_ERROR@resources.PrereqRes"/>
+    <RECOMMENDATION TEXT="You may actually have installed patches which have obsoleted these, in which case you can  successfully continue with the install. If you have not, it is recommended that you do not continue."
+                    TEXTID="S_CHECK_PATCHES_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="ClusterPatches"
+                EXTERNALNAME="Are the required patches applied to the O/S?"
+                EXTERNALNAMEID="S_CHECK_PATCHES@resources.PrereqRes" SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    the minimum required patches are available on the system."
+                 TEXTID="S_CHECK_PATCHES_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="PatchesChecks" RULE="CheckPatches" FILE="refhost.xml"
+                RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="Some required patches are missing." TEXTID="S_CHECK_PATCHES_ERROR@resources.PrereqRes"/>
+    <RECOMMENDATION TEXT="You may actually have installed patches which have obsoleted these, in which case you can  successfully continue with the install. If you have not, it is recommended that you do not continue."
+                    TEXTID="S_CHECK_PATCHES_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="Packages"
+                EXTERNALNAME="Are the required packages installed on the system?"
+                EXTERNALNAMEID="S_CHECK_PACKAGES@resources.PrereqRes"
+                SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    the minimum required patches are available on the system."
+                 TEXTID="S_CHECK_PACKAGES_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="PackagesChecks" RULE="CheckPackages"
+                FILE="refhost.xml" RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="Some required packages are missing."
+                 TEXTID="S_CHECK_PACKAGES_ERROR@resources.PrereqRes"/>
+    <RECOMMENDATION TEXT="You may actually have installed packages which have obsoleted these, in which case you can  successfully continue with the install. If you have not, it is recommended that you do not continue."
+                    TEXTID="S_CHECK_PACKAGES_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="GLIBC"
+                EXTERNALNAME="Required GLIBC installed on the system?"
+                EXTERNALNAMEID="S_CHECK_GLIBC@resources.PrereqRes"
+                SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    the minimum required glibc is available on the system."
+                 TEXTID="S_CHECK_GLIBC_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="GLIBCChecks" RULE="CheckGLIBC"
+                FILE="refhost.xml" RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="Required GLIBC not installed."
+                 TEXTID="S_CHECK_PACKAGES_ERROR@resources.PrereqRes"/>
+    <RECOMMENDATION TEXT="You may actually have installed the required GLIBC which have obsoleted this, in which case you can  successfully continue with the install. If you have not, it is recommended that you do not continue."
+                    TEXTID="S_CHECK_PACKAGES_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="MinimalKernel" EXTERNALNAME="Check kernel parameters"
+                EXTERNALNAMEID="S_CHECK_KERNEL_PARAMETERS@resources.PrereqRes" SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    the minimum required kernel parameters are available on the system."
+                 TEXTID="S_CHECK_KERNEL_PARAMETERS_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="KernelChecks" RULE="CheckParameters"
+                FILE="refhost.xml" RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="The kernel parameters do not meet the minimum requirements."
+             TEXTID="S_CHECK_KERNEL_PARAMETERS_ERROR@resources.PrereqRes"/>
+    <RECOMMENDATION TEXT="Update the /etc/system file with the required values, restart the system and perform the install."
+             TEXTID="S_CHECK_KERNEL_PARAMETERS_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="Kernel" EXTERNALNAME="Check kernel parameters"
+                EXTERNALNAMEID="S_CHECK_KERNEL_PARAMETERS@resources.PrereqRes" SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    the minimum required kernel parameters are available on the system."
+                 TEXTID="S_CHECK_KERNEL_PARAMETERS_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="KernelChecks" RULE="CheckParameters"
+                FILE="refhost.xml" RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="The kernel parameters do not meet the minimum requirements."
+             TEXTID="S_CHECK_KERNEL_PARAMETERS_ERROR@resources.PrereqRes"/>
+    <RECOMMENDATION TEXT="Update the /etc/system file with the required values, restart the system and perform the install."
+             TEXTID="S_CHECK_KERNEL_PARAMETERS_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="Security" EXTERNALNAME="Check kernel parameters"
+                EXTERNALNAMEID="S_CHECK_SECURITY_PARAMETERS@resources.PrereqRes"                SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether 
+    the minimum required kernel parameters are available on the system."
+                 TEXTID="S_CHECK_SECURITY_PARAMETERS_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="KernelChecks" RULE="CheckParameters"
+                FILE="refhost.xml" RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="The kernel parameters do not meet the minimum requirements."
+             TEXTID="S_CHECK_SECURITY_PARAMETERS_ERROR@resources.PrereqRes"/>
+    <RECOMMENDATION TEXT="Update the /etc/system file with the required values, restart the system and perform the install."
+             TEXTID="S_CHECK_SECURITY_PARAMETERS_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="Security_Core" EXTERNALNAME="Check kernel parameters"
+                EXTERNALNAMEID="S_CHECK_SECURITY_PARAMETERS@resources.PrereqRes"                SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether
+    the minimum required kernel parameters are available on the system."
+                 TEXTID="S_CHECK_SECURITY_PARAMETERS_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="KernelChecks" RULE="CheckParameters"
+                FILE="refhost_Core.xml" RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="The kernel parameters do not meet the minimum requirements."
+             TEXTID="S_CHECK_SECURITY_PARAMETERS_ERROR@resources.PrereqRes"/>
+    <RECOMMENDATION TEXT="Update the /etc/system file with the required values, restart the system and perform the install."
+             TEXTID="S_CHECK_SECURITY_PARAMETERS_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+
+  <PREREQUISITE NAME="CPU"
+                EXTERNALNAME="Does the system run on atleast 300Mhz CPU?"
+                EXTERNALNAMEID="S_CHECK_CPU@resources.PrereqRes"
+                SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    CPU speed meets the minimum requirements."
+                 TEXTID="S_CHECK_CPU_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="SystemChecks" RULE="CheckMinCPUSpeed" FILE="refhost.xml"
+                RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="The system runs on a CPU that is too slow for Oracle software."
+             TEXTID="S_CHECK_CPU_ERROR@resources.PrereqRes"/>
+    <RECOMMENDATION TEXT="Make sure that the system runs on a CPU with the minimum required speed."
+                    TEXTID="S_CHECK_CPU_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="TotalMemory"
+                EXTERNALNAME="Does the system have sufficient physical memory?"
+                EXTERNALNAMEID="S_CHECK_TOTAL_MEMORY@resources.PrereqRes"
+                SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    system has sufficient physical memory."
+                 TEXTID="S_CHECK_TOTAL_MEMORY_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="SystemChecks" RULE="CheckPhysicalMemory" FILE="refhost.xml"
+                RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="The system does not have sufficient physical memory to perform the install."
+             TEXTID="S_CHECK_TOTAL_MEMORY_ERROR@resources.PrereqRes">
+    </PROBLEM>
+    <RECOMMENDATION TEXT="Upgrade the memory for your system in order for Oracle software to function."
+                    TEXTID="S_CHECK_TOTAL_MEMORY_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="AvailableMemory"
+                EXTERNALNAME="Does the system have sufficient available memory?"
+                EXTERNALNAMEID="S_CHECK_AVAILABLE_MEMORY@resources.PrereqRes"
+                SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    system has sufficient available memory."
+                 TEXTID="S_CHECK_AVAILABLE_MEMORY_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="SystemChecks" RULE="CheckAvailableMemory" FILE="refhost.xml"
+                RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="The system does not have sufficient free memory to perform the install."
+             TEXTID="S_CHECK_AVAILABLE_MEMORY_ERROR@resources.PrereqRes">
+    </PROBLEM>
+    <RECOMMENDATION TEXT="Close applications to make sure that the system has sufficient free memory to perform the install."
+                    TEXTID="S_CHECK_AVAILABLE_MEMORY_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="SwapSpace"
+                EXTERNALNAME="Does the system have sufficient swap space?"
+                EXTERNALNAMEID="S_CHECK_SWAP_SPACE@resources.PrereqRes"
+                SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    sufficient space is available to perform the install."
+                 TEXTID="S_CHECK_SWAP_SPACE_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="SystemChecks" RULE="CheckSwapSpace" FILE="refhost.xml"
+                RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="The system does not have the required swapspace."
+             TEXTID="S_CHECK_SWAP_SPACE_ERROR@resources.PrereqRes">
+    </PROBLEM>
+    <RECOMMENDATION TEXT="Make more swap space available to perform the install."
+                    TEXTID="S_CHECK_SWAP_SPACE_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="OracleBase"
+                EXTERNALNAME="ORACLE_HOME should not be a parent of ORACLE_BASE"
+                EXTERNALNAMEID="S_CHECK_ORACLE_BASE@resources.PrereqRes"
+                SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+          ORACLE_BASE environment variable is set to a subdirectory of the Oracle home into which the install is taking place."
+                 TEXTID="S_CHECK_ORACLE_BASE_DESCRIPTION@resources.PrereqRes"/>
+    <RULESETREF NAME="OracleHomeChecks" RULE="CheckOracleBase" FILE="refhost.xml"
+                RESULTS_FILE="install_rule_results.xml"/>
+    <PROBLEM TEXT="The environment variable 'ORACLE_BASE' is set to be a subdirectory of the Oracle home."
+             TEXTID="S_CHECK_ORACLE_BASE_ERROR@resources.PrereqRes">
+    </PROBLEM>
+    <RECOMMENDATION TEXT="Unset the ORACLE_BASE or set it to be a parent of the Oracle home."
+                    TEXTID="S_CHECK_ORACLE_BASE_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+  <PREREQUISITE NAME="RootAccess" EXTERNALNAME="Does the user have root access?"
+                EXTERNALNAMEID="S_CHECK_ROOT_ACCESS@resources.PrereqRes"
+                SEVERITY="Warning">
+    <DESCRIPTION TEXT="This is a prerequisite condition to test whether the
+    the user has root access or not."
+                 TEXTID="S_CHECK_ROOT_ACCESS_DESCRIPTION@resources.PrereqRes"/>
+    <PROBLEM TEXT="You have not confirmed if you have root access. Root acess is required to perform some configuration setup after the install is complete."
+             TEXTID="S_CHECK_ROOT_ACCESS_ERROR@resources.PrereqRes">
+    </PROBLEM>
+    <RECOMMENDATION TEXT="Make sure that the you have necessary priviledges to run scripts as root."
+                    TEXTID="S_CHECK_ROOT_ACCESS_ACTION@resources.PrereqRes"/>
+  </PREREQUISITE>
+</PREREQUISITETESTS>

@@ -1,0 +1,68 @@
+
+use strict;
+use File::Copy;
+
+# Global variables
+###################
+my $ORACLE_HOME 	= '%ORACLE_HOME%';
+$ORACLE_HOME =~ s/\\/\//g;
+my $htdocs_dir 		= "$ORACLE_HOME/Apache/Apache/htdocs";
+my $s_hostName 		= "%s_hostName%";
+my $s_oemConsolePort 	= "%s_oemConsolePort%";
+my @files		= ();
+my @index_files		= ();
+
+# Main
+#######
+chdir($htdocs_dir) || die "Unable to change to directory $htdocs_dir! $!\n";
+opendir(DIR, ".") || die "Unable to open directory $htdocs_dir! $!\n";
+@files = readdir(DIR);
+closedir(DIR);
+
+foreach my $file (@files)
+{
+	chomp($file);
+	if ($file =~ /^index\.html.*/)
+	{
+		push (@index_files, "$file");
+	}
+}
+
+foreach my $index_file (@index_files)
+{
+	&instantiate($index_file);	
+}
+
+
+# Subroutines
+##############
+
+sub instantiate()
+{
+	my $file = shift;
+	my $temp_file = "$file.tempinst";
+
+	open (IN, "<$file") || 
+		warn "Unable to open file $file for reading! $!\n";
+	open (OUT, ">>$temp_file") ||
+		warn "Unable to open file $temp_file for writing! $!\n";
+	
+	print "Instantiating file $file...\n";
+
+	while (<IN>)
+	{
+		s/\%s_hostName\%/$s_hostName/g;
+		s/\%s_oemConsolePort\%/$s_oemConsolePort/g;
+		print OUT;
+	}
+
+	close OUT;
+	close IN;
+	if ( -e "$temp_file")
+	{
+		move("$temp_file", "$file") || 
+			warn "Unable to move file $temp_file to $file! $!\n";
+	}
+}
+	
+

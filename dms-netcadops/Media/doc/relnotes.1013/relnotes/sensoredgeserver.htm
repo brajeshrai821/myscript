@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 24, 2006 11:30:33 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5 Build 274" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Oracle Sensor Edge Server</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="hadr.htm" title="Previous" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Release Notes </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25216-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="hadr.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="i1009338" name="i1009338"></a>
+<h1 class="chapter"><span class="secnum">10 </span> Oracle Sensor Edge Server</h1>
+<p>This chapter describes issues with Oracle Sensor Edge Server. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDDDDGH">Section 10.1, "Installation and Configuration Issues"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#i1009855">Section 10.2, "General Issues"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABBEIIJ">Section 10.3, "Documentation Issues"</a>
+</p>
+</li>
+</ul><a id="CHDDDDGH" name="CHDDDDGH"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref174" name="sthref174"></a>
+<h2 class="sect1"><span class="secnum">10.1 </span>Installation and Configuration Issues
+</h2>
+<p>This section describes installation and configuration issues regarding Oracle Sensor Edge Server. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CACFAFBH">Section 10.1.1, "Valid 10.1.3 OC4J in Correct Oracle Home Required for Oracle Sensor Edge Mobile"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CJHDHJII">Section 10.1.2, "OC4J 10.1.2 Must be Stopped if Installing Against It"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CACCAEIA">Section 10.1.3, "Default Database Tablespaces"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BGBFAFAA">Section 10.1.4, "Oracle Sensor Edge Server Installation Fails"</a>
+</p>
+</li>
+</ul><a id="CACFAFBH" name="CACFAFBH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref175" name="sthref175"></a>
+<h3 class="sect2"><span class="secnum">10.1.1 </span>Valid 10.1.3 OC4J in Correct Oracle Home Required for Oracle Sensor Edge Mobile
+</h3>
+<p>You must have OC4J 10.1.3 installed into the same Oracle home into which you are going to install Oracle Sensor Edge Mobile. Having OC4J in another location is not supported by Oracle Universal Installer.
+</p>
+<p>After confirming that OC4J is installed in the proper place, you can install Oracle Sensor Edge Server products. To install any Oracle Sensor Edge Server products, you must first select Oracle Sensor Edge Server in the Installation screen. Subsequently, you will be able to install Oracle Sensor Edge Server, Oracle Sensor Edge Mobile, or both products.
+</p>
+<p>If you install both products, you will be given the option of launching the Sensor Edge Welcome twice. Both products are trying to open the same Welcome page; opening either one opens the same page.
+</p>
+</div><!-- class="sect2" -->
+<a id="CJHDHJII" name="CJHDHJII"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref176" name="sthref176"></a>
+<h3 class="sect2"><span class="secnum">10.1.2 </span>OC4J 10.1.2 Must be Stopped if Installing Against It
+</h3>
+<p>As noted in Oracle Sensor Edge Server Guide, you can install Oracle Sensor Edge Server along with OC4J 10.1.2 (versus the current 10.1.3 version). If you choose to install Oracle Sensor Edge Server with OC4J 10.1.2, ensure that OC4J is not running at the time. If OC4J 10.1.2 is running when you try to install Oracle Sensor Edge Server against it, the installation will fail.
+</p>
+</div><!-- class="sect2" -->
+<a id="CACCAEIA" name="CACCAEIA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref177" name="sthref177"></a>
+<h3 class="sect2"><span class="secnum">10.1.3 </span>Default Database Tablespaces
+</h3>
+<p>The scripts included with Oracle Sensor Edge Server are for a simple, generic installations. Our testing is accomplished against such generic installations.
+</p>
+<p>However, in enterprise environments, there may be many custom requirements and configurations that customers must design and implement themselves.
+</p>
+<p>For this reason, please ensure that you are familiar with tablespace creation. To learn about database tablespace creation, see the <span class="italic">Oracle SQL Reference</span> and <span class="italic">Oracle Database Concepts</span> guides for your particular release.
+</p>
+<p>Once you have set up your database (including the server, datafiles, and tablespaces across datafiles), you can modify Oracle Sensor Edge Server install scripts as needed.
+</p>
+<p><code>create&#095;edg&#095;user.sql</code> is used for SDS, and <code>create&#095;edg&#095;sda&#095;user.sql</code>is used for SDR.
+</p>
+<p>These scripts must be modified to use newly-created tablespaces for specific customer requirements.
+</p>
+<p>Under the create user command where you specify which tablespace the user is to use, change the line containing 'create user' in the .sql scripts, according to the manual.
+</p>
+</div><!-- class="sect2" -->
+<a id="BGBFAFAA" name="BGBFAFAA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref178" name="sthref178"></a>
+<h3 class="sect2"><span class="secnum">10.1.4 </span>Oracle Sensor Edge Server Installation Fails
+</h3>
+<p>When installing the Oracle Sensor Edge Server, do not select the Oracle Containers for J2EE 10.1.3.0.0 option from the companion CD Oracle Universal Installer (OUI); selecting this option along with the SES option causes the Oracle Sensor Edge Server installation to fail. The valid OC4J instance is installed using the Oracle Application Server CD-ROM (or DVD-ROM), not the companion CD OUI. For more information, see the Oracle Application Server Installation Guide appropriate to your platform.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="i1009855" name="i1009855"></a>
+<div class="sect1">
+<a id="sthref179" name="sthref179"></a>
+<h2 class="sect1"><span class="secnum">10.2 </span>General Issues
+</h2>
+<p>This section describes general issues encountered in Oracle Sensor Edge Server. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABGCFBJ">Section 10.2.1, "Using UTL&#095;EDG.REMOVE&#095;RULE Displays an Error"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABIJFAI">Section 10.2.2, "Adding a Rule Displays an Error"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABIJFAI">Section 10.2.2, "Adding a Rule Displays an Error"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABEACCD">Section 10.2.3, "Localization -- Navigation Tree in the SES Console Renders as the Server Locale-Defined Character Set"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABECCJF">Section 10.2.4, "Reassignment of Audio Event Type (207)"</a>
+</p>
+</li>
+</ul><a id="BABGCFBJ" name="BABGCFBJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref180" name="sthref180"></a>
+<h3 class="sect2"><span class="secnum">10.2.1 </span>Using UTL&#095;EDG.REMOVE&#095;RULE Displays an Error
+</h3>
+<p>When using the <code>API UTL&#095;EDG.REMOVE&#095;RULE</code>, an error may be encountered. This API only works if your rule was created through other Oracle Sensor Edge Server APIs.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABIJFAI" name="BABIJFAI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref181" name="sthref181"></a>
+<h3 class="sect2"><span class="secnum">10.2.2 </span>Adding a Rule Displays an Error
+</h3>
+<p>In this release, be sure to use the syntax <code>':event'</code> instead of <code>'TAB.USER&#095;DATA'</code>.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABEACCD" name="BABEACCD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref182" name="sthref182"></a>
+<h3 class="sect2"><span class="secnum">10.2.3 </span>Localization -- Navigation Tree in the SES Console Renders as the Server Locale-Defined Character Set
+</h3>
+<p>The character set defined in the Server Locale overrides the characters set in the browser locale even when you switch the browser locale. For example, if you switch the browser locale to <span class="italic">Japanese</span>, the Server Locale is defined as traditional Chinese, the strings in the Navigation Tree of the SES Console (such as the <code><span class="codeinlineitalic">Available Extensions</span></code>, filters, devices, and device group nodes) and the error and confirmation messages render in traditional Chinese rather than in Japanese. To correct this problem, reset the Server Locale, or override the Server Locale-defined character set by overloading <code><span class="codeinlineitalic">MsgTranslator</span></code> methods to take locale. String literals in the SESConfig tree control must be non-static and fetched using <code><span class="codeinlineitalic">Locale</span></code> on each page request.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABECCJF" name="BABECCJF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref183" name="sthref183"></a>
+<h3 class="sect2"><span class="secnum">10.2.4 </span>Reassignment of Audio Event Type (207)
+</h3>
+<p>The Audio Event Type (which is the event supported by the Simple Audio Driver) has been reassigned from <span class="italic">207</span> to <span class="italic">104</span>, and is now included in the group Generic Instructions to Devices (Event Types 100 - 199). Its Subtype remains <span class="italic">1</span> (<code><span class="codeinlineitalic">Play audio jobs in the .xml file in the Datafield</span></code>).
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABBEIIJ" name="BABBEIIJ"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref184" name="sthref184"></a>
+<h2 class="sect1"><span class="secnum">10.3 </span>Documentation Issues
+</h2>
+<p>This section describes documentation issues regarding Oracle Sensor Edge Server. It includes the following topic:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDFHHBD">Section 10.3.1, "Documentation for Oracle Sensor Edge Server Extensions"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CJHJJDGJ">Section 10.3.2, "Manually Deploying Sensor Data Streams Against an Existing Sensor Data Repository"</a>
+</p>
+</li>
+</ul><a id="CHDFHHBD" name="CHDFHHBD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref185" name="sthref185"></a>
+<h3 class="sect2"><span class="secnum">10.3.1 </span>Documentation for Oracle Sensor Edge Server Extensions
+</h3>
+<p>Once the server is installed, you can see documentation for extensions at: <code><span class="codeinlineitalic">http://&lt;host on which SES is installed>:&lt;oc4j port>/edge/extensions</span></code>. Or, see Oracle Sensor Edge Server information on Oracle Technology Network at: <code>http://www.oracle.com/technology/products/sensor&#095;edge&#095;server/extensions.html</code>.
+</p>
+</div><!-- class="sect2" -->
+<a id="CJHJJDGJ" name="CJHJJDGJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref186" name="sthref186"></a>
+<h3 class="sect2"><span class="secnum">10.3.2 </span>Manually Deploying Sensor Data Streams Against an Existing Sensor Data Repository
+</h3>
+<p><span class="italic">Oracle Sensor Edge Server Guide</span> omits a step in describing how to manually deploy Sensor Data Streams if you have already created a Sensor Data Repository. The procedure for manually deploying Sensor Data Streams if the Sensor Data Repository exists is as follows:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Use SQL&#042;Plus to connect to the database as <span class="italic">sysdba</span>, by running <code>sqlplus /nolog</code>.
+</p>
+</li>
+<li>
+<p>Run sqlplus; connect as <code><span class="codeinlineitalic">sys/your&#095;pwd&#064;your&#095;db as sysdba</span></code>.
+</p>
+</li>
+<li>
+<p>Run the script <code>grant&#095;edg&#095;user.sql</code>, located in <code>Oracle&#095;Home /edge/stage/sql/10.1.3</code>.
+</p>
+</li>
+<li>
+<p>Disconnect as <span class="italic">sys</span> and then reconnect to the database as the <span class="italic">edge user</span>.
+</p>
+</li>
+<li>
+<p>Run the script <code>edg&#095;create&#095;streams.sql</code>, located in <code>Oracle&#095;Home /edge/stage/sql/10.1.3</code>.
+</p>
+</li>
+<li>
+<p>Follow the procedure described in "Connecting Oracle Sensor Edge Server to Sensor Data Streams".
+</p>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="hadr.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

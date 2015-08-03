@@ -1,0 +1,40 @@
+
+LoadModule osso_module libexec/mod_osso.so
+
+<IfModule mod_osso.c>
+
+   OssoIpCheck off
+   OssoIdleTimeout off
+
+#
+# Insert Protected Resources: (see Notes below for how to protect resources)
+#
+
+
+
+#-------
+#
+# Notes
+#
+#-------
+#
+# 1. Here's what you need to add to protect a resource,
+#    e.g. <ApacheServerRoot>/htdocs/private:
+#
+#      <Location /private>
+#      require valid-user
+#      AuthType Basic
+#      </Location>
+#
+</IfModule>
+
+#
+# If you would like to have short hostnames redirected to
+# fully qualified hostnames to allow clients that need 
+# authentication via mod_osso to be able to enter short
+# hostnames into their browsers uncomment out the following
+# lines
+#
+#PerlModule Apache::ShortHostnameRedirect
+#PerlHeaderParserHandler Apache::ShortHostnameRedirect
+

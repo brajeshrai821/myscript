@@ -1,0 +1,138 @@
+<?xml version="1.0" standalone="yes" ?>
+
+<!-- Copyright (c) 2005 Oracle Corporation. All rights Reserved -->
+<!-- Do not modify the contents of this file -->
+
+
+<install-configuration>
+
+     <configuration type="GLOBAL">
+
+            <property type="INPUT_TYPE"
+                      name="DESTINATION_LOCATION" 
+                      value="" />
+     
+            <property type="INPUT_TYPE"
+                      name="TMP_LOCATION"
+                      value="" />
+     
+            <property type="INPUT_TYPE"
+                      name="LOG_LOCATION"
+                      value="" />
+               
+            <property type="INPUT_TYPE"
+                      name="INSTALLER_STARTUP_LOCATION"
+                      value="" />
+     
+            <property type="INPUT_TYPE"
+                      name="INSTALL_MECHANISM"
+                      value="BASIC_INSTALL" />
+     
+            <property type="INPUT_TYPE"
+                      name="INSTALL_NAME"
+                      value="" />
+
+     </configuration>
+
+
+     <configuration type="BASIC_INSTALL">
+
+     
+             <property type="INSTALL_TYPE"
+                       name="ORACLE_J2EE_WEB_SERVER_BASIC_INSTALL"
+                       business-name="Integrated Webserver, J2EE Server, Process Management"
+                       value="ORACLE_J2EE_WEB_SERVER_BASIC_INSTALL" 
+                       footprint="678MB"
+                       chained="false"
+                       oracleHomeNames="OraHomeTest"
+                       responseFile="as10g_basic.rsp"
+                       args="OUI_SCRATCH_PATH,MIDTIER_INSTANCE_NAME,ADMIN_USER_NAME,ADMIN_USER_PASSWD,ADMIN_USER_PASSWD_CONFIRM,ADMIN_USER_DETAILS,MGT_SETTING,OC4J_INSTANCE_NAME,USE_LOCAL_INSTANCE"
+                       selected="false" 
+                       installable="true"
+                       sub-install-types="NONE" />
+                  
+         
+			 <property type="INPUT_TYPE"
+                       name="OUI_SCRATCH_PATH"
+                       value=""
+                       rspFileAssociation="oracle.as.j2ee.top:s_oui_scratchPath" />
+		
+
+			 <property type="INPUT_TYPE"
+                       name="MIDTIER_INSTANCE_NAME"
+                       value=""
+                       rspFileAssociation="oracle.as.j2ee.top:s_asInstanceName"/>
+     
+
+  			 <property type="INPUT_TYPE"
+                       name="ADMIN_USER_NAME"
+                       value=""
+                       rspFileAssociation="oracle.as.j2ee.top:s_adminName"/>
+     
+
+             <property type="INPUT_TYPE"
+                       name="ADMIN_USER_PASSWD"
+                       value=""
+                       rspFileAssociation="oracle.as.j2ee.top:s_adminPassword"
+                       secure="true"/>
+                       
+             <property type="INPUT_TYPE"
+	                   name="ADMIN_USER_PASSWD_CONFIRM"
+	                   value=""
+	                   rspFileAssociation="oracle.as.j2ee.top:s_adminPasswordConfirm"
+                       secure="true"/>
+
+			 <property type="INPUT_TYPE"
+	                   name="MGT_SETTING"
+	                   value="Administer Locally"
+	                   rspFileAssociation="oracle.as.j2ee.top:s_selection"
+                       secure="false"/>
+
+			 <property type="INPUT_TYPE"
+					   name="OC4J_INSTANCE_NAME"
+	                   value="home"
+	                   rspFileAssociation="oracle.as.j2ee.top:s_oc4jInstanceName"
+                       secure="false"/>
+
+			 <property type="INPUT_TYPE"
+	                   name="USE_LOCAL_INSTANCE"
+	                   value="true"
+	                   rspFileAssociation="oracle.as.j2ee.top:b_useLocalInstance"
+                       secure="false"/>
+             
+			  <property type="LIST_INPUT_TYPE"
+	               name="ADMIN_USER_DETAILS"
+	               value="$MIDTIER_INSTANCE_NAME#!$ADMIN_USER_NAME#!$ADMIN_USER_PASSWD#!$ADMIN_USER_PASSWD_CONFIRM#!$OC4J_INSTANCE_NAME"
+	               rspFileAssociation="oracle.as.j2ee.top:sl_adminDialogReturn"
+				    secure="true"/>    
+
+
+    </configuration>
+
+    <configuration type="ADVANCED_INSTALL">
+
+           <property type="INSTALL_TYPE"
+                     toplevel="true"
+                     name="ORACLE_AS_1013_ADVANCED_INSTALL"
+                     business-name="Oracle 1013 Advanced Install"
+                     value="ORACLE_AS_1013_ADVANCED_INSTALL"
+                     description="ORACLE_AS_1013_ADVANCED_INSTALL_DESC"
+                     version="10.1.3"
+                     footprint="760MB"
+					 chained="false"
+					 oracleHomeNames="OraHomeTest"
+                     responseFile="as10g_advanced.rsp"
+                     args="OUI_SCRATCH_PATH"
+                     selected="true"
+                     installable="true"
+                     sub-install-types="NONE" />
+           
+		     <property type="INPUT_TYPE"
+                       name="OUI_SCRATCH_PATH"
+                       value=""
+                       rspFileAssociation="oracle.as.j2ee.top:s_oui_scratchPath" />
+  
+            
+     </configuration>
+
+</install-configuration>

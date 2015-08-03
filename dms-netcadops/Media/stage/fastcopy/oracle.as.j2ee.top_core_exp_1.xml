@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<!-- Copyright (c) 2006 Oracle Corporation. All Rights Reserved. -->
+<!-- Do not modify the contents of this file by hand. -->
+
+<FILE_LIST>
+  <FILE>
+    <SOURCE> Components/oracle.java.jdbc.jdbc_common/10.1.0.2.0/1/DataFiles/Expanded/jdbc/jdbc/Readme.txt </SOURCE>
+    <DEST> jdbc/Readme.txt </DEST>
+  </FILE>
+  <FILE>
+    <SOURCE> Components/oracle.rsf.net_rsf/10.1.0.2.0/1/DataFiles/Expanded/network/doc/README_OracleNet.htm </SOURCE>
+    <DEST> network/doc/README_OracleNet.htm </DEST>
+  </FILE>
+  <FILE>
+    <SOURCE> Components/oracle.rsf.net_rsf/10.1.0.2.0/1/DataFiles/Expanded/network/doc/relnotes/README_ASO.htm </SOURCE>
+    <DEST> relnotes/README.ASO </DEST>
+  </FILE>
+  <FILE>
+    <SOURCE> Components/oracle.rsf.net_rsf/10.1.0.2.0/1/DataFiles/Expanded/network/doc/network/doc/README_ASO.htm </SOURCE>
+    <DEST> network/doc/README.ASO </DEST>
+  </FILE>
+</FILE_LIST>

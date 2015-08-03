@@ -1,0 +1,769 @@
+<?xml version="1.0" standalone="yes" ?>
+<!-- Copyright (c) 2002 Oracle Corporation. All rights Reserved -->
+<!-- Do not modify the contents of this file by hand. -->
+<LIB_LIST>
+<QUERY_LIST>
+<LIB NAME="areasQueries" VER="10.1.0.4.0" REP_VER="0.0" MIN_INST_VER="10.1.0.3.0" INV_LOC="Queries/areasQueries/10.1.0.4.0/1/areasQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="clusterQueriesEx" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/clusterQueriesEx/10.1.0.3.0/1/clusterQuery.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="dbQueries" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/dbQueries/10.1.0.3.0/1/dbQueries.jar" PLAT="Solaris HP_UX Linux IBM_AIX UNIX_Alpha"/>
+<LIB NAME="fileQueries" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/fileQueries/10.1.0.3.0/1/fileQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="generalQueries" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/generalQueries/10.1.0.3.0/1/generalQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="netQueries" VER="10.1.0.4.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/netQueries/10.1.0.4.0/1/netQueries.jar" PLAT="NT_X86 W95 W98 NT_IA64 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="rgsQueries" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/rgsQueries/10.1.0.3.0/1/rgsQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="unixQueries" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/unixQueries/10.1.0.3.0/1/unixQueries.jar" PLAT="Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="globalVarQueries" VER="2.1.0.4.1" REP_VER="0.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Queries/globalVarQueries/2.1.0.4.1/1/globalVarQueries.jar" PLAT="NT_X86 Solaris IBM_AIX HP_UX UNIX_Alpha Linux Intel_Solaris Linux_IA64 HP_IA64"/>
+<LIB NAME="RunningProcessQuery" VER="1.5.1" REP_VER="0.0" MIN_INST_VER="1.5.1.0.0" INV_LOC="Queries/RunningProcessQuery/1.5.1/1/RunningProcessesQuery.jar" PLAT="Solaris NT_X86 HP_UX IBM_AIX UNIX_Alpha Linux Linux_S390 Linux_IA64 HP_IA64"/>
+<LIB NAME="generalPortQueries" VER="2.1.0.19.8" REP_VER="0.0.0.0.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Queries/generalPortQueries/2.1.0.19.8/1/generalPortQueries.jar" PLAT="Solaris IBM_AIX HP_IA64 Linux_IA64 HP_UX UNIX_Alpha Linux Intel_Solaris NT_X86"/>
+<LIB NAME="portQueries" VER="2.1.0.16.4" REP_VER="0.0.0.0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/portQueries/2.1.0.16.4/1/portQueries.jar" PLAT="Solaris IBM_AIX HP_IA64 Linux_IA64 HP_UX UNIX_Alpha Linux Intel_Solaris NT_X86"/>
+<LIB NAME="RepositoryQueries" VER="3.0.0.2.26" REP_VER="1.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/RepositoryQueries/3.0.0.2.26/1/Queries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="OEMQuery" VER="2.4" REP_VER="0.0" MIN_INST_VER="1.5.5.0.0" INV_LOC="Queries/OEMQuery/2.4/1/oemQuery.jar" PLAT="Solaris HP_UX IBM_AIX Linux UNIX_Alpha NT_X86 W95 W98"/>
+<LIB NAME="LangQueries" VER="1.3.6.4" REP_VER="1.3.6" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/LangQueries/1.3.6.4/1/LangQueries.jar" PLAT="NT_X86 W95 W98 NT_IA64 Solaris HP_UX UNIX_Alpha Linux Intel_Solaris"/>
+<LIB NAME="SpawnQueries" VER="1.1.4" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/SpawnQueries/1.1.4/1/SpawnQueries.jar" PLAT="NT_X86 NT_IA64 W95 W98 Solaris NT_Alpha Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare OpenVMS DG_UX HP_UX Linux Linux_S390 HP_IA64 Linux_IA64 IBM_MVS NetWare_411 NetWare_500 NEC Hitachi_UX Iris NCOS"/>
+<LIB NAME="PrerequisiteQueries" VER="1.1.12" REP_VER="1.1.5" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/PrerequisiteQueries/1.1.12/1/PrerequisiteQueries.jar" PLAT="Solaris NT_X86 W95 W98 NT_IA64 HP_UX IBM_AIX UNIX_Alpha Linux"/>
+<LIB NAME="MemorySizeQuery" VER="1.2.8.0.6" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/MemorySizeQuery/1.2.8.0.6/1/MemorySizeQuery.jar" PLAT="Solaris HP_UX IBM_AIX UNIX_Alpha Linux Linux_S390 Linux_IA64 HP_IA64"/>
+<LIB NAME="LDAPGlobalQueries" VER="1.3.0.0.0" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/LDAPGlobalQueries/1.3.0.0.0/1/LDAPGlobalQueries.jar" PLAT="NT_X86 W95 W98 Solaris NT_Alpha Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare OpenVMS DG_UX HP_UX Linux IBM_MVS NetWare_411 NetWare_500 NEC Hitachi_UX Iris NCOS"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/1/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="textFileQueries" VER="2.1.0.3.1" REP_VER="0.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Queries/textFileQueries/2.1.0.3.1/1/textFileQueries.jar" PLAT="NT_X86 Solaris IBM_AIX HP_UX UNIX_Alpha Linux Intel_Solaris Linux_IA64 HP_IA64"/>
+<LIB NAME="FileQuery" VER="1.4" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/FileQuery/1.4/1/FileQuery.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="OCAQueries" VER="1.0.2.0.2" REP_VER="0.0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/OCAQueries/1.0.2.0.2/1/OCAQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="SIDQueries" VER="1.2.7" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/SIDQueries/1.2.7/1/SidQueries.jar" PLAT="NT_X86 W95 W98 NT_IA64 Solaris HP_UX HP_IA64 UNIX_Alpha Linux Linux_S390 Linux_IA64 IBM_AIX"/>
+<LIB NAME="OsmQueries" VER="3.3" REP_VER="2.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/OsmQueries/3.3/1/OsmQueries.jar" PLAT="Solaris W95 W98 NT_IA64 NT_X86 HP_UX IBM_AIX UNIX_Alpha Linux"/>
+<LIB NAME="EmQueries" VER="4.2.3" REP_VER="0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/EmQueries/4.2.3/1/EmQueries.jar" PLAT="Solaris NT_X86 W95 W98 NT_IA64 HP_UX IBM_AIX UNIX_Alpha Linux HP_IA64 Linux_IA64 Linux_S390"/>
+<LIB NAME="cfsprereqQueries" VER="1.1.0" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/cfsprereqQueries/1.1.0/1/cfsprereqQueries.jar" PLAT="NT_X86 NT_IA64 W95 W98 Solaris NT_Alpha Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare OpenVMS DG_UX HP_UX Linux Linux_S390 HP_IA64 Linux_IA64 IBM_MVS NetWare_411 NetWare_500 NEC Hitachi_UX Iris NCOS"/>
+<LIB NAME="XMLFileQueries" VER="2.1.0.4.2" REP_VER="0.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Queries/XMLFileQueries/2.1.0.4.2/1/XMLFileQueries.jar" PLAT="NT_X86 Solaris IBM_AIX HP_UX UNIX_Alpha Linux Intel_Solaris Linux_IA64 HP_IA64"/>
+<LIB NAME="DBConnectQueries" VER="8.4" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBConnectQueries/8.4/1/DBConnectQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="IP_DBQueries" VER="3.0" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/IP_DBQueries/3.0/1/IP_DBQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="dbQueries" VER="10.1.0.2.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/dbQueries/10.1.0.2.0/1/dbQueries.jar" PLAT="Solaris HP_UX Linux IBM_AIX UNIX_Alpha Linux_IA64"/>
+<LIB NAME="GetDomainNameQuery" VER="2.0.0.0.1" REP_VER="0.0.0.0.0" MIN_INST_VER="2.1.0.2.0" INV_LOC="Queries/GetDomainNameQuery/2.0.0.0.1/1/getDomainNameQuery.jar" PLAT="Solaris IBM_AIX UNIX_Alpha HP_UX IBM_MVS Linux NEC Linux Dynix Intel_Solaris SINIX_Y ReliantUNIX_M UnixWare Hitachi_UX Iris OpenVMS NCOS DG_UX"/>
+<LIB NAME="customFileQueries" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Queries/customFileQueries/10.1.0.3.0/1/customFileQueries.jar" PLAT="NT_X86 Solaris IBM_AIX HP_UX UNIX_Alpha Linux Intel_Solaris Linux_IA64 HP_IA64"/>
+<LIB NAME="walletQueries" VER="1.0.0.0.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/walletQueries/1.0.0.0.0/1/walletQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="ShutdownQueries" VER="10.1.2.0.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/ShutdownQueries/10.1.2.0.2/1/Shutdown.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="OracleHomeQueries" VER="1.0.0.0.0" REP_VER="0.0.0.0.0" MIN_INST_VER="1.0.0.0.0" INV_LOC="Queries/OracleHomeQueries/1.0.0.0.0/1/OracleHomeQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="EdgeRepositoryQueries" VER="10.1.0.3.1" REP_VER="0.0" MIN_INST_VER="10.1.0.3.1" INV_LOC="Queries/EdgeRepositoryQueries/10.1.0.3.1/1/EdgeRepositoryQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="LDAPAuthenticationQueries" VER="2.0.0.0.0" REP_VER="0.0.0.0.0" MIN_INST_VER="1.0.0.0.0" INV_LOC="Queries/LDAPAuthenticationQueries/2.0.0.0.0/1/LDAPAuthenticationQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="ModifiedRepositoryQueries" VER="10.1.2.0.3" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/ModifiedRepositoryQueries/10.1.2.0.3/1/ModifiedRepositoryQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="ssoKeyQueries" VER="1.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/ssoKeyQueries/1.0/1/ssoKeyQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="httpQueries" VER="1.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/httpQueries/1.0/1/httpQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="SOAInstanceQueries" VER="1.8" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/SOAInstanceQueries/1.8/1/SOAInstanceQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="SpawnLongQueries" VER="1.1.5" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/SpawnLongQueries/1.1.5/1/SpawnLongQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="generalUtilityQueries" VER="1.0.0.0.0" REP_VER="0.0" MIN_INST_VER="1.0.0.0.0" INV_LOC="Queries/generalUtilityQueries/1.0.0.0.0/1/generalUtilityQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="ContentServicesQueries" VER="60.0.0.0.0" REP_VER="0.0" MIN_INST_VER="1.0..0.0.0" INV_LOC="Queries/ContentServicesQueries/60.0.0.0.0/1/ContentServicesQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="soaNetQueries" VER="1.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/soaNetQueries/1.0/1/soaNetQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/2/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="SpawnQueries" VER="1.1.4" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/SpawnQueries/1.1.4/2/SpawnQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="netQueries" VER="10.1.0.4.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Queries/netQueries/10.1.0.4.0/2/netQueries.jar" PLAT="NT_X86 W95 W98 NT_IA64 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/3/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/4/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/5/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/6/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/7/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/8/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/9/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/10/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/11/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/12/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/13/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/14/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/15/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/16/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/17/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/18/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/19/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/20/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/21/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/22/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/23/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/24/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/25/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/26/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/27/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/28/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/29/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/30/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/31/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/32/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/33/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/34/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/35/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/36/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/37/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/38/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/39/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/40/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/41/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/42/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/43/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/44/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/45/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/46/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/47/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/48/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/49/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/50/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/51/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/52/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/53/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/54/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/55/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/56/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/57/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/58/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/59/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/60/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/61/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/62/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/63/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/64/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/65/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/66/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/67/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/68/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/69/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/70/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/71/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/72/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/73/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/74/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/75/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/76/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/77/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/78/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/79/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/80/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/81/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/82/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/83/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/84/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/85/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/86/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/87/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/88/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/89/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/90/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/91/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/92/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/93/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/94/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/95/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/96/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/97/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/98/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/99/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/100/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/101/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/102/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/103/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/104/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/105/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/106/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/107/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/108/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/109/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/110/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/111/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/112/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/113/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/114/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/115/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/116/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/117/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/118/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/119/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/120/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/121/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/122/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/123/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/124/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/125/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/126/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/127/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/128/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/129/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/130/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/131/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/132/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/133/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/134/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/135/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/136/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/137/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/138/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/139/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/140/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/141/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/142/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/143/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/144/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/145/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/146/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/147/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="SOAInstanceQueries" VER="1.9" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/SOAInstanceQueries/1.9/1/SOAInstanceQueries.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/148/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/149/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/150/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/151/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/152/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/153/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/154/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/155/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/156/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/157/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/158/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/159/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/160/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/161/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/162/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/163/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/164/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/165/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/166/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/167/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/168/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/169/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/170/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/171/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/172/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/173/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/174/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/175/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/176/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/177/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/178/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/179/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/180/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/181/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/182/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/183/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/184/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/185/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/186/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/187/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/188/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/189/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/190/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/191/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/192/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/193/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/194/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/195/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/196/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/197/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/198/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/199/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/200/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/201/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/202/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/203/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/204/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/205/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/206/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/207/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/208/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="globalVarQueries" VER="2.1.0.4.1" REP_VER="0.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Queries/globalVarQueries/2.1.0.4.1/2/globalVarQueries.jar" PLAT="NT_X86 Solaris IBM_AIX HP_UX UNIX_Alpha Linux Intel_Solaris Linux_IA64 HP_IA64 NT_IA64"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/209/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/210/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/211/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/212/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/213/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/214/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/215/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/216/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/217/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="FileQuery" VER="1.5" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/FileQuery/1.5/1/FileQuery.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/218/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/219/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/220/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/221/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/222/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/223/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+<LIB NAME="DBQueries" VER="7.2" REP_VER="0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Queries/DBQueries/7.2/224/DBQueries.jar" PLAT="NT_X86 W95 Solaris IBM_AIX HP_UX Linux UNIX_Alpha Intel_Solaris"/>
+</QUERY_LIST>
+<DIALOG_LIST>
+<LIB NAME="standardDialogs" VER="10.1.0.6.0" REP_VER="1.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Dialogs/standardDialogs/10.1.0.6.0/1/standardDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogs" VER="9.0.4.0.29" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogs/9.0.4.0.29/1/customIasDialogs.jar" PLAT="NT_X86 NT_IA64 W95 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="modifiedMultiItem" VER="2.1.0.6.0" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/modifiedMultiItem/2.1.0.6.0/1/NewMultiItem.jar" PLAT="NT_X86 NT_IA64 W95 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="TwoRadioStaticDynamicDialogs" VER="2.5.0.1.0" REP_VER="2.3" MIN_INST_VER="1.5.0.0.0" INV_LOC="Dialogs/TwoRadioStaticDynamicDialogs/2.5.0.1.0/1/TwoRadioStaticDynamic.jar" PLAT="Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_S390 HP_IA64 Linux_IA64 NT_X86"/>
+<LIB NAME="customDialogs" VER="3.4.4" REP_VER="2.3" MIN_INST_VER="1.5.0.0.0" INV_LOC="Dialogs/customDialogs/3.4.4/1/CustomDialogs.jar" PLAT="Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_S390 HP_IA64 Linux_IA64 NT_X86 NT_IA64"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/1/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/1/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="ASDbConfigParams" VER="2.3.1" REP_VER="2.3" MIN_INST_VER="1.5.0.0.0" INV_LOC="Dialogs/ASDbConfigParams/2.3.1/1/ASDbConfigParams.jar" PLAT="Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_S390 HP_IA64 Linux_IA64 NT_X86 NT_IA64"/>
+<LIB NAME="OiDynamicXYRadioSpreadTable" VER="2.5.0.5.29" REP_VER="2.3" MIN_INST_VER="1.5.0.0.0" INV_LOC="Dialogs/OiDynamicXYRadioSpreadTable/2.5.0.5.29/1/OiDynamicXYRadioSpreadTable.jar" PLAT="Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_S390 HP_IA64 Linux_IA64 NT_X86"/>
+<LIB NAME="modifiedMultiItemRadio" VER="11.0.0.0.0" REP_VER="1.0" MIN_INST_VER="1.0.0.0.0" INV_LOC="Dialogs/modifiedMultiItemRadio/11.0.0.0.0/1/modifiedMultiItemRadio.jar" PLAT="NT_X86 NT_IA64 W95 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="ASVirtualHostDialog" VER="1.0.0.0" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/ASVirtualHostDialog/1.0.0.0/1/ASVirtualHostDialog.jar" PLAT="NT_X86 NT_IA64 W95 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="ASLoadBalancer" VER="1.0.0.0" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/ASLoadBalancer/1.0.0.0/1/ASLoadBalancer.jar" PLAT="NT_X86 NT_IA64 W95 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="TwoPanelMultiItem" VER="10.1.3.0.2" REP_VER="1.0" MIN_INST_VER="1.0.0.0.0" INV_LOC="Dialogs/TwoPanelMultiItem/10.1.3.0.2/1/TwoPanelMultiItem.jar" PLAT="NT_X86 NT_IA64 W95 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="ClusterDialogs" VER="3.0.0.0.0" REP_VER="1.0" MIN_INST_VER="1.0.0.0.0" INV_LOC="Dialogs/ClusterDialogs/3.0.0.0.0/1/ClusterDialogs.jar" PLAT="NT_X86 NT_IA64 W95 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="OSFSDialogs" VER="10.1.3.1.0" REP_VER="1.0" MIN_INST_VER="1.0.0.0.0" INV_LOC="Dialogs/OSFSDialogs/10.1.3.1.0/1/customOSFSDialogs.jar" PLAT="NT_X86 NT_IA64 W95 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="ManagementSettingsDialogs" VER="1.0.0.0.2" REP_VER="1.0" MIN_INST_VER="1.0.0.0.0" INV_LOC="Dialogs/ManagementSettingsDialogs/1.0.0.0.2/1/ManagementSettingsDialog.jar" PLAT="NT_X86 NT_IA64 W95 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="ModifiedISuitesDialogs" VER="10.1.3.0.2" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/ModifiedISuitesDialogs/10.1.3.0.2/1/ModifiedISuitesDialogs.jar" PLAT="NT_X86 NT_IA64 W95 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="PortalDialogs" VER="55.0.0.0.0" REP_VER="1.0" MIN_INST_VER="1.0.0.0.0" INV_LOC="Dialogs/PortalDialogs/55.0.0.0.0/1/PortalDialogs.jar" PLAT="NT_X86 NT_IA64 W95 Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/2/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/2/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/3/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/3/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/4/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/4/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/5/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/5/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/6/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/6/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/7/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/7/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/8/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/8/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/9/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/9/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/10/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/10/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/11/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/11/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/12/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/12/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/13/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/13/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/14/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/14/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/15/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/15/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/16/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/16/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/17/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/17/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/18/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/18/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/19/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/19/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/20/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/20/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/21/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/21/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/22/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/22/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/23/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/23/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/24/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/24/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/25/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/25/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/26/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/26/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/27/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/27/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/28/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/28/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/29/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/29/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/30/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/30/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/31/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/31/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/32/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/32/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/33/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/33/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/34/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/34/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/35/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/35/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/36/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/36/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/37/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/37/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/38/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/38/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/39/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/39/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/40/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/40/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/41/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/41/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/42/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/42/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/43/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/43/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/44/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/44/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/45/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/45/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/46/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/46/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/47/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/47/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/48/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/48/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/49/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/49/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/50/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/50/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/51/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/51/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/52/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/52/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/53/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/53/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/54/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/54/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/55/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/55/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/56/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/56/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/57/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/57/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/58/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/58/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/59/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/59/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/60/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/60/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/61/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/61/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/62/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/62/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/63/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/63/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/64/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/64/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/65/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/65/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/66/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/66/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/67/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/67/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/68/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/68/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/69/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/69/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/70/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/70/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/71/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/71/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/72/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/72/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/73/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/73/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/74/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/74/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/75/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/75/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/76/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/76/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/77/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/77/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/78/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/78/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/79/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/79/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/80/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/80/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/81/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/81/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/82/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/82/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/83/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/83/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/84/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/84/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/85/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/85/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/86/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/86/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/87/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/87/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/88/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/88/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/89/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/89/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/90/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/90/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/91/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/91/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/92/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/92/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/93/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/93/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/94/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/94/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/95/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/95/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/96/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/96/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/97/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/97/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/98/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/98/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/99/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/99/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/100/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/100/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/101/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/101/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/102/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/102/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/103/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/103/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/104/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/104/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/105/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/105/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/106/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/106/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/107/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/107/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/108/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/108/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/109/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/109/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/110/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/110/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/111/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/111/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/112/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/112/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/113/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/113/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/114/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/114/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/115/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/115/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/116/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/116/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/117/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/117/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/118/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/118/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/119/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/119/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/120/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/120/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/121/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/121/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/122/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/122/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/123/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/123/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/124/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/124/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/125/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/125/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/126/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/126/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/127/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/127/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/128/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/128/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/129/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/129/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/130/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/130/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/131/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/131/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/132/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/132/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/133/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/133/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/134/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/134/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/135/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/135/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/136/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/136/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/137/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/137/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/138/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/138/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/139/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/139/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/140/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/140/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/141/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/141/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/142/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/142/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/143/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/143/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/144/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/144/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/145/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/145/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/146/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/146/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/147/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/147/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/148/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/148/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/149/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/149/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/150/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/150/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/151/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/151/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/152/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/152/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/153/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/153/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/154/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/154/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/155/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/155/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/156/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/156/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/157/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/157/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/158/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/158/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/159/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/159/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/160/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/160/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/161/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/161/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/162/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/162/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/163/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/163/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/164/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/164/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/165/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/165/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/166/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/166/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/167/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/167/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/168/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/168/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/169/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/169/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/170/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/170/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/171/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/171/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/172/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/172/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/173/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/173/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/174/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/174/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/175/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/175/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/176/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/176/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/177/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/177/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/178/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/178/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/179/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/179/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/180/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/180/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/181/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/181/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/182/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/182/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/183/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/183/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/184/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/184/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/185/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/185/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/186/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/186/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/187/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/187/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/188/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/188/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/189/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/189/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/190/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/190/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/191/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/191/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/192/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/192/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/193/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/193/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/194/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/194/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/195/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/195/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/196/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/196/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/197/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/197/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/198/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/198/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/199/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/199/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/200/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/200/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/201/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/201/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/202/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/202/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/203/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/203/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/204/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/204/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/205/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/205/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/206/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/206/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/207/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/207/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/208/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/208/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/209/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/209/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/210/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/210/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/211/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/211/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/212/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/212/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/213/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/213/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/214/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/214/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/215/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/215/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/216/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/216/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/217/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/217/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/218/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/218/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/219/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/219/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/220/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/220/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/221/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/221/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/222/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/222/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/223/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/223/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="TaoCustomDialogs" VER="9.0.4.0.5" REP_VER="1.0" MIN_INST_VER="2.0.0.0.0" INV_LOC="Dialogs/TaoCustomDialogs/9.0.4.0.5/224/TaoCustomDialogs.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="iSuitesDialogsCore" VER="2.0.0.0.6" REP_VER="1.0" MIN_INST_VER="1.7.1.8.0" INV_LOC="Dialogs/iSuitesDialogsCore/2.0.0.0.6/224/customIasDialogsCore.jar" PLAT="ALL_PLATFORMS"/>
+</DIALOG_LIST>
+<ACTION_LIST>
+<LIB NAME="clusterActions" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/clusterActions/10.1.0.3.0/1/clusterActionLib.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="fileActions" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.3.0" INV_LOC="Actions/fileActions/10.1.0.3.0/1/fileActionLib.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="generalActions" VER="10.1.0.5.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/generalActions/10.1.0.5.0/1/generalActions.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="jarActions" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/jarActions/10.1.0.3.0/1/jarActionLib.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="launchPadActions" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/launchPadActions/10.1.0.3.0/1/launchpadaction.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="rgsActions" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/rgsActions/10.1.0.3.0/1/rgsActions.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="SpawnActions" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/SpawnActions/10.1.0.3.0/1/spawnActions.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="unixActions" VER="10.1.0.4.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/unixActions/10.1.0.4.0/1/unixActions.jar" PLAT="Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_PPC Linux_S390 HP_IA64 Linux_IA64"/>
+<LIB NAME="SpawnActions" VER="10.1.0.3.2" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/SpawnActions/10.1.0.3.2/1/spawnActions.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="customFileActions" VER="1.2" REP_VER="0.0" MIN_INST_VER="1.1" INV_LOC="Actions/customFileActions/1.2/1/customFileActions.jar" PLAT="NT_X86 W95 W98 NT_IA64 Solaris HP_UX Linux UNIX_Alpha IBM_AIX"/>
+<LIB NAME="dbActions" VER="10.1.0.2.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/dbActions/10.1.0.2.0/1/dbActions.jar" PLAT="Solaris HP_UX Linux IBM_AIX UNIX_Alpha Linux_IA64"/>
+<LIB NAME="docActionLib" VER="2.1" REP_VER="0.0" MIN_INST_VER="1.1" INV_LOC="Actions/docActionLib/2.1/1/docActionLib.jar" PLAT="Solaris HP_UX Linux UNIX_Alpha IBM_AIX"/>
+<LIB NAME="OEMRegistry" VER="1.5.6" REP_VER="1.5.0" MIN_INST_VER="1.5.5.0.0" INV_LOC="Actions/OEMRegistry/1.5.6/1/oemRegistryActions.jar" PLAT="NT_X86 W95 W98 Solaris NT_Alpha Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare OpenVMS DG_UX HP_UX IBM_MVS NetWare_411 NetWare_500 NEC Hitachi_UX Iris NCOS Linux"/>
+<LIB NAME="textFileActions" VER="2.1.0.3.3" REP_VER="0.0.0.0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Actions/textFileActions/2.1.0.3.3/1/textFileActions.jar" PLAT="Solaris IBM_AIX HP_IA64 Linux_IA64 HP_UX UNIX_Alpha Linux Intel_Solaris NT_X86"/>
+<LIB NAME="walletActions" VER="10.1.2.0.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/walletActions/10.1.2.0.0/1/walletActions.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="fileModifyActions" VER="1.0.0.0.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/fileModifyActions/1.0.0.0.0/1/fileModifyActions.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="generalUtilityActions" VER="1.2.0.0.0" REP_VER="0.0.0.0.0" MIN_INST_VER="1.5.0.0.0" INV_LOC="Actions/generalUtilityActions/1.2.0.0.0/1/generalUtilityActions.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="PortalActions" VER="3.0.0.0.0" REP_VER="0.0" MIN_INST_VER="1.0.0.0.0" INV_LOC="Actions/PortalActions/3.0.0.0.0/1/PortalActions.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="generalActions" VER="10.1.0.3.0" REP_VER="0.0" MIN_INST_VER="10.1.0.2.0" INV_LOC="Actions/generalActions/10.1.0.3.0/1/generalActions.jar" PLAT="ALL_PLATFORMS"/>
+<LIB NAME="customXMLFileActions" VER="1.0.0.0.2" REP_VER="0.0" MIN_INST_VER="1.0.0.0.0" INV_LOC="Actions/customXMLFileActions/1.0.0.0.2/1/customXMLFileActions.jar" PLAT="ALL_PLATFORMS"/>
+</ACTION_LIST>
+</LIB_LIST>

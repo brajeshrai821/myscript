@@ -1,0 +1,555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 23, 2006 13:32:48 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5.1 Build 4" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Default Port Numbers</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="silent.htm" title="Previous" />
+<link rel="next" href="deinst.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+<link rel="index" href="index.htm" title="Index" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Installation Guide  </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25217-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="silent.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="deinst.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="CHDFIGAE" name="CHDFIGAE"></a><a id="sthref662" name="sthref662"></a>
+<h1 class="appendix"><span class="secnum">B </span> Default <a id="sthref663" name="sthref663"></a><a id="sthref664" name="sthref664"></a><a id="sthref665" name="sthref665"></a>Port Numbers</h1>
+<p>By default, the installer assigns port numbers to components from a set of default port numbers. This appendix contains a list of these port numbers.
+</p>
+<p>If you want to use a different set of port numbers, you have to create a file called staticports.ini, in which you list the port numbers that you want to use. See <a href="reqs.htm#CIHHAFDF">Section 2.5.3, "Using Custom Port Numbers (the "Static Ports" Feature)"</a> for details.
+</p>
+<p>This appendix contains the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BEIHDIGD">Section B.1, "Method of Assigning Default Port Numbers"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEIEFBDD">Section B.2, "Default Port Numbers"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BEIEFBCF">Section B.3, "Ports to Open in Firewalls"</a>
+</p>
+</li>
+</ul><a id="BEIHDIGD" name="BEIHDIGD"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref666" name="sthref666"></a>
+<h2 class="sect1"><span class="secnum">B.1 </span>Method of Assigning Default Port Numbers
+</h2>
+<p>The installer assigns default port numbers to each component using the following method:
+</p>
+<ol type="1" start="1">
+<li>
+<p>The installer checks if the default port number is in use. If it is not in use, the installer assigns it to the component.
+</p>
+</li>
+<li>
+<p>If the default port number is already in use by an Oracle product or by any running application, the installer tries the lowest number in the port number range. It keeps trying the port numbers in the range until it finds one that is available.
+</p>
+</li>
+</ol>
+</div><!-- class="sect1" -->
+<a id="BEIEFBDD" name="BEIEFBDD"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref667" name="sthref667"></a>
+<h2 class="sect1"><span class="secnum">B.2 </span>Default Port Numbers
+</h2>
+<p><a href="#CHDIAAIH">Table B-1</a> lists the default port numbers for components. The last column, <a href="#CHDFBIGB">Name in staticports.ini</a>, specifies the component name as it appears in the <code>staticports.ini</code> file, which enables you to override the default port numbers. See <a href="reqs.htm#CIHHAFDF">Section 2.5.3, "Using Custom Port Numbers (the "Static Ports" Feature)"</a> for details.
+</p>
+<div class="tblhruleformalwide">
+<a id="sthref668" name="sthref668"></a><a id="CHDIAAIH" name="CHDIAAIH"></a>
+<p class="titleintable">Table B-1 Default Port Numbers and Ranges (Grouped by Component)</p>
+<table class="HRuleFormalWide" title="Default Port Numbers and Ranges (Grouped by Component)" summary="Default port numbers and ranges" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2">Component
+</th>
+<th align="left" valign="bottom" id="r1c2-t2">Default Port
+</th>
+<th align="left" valign="bottom" id="r1c3-t2">Port Number Range
+</th>
+<th align="left" valign="bottom" id="r1c4-t2"><a id="CHDFBIGB" name="CHDFBIGB"></a>Name in staticports.ini
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p><span class="bold">Oracle Process Manager and Notification Server (OPMN)</span>
+</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p>
+</p>
+<br />
+</td>
+<td align="left" headers="r2c1-t2 r1c3-t2">
+<p>
+</p>
+<br />
+</td>
+<td align="left" headers="r2c1-t2 r1c4-t2">
+<p>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p>Oracle Notification Server Request Port
+</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p>6003
+</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c3-t2">
+<p>6003 - 6099
+</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c4-t2">
+<pre xml:space="preserve" class="oac_no_warn">Oracle Notification Server Request port
+</pre>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t2" headers="r1c1-t2">
+<p>Oracle Notification Server Local Port
+</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c2-t2">
+<p>6100
+</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c3-t2">
+<p>6100 - 6199
+</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c4-t2">
+<pre xml:space="preserve" class="oac_no_warn">Oracle Notification Server Local port
+</pre>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t2" headers="r1c1-t2">
+<p>Oracle Notification Server Remote Port
+</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c2-t2">
+<p>6200
+</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c3-t2">
+<p>6200 - 6299
+</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c4-t2">
+<pre xml:space="preserve" class="oac_no_warn">Oracle Notification Server Remote port
+</pre>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t2" headers="r1c1-t2">
+<p><span class="bold"><span class="bold">Oracle Application Server Containers for J2EE</span> (OC4J)</span>
+</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c2-t2">
+<p>
+</p>
+<br />
+</td>
+<td align="left" headers="r6c1-t2 r1c3-t2">
+<p>
+</p>
+<br />
+</td>
+<td align="left" headers="r6c1-t2 r1c4-t2">
+<p>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t2" headers="r1c1-t2">
+<p>OC4J AJP
+</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c2-t2">
+<p>12501
+</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c3-t2">
+<p>12501 - 12600
+</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c4-t2">
+<p>Not settable through staticports.ini
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t2" headers="r1c1-t2">
+<p>OC4J RMI
+</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c2-t2">
+<p>12401
+</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c3-t2">
+<p>12401 - 12500
+</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c4-t2">
+<p>Not settable through staticports.ini
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t2" headers="r1c1-t2">
+<p>JMS
+</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c2-t2">
+<p>12601
+</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c3-t2">
+<p>12601 - 12700
+</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c4-t2">
+<p>Not settable through staticports.ini
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t2" headers="r1c1-t2">
+<p>IIOP
+</p>
+</td>
+<td align="left" headers="r10c1-t2 r1c2-t2">
+<p>13301
+</p>
+</td>
+<td align="left" headers="r10c1-t2 r1c3-t2">
+<p>13301 - 13400
+</p>
+</td>
+<td align="left" headers="r10c1-t2 r1c4-t2">
+<p>Not settable through staticports.ini
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t2" headers="r1c1-t2">
+<p>IIOPS1
+</p>
+</td>
+<td align="left" headers="r11c1-t2 r1c2-t2">
+<p>13401
+</p>
+</td>
+<td align="left" headers="r11c1-t2 r1c3-t2">
+<p>13401 - 13500
+</p>
+</td>
+<td align="left" headers="r11c1-t2 r1c4-t2">
+<p>Not settable through staticports.ini
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t2" headers="r1c1-t2">
+<p>IIOPS2
+</p>
+</td>
+<td align="left" headers="r12c1-t2 r1c2-t2">
+<p>13501
+</p>
+</td>
+<td align="left" headers="r12c1-t2 r1c3-t2">
+<p>13501 -13600
+</p>
+</td>
+<td align="left" headers="r12c1-t2 r1c4-t2">
+<p>Not settable through staticports.ini
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t2" headers="r1c1-t2">
+<p><span class="bold">Oracle HTTP Server</span>
+</p>
+<br />
+</td>
+<td align="left" headers="r13c1-t2 r1c2-t2">
+<p>
+</p>
+<br />
+</td>
+<td align="left" headers="r13c1-t2 r1c3-t2">
+<p>
+</p>
+<br />
+</td>
+<td align="left" headers="r13c1-t2 r1c4-t2">
+<p>
+</p>
+<br />
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t2" headers="r1c1-t2">
+<p>Listen Port
+</p>
+</td>
+<td align="left" headers="r14c1-t2 r1c2-t2">
+<p>7777
+</p>
+</td>
+<td align="left" headers="r14c1-t2 r1c3-t2">
+<p>7777 - 7877
+</p>
+</td>
+<td align="left" headers="r14c1-t2 r1c4-t2">
+<p>Not settable through staticports.ini
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t2" headers="r1c1-t2">
+<p>Listen (SSL<span class="bold"></span>) Port
+</p>
+</td>
+<td align="left" headers="r15c1-t2 r1c2-t2">
+<p>4443
+</p>
+</td>
+<td align="left" headers="r15c1-t2 r1c3-t2">
+<p>4443
+</p>
+</td>
+<td align="left" headers="r15c1-t2 r1c4-t2">
+<p>Not settable through staticports.ini
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t2" headers="r1c1-t2">
+<p>Port
+</p>
+</td>
+<td align="left" headers="r16c1-t2 r1c2-t2">
+<p>7777
+</p>
+</td>
+<td align="left" headers="r16c1-t2 r1c3-t2">
+<p>7777 - 7877
+</p>
+</td>
+<td align="left" headers="r16c1-t2 r1c4-t2">
+<pre xml:space="preserve" class="oac_no_warn">Oracle HTTP Server port
+</pre>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t2" headers="r1c1-t2">
+<p>SSL Port
+</p>
+</td>
+<td align="left" headers="r17c1-t2 r1c2-t2">
+<p>4443
+</p>
+</td>
+<td align="left" headers="r17c1-t2 r1c3-t2">
+<p>443, 4443
+</p>
+</td>
+<td align="left" headers="r17c1-t2 r1c4-t2">
+<pre xml:space="preserve" class="oac_no_warn">Oracle HTTP Server SSL port
+</pre>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t2" headers="r1c1-t2">
+<p>Java Object Cache
+</p>
+</td>
+<td align="left" headers="r18c1-t2 r1c2-t2">
+<p>7000
+</p>
+</td>
+<td align="left" headers="r18c1-t2 r1c3-t2">
+<p>7000 - 7099
+</p>
+</td>
+<td align="left" headers="r18c1-t2 r1c4-t2">
+<p>Not settable through staticports.ini
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t2" headers="r1c1-t2">
+<p>Port Tunneling
+</p>
+</td>
+<td align="left" headers="r19c1-t2 r1c2-t2">
+<p>7501
+</p>
+</td>
+<td align="left" headers="r19c1-t2 r1c3-t2">
+<p>7501 - 7599
+</p>
+</td>
+<td align="left" headers="r19c1-t2 r1c4-t2">
+<p>Not settable through staticports.ini
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t2" headers="r1c1-t2">
+<p>Oracle HTTP Server Diagnostic port
+</p>
+</td>
+<td align="left" headers="r20c1-t2 r1c2-t2">
+<p>7200
+</p>
+</td>
+<td align="left" headers="r20c1-t2 r1c3-t2">
+<p>7200 - 7299
+</p>
+</td>
+<td align="left" headers="r20c1-t2 r1c4-t2">
+<p>Not settable through staticports.ini
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformalwide" -->
+
+</div><!-- class="sect1" -->
+<a id="BEIEFBCF" name="BEIEFBCF"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref669" name="sthref669"></a>
+<h2 class="sect1"><span class="secnum">B.3 </span>Ports to Open in Firewalls<a id="sthref670" name="sthref670"></a><a id="sthref671" name="sthref671"></a>
+</h2>
+<p>If you plan to install Oracle Application Server behind firewalls, you need to open certain ports in the firewall during installation (and also during runtime).
+</p>
+<p>For a 10<span class="italic">g</span> Release 3 (10.1.3) middle-tier instance, you need access to Oracle Notification Server and AJP ports. You need to open the following ports used by these components in the firewall:
+</p>
+<ul>
+<li type="disc">
+<p>OPMN Oracle Notification Server remote port
+</p>
+</li>
+<li type="disc">
+<p>OC4J AJP port
+</p>
+</li>
+</ul>
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="silent.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="deinst.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

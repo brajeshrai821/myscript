@@ -1,0 +1,401 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 23, 2006 13:32:48 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5.1 Build 4" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Postinstallation Tasks</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="ha.htm" title="Previous" />
+<link rel="next" href="silent.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+<link rel="index" href="index.htm" title="Index" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Installation Guide  </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25217-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="ha.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="silent.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="BABDABFD" name="BABDABFD"></a><a id="sthref592" name="sthref592"></a>
+<h1 class="chapter"><span class="secnum">7 </span> <a id="sthref593" name="sthref593"></a>Postinstallation Tasks</h1>
+<p>Contents:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CIHGCDDD">Section 7.1, "Deploying Oracle Business Rules Rule Author"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJAJGG">Section 7.2, "State of Oracle Application Server Instances After Installation"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHGBGJI">Section 7.3, "Passwords for Oracle Application Server Components"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJBDJH">Section 7.4, "NFS Installations"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHEIDGF">Section 7.5, "Configuring OracleAS Clusters"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABBEBEE">Section 7.6, "Backup and Recovery"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABGIGEG">Section 7.7, "SSL"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#i1008184">Section 7.8, "Operating System Locale and NLS&#095;LANG Environment Variable"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABIEFIJ">Section 7.9, "What to Do Next"</a>
+</p>
+</li>
+</ul><a id="CIHGCDDD" name="CIHGCDDD"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref594" name="sthref594"></a>
+<h2 class="sect1"><span class="secnum">7.1 </span>Deploying Oracle Business Rules Rule Author<a id="sthref595" name="sthref595"></a><a id="sthref596" name="sthref596"></a>
+</h2>
+<p>After installing Oracle Application Server, you need to perform some additional steps to use Oracle Business Rules Rule Author and its associated online help.
+</p>
+<p>The steps are as follows:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Access the Oracle Enterprise Manager 10g Application Server Control Console using the following URL: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">http://<span class="italic">hostname</span>:<span class="italic">http&#095;port&#095;number</span>/em
+
+</pre>
+<p>In the <span class="bold">Groups</span> section of the page, click <span class="bold">home</span> in the Name column.
+</p>
+</li>
+<li>
+<p>Select the <span class="bold">Applications</span> tab.
+</p>
+</li>
+<li>
+<p>To deploy Oracle Business Rules Rule Author, perform the following steps:
+</p>
+<ol type="a">
+<li>
+<p>Click <span class="bold">Deploy</span>. This opens the Deploy: Select Archive page.
+</p>
+</li>
+<li>
+<p>Select one of the following options:
+</p>
+<ul>
+<li type="circle">
+<p><span class="bold">Archive already present on server where Application Server Control is running.</span>
+</p>
+<p>If you select this option, fill in the <span class="bold">Location on Server</span> field with <code>&#036;ORACLE&#095;HOME/rules/webapps/ruleauthor.ear</code>.
+</p>
+</li>
+<li type="circle">
+<p><span class="bold">Archive is present on local host. Upload archive to the server where Application Server Control is running.</span>
+</p>
+<p>If you select this option, click <span class="bold">Browse</span> to locate the <code>ruleauthor.ear</code> file on your machine. The file is located at <code>&#036;ORACLE&#095;HOME/rules/webapps/ruleauthor.ear</code>.
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>. This opens the Deploy: Application Attributes page.
+</p>
+</li>
+<li>
+<p>Enter the name of the application as <code>ruleauthor</code>.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>. This opens the Deploy: Deployment Settings page.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Deploy</span>. This will display server messages during deployment.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Return</span>.
+</p>
+</li>
+</ol>
+</li>
+<li>
+<p>To deploy the online help for Oracle Business Rules Rule Author, perform the following steps:
+</p>
+<ol type="a">
+<li>
+<p>Click <span class="bold">Deploy</span>. This opens the Deploy: Select Archive page.
+</p>
+</li>
+<li>
+<p>Select one of the following options:
+</p>
+<ul>
+<li type="circle">
+<p><span class="bold">Archive already present on server where Application Server Control is running.</span>
+</p>
+<p>If you select this option, fill in the <span class="bold">Location on Server</span> field with <code>&#036;ORACLE&#095;HOME/rules/webapps/rulehelp.ear</code>. 
+</p>
+</li>
+<li type="circle">
+<p><span class="bold">Archive is present on local host. Upload archive to the server where Application Server Control is running.</span>
+</p>
+<p>If you select this option, click <span class="bold">Browse</span> to locate the <code>rulehelp.ear</code> file on your machine. The file is located at <code>&#036;ORACLE&#095;HOME/rules/webapps/rulehelp.ear</code>.
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>. This opens the Deploy: Application Attributes page.
+</p>
+</li>
+<li>
+<p>Enter the name of the application as <code>rulehelp</code>.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Next</span>. This opens the Deploy: Deployment Settings page.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Deploy</span>. This will display server messages during deployment.
+</p>
+</li>
+</ol>
+</li>
+</ol>
+</div><!-- class="sect1" -->
+<a id="BABJAJGG" name="BABJAJGG"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref597" name="sthref597"></a>
+<h2 class="sect1"><span class="secnum">7.2 </span>State of Oracle Application Server Instances After Installation
+</h2>
+<p>After installation, the components that you have configured are started up (unless you have configured them to use ports lower than 1024, in which case you have to start them up manually).
+</p>
+<p><a id="sthref598" name="sthref598"></a>You can view the Welcome page and the <a id="sthref599" name="sthref599"></a>Application Server Control page in a browser. The URLs for these pages are shown in the last screen of the installer. You can view the contents of the last screen in the file <code>ORACLE&#095;HOME/install/readme.txt</code>.
+</p>
+<p>You can use scripts or you can use the Oracle Enterprise Manager 10<span class="italic">g</span> Application Server Control to start and stop Oracle Application Server instances. See the <span class="italic">Oracle Application Server Administrator's Guide</span> for details.
+</p>
+</div><!-- class="sect1" -->
+<a id="CIHGBGJI" name="CIHGBGJI"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref600" name="sthref600"></a>
+<h2 class="sect1"><span class="secnum">7.3 </span>Passwords for Oracle Application Server Components
+</h2>
+<p>By default, all passwords for Oracle Application Server components are set to be the same as the Oracle Application Server instance password. For security reasons, you should change the passwords of the various components to have different values.
+</p>
+<p>See the <span class="italic">Oracle Application Server Administrator's Guide</span> and the component guides in the Oracle Application Server Documentation Library for details on how to alter the passwords for the components you have installed.
+</p>
+</div><!-- class="sect1" -->
+<a id="BABJBDJH" name="BABJBDJH"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref601" name="sthref601"></a>
+<h2 class="sect1"><span class="secnum">7.4 </span>NFS Installations<a id="sthref602" name="sthref602"></a><a id="sthref603" name="sthref603"></a>
+</h2>
+<p>If you installed Oracle Application Server on an NFS disk, you need to edit the <code>LockFile</code> directive in the <code>ORACLE&#095;HOME/Apache/Apache/conf/httpd.conf</code> file so that it points to a local disk. This file is used by the Oracle HTTP Server component.
+</p>
+<p>See the <span class="italic">Oracle HTTP Server Administrator's Guide</span> for details.
+</p>
+</div><!-- class="sect1" -->
+<a id="CIHEIDGF" name="CIHEIDGF"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref604" name="sthref604"></a>
+<h2 class="sect1"><span class="secnum">7.5 </span>Configuring OracleAS Clusters
+</h2>
+<p>If you did not configure OracleAS Clusters during installation, you can use Oracle Process Manager and Notification Server (OPMN) commands to do so following installation. See <!A HREF="xlinkSRC ASADM0220">"Configuring Cluster Topologies"</a> in the <span class="italic">Oracle Application Server Administrator's Guide</span> for details.
+</p>
+</div><!-- class="sect1" -->
+<a id="BABBEBEE" name="BABBEBEE"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref605" name="sthref605"></a>
+<h2 class="sect1"><span class="secnum">7.6 </span>Backup and Recovery<a id="sthref606" name="sthref606"></a>
+</h2>
+<p>After installation would be a good time to start backing up the files, and to set up your backup and recovery strategy. See the <span class="italic">Oracle Application Server Administrator's Guide</span> for details.
+</p>
+</div><!-- class="sect1" -->
+<a id="BABGIGEG" name="BABGIGEG"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref607" name="sthref607"></a>
+<h2 class="sect1"><span class="secnum">7.7 </span>SSL<a id="sthref608" name="sthref608"></a>
+</h2>
+<p>By default, most components are not configured for SSL. To enable SSL, see the SSL section in the <span class="italic">Oracle Application Server Administrator's Guide</span>.
+</p>
+</div><!-- class="sect1" -->
+<a id="i1008184" name="i1008184"></a>
+<div class="sect1">
+<a id="sthref609" name="sthref609"></a>
+<h2 class="sect1"><span class="secnum">7.8 </span>Operating System Locale and NLS&#095;LANG Environment Variable<a id="sthref610" name="sthref610"></a><a id="sthref611" name="sthref611"></a>
+</h2>
+<p>If you installed Oracle Application Server in a non-English language environment, please check your settings as described in these sections:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDCDFCF">Section 7.8.1, "Check the Operating System Locale"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDDHIEF">Section 7.8.2, "Check the NLS&#095;LANG Setting"</a>
+</p>
+</li>
+</ul><a id="CHDCDFCF" name="CHDCDFCF"></a>
+<div class="sect2">
+<a id="sthref612" name="sthref612"></a>
+<h3 class="sect2"><span class="secnum">7.8.1 </span>Check the Operating System Locale
+</h3>
+<p>To make sure the default locale is set properly, verify that the LC&#095;ALL or LANG environment variables are set with the appropriate values. To check the current setting, run the <code>locale</code> command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">locale</span>
+
+</pre>
+</div><!-- class="sect2" -->
+<a id="CHDDHIEF" name="CHDDHIEF"></a>
+<div class="sect2">
+<a id="sthref613" name="sthref613"></a>
+<h3 class="sect2"><span class="secnum">7.8.2 </span>Check the NLS&#095;LANG Setting
+</h3>
+<p>To check the NLS&#095;LANG setting:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Make sure the value of the NLS&#095;LANG environment variable is compatible with the default locale setting of the operating system. See the <span class="italic">Oracle Application Server Globalization Guide</span> for details, including a list of files that set this variable. You might need to edit the value of the NLS&#095;LANG variable in these files.
+</p>
+</li>
+<li>
+<p>Check that the NLS&#095;LANG setting in the <code>ORACLE&#095;HOME/opmn/conf/opmn.xml</code> file is identical to the NLS&#095;LANG environment variable.
+</p>
+<p>Example: The NLS&#095;LANG setting in the <code>opmn.xml</code> file might look something like this:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;environment>
+     &lt;variable id&#061;"TMP" value&#061;"/tmp"/> 
+     &lt;variable id&#061;"NLS&#095;LANG" value&#061;"JAPANESE&#095;JAPAN.JA16SJIS"/> 
+&lt;/environment>
+
+</pre>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABIEFIJ" name="BABIEFIJ"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref614" name="sthref614"></a>
+<h2 class="sect1"><span class="secnum">7.9 </span>What to Do Next
+</h2>
+<p>After installing Oracle Application Server, you should read the <span class="italic">Oracle Application Server Administrator's Guide</span>. Specifically, you should read the "Getting Started After Installing Oracle Application Server" chapter.
+</p>
+<p>You should also perform a complete Oracle Application Server environment backup after installing Oracle Application Server. This enables you to restore a working environment in case something goes wrong. For details on how to perform a complete Oracle Application Server environment backup, see the <span class="italic">Oracle Application Server Administrator's Guide</span>.
+</p>
+<p>You should also perform a complete Oracle Application Server environment backup after each successful patchset upgrade and after each successful configuration change.
+</p>
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="ha.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="silent.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

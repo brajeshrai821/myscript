@@ -1,0 +1,1613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 23, 2006 13:32:47 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5.1 Build 4" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Advanced Installation</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="basic_install.htm" title="Previous" />
+<link rel="next" href="ha.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+<link rel="index" href="index.htm" title="Index" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Installation Guide  </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25217-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="basic_install.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="ha.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="CIHJDJHG" name="CIHJDJHG"></a><a id="sthref364" name="sthref364"></a>
+<h1 class="chapter"><span class="secnum">5 </span> <a name="ASINS110|advanced installation"></a>Advanced Installation<a id="sthref365" name="sthref365"></a></h1>
+<p>This chapter describes how to perform an advanced installation of Oracle Application Server. The following topics are covered:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CIHGIDCJ">Section 5.1, "What Components Are Installed?"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHDCGIJ">Section 5.2, "Advanced Installation Steps"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHEBCIB">Section 5.3, "Installation Screens"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHDGJEJ">Section 5.4, "Troubleshooting Information"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHFEHDI">Section 5.5, "What Should I Do Next?"</a>
+</p>
+</li>
+</ul><a id="CIHGIDCJ" name="CIHGIDCJ"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref366" name="sthref366"></a>
+<h2 class="sect1"><span class="secnum">5.1 </span>What Components Are Installed?<a id="sthref367" name="sthref367"></a>
+</h2>
+<p>During the Advanced Installation, you have four installation choices: J2EE Server and Process Management, Web Server and Process Management, Integrated Web Server, J2EE Server and Process Management, and Oracle TopLink.
+</p>
+<p>The following components are installed in a J2EE Server and Process Management installation:
+</p>
+<ul>
+<li type="disc">
+<p>Oracle Containers for J2EE
+</p>
+<p>This component provides a complete Java 2 Enterprise Edition (J2EE) environment for developing Java applications.
+</p>
+</li>
+<li type="disc">
+<p>Oracle Enterprise Manager 10<span class="italic">g</span> Application Server Control
+</p>
+<p>This component is used for Web-based management of Oracle Application Server.
+</p>
+</li>
+<li type="disc">
+<p>Oracle Process Manager and Notification Server
+</p>
+</li>
+</ul>
+<p>The following components are installed in a Web Server and Process Management installation:
+</p>
+<ul>
+<li type="disc">
+<p>Oracle HTTP Server
+</p>
+<p>This is the Web server component of Oracle Application Server.
+</p>
+</li>
+<li type="disc">
+<p>Oracle Process Manager and Notification Server
+</p>
+</li>
+</ul>
+<p>An Integrated Web Server, J2EE Server and Process Management installation contains the components from both the J2EE Server and Process Management and Web Server and Process Management installations.
+</p>
+<p>In an Oracle TopLink installation, only Oracle TopLink Foundation Library is installed.
+</p>
+</div><!-- class="sect1" -->
+<a id="CIHDCGIJ" name="CIHDCGIJ"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref368" name="sthref368"></a>
+<h2 class="sect1"><span class="secnum">5.2 </span>Advanced Installation Steps<a id="sthref369" name="sthref369"></a><a id="sthref370" name="sthref370"></a>
+</h2>
+<p>This section describes the procedure for the advanced installation of Oracle Application Server. It contains the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CIHIHFAB">Section 5.2.1, "Before You Begin"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHCGJCG">Section 5.2.2, "Installing J2EE Server and Process Management"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHFCFIB">Section 5.2.3, "Installing Web Server and Process Management"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHIEBFI">Section 5.2.4, "Installing Integrated Web Server, J2EE Server and Process Management"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHCDBCD">Section 5.2.5, "Installing Oracle TopLink"</a>
+</p>
+</li>
+</ul><a id="CIHIHFAB" name="CIHIHFAB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref371" name="sthref371"></a>
+<h3 class="sect2"><span class="secnum">5.2.1 </span>Before You Begin
+</h3>
+<p>Before you begin installing Oracle Application Server, ensure that you have read both <a href="reqs.htm#BABFDIBC">Chapter 2, "Requirements"</a> and <a href="basic.htm#CHDHCJEC">Chapter 3, "Things You Should Know Before Starting the Installation"</a>. These chapters contain important information with which you must be familiar before you begin the installation so you can avoid potential problems during the installation.
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHCGJCG" name="CIHCGJCG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref372" name="sthref372"></a>
+<h3 class="sect2"><span class="secnum">5.2.2 </span>Installing J2EE Server and Process Management<a id="sthref373" name="sthref373"></a><a id="sthref374" name="sthref374"></a><a id="sthref375" name="sthref375"></a>
+</h3>
+<p><a href="#CIHFCACB">Table 5-1</a> provides a brief summary of the steps necessary to install J2EE Server and Process Management with an advanced installation. 
+</p>
+<div class="tblformalwide">
+<a id="sthref376" name="sthref376"></a><a id="CIHFCACB" name="CIHFCACB"></a>
+<p class="titleintable">Table 5-1 Steps for Installing J2EE Server and Process Management</p>
+<table class="FormalWide" title="Steps for Installing J2EE Server and Process Management" summary="installing J2EE and Web Cache with OracleAS Database-Based Clusters and Identity Management Access" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2">
+<br />
+</th>
+<th align="left" valign="bottom" id="r1c2-t2">Screen
+</th>
+<th align="left" valign="bottom" id="r1c3-t2">Action
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p><span class="bold">1.</span>
+</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p>--
+</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c3-t2">
+<p>Start Oracle Universal Installer.
+</p>
+<p>For more information, refer to <a href="basic.htm#BABEIGGD">Section 3.11, "Starting theOracle Universal Installer"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p><span class="bold">2.</span>
+</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p>Oracle Application Server 10g 10.1.3.0.0 Installation
+</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c3-t2">
+<p>Specify the Oracle Home in the <span class="bold">Installation Directory</span> field.
+</p>
+<p>Select <span class="bold">Advanced Installation Mode</span>.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHJIFGI">Section 5.3.1, "Oracle Application Server 10g 10.1.3.0.0 Installation Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t2" headers="r1c1-t2">
+<p><span class="bold">3.</span>
+</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c2-t2">
+<p>Select Installation Type
+</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c3-t2">
+<p>Select <span class="bold">J2EE Server and Process Management</span>.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHIHJBA">Section 5.3.2, "Select Installation Type Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t2" headers="r1c1-t2">
+<p><span class="bold">4.</span>
+</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c2-t2">
+<p>Specify Port Configuration Options
+</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c3-t2">
+<p>Select whether you want to configure ports automatically or manually by specifying the location of a port configuration file.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHBFIIB">Section 5.3.3, "Specify Port Configuration Options Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t2" headers="r1c1-t2">
+<p><span class="bold">5.</span>
+</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c2-t2">
+<p>Administration Instance Settings
+</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c3-t2">
+<p>Select <span class="bold">Configure this as an Administration OC4J instance</span> if you would like to run Application Server Control on this instance.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHCBCIC">Section 5.3.4, "Administration Instance Settings"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t2" headers="r1c1-t2">
+<p><span class="bold">6.</span>
+</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c2-t2">
+<p>Administration Settings
+</p>
+</td>
+<td align="left" headers="r7c1-t2 r1c3-t2">
+<p>Specify the Oracle Application Server instance name and <code>oc4jadmin</code> password.
+</p>
+<p>Specify the default Oracle Containers for J2EE instance name.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHHJDJG">Section 5.3.5, "Administration Settings Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t2" headers="r1c1-t2">
+<p><span class="bold">7.</span>
+</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c2-t2">
+<p>Cluster Topology Configuration
+</p>
+</td>
+<td align="left" headers="r8c1-t2 r1c3-t2">
+<p> Select if you would like to configure this instance to be part of an Oracle Application Server cluster topology. 
+</p>
+<p>If you select <span class="bold">Configure this OC4J instance to be part of an Oracle Application Server cluster topology</span>, specify the <span class="bold">IP Address </span>and <span class="bold">Port</span>, and select <span class="bold">Access this OC4J Instance from a separate Oracle HTTP Server</span> if you want the default web site to run in AJP protocol mode.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHDIGCC">Section 5.3.7, "Cluster Topology Configuration Screen - J2EE Server and Process Management Install Type"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t2" headers="r1c1-t2">
+<p><span class="bold">8.</span> 
+</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c2-t2">
+<p>Summary
+</p>
+</td>
+<td align="left" headers="r9c1-t2 r1c3-t2">
+<p>Verify that the installation parameters shown on the screen are correct.
+</p>
+<p>Click <span class="bold">Install</span>.
+</p>
+<p>For more information, refer to <a href="#CIHIJDJG">Section 5.3.10, "Summary Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t2" headers="r1c1-t2">
+<p><span class="bold">9.</span>
+</p>
+</td>
+<td align="left" headers="r10c1-t2 r1c2-t2">
+<p>Install
+</p>
+</td>
+<td align="left" headers="r10c1-t2 r1c3-t2">
+<p>None. This screen shows the progress of the installation.
+</p>
+<p>For more information, refer to <a href="#CIHGBBAG">Section 5.3.11, "Install Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t2" headers="r1c1-t2">
+<p><span class="bold">10.</span>
+</p>
+</td>
+<td align="left" headers="r11c1-t2 r1c2-t2">
+<p>Configuration Assistants
+</p>
+</td>
+<td align="left" headers="r11c1-t2 r1c3-t2">
+<p>None, unless you want to stop the installation of a particular configuration assistant.
+</p>
+<p>For more information, refer to <a href="#CIHDFJEH">Section 5.3.12, "Configuration Assistants Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t2" headers="r1c1-t2">
+<p><span class="bold">11.</span>
+</p>
+</td>
+<td align="left" headers="r12c1-t2 r1c2-t2">
+<p>End of Installation
+</p>
+</td>
+<td align="left" headers="r12c1-t2 r1c3-t2">
+<p>None. This screen tells you whether or not your installation was successful, and provides a link to the product release notes.
+</p>
+<p>For more information, refer to <a href="#CIHEBJHD">Section 5.3.13, "End of Installation Screen"</a>.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblformalwide" -->
+
+</div><!-- class="sect2" -->
+<a id="CIHFCFIB" name="CIHFCFIB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref377" name="sthref377"></a>
+<h3 class="sect2"><span class="secnum">5.2.3 </span>Installing Web Server and Process Management<a id="sthref378" name="sthref378"></a><a id="sthref379" name="sthref379"></a><a id="sthref380" name="sthref380"></a>
+</h3>
+<p><a href="#CIHEBIGG">Table 5-2</a> provides a brief summary of the steps necessary to install Web Server and Process Management with an advanced installation. 
+</p>
+<div class="tblformalwide">
+<a id="sthref381" name="sthref381"></a><a id="CIHEBIGG" name="CIHEBIGG"></a>
+<p class="titleintable">Table 5-2 Steps for Installing Web Server and Process Management</p>
+<table class="FormalWide" title="Steps for Installing Web Server and Process Management" summary="installing J2EE and Web Cache with OracleAS Database-Based Clusters and Identity Management Access" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t3">
+<br />
+</th>
+<th align="left" valign="bottom" id="r1c2-t3">Screen
+</th>
+<th align="left" valign="bottom" id="r1c3-t3">Action
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t3" headers="r1c1-t3">
+<p><span class="bold">1.</span>
+</p>
+</td>
+<td align="left" headers="r2c1-t3 r1c2-t3">
+<p>--
+</p>
+</td>
+<td align="left" headers="r2c1-t3 r1c3-t3">
+<p>Start Oracle Universal Installer.
+</p>
+<p>For more information, refer to <a href="basic.htm#BABEIGGD">Section 3.11, "Starting theOracle Universal Installer"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t3" headers="r1c1-t3">
+<p><span class="bold">2.</span>
+</p>
+</td>
+<td align="left" headers="r3c1-t3 r1c2-t3">
+<p>Oracle Application Server 10g 10.1.3.0.0 Installation
+</p>
+</td>
+<td align="left" headers="r3c1-t3 r1c3-t3">
+<p>Specify the Oracle Home in the <span class="bold">Installation Directory</span> field.
+</p>
+<p>Select <span class="bold">Advanced Installation Mode</span>.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHJIFGI">Section 5.3.1, "Oracle Application Server 10g 10.1.3.0.0 Installation Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t3" headers="r1c1-t3">
+<p><span class="bold">3.</span>
+</p>
+</td>
+<td align="left" headers="r4c1-t3 r1c2-t3">
+<p>Select Installation Type
+</p>
+</td>
+<td align="left" headers="r4c1-t3 r1c3-t3">
+<p>Select <span class="bold">Web Server and Process Management</span>.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHIHJBA">Section 5.3.2, "Select Installation Type Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t3" headers="r1c1-t3">
+<p><span class="bold">4.</span>
+</p>
+</td>
+<td align="left" headers="r5c1-t3 r1c2-t3">
+<p>Specify Port Configuration Options
+</p>
+</td>
+<td align="left" headers="r5c1-t3 r1c3-t3">
+<p>Select whether you want to configure ports automatically or manually by specifying the location of a port configuration file.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHBFIIB">Section 5.3.3, "Specify Port Configuration Options Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t3" headers="r1c1-t3">
+<p><span class="bold">5.</span>
+</p>
+</td>
+<td align="left" headers="r6c1-t3 r1c2-t3">
+<p>Specify Instance Name
+</p>
+</td>
+<td align="left" headers="r6c1-t3 r1c3-t3">
+<p>Specify the Oracle Application Server instance name.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHGJJEE">Section 5.3.6, "Specify Instance Name Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t3" headers="r1c1-t3">
+<p><span class="bold">6.</span>
+</p>
+</td>
+<td align="left" headers="r7c1-t3 r1c2-t3">
+<p>Cluster Topology Configuration
+</p>
+</td>
+<td align="left" headers="r7c1-t3 r1c3-t3">
+<p> Select if you would like to configure this instance to be part of an Oracle Application Server cluster topology. 
+</p>
+<p>If you select <span class="bold">Configure this HTTP Server instance to be part of an Oracle Application Server cluster</span>, specify the <span class="bold">IP Address </span>and <span class="bold">Port</span>.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHGJJFF">Section 5.3.8, "Cluster Topology Configuration Screen - Web Server and Process Management Install Type"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t3" headers="r1c1-t3">
+<p><span class="bold">7.</span> 
+</p>
+</td>
+<td align="left" headers="r8c1-t3 r1c2-t3">
+<p>Summary
+</p>
+</td>
+<td align="left" headers="r8c1-t3 r1c3-t3">
+<p>Verify that the installation parameters shown on the screen are correct.
+</p>
+<p>Click <span class="bold">Install</span>.
+</p>
+<p>For more information, refer to <a href="#CIHIJDJG">Section 5.3.10, "Summary Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t3" headers="r1c1-t3">
+<p><span class="bold">8.</span>
+</p>
+</td>
+<td align="left" headers="r9c1-t3 r1c2-t3">
+<p>Install
+</p>
+</td>
+<td align="left" headers="r9c1-t3 r1c3-t3">
+<p>None. This screen shows the progress of the installation.
+</p>
+<p>For more information, refer to <a href="#CIHGBBAG">Section 5.3.11, "Install Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t3" headers="r1c1-t3">
+<p><span class="bold">9.</span>
+</p>
+</td>
+<td align="left" headers="r10c1-t3 r1c2-t3">
+<p>Configuration Assistants
+</p>
+</td>
+<td align="left" headers="r10c1-t3 r1c3-t3">
+<p>None, unless you want to stop the installation of a particular configuration assistant.
+</p>
+<p>For more information, refer to <a href="#CIHDFJEH">Section 5.3.12, "Configuration Assistants Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t3" headers="r1c1-t3">
+<p><span class="bold">10.</span>
+</p>
+</td>
+<td align="left" headers="r11c1-t3 r1c2-t3">
+<p>End of Installation
+</p>
+</td>
+<td align="left" headers="r11c1-t3 r1c3-t3">
+<p>None. This screen tells you whether or not your installation was successful, and provides a link to the product release notes.
+</p>
+<p>For more information, refer to <a href="#CIHEBJHD">Section 5.3.13, "End of Installation Screen"</a>.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblformalwide" -->
+
+</div><!-- class="sect2" -->
+<a id="CIHIEBFI" name="CIHIEBFI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref382" name="sthref382"></a>
+<h3 class="sect2"><span class="secnum">5.2.4 </span>Installing Integrated Web Server, J2EE Server and Process Management<a id="sthref383" name="sthref383"></a><a id="sthref384" name="sthref384"></a><a id="sthref385" name="sthref385"></a>
+</h3>
+<p><a href="#CIHEEHAG">Table 5-3</a> provides a brief summary of the steps necessary to install Integrated Web Server, J2EE Server and Process Management with an advanced installation. 
+</p>
+<div class="tblformalwide">
+<a id="sthref386" name="sthref386"></a><a id="CIHEEHAG" name="CIHEEHAG"></a>
+<p class="titleintable">Table 5-3 Steps for Installing Integrated Web Server, J2EE Server and Process Management</p>
+<table class="FormalWide" title="Steps for Installing Integrated Web Server, J2EE Server and Process Management" summary="installing J2EE and Web Cache with OracleAS Database-Based Clusters and Identity Management Access" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t4">
+<br />
+</th>
+<th align="left" valign="bottom" id="r1c2-t4">Screen
+</th>
+<th align="left" valign="bottom" id="r1c3-t4">Action
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t4" headers="r1c1-t4">
+<p><span class="bold">1.</span>
+</p>
+</td>
+<td align="left" headers="r2c1-t4 r1c2-t4">
+<p>--
+</p>
+</td>
+<td align="left" headers="r2c1-t4 r1c3-t4">
+<p>Start Oracle Universal Installer.
+</p>
+<p>For more information, refer to <a href="basic.htm#BABEIGGD">Section 3.11, "Starting theOracle Universal Installer"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t4" headers="r1c1-t4">
+<p><span class="bold">2.</span>
+</p>
+</td>
+<td align="left" headers="r3c1-t4 r1c2-t4">
+<p>Oracle Application Server 10g 10.1.3.0.0 Installation
+</p>
+</td>
+<td align="left" headers="r3c1-t4 r1c3-t4">
+<p>Specify the Oracle Home in the <span class="bold">Installation Directory</span> field.
+</p>
+<p>Select <span class="bold">Advanced Installation Mode</span>.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHJIFGI">Section 5.3.1, "Oracle Application Server 10g 10.1.3.0.0 Installation Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t4" headers="r1c1-t4">
+<p><span class="bold">3.</span>
+</p>
+</td>
+<td align="left" headers="r4c1-t4 r1c2-t4">
+<p>Select Installation Type
+</p>
+</td>
+<td align="left" headers="r4c1-t4 r1c3-t4">
+<p>Select <span class="bold">Integrated Web Server, J2EE Server and Process Management</span>.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHIHJBA">Section 5.3.2, "Select Installation Type Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t4" headers="r1c1-t4">
+<p><span class="bold">4.</span>
+</p>
+</td>
+<td align="left" headers="r5c1-t4 r1c2-t4">
+<p>Specify Port Configuration Options
+</p>
+</td>
+<td align="left" headers="r5c1-t4 r1c3-t4">
+<p>Select whether you want to configure ports automatically or manually by specifying the location of a port configuration file.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHBFIIB">Section 5.3.3, "Specify Port Configuration Options Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t4" headers="r1c1-t4">
+<p><span class="bold">5.</span>
+</p>
+</td>
+<td align="left" headers="r6c1-t4 r1c2-t4">
+<p>Administration Instance Settings
+</p>
+</td>
+<td align="left" headers="r6c1-t4 r1c3-t4">
+<p>Select <span class="bold">Configure this as an Administration OC4J instance</span> if you would like to run Application Server Control on this instance.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHCBCIC">Section 5.3.4, "Administration Instance Settings"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t4" headers="r1c1-t4">
+<p><span class="bold">6.</span>
+</p>
+</td>
+<td align="left" headers="r7c1-t4 r1c2-t4">
+<p>Administration Settings
+</p>
+</td>
+<td align="left" headers="r7c1-t4 r1c3-t4">
+<p>Specify the Oracle Application Server instance name and <code>oc4jadmin</code> password.
+</p>
+<p>Specify the default Oracle Containers for J2EE instance name.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHHJDJG">Section 5.3.5, "Administration Settings Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t4" headers="r1c1-t4">
+<p><span class="bold">7.</span>
+</p>
+</td>
+<td align="left" headers="r8c1-t4 r1c2-t4">
+<p>Cluster Topology Configuration
+</p>
+</td>
+<td align="left" headers="r8c1-t4 r1c3-t4">
+<p> Select if you would like to configure this instance to be part of an Oracle Application Server cluster topology. 
+</p>
+<p>If you select <span class="bold">Configure this instance to be part of an Oracle Application Server cluster topology</span>, specify the <span class="bold">IP Address </span>and <span class="bold">Port</span>.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHBAAGA">Section 5.3.9, "Cluster Topology Configuration Screen - Integrated Web Server, J2EE Server and Process Management Install Type"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t4" headers="r1c1-t4">
+<p><span class="bold">8.</span> 
+</p>
+</td>
+<td align="left" headers="r9c1-t4 r1c2-t4">
+<p>Summary
+</p>
+</td>
+<td align="left" headers="r9c1-t4 r1c3-t4">
+<p>Verify that the installation parameters shown on the screen are correct.
+</p>
+<p>Click <span class="bold">Install</span>.
+</p>
+<p>For more information, refer to <a href="#CIHIJDJG">Section 5.3.10, "Summary Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t4" headers="r1c1-t4">
+<p><span class="bold">9.</span>
+</p>
+</td>
+<td align="left" headers="r10c1-t4 r1c2-t4">
+<p>Install
+</p>
+</td>
+<td align="left" headers="r10c1-t4 r1c3-t4">
+<p>None. This screen shows the progress of the installation.
+</p>
+<p>For more information, refer to <a href="#CIHGBBAG">Section 5.3.11, "Install Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t4" headers="r1c1-t4">
+<p><span class="bold">10</span>
+</p>
+</td>
+<td align="left" headers="r11c1-t4 r1c2-t4">
+<p>Configuration Assistants
+</p>
+</td>
+<td align="left" headers="r11c1-t4 r1c3-t4">
+<p>None, unless you want to stop the installation of a particular configuration assistant.
+</p>
+<p>For more information, refer to <a href="#CIHDFJEH">Section 5.3.12, "Configuration Assistants Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t4" headers="r1c1-t4">
+<p><span class="bold">11.</span>
+</p>
+</td>
+<td align="left" headers="r12c1-t4 r1c2-t4">
+<p>End of Installation
+</p>
+</td>
+<td align="left" headers="r12c1-t4 r1c3-t4">
+<p>None. This screen tells you whether or not your installation was successful, and provides a link to the product release notes.
+</p>
+<p>For more information, refer to <a href="#CIHEBJHD">Section 5.3.13, "End of Installation Screen"</a>.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblformalwide" -->
+
+</div><!-- class="sect2" -->
+<a id="CIHCDBCD" name="CIHCDBCD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref387" name="sthref387"></a>
+<h3 class="sect2"><span class="secnum">5.2.5 </span>Installing Oracle TopLink<a id="sthref388" name="sthref388"></a><a id="sthref389" name="sthref389"></a><a id="sthref390" name="sthref390"></a>
+</h3>
+<p><a href="#CIHBHFAD">Table 5-4</a> provides a brief summary of the steps necessary to install Oracle TopLink with an advanced installation. 
+</p>
+<div class="tblformalwide">
+<a id="sthref391" name="sthref391"></a><a id="CIHBHFAD" name="CIHBHFAD"></a>
+<p class="titleintable">Table 5-4 Steps for Installing Oracle TopLink</p>
+<table class="FormalWide" title="Steps for Installing Oracle TopLink" summary="installing J2EE and Web Cache with OracleAS Database-Based Clusters and Identity Management Access" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5">
+<br />
+</th>
+<th align="left" valign="bottom" id="r1c2-t5">Screen
+</th>
+<th align="left" valign="bottom" id="r1c3-t5">Action
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p><span class="bold">1.</span>
+</p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>--
+</p>
+</td>
+<td align="left" headers="r2c1-t5 r1c3-t5">
+<p>Start Oracle Universal Installer.
+</p>
+<p>For more information, refer to <a href="basic.htm#BABEIGGD">Section 3.11, "Starting theOracle Universal Installer"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p><span class="bold">2.</span>
+</p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>Oracle Application Server 10g 10.1.3.0.0 Installation
+</p>
+</td>
+<td align="left" headers="r3c1-t5 r1c3-t5">
+<p>Specify the Oracle Home in the <span class="bold">Installation Directory</span> field.
+</p>
+<p>Select <span class="bold">Advanced Installation Mode</span>.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHJIFGI">Section 5.3.1, "Oracle Application Server 10g 10.1.3.0.0 Installation Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
+<p><span class="bold">3.</span>
+</p>
+</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">
+<p>Select Installation Type
+</p>
+</td>
+<td align="left" headers="r4c1-t5 r1c3-t5">
+<p>Select <span class="bold">Oracle TopLink</span>.
+</p>
+<p>Click <span class="bold">Next</span>.
+</p>
+<p>For more information, refer to <a href="#CIHIHJBA">Section 5.3.2, "Select Installation Type Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t5" headers="r1c1-t5">
+<p><span class="bold">4.</span> 
+</p>
+</td>
+<td align="left" headers="r5c1-t5 r1c2-t5">
+<p>Summary
+</p>
+</td>
+<td align="left" headers="r5c1-t5 r1c3-t5">
+<p>Verify that the installation parameters shown on the screen are correct.
+</p>
+<p>Click <span class="bold">Install</span>.
+</p>
+<p>For more information, refer to <a href="#CIHIJDJG">Section 5.3.10, "Summary Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t5" headers="r1c1-t5">
+<p><span class="bold">5.</span>
+</p>
+</td>
+<td align="left" headers="r6c1-t5 r1c2-t5">
+<p>Install
+</p>
+</td>
+<td align="left" headers="r6c1-t5 r1c3-t5">
+<p>None. This screen shows the progress of the installation.
+</p>
+<p>For more information, refer to <a href="#CIHGBBAG">Section 5.3.11, "Install Screen"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t5" headers="r1c1-t5">
+<p><span class="bold">6.</span>
+</p>
+</td>
+<td align="left" headers="r7c1-t5 r1c2-t5">
+<p>End of Installation
+</p>
+</td>
+<td align="left" headers="r7c1-t5 r1c3-t5">
+<p>None. This screen tells you whether or not your installation was successful, and provides a link to the product release notes.
+</p>
+<p>For more information, refer to <a href="#CIHEBJHD">Section 5.3.13, "End of Installation Screen"</a>.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblformalwide" -->
+
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CIHEBCIB" name="CIHEBCIB"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref392" name="sthref392"></a>
+<h2 class="sect1"><span class="secnum">5.3 </span>Installation Screens
+</h2>
+<p>This section describes the various Oracle Universal Installer (OUI) installation screens for Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3). It contains the following sections:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CIHJIFGI">Section 5.3.1, "Oracle Application Server 10g 10.1.3.0.0 Installation Screen"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHIHJBA">Section 5.3.2, "Select Installation Type Screen"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHBFIIB">Section 5.3.3, "Specify Port Configuration Options Screen"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHCBCIC">Section 5.3.4, "Administration Instance Settings"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHHJDJG">Section 5.3.5, "Administration Settings Screen"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHGJJEE">Section 5.3.6, "Specify Instance Name Screen"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHDIGCC">Section 5.3.7, "Cluster Topology Configuration Screen - J2EE Server and Process Management Install Type"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHGJJFF">Section 5.3.8, "Cluster Topology Configuration Screen - Web Server and Process Management Install Type"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHBAAGA">Section 5.3.9, "Cluster Topology Configuration Screen - Integrated Web Server, J2EE Server and Process Management Install Type"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHIJDJG">Section 5.3.10, "Summary Screen"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHGBBAG">Section 5.3.11, "Install Screen"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHDFJEH">Section 5.3.12, "Configuration Assistants Screen"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHEBJHD">Section 5.3.13, "End of Installation Screen"</a>
+</p>
+</li>
+</ul><a id="CIHJIFGI" name="CIHJIFGI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref393" name="sthref393"></a>
+<h3 class="sect2"><span class="secnum">5.3.1 </span>Oracle Application Server 10g 10.1.3.0.0 Installation Screen
+</h3>
+<p>This is the first screen in the installation process. You need to specify the installation directory (or Oracle home) and whether you want to perform a basic or advanced installation.
+</p>
+<div class="figure">
+<a id="sthref394" name="sthref394"></a>
+
+<p class="titleinfigure">Figure 5-1 Oracle Application Server 10g 10.1.3.0.0 Installation Screen</p>
+<img src="img/installer_welcome_advanced.gif" alt="Description of Figure 5-1  follows" title="Description of Figure 5-1  follows"/>
+<br /><a id="sthref395" name="sthref395" href="img_text/installer_welcome_advanced.htm">Description of  "Figure 5-1 Oracle Application Server 10g 10.1.3.0.0 Installation Screen"</a>
+<br /><br />
+</div><!-- class="figure" -->
+<a id="sthref396" name="sthref396"></a>
+<p class="subhead2">Installation Directory</p>
+<p>Specify the full path of the installation directory or Oracle home. This is the directory where you want to install the software. For more information about the Oracle home, refer to <a href="basic.htm#CHDCECEI">Section 3.1, "Oracle Home Directory"</a>.
+</p><a id="sthref397" name="sthref397"></a>
+<p class="subhead2">Select Basic or Advanced Installation Mode</p>
+<p>In this chapter you are performing an advanced installation of Oracle Application Server, so select <span class="bold">Advanced Installation Mode</span> and click <span class="bold">Next</span>.
+</p>
+<p>If you want to perform a basic installation, see <a href="basic_install.htm#BABCHEJI">Chapter 4, "Basic Installation"</a>.
+</p>
+<p>After you click the <span class="bold">Next</span> button, the following warning appears:
+</p>
+<div class="figure">
+<a id="sthref398" name="sthref398"></a>
+
+<p class="titleinfigure">Figure 5-2 Warning Screen</p>
+<img src="img/installer_warning.gif" alt="Description of Figure 5-2  follows" title="Description of Figure 5-2  follows"/>
+<br /><a id="sthref399" name="sthref399" href="img_text/installer_warning.htm">Description of  "Figure 5-2 Warning Screen"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p>Click <span class="bold">Yes</span> to continue with the advanced installation.
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHIHJBA" name="CIHIHJBA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref400" name="sthref400"></a>
+<h3 class="sect2"><span class="secnum">5.3.2 </span>Select Installation Type Screen
+</h3>
+<p>Select the product you want to install, then click <span class="bold">Next</span>.
+</p>
+<div class="figure">
+<a id="CIHBDCCA" name="CIHBDCCA"></a><a id="sthref401" name="sthref401"></a>
+
+<p class="titleinfigure">Figure 5-3 Oracle Universal Installer: Select Installation Type Screen</p>
+<img src="img/installer_type.gif" alt="Description of Figure 5-3  follows" title="Description of Figure 5-3  follows"/>
+<br /><a id="sthref402" name="sthref402" href="img_text/installer_type.htm">Description of  "Figure 5-3 Oracle Universal Installer: Select Installation Type Screen"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p>To learn what components are installed with the different installation types, see <a href="#CIHGIDCJ">Section 5.1, "What Components Are Installed?"</a>.
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHBFIIB" name="CIHBFIIB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref403" name="sthref403"></a>
+<h3 class="sect2"><span class="secnum">5.3.3 </span>Specify Port Configuration Options Screen
+</h3>
+<p>Select the method in which you want to configure ports.
+</p>
+<div class="figure">
+<a id="sthref404" name="sthref404"></a>
+
+<p class="titleinfigure">Figure 5-4 Oracle Universal Installer: Specify Port Configuration Options Screen</p>
+<img src="img/installer_ports.gif" alt="Description of Figure 5-4  follows" title="Description of Figure 5-4  follows"/>
+<br /><a id="sthref405" name="sthref405" href="img_text/installer_ports.htm">Description of  "Figure 5-4 Oracle Universal Installer: Specify Port Configuration Options Screen"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p>Click <span class="bold">Automatic</span> if you want to use all default port numbers. Refer to <a href="ports.htm#CHDFIGAE">Appendix B</a> for a list of all the default port numbers and ranges.
+</p>
+<p>Click <span class="bold">Manual</span> if you want to customize your port numbers. You must supply the full path and file name to an existing port configuration file containing the port numbers you want to use for each component. Typically, this port configuration file is called <code>staticports.ini</code>, although any name is valid as long as the format of the file is correct. Refer to <a href="reqs.htm#CIHHAFDF">Section 2.5.3, "Using Custom Port Numbers (the "Static Ports" Feature)"</a> for more information about the staticports.ini file that is shipped with the product. 
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHCBCIC" name="CIHCBCIC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref406" name="sthref406"></a>
+<h3 class="sect2"><span class="secnum">5.3.4 </span>Administration Instance Settings
+</h3>
+<p>Select whether you would like to run Application Server Control on this instance.
+</p>
+<div class="figure">
+<a id="sthref407" name="sthref407"></a>
+
+<p class="titleinfigure">Figure 5-5 Oracle Universal Installer: Administration Instance Settings Screen</p>
+<img src="img/installer_manage.gif" alt="Description of Figure 5-5  follows" title="Description of Figure 5-5  follows"/>
+<br /><a id="sthref408" name="sthref408" href="img_text/installer_manage.htm">Description of  "Figure 5-5 Oracle Universal Installer: Administration Instance Settings Screen"</a>
+<br /><br />
+</div><!-- class="figure" -->
+<a id="sthref409" name="sthref409"></a>
+<p class="subhead2">Configure this as an Administration OC4J instance</p>
+<p>Select this option if you want to run Application Server Control on this system to provide management capabilities.
+</p>
+<p>If you are using a single instance topology, you should select this option to be able to manage the instance.
+</p>
+<p>If you are using a cluster topology, you should select this option if you want this instance to administer the cluster using Application Server Control. In a cluster topology, only one instance should be configured as an Administration OC4J instance. Note that the Administration OC4J instance for the cluster does not have to be the first installed node.
+</p>
+<p>If you do not select <span class="bold">Configure this as an Administration OC4J instance</span>, then Application Server Control will be configured to not run on this system. This Application Server instance will need to be managed by Application Server Control running on another OC4J instance within the cluster topology. You can configure the Application Server Control to run on this instance following installation if required. See <!A HREF="xlinkSRC ASADM0031">"Enabling Remote Management by Setting Administrator Credentials"</a> in the <span class="italic">Oracle Application Server Administrator's Guide</span> for details.
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHHJDJG" name="CIHHJDJG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref410" name="sthref410"></a>
+<h3 class="sect2"><span class="secnum">5.3.5 </span>Administration Settings Screen
+</h3>
+<p>Specify the Oracle Application Server instance name, <code>oc4jadmin</code> password, and the OC4J instance name.
+</p>
+<div class="figure">
+<a id="sthref411" name="sthref411"></a>
+
+<p class="titleinfigure">Figure 5-6 Oracle Universal Installer: Administration Settings Screen</p>
+<img src="img/installer_admin.gif" alt="Description of Figure 5-6  follows" title="Description of Figure 5-6  follows"/>
+<br /><a id="sthref412" name="sthref412" href="img_text/installer_admin.htm">Description of  "Figure 5-6 Oracle Universal Installer: Administration Settings Screen"</a>
+<br /><br />
+</div><!-- class="figure" -->
+<a id="sthref413" name="sthref413"></a>
+<p class="subhead2">AS Instance Name</p>
+<p>The AS Instance Name uniquely identifies this Oracle Application Server instance.
+</p>
+<p>For more information about instance names, see <a href="basic.htm#CHDDGCGA">Section 3.4, "Oracle Application Server Instances and Instance Names"</a>. 
+</p><a id="sthref414" name="sthref414"></a>
+<p class="subhead2">Default OC4J Instance Administrator Account Username</p>
+<p>The administrative username for Oracle Application Server instances is set to <code>oc4jadmin</code> and cannot be changed. To manage Oracle Application Server instances using Enterprise Manager, log in as the <code>oc4jadmin</code> user.
+</p>
+<p>For more information about the <code>oc4jadmin</code> user, see <a href="basic.htm#CHDJCIJH">Section 3.5, "The oc4jadmin User and Restrictions on its Password"</a>.
+</p><a id="sthref415" name="sthref415"></a>
+<p class="subhead2">Administrator Account Password and Confirm Administrator Account Password</p>
+<p>On a host, you can install multiple Oracle Application Server instances, each with its own unique instance name, but the name of the administrative user is <code>oc4jadmin</code> for all instances. You can specify a different password for the <code>oc4jadmin </code>user for each instance.
+</p>
+<p>For more information about the <code>oc4jadmin</code> password, see <a href="basic.htm#CHDJCIJH">Section 3.5, "The oc4jadmin User and Restrictions on its Password"</a>.
+</p><a id="sthref416" name="sthref416"></a>
+<p class="subhead2">OC4J Instance Name</p>
+<p>The <span class="bold">OC4J instance name</span> identifies the default OC4J instance created by the installer.
+</p>
+<p>OC4J instance names can consist only of the alphanumeric characters (<code>A</code>-<code>Z</code>, <code>a</code>-<code>z</code>, <code>0</code>-<code>9</code>) and the underscore character (<code>&#095;</code>).
+</p>
+<p>There is no maximum length for an OC4J instance name. 
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHGJJEE" name="CIHGJJEE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref417" name="sthref417"></a>
+<h3 class="sect2"><span class="secnum">5.3.6 </span>Specify Instance Name Screen
+</h3>
+<p>This screen only appears if you select the <span class="bold">Web Server and Process Management</span> option on the Select Installation Type screen shown in <a href="#CIHBDCCA">Figure 5-3</a>.
+</p>
+<div class="figure">
+<a id="sthref418" name="sthref418"></a>
+
+<p class="titleinfigure">Figure 5-7 Oracle Universal Installer: Specify Instance Name Screen</p>
+<img src="img/installer_name.gif" alt="Description of Figure 5-7  follows" title="Description of Figure 5-7  follows"/>
+<br /><a id="sthref419" name="sthref419" href="img_text/installer_name.htm">Description of  "Figure 5-7 Oracle Universal Installer: Specify Instance Name Screen"</a>
+<br /><br />
+</div><!-- class="figure" -->
+<a id="sthref420" name="sthref420"></a>
+<p class="subhead2">Instance Name</p>
+<p>Specify the Oracle Application Server instance name. The instance name uniquely identifies this Oracle Application Server instance.
+</p>
+<p>For more information about instance names, see <a href="basic.htm#CHDDGCGA">Section 3.4, "Oracle Application Server Instances and Instance Names"</a>. 
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHDIGCC" name="CIHDIGCC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref421" name="sthref421"></a>
+<h3 class="sect2"><span class="secnum">5.3.7 </span>Cluster Topology Configuration Screen - J2EE Server and Process Management Install Type
+</h3>
+<p>Select whether you would like to configure this instance to be part of an Oracle Application Server cluster topology.
+</p>
+<div class="figure">
+<a id="sthref422" name="sthref422"></a>
+
+<p class="titleinfigure">Figure 5-8 Oracle Universal Installer: Cluster Topology Configuration (J2EE)</p>
+<img src="img/installer_cluster_j2ee.gif" alt="Description of Figure 5-8  follows" title="Description of Figure 5-8  follows"/>
+<br /><a id="sthref423" name="sthref423" href="img_text/installer_cluster_j2ee.htm">Description of  "Figure 5-8 Oracle Universal Installer: Cluster Topology Configuration (J2EE)"</a>
+<br /><br />
+</div><!-- class="figure" -->
+<a id="sthref424" name="sthref424"></a>
+<p class="subhead2">Configure this OC4J instance to be part of an Oracle Application Server cluster topology</p>
+<p>Select this option if you would like to configure this instance to be part of an Oracle Application Server cluster topology. You may also configure the cluster topology following installation. See <a href="post.htm#CIHEIDGF">Section 7.5, "Configuring OracleAS Clusters"</a> for details.
+</p><a id="sthref425" name="sthref425"></a>
+<p class="subhead2">Specify the Oracle Application Server cluster discovery address</p>
+<p>Specify the <span class="bold">IP Address</span> and the <span class="bold">Port</span> for the multicast address shared by all the nodes in the cluster.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>
+<ul>
+<li type="disc">
+<p>When installing the first instance of the cluster, you only need to provide the discovery address. You do not need to perform any additional steps before installing the first instance of the cluster.
+</p>
+</li>
+<li type="disc">
+<p>All nodes within the topology must be configured to use the same multicast address and port.
+</p>
+</li>
+<li type="disc">
+<p>The multicast address must be within the valid address range, which is <code>224.0.0.1</code> to <code>239.255.255.255</code>.
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>If you are adding an instance to an existing cluster and do not know the multicast address, find the <code>&lt;discover></code> element in the <code>opmn.xml</code> file on an Oracle Application Server instance in the topology. The <code>&lt;discover></code> element should appear like this:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;notification-server>
+&nbsp;&nbsp;&lt;topology>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;discover list&#061;"&#042;225.0.0.20:8001"/>
+&nbsp;&nbsp;&lt;/topology>
+...
+&lt;/notification-server>
+
+</pre>
+<p>In this example, the IP address is <code>225.0.0.20</code> and the port is <code>8001</code>.
+</p><a id="sthref426" name="sthref426"></a>
+<p class="subhead2">Access this OC4J Instance from a separate Oracle HTTP Server</p>
+<p>Select this option if you want the OC4J instance to accept requests from an Oracle HTTP Server instance. If you select this option, then the OC4J instance will be configured so that its default web site is running in AJP protocol mode and accepts requests from <code>mod&#095;oc4j</code> running in Oracle HTTP Server.
+</p>
+<p>If you do not select this option, the OC4J instance will listen for requests from browser clients using its own HTTP listener. The OC4J instance will be configured so that its default web site is running in HTTP protocol mode and can be directly accessed from browser clients.
+</p>
+<p>You can change how this OC4J instance is accessed following installation. See <!A HREF="xlinkSRC JICON8212">"Configuring Multicast Discovery with opmnctl"</a> in the <span class="italic">Oracle Containers for J2EE Configuration and Administration Guide</span>.
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHGJJFF" name="CIHGJJFF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref427" name="sthref427"></a>
+<h3 class="sect2"><span class="secnum">5.3.8 </span>Cluster Topology Configuration Screen - Web Server and Process Management Install Type
+</h3>
+<p>Select whether you would like to configure this instance to be part of an Oracle Application Server cluster topology.
+</p>
+<div class="figure">
+<a id="sthref428" name="sthref428"></a>
+
+<p class="titleinfigure">Figure 5-9 Oracle Universal Installer: Cluster Topology Configuration (Web Server)</p>
+<img src="img/installer_cluster_http.gif" alt="Description of Figure 5-9  follows" title="Description of Figure 5-9  follows"/>
+<br /><a id="sthref429" name="sthref429" href="img_text/installer_cluster_http.htm">Description of  "Figure 5-9 Oracle Universal Installer: Cluster Topology Configuration (Web Server)"</a>
+<br /><br />
+</div><!-- class="figure" -->
+<a id="sthref430" name="sthref430"></a>
+<p class="subhead2">Configure this Oracle HTTP Server instance to be part of an Oracle Application Server cluster</p>
+<p>Select this option if you would like to configure this instance to be part of an Oracle Application Server cluster. You may also configure the cluster following installation. See <a href="post.htm#CIHEIDGF">Section 7.5, "Configuring OracleAS Clusters"</a> for details.
+</p><a id="sthref431" name="sthref431"></a>
+<p class="subhead2">Specify the Oracle Application Server cluster discovery address</p>
+<p>Specify the <span class="bold">IP Address</span> and the <span class="bold">Port</span> for the multicast address shared by all the nodes in the cluster.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>
+<ul>
+<li type="disc">
+<p>When installing the first instance of the cluster, you only need to provide the discovery address. You do not need to perform any additional steps before installing the first instance of the cluster.
+</p>
+</li>
+<li type="disc">
+<p>All nodes within the topology must be configured to use the same multicast address and port.
+</p>
+</li>
+<li type="disc">
+<p>The multicast address must be within the valid address range, which is <code>224.0.0.1</code> to <code>239.255.255.255</code>.
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>If you are adding an instance to an existing cluster and do not know the multicast address, find the <code>&lt;discover></code> element in the <code>opmn.xml</code> file on an Oracle Application Server instance in the topology. The <code>&lt;discover></code> element should appear like this:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;notification-server>
+&nbsp;&nbsp;&lt;topology>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;discover list&#061;"&#042;225.0.0.20:8001"/>
+&nbsp;&nbsp;&lt;/topology>
+...
+&lt;/notification-server>
+
+</pre>
+<p>In this example, the IP address is <code>225.0.0.20</code> and the port is <code>8001</code>.
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHBAAGA" name="CIHBAAGA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref432" name="sthref432"></a>
+<h3 class="sect2"><span class="secnum">5.3.9 </span>Cluster Topology Configuration Screen - Integrated Web Server, J2EE Server and Process Management Install Type
+</h3>
+<p>Select whether you would like to configure this instance to be part of an Oracle Application Server cluster topology.
+</p>
+<div class="figure">
+<a id="sthref433" name="sthref433"></a>
+
+<p class="titleinfigure">Figure 5-10 Oracle Universal Installer: Cluster Topology Configuration (Integrated)</p>
+<img src="img/installer_cluster_integrate.gif" alt="Description of Figure 5-10  follows" title="Description of Figure 5-10  follows"/>
+<br /><a id="sthref434" name="sthref434" href="img_text/installer_cluster_integrate.htm">Description of  "Figure 5-10 Oracle Universal Installer: Cluster Topology Configuration (Integrated)"</a>
+<br /><br />
+</div><!-- class="figure" -->
+<a id="sthref435" name="sthref435"></a>
+<p class="subhead2">Configure this instance to be part of an Oracle Application Server cluster topology</p>
+<p>Select this option if you would like to configure this instance to be part of an Oracle Application Server cluster topology. You may also configure the cluster topology following installation. See <a href="post.htm#CIHEIDGF">Section 7.5, "Configuring OracleAS Clusters"</a> for details.
+</p><a id="sthref436" name="sthref436"></a>
+<p class="subhead2">Specify the Oracle Application Server cluster discovery address</p>
+<p>Specify the <span class="bold">IP Address</span> and the <span class="bold">Port</span> for the multicast address shared by all the nodes in the cluster.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>
+<ul>
+<li type="disc">
+<p>When installing the first instance of the cluster, you only need to provide the discovery address. You do not need to perform any additional steps before installing the first instance of the cluster.
+</p>
+</li>
+<li type="disc">
+<p>All nodes within the topology must be configured to use the same multicast address and port.
+</p>
+</li>
+<li type="disc">
+<p>The multicast address must be within the valid address range, which is <code>224.0.0.1</code> to <code>239.255.255.255</code>.
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>If you are adding an instance to an existing cluster and do not know the multicast address, find the <code>&lt;discover></code> element in the <code>opmn.xml</code> file on an Oracle Application Server instance in the topology. The <code>&lt;discover></code> element should appear like this:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;notification-server>
+&nbsp;&nbsp;&lt;topology>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;discover list&#061;"&#042;225.0.0.20:8001"/>
+&nbsp;&nbsp;&lt;/topology>
+...
+&lt;/notification-server>
+
+</pre>
+<p>In this example, the IP address is <code>225.0.0.20</code> and the port is <code>8001</code>.
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHIJDJG" name="CIHIJDJG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref437" name="sthref437"></a>
+<h3 class="sect2"><span class="secnum">5.3.10 </span>Summary Screen
+</h3>
+<p>Check and verify that the installation parameters shown in this window are correct.
+</p>
+<div class="figure">
+<a id="sthref438" name="sthref438"></a>
+
+<p class="titleinfigure">Figure 5-11 Oracle Universal Installer: Summary Screen</p>
+<img src="img/installer_summary.gif" alt="Description of Figure 5-11  follows" title="Description of Figure 5-11  follows"/>
+<br /><a id="sthref439" name="sthref439" href="img_text/installer_summary.htm">Description of  "Figure 5-11 Oracle Universal Installer: Summary Screen"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p>Click <span class="bold">Install</span> to begin the installation.
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHGBBAG" name="CIHGBBAG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref440" name="sthref440"></a>
+<h3 class="sect2"><span class="secnum">5.3.11 </span>Install Screen
+</h3>
+<p>This screen shows the progress of the installation.
+</p>
+<div class="figure">
+<a id="sthref441" name="sthref441"></a>
+
+<p class="titleinfigure">Figure 5-12 Oracle Universal Installer: Install Screen</p>
+<img src="img/installer_progress.gif" alt="Description of Figure 5-12  follows" title="Description of Figure 5-12  follows"/>
+<br /><a id="sthref442" name="sthref442" href="img_text/installer_progress.htm">Description of  "Figure 5-12 Oracle Universal Installer: Install Screen"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p>Click <span class="bold">Stop Installation</span> if you want to abort the installation. You will be asked to verify that you want to stop the installation.
+</p>
+<p>This screen also provides the location of the install log, in case you want to view the contents of the log. 
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHDFJEH" name="CIHDFJEH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref443" name="sthref443"></a>
+<h3 class="sect2"><span class="secnum">5.3.12 </span>Configuration Assistants Screen
+</h3>
+<p>This screen shows the name, status, and tool type for tools recommended to be run before completing the installation.
+</p>
+<div class="figure">
+<a id="sthref444" name="sthref444"></a>
+
+<p class="titleinfigure">Figure 5-13 Oracle Universal Installer: Configuration Assistants Screen</p>
+<img src="img/installer_config.gif" alt="Description of Figure 5-13  follows" title="Description of Figure 5-13  follows"/>
+<br /><a id="sthref445" name="sthref445" href="img_text/installer_config.htm">Description of  "Figure 5-13 Oracle Universal Installer: Configuration Assistants Screen"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p>A tool may have one of the following states, as shown in the status column:
+</p>
+<ul>
+<li type="disc">
+<p><span class="bold">Succeeded</span>: The tool ran successfully.
+</p>
+</li>
+<li type="disc">
+<p><span class="bold">Failed</span>: The tool ran, but failed.
+</p>
+</li>
+<li type="disc">
+<p><span class="bold">Pending</span>: The tool is waiting to run.
+</p>
+</li>
+<li type="disc">
+<p><span class="bold">Cancelled</span>: The tool was cancelled by the user (by clicking <span class="bold">Stop</span>).
+</p>
+</li>
+<li type="disc">
+<p><span class="bold">In Progress</span>: The tool is currently running.
+</p>
+</li>
+<li type="disc">
+<p><span class="bold">Skipped</span>: A configuration assistant running before this tool was cancelled or failed. Tools that follow a failed or cancelled tool are skipped.
+</p>
+</li>
+</ul>
+<p>When you select a tool, its details are shown in the Details box. Details are displayed as the tool is running. If you want to stop a configuration assistant while it is running, click <span class="bold">Stop</span>.
+</p>
+<p>If all tools succeed on the first try, OUI automatically proceeds to the next page. Otherwise, OUI remains on the Configuration Assistants page until all tools are successful. You can then click <span class="bold">Next</span> to proceed.
+</p>
+<p>If one or more tools fail, OUI does not proceed to the next page. Instead, you can read the details of failed tools, fix the problems, and try running the configuration assistant again. You should also consult the installation document for the product being installed for instructions on what to do if a tool fails. For all failed or skipped tools, OUI generates a list of the tool names and the commands used to run them; you can copy/paste this information directly into a shell script or batch file to run these tools after installation is complete.
+</p>
+<p>By default, the check box in the Retry column will be checked for all tools that failed or were skipped. To retry all checked configuration assistants, click <span class="bold">Retry</span>.
+</p>
+<p>To continue without fixing the problem, click <span class="bold">Next</span>.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>The installation is considered successful even if all configuration assistants failed, irrespective of their type (Recommended or Optional). However, failing to successfully run all recommended tools results in an improperly configured product that may not function.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="CIHEBJHD" name="CIHEBJHD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref446" name="sthref446"></a>
+<h3 class="sect2"><span class="secnum">5.3.13 </span>End of Installation Screen
+</h3>
+<p>This screen tells you whether or not your Oracle Application Server installation was successful and displays some important information that you must remember about the products you have installed. For example, it might contain information about the URLs for particular Web applications. Write down this information so that you can remember it.
+</p>
+<p>This information can also be found in the <code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code><code>/install/readme.txt</code> file.
+</p>
+<div class="figure">
+<a id="sthref447" name="sthref447"></a>
+
+<p class="titleinfigure">Figure 5-14 Oracle Universal Installer: End of Installation</p>
+<img src="img/installer_end.gif" alt="Description of Figure 5-14  follows" title="Description of Figure 5-14  follows"/>
+<br /><a id="sthref448" name="sthref448" href="img_text/installer_end.htm">Description of  "Figure 5-14 Oracle Universal Installer: End of Installation"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p>To view release notes for the products you have installed, click <span class="bold">Release Information</span> or see the documentation page on OTN (<code><a href="http://www.oracle.com/technology/documentation">http://www.oracle.com/technology/documentation</a></code>).
+</p>
+<p>Click <span class="bold">Exit</span> to exit the Oracle Universal Installer.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CIHDGJEJ" name="CIHDGJEJ"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref449" name="sthref449"></a>
+<h2 class="sect1"><span class="secnum">5.4 </span>Troubleshooting Information
+</h2>
+<p>If you encounter any problems with the installation, configuration assistants, or product in general, refer to <a href="ts.htm#BABFHDCC">Appendix E, "Troubleshooting"</a> for common problems and solutions.
+</p>
+</div><!-- class="sect1" -->
+<a id="CIHFEHDI" name="CIHFEHDI"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref450" name="sthref450"></a>
+<h2 class="sect1"><span class="secnum">5.5 </span>What Should I Do Next?
+</h2>
+<p>After the installation is complete, you should:
+</p>
+<ul>
+<li type="disc">
+<p>Refer to <a href="post.htm#BABDABFD">Chapter 7</a> for instructions and information about postinstallation tasks you should perform.
+</p>
+</li>
+<li type="disc">
+<p>Refer to the <span class="italic">Oracle Application Server Administrator's Guide</span> for information about how to configure, administer, and manage Oracle Application Server after it has been successfully installed.
+</p>
+</li>
+</ul>
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="basic_install.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="ha.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

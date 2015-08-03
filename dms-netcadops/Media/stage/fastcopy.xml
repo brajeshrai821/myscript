@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<!-- Copyright (c) 2006 Oracle Corporation. All Rights Reserved. -->
+<!-- Do not modify the contents of this file by hand. -->
+
+<FASTCOPY DISKS="1" DIR="fastcopy">
+
+  <TOPLEVEL_COMPONENT NAME="oracle.as.j2ee.top" INSTALL_TYPE="core" PLATFORM="Linux">
+    <DEFAULT_JARS_LIST DISK="1"> oracle.as.j2ee.top_core_1.xml </DEFAULT_JARS_LIST>
+    <EXPANDED_FILES_LIST DISK="1"> oracle.as.j2ee.top_core_exp_1.xml </EXPANDED_FILES_LIST>
+    <DIRS_LIST> oracle.as.j2ee.top_core_dirs.lst </DIRS_LIST>
+    <PREPROC_FILEMAP> oracle.as.j2ee.top_core_filemap.jar </PREPROC_FILEMAP>
+  </TOPLEVEL_COMPONENT>
+
+  <TOPLEVEL_COMPONENT NAME="oracle.as.j2ee.top" INSTALL_TYPE="httpServer" PLATFORM="Linux">
+    <DEFAULT_JARS_LIST DISK="1"> oracle.as.j2ee.top_httpServer_1.xml </DEFAULT_JARS_LIST>
+    <EXPANDED_FILES_LIST DISK="1"> oracle.as.j2ee.top_httpServer_exp_1.xml </EXPANDED_FILES_LIST>
+    <DIRS_LIST> oracle.as.j2ee.top_httpServer_dirs.lst </DIRS_LIST>
+    <PREPROC_FILEMAP> oracle.as.j2ee.top_httpServer_filemap.jar </PREPROC_FILEMAP>
+  </TOPLEVEL_COMPONENT>
+
+  <TOPLEVEL_COMPONENT NAME="oracle.as.j2ee.top" INSTALL_TYPE="allProducts" PLATFORM="Linux">
+    <DEFAULT_JARS_LIST DISK="1"> oracle.as.j2ee.top_allProducts_1.xml </DEFAULT_JARS_LIST>
+    <EXPANDED_FILES_LIST DISK="1"> oracle.as.j2ee.top_allProducts_exp_1.xml </EXPANDED_FILES_LIST>
+    <DIRS_LIST> oracle.as.j2ee.top_allProducts_dirs.lst </DIRS_LIST>
+    <PREPROC_FILEMAP> oracle.as.j2ee.top_allProducts_filemap.jar </PREPROC_FILEMAP>
+  </TOPLEVEL_COMPONENT>
+
+  <TOPLEVEL_COMPONENT NAME="oracle.as.j2ee.top" INSTALL_TYPE="toplink" PLATFORM="Linux">
+    <DEFAULT_JARS_LIST DISK="1"> oracle.as.j2ee.top_toplink_1.xml </DEFAULT_JARS_LIST>
+    <DIRS_LIST> oracle.as.j2ee.top_toplink_dirs.lst </DIRS_LIST>
+    <PREPROC_FILEMAP> oracle.as.j2ee.top_toplink_filemap.jar </PREPROC_FILEMAP>
+  </TOPLEVEL_COMPONENT>
+
+  <TOPLEVEL_COMPONENT NAME="oracle.apache.standalone" INSTALL_TYPE="Typical" PLATFORM="NT_X86">
+  </TOPLEVEL_COMPONENT>
+
+  <SETPERMS>
+    <SCRIPT DISK="1"> setperms1.sh </SCRIPT>
+  </SETPERMS>
+
+  <RACFILES> racfiles.jar </RACFILES>
+
+</FASTCOPY>

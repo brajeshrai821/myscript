@@ -1,0 +1,35 @@
+#! /bin/sh
+# oaracleas      OracleAS Service Daemon
+#
+# chkconfig: 2345 80 05
+# description: OracleAS Service Daemon
+#
+#
+
+#
+# Change the value of ORACLE to the login name of the
+# oracle owner at your site.
+#
+ORA_USER=SCRIPT_ORAUSER
+ORA_HOME=SCRIPT_ORAHOME
+
+case $1 in
+'start')
+        su $ORA_USER -c "${ORA_HOME}/opmn/bin/opmnctl startall"
+        ;;
+'stop')
+        su $ORA_USER -c "${ORA_HOME}/opmn/bin/opmnctl stopall"
+        ;;
+'restart')
+        su $ORA_USER -c "${ORA_HOME}/opmn/bin/opmnctl stopall"
+        su $ORA_USER -c "${ORA_HOME}/opmn/bin/opmnctl startall"
+        ;;
+'status')
+        su $ORA_USER -c "${ORA_HOME}/opmn/bin/opmnctl status"
+        ;;
+*)
+        echo "usage: $0 {start|stop|restart|status}"
+        exit
+        ;;
+esac
+exit

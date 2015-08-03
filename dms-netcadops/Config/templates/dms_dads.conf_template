@@ -1,0 +1,12 @@
+<Location /pls/<instance_name>>
+    SetHandler pls_handler
+    Order allow,deny
+    Allow from All
+    AllowOverride None
+    PlsqlDatabaseUsername <NetCadops_schema_user>
+    PlsqlDatabasePassword <NetCadops_schema_password>
+    PlsqlDatabaseConnectString <instance_name> TNSFormat
+    PlsqlAuthenticationMode Basic
+    PlsqlDefaultPage netcMenu.login
+</Location>
+

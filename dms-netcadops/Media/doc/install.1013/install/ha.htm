@@ -1,0 +1,2725 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 23, 2006 13:32:47 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5.1 Build 4" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Installing in High Availability Environments</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="advanced_install.htm" title="Previous" />
+<link rel="next" href="post.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+<link rel="index" href="index.htm" title="Index" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Installation Guide  </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25217-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="advanced_install.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="post.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="BGBCJEDJ" name="BGBCJEDJ"></a><a id="sthref451" name="sthref451"></a>
+<h1 class="chapter"><span class="secnum">6 </span> Installing in High Availability <a id="sthref452" name="sthref452"></a>Environments</h1>
+<p>This chapter provides an overview of the high availability configurations supported by Oracle Application Server and instructions for installation. 
+</p>
+<p>Contents of this chapter:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABHHCDA">Section 6.1, "Overview of High Availability Configurations"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CDEIHBHH">Section 6.2, "Requirements for High Availability Configurations"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BGBIIIJA">Section 6.3, "Creating the Active-Active Topology"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABEAAAD">Section 6.4, "Creating the Active-Passive Topology"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABBJIGD">Section 6.5, "Creating an OracleAS Disaster Recovery Configuration"</a>
+</p>
+</li>
+</ul><a id="BABHHCDA" name="BABHHCDA"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref453" name="sthref453"></a>
+<h2 class="sect1"><span class="secnum">6.1 </span>Overview of High Availability Configurations<a id="sthref454" name="sthref454"></a>
+</h2>
+<p>This chapter provides only a brief overview of the high availability configurations in Oracle Application Server. For a complete description of the configurations, see the <span class="italic">Oracle Application Server High Availability Guide</span>.
+</p>
+<p>Oracle Application Server supports the following types of high availability configurations at installation time. Note that there are multiple variants of each type.
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABEHIBC">Section 6.1.1, "Active-Active Topologies: OracleAS Clusters"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJDGHF">Section 6.1.2, "Active-Passive Topologies: OracleAS Cold Failover Clusters"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABDIJGG">Section 6.1.3, "OracleAS Disaster Recovery"</a>
+</p>
+</li>
+</ul>
+<p>For a quick summary of the high availability configurations, see <a href="#BABHCJEI">Section 6.1.4, "Summary of Differences"</a>.
+</p><a id="BABEHIBC" name="BABEHIBC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref455" name="sthref455"></a>
+<h3 class="sect2"><span class="secnum">6.1.1 </span>Active-Active Topologies: OracleAS Clusters
+</h3>
+<p>Oracle Application Server provides an active-active redundant model for all its components with OracleAS Clusters. In an OracleAS Clusters configuration, two or more Oracle Application Server instances are configured to serve the same workload. These instances can run on the same machine or on different machines.The instances are front-ended by an external load balancer, which directs requests to any of the active instances. Instead of an external load balancer, you can also run a software load balancer to distribute the requests. In production environment, however, a hardware load balancer is recommended.
+</p>
+<p>Common properties of an OracleAS Clusters configuration include:
+</p>
+<ul>
+<li type="disc">
+<p>Similar instance configuration
+</p>
+<p>The instances need to serve the same workload or applications. Some configuration properties should have similar values across instances so that the instances can deliver the same reply to the same request. Other configuration properties may be instance-specific, such as local host name information.
+</p>
+<p>If you make a configuration change to one instance, you should also make the same change to the other instances in the active-active topology. The "Configuring and Managing Clusters" chapter in the <span class="italic"><a href="../../web.1013/b14432/toc.htm">Oracle Containers for J2EE Configuration and Administration Guide</a></span> lists the files that contain properties that should be replicated.
+</p>
+</li>
+<li type="disc">
+<p>Independent operation
+</p>
+<p>If one Oracle Application Server instance in an active-active topology fails, the other instances in the cluster continue to serve requests. The load balancer directs requests only to instances that are alive.
+</p>
+</li>
+</ul>
+<p>Advantages of an OracleAS Clusters configuration include:
+</p>
+<ul>
+<li type="disc">
+<p>Increased availability
+</p>
+<p>An active-active topology is a redundant configuration. Loss of one instance can be tolerated because other instances can continue to serve the same requests.
+</p>
+</li>
+<li type="disc">
+<p>Increased scalability and performance
+</p>
+<p>Multiple identically-configured instances provide the capability to share a workload among different machines and processes. You can scale the topology by adding new instances as the number of requests increase.
+</p>
+</li>
+</ul>
+<p>For instructions on creating the OracleAS Clusters configuration, see <a href="#BGBIIIJA">Section 6.3, "Creating the Active-Active Topology"</a>.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABJDGHF" name="BABJDGHF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref456" name="sthref456"></a>
+<h3 class="sect2"><span class="secnum">6.1.2 </span>Active-Passive Topologies: OracleAS Cold Failover Clusters
+</h3>
+<p>Oracle Application Server provides an active-passive model for all its components in <a id="sthref457" name="sthref457"></a>OracleAS Cold Failover Clusters. In an OracleAS Cold Failover Cluster topology, two Oracle Application Server instances are configured to serve the same application workload but only one is active at any particular time. The passive instance runs (that is, becomes active) only when the active instance fails. These instances run on nodes that are in a hardware cluster.
+</p>
+<p>Common properties of an OracleAS Cold Failover Cluster topology include:
+</p>
+<ul>
+<li type="disc">
+<p>Hardware cluster
+</p>
+<p>In an OracleAS Cold Failover Cluster topology, you run Oracle Application Server on machines that are in a hardware cluster, with vendor clusterware running on the machines.
+</p>
+</li>
+<li type="disc">
+<p><a id="sthref458" name="sthref458"></a>Shared storage
+</p>
+<p>You install the Oracle home for the Oracle Application Server instance on storage shared by the machines in the hardware cluster.
+</p>
+<p>The active node in the OracleAS Cold Failover Cluster topology mounts the shared storage so that it has access to the Oracle home. If it fails, the passive instance mounts the shared storage and accesses the same Oracle home.
+</p>
+</li>
+<li type="disc">
+<p>Virtual hostname
+</p>
+<p>The virtual hostname gives clients a single system view of the Oracle Application Server middle tier. Clients use the virtual hostname to access the Oracle Application Server middle tier.
+</p>
+<p>The virtual hostname is associated with a virtual IP. This name-IP entry must be added to the DNS that the site uses. For example, if the two physical hostnames of the hardware cluster are <code>node1.mycompany.com</code> and <code>node2.mycompany.com</code>, the single view of this cluster can be provided by the virtual hostname <code>apps.mycompany.com</code>. In the DNS, <code>apps</code> maps to a <a id="sthref459" name="sthref459"></a>virtual IP address that floats between <code>node1</code> and <code>node2</code> via a hardware cluster. Clients access Oracle Application Server using <code>apps.mycompany.com</code>; they do not know which physical node is active and actually servicing a particular request.
+</p>
+<p>You can specify the virtual hostname during installation. See <a href="#BABEAAAD">Section 6.4, "Creating the Active-Passive Topology"</a>.
+</p>
+</li>
+<li type="disc">
+<p>Failover procedure
+</p>
+<p>An active-passive configuration also includes a set of scripts and procedures to detect failure of the active instance and fail over to the passive instance while minimizing downtime.
+</p>
+</li>
+</ul>
+<p>Advantages of an <a id="sthref460" name="sthref460"></a>OracleAS Cold Failover Cluster topology include:
+</p>
+<ul>
+<li type="disc">
+<p>Increased availability
+</p>
+<p>If the active instance fails for any reason or must be taken offline, an identically configured passive instance is prepared to take over at any time.
+</p>
+</li>
+<li type="disc">
+<p>Reduced operating costs
+</p>
+<p>In an active-passive topology only one set of processes is up and serving requests. Managing the active instance is generally easier than managing an array of active instances.
+</p>
+</li>
+<li type="disc">
+<p>Application independence
+</p>
+<p>Some applications may not be suited to an active-active topology. This may include applications that rely heavily on application state or on information stored locally. An active-passive topology has only one instance serving requests at any particular time.
+</p>
+</li>
+</ul>
+<p>For instructions on creating the OracleAS Cold Failover Cluster configuration, see <a href="#BABEAAAD">Section 6.4, "Creating the Active-Passive Topology"</a>.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABDIJGG" name="BABDIJGG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref461" name="sthref461"></a>
+<h3 class="sect2"><span class="secnum">6.1.3 </span>OracleAS Disaster Recovery
+</h3>
+<p>OracleAS Disaster Recovery configurations have the following characteristics:
+</p>
+<ul>
+<li type="disc">
+<p>A production site and a standby site that mirrors the production site. Typically, these sites are located some distance from each other to guard against site failures such as floods, fires, or earthquakes. During normal operation, the production site handles all the requests. If the production site goes down, the standby site takes over and handles all the requests.
+</p>
+</li>
+<li type="disc">
+<p>Each site has all the hardware and software to run. It contains nodes for running Oracle Application Server instances, load balancers, and DNS servers.
+</p>
+</li>
+</ul>
+<p>For installation details, see <a href="#BABBJIGD">Section 6.5, "Creating an OracleAS Disaster Recovery Configuration"</a>.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABHCJEI" name="BABHCJEI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref462" name="sthref462"></a>
+<h3 class="sect2"><span class="secnum">6.1.4 </span>Summary of Differences<a id="sthref463" name="sthref463"></a>
+</h3>
+<p><a href="#BABJDGJC">Table 6-1</a> summarizes the differences among the high availability configurations.
+</p>
+<div class="tblhruleformalwide">
+<a id="sthref464" name="sthref464"></a><a id="BABJDGJC" name="BABJDGJC"></a>
+<p class="titleintable">Table 6-1 Differences Among the High Availability Configurations</p>
+<table class="HRuleFormalWide" title="Differences Among the High Availability Configurations" summary="Differences among the high availability environments" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2">
+<br />
+</th>
+<th align="left" valign="bottom" id="r1c2-t2">OracleAS Cold Failover Cluster
+<br />
+</th>
+<th align="left" valign="bottom" id="r1c3-t2">OracleAS Clusters
+<br />
+</th>
+<th align="left" valign="bottom" id="r1c4-t2">OracleAS Disaster Recovery
+<br />
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p>Node configuration
+</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p>Active-Passive
+</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c3-t2">
+<p>Active-Active
+</p>
+</td>
+<td align="left" headers="r2c1-t2 r1c4-t2">
+<p>Active-Passive
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p>Hardware cluster
+</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p>Yes
+</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c3-t2">
+<p>No
+</p>
+</td>
+<td align="left" headers="r3c1-t2 r1c4-t2">
+<p>Optional (hardware cluster required only if you installed the OracleAS Infrastructure in an OracleAS Cold Failover Cluster configuration)
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t2" headers="r1c1-t2">
+<p>Virtual hostname
+</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c2-t2">
+<p>Yes
+</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c3-t2">
+<p>No
+</p>
+</td>
+<td align="left" headers="r4c1-t2 r1c4-t2">
+<p>Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t2" headers="r1c1-t2">
+<p>Load balancer
+</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c2-t2">
+<p>No
+</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c3-t2">
+<p>Yes
+</p>
+</td>
+<td align="left" headers="r5c1-t2 r1c4-t2">
+<p>No
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t2" headers="r1c1-t2">
+<p>Shared storage
+</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c2-t2">
+<p>Yes
+</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c3-t2">
+<p>No
+</p>
+</td>
+<td align="left" headers="r6c1-t2 r1c4-t2">
+<p>No
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformalwide" -->
+
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CDEIHBHH" name="CDEIHBHH"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref465" name="sthref465"></a>
+<h2 class="sect1"><span class="secnum">6.2 </span>Requirements for High Availability Configurations<a id="sthref466" name="sthref466"></a>
+</h2>
+<p>This section describes the requirements common to all high availability configurations. In addition to these common requirements, each configuration has its own specific requirements. See the individual chapters for details.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>You still need to meet the requirements listed in <a href="reqs.htm#BABFDIBC">Chapter 2, "Requirements"</a>, plus requirements specific to the high availability configuration that you plan to use.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>The common requirements are:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CDEFIAHB">Section 6.2.1, "Check Minimum Number of Nodes"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BGBCEGFB">Section 6.2.2, "Check That Groups Are Defined Identically on All Nodes"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BGBFGFAG">Section 6.2.3, "Check the Properties of the oracle User"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABIFHGA">Section 6.2.4, "Check for Previous Oracle Installations on All Nodes"</a>
+</p>
+</li>
+</ul><a id="CDEFIAHB" name="CDEFIAHB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref467" name="sthref467"></a>
+<h3 class="sect2"><span class="secnum">6.2.1 </span>Check Minimum Number of Nodes
+</h3>
+<p>You need at least two nodes in a high availability configuration. If a node fails for any reason, the second node takes over.
+</p>
+</div><!-- class="sect2" -->
+<a id="BGBCEGFB" name="BGBCEGFB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref468" name="sthref468"></a>
+<h3 class="sect2"><span class="secnum">6.2.2 </span>Check That Groups Are Defined Identically on All Nodes<a id="sthref469" name="sthref469"></a><a id="sthref470" name="sthref470"></a>
+</h3>
+<p>Check that the <code>/etc/group</code> file on all nodes in the cluster contains the operating system groups that you plan to use. You should have one group for the oraInventory directory, and one or two groups for database administration. The group names and the group IDs must be the same for all nodes.
+</p>
+<p>See <a href="reqs.htm#BABEJJJF">Section 2.6, "Operating System Groups"</a> for details.
+</p>
+</div><!-- class="sect2" -->
+<a id="BGBFGFAG" name="BGBFGFAG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref471" name="sthref471"></a>
+<h3 class="sect2"><span class="secnum">6.2.3 </span>Check the Properties of the oracle User<a id="sthref472" name="sthref472"></a><a id="sthref473" name="sthref473"></a>
+</h3>
+<p>Check that the <code>oracle</code> operating system user, which you log in as to install Oracle Application Server, has the following properties:
+</p>
+<ul>
+<li type="disc">
+<p>Belongs to the <code>oinstall</code> group and to the <code>osdba</code> group. The <code>oinstall</code> group is for the oraInventory directory, and the <code>osdba</code> group is a database administration group. See <a href="reqs.htm#BABEJJJF">Section 2.6, "Operating System Groups"</a> for details.
+</p>
+</li>
+<li type="disc">
+<p>Has write privileges on remote directories.
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="BABIFHGA" name="BABIFHGA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref474" name="sthref474"></a>
+<h3 class="sect2"><span class="secnum">6.2.4 </span>Check for Previous Oracle Installations on All Nodes<a id="sthref475" name="sthref475"></a>
+</h3>
+<p>Check that all the nodes where you want to install in a high availability configuration do not have existing oraInventory directories.
+</p>
+<p>Details of all Oracle software installations are recorded in the Oracle Installer Inventory directory. Typically, this directory is unique to a node and named <code>oraInventory</code>. The directory path of the Oracle Installer Inventory directory is stored in the <code>oraInst.loc</code> file. 
+</p>
+<p>The existence of this file on a node confirms that the node contains some Oracle software installation. Since the high availability configurations require installations on multiple nodes with Oracle Installer Inventory directories on a file system that may not be accessible on other nodes, the installation instructions in this chapter and subsequent chapters for high availability configurations assume that there have not been any previous installations of any Oracle software on any of the nodes that are used for this high availability configuration. The <code>oraInst.loc</code> file and the Oracle Installer Inventory directory should not exist on any of these nodes prior to these high availability installations. 
+</p>
+<p>To check if a node contains an oraInventory directory that could be detected by the installer:
+</p>
+<ol type="1" start="1">
+<li>
+<p>On each node, check for the existence of the <code>oraInst.loc</code> file. This file is stored in the <code>/etc</code> directory. 
+</p>
+<p>If a node does not contain this file, then it does not have an oraInventory directory that will be used by the installer. You can check the next node.
+</p>
+</li>
+<li>
+<p>For nodes that contain the <code>oraInst.loc</code> file, rename the file and the oraInventory directory. The installer then prompts you to enter a location for a new oraInventory directory.
+</p>
+<p>For example enter the following commands as root: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">cat /etc/oraInst.loc</span>
+inventory&#095;loc&#061;/localfs/app/oracle/oraInventory 
+inst&#095;group&#061;dba 
+&#035; mv <span class="bold">/etc/oraInst.loc /etc/oraInst.loc.orig</span> 
+&#035; mv <span class="bold">/localfs/app/oracle/oraInventory /localfs/app/oracle/oraInventory.orig</span>
+
+</pre>
+</li>
+</ol>
+<p>Since the <code>oraInst.loc</code> file and the Oracle Installer Inventory directory are required only during the installation of Oracle software, and not at runtime, renaming them and restoring them later does not affect the behavior of any installed Oracle software on any node. Make sure that the appropriate <code>oraInst.loc</code> file and Oracle Installer Inventory directory are in place before starting the Oracle Universal Installer. 
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>For an OracleAS Disaster Recovery configuration, the correct <code>oraInst.loc</code> file and associated oraInventory directory are required during normal operation, not just during installation.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BGBIIIJA" name="BGBIIIJA"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref476" name="sthref476"></a>
+<h2 class="sect1"><span class="secnum">6.3 </span>Creating the Active-Active Topology<a id="sthref477" name="sthref477"></a><a id="sthref478" name="sthref478"></a><a id="sthref479" name="sthref479"></a>
+</h2>
+<p>This section describes how to install Oracle Application Server in an active-active topology with OracleAS Clusters. OracleAS Clusters is one of the high availability environments supported by Oracle Application Server.
+</p>
+<p>Contents of this section:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABEDFGD">Section 6.3.1, "Active-Active Topologies: Introduction"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABGACJD">Section 6.3.2, "OracleAS Clusters in Active-Active Topologies"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABGJJIJ">Section 6.3.3, "Properties of Oracle Application Server Instances in Active-Active Topologies"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABBJEJI">Section 6.3.4, "Installation Steps for Active-Active Topologies"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABEDFGJ">Section 6.3.5, "Supporting Procedures for Creating the Active-Active Topology"</a>
+</p>
+</li>
+</ul><a id="BABEDFGD" name="BABEDFGD"></a>
+<div class="sect2">
+<a id="sthref480" name="sthref480"></a>
+<h3 class="sect2"><span class="secnum">6.3.1 </span>Active-Active Topologies: Introduction<a id="sthref481" name="sthref481"></a>
+</h3>
+<p>An active-active topology consists of redundant middle-tier instances that deliver greater scalability and availability than a single instance. Active-active topologies remove the single point of failure that a single instance poses. While a single Oracle Application Server instance leverages the resources of a single host, a cluster of middle-tier instances spans multiple hosts, distributing application execution over a greater number of CPUs. A single Oracle Application Server instance is vulnerable to the failure of its host and operating system, but an active-active topology continues to function despite the loss of an operating system or a host, hiding any such failure from clients.
+</p>
+<p>In active-active topologies, all the instances are active at the same time. This is different from active-passive topologies, where only one instance is active at any time.
+</p>
+<p>The nodes in the active-active topologies are not in a hardware cluster.
+</p><a id="sthref482" name="sthref482"></a>
+<p class="subhead2">Load Balancer Requirements</p>
+<p>Active-active topologies use a load balancer to direct requests to one of the Oracle Application Server instances in the topology. In other words, the Oracle Application Server instances are fronted by the load balancer.
+</p>
+<p>You configure the load balancer with virtual server names for HTTP and HTTPS traffic. Clients use the virtual server names in their requests. The load balancer directs requests to an available Oracle Application Server instance.
+</p>
+<p>See the <span class="italic">Oracle Application Server High Availability Guide</span> for a list of features that your load balancer should have.
+</p><a id="sthref483" name="sthref483"></a>
+<p class="subhead2">Figures of Active-Active Topologies</p>
+<p>The following figures show two active-active topologies. The difference in the topologies is whether you install Oracle HTTP Server and OC4J in the same Oracle home or in separate Oracle homes.
+</p>
+<p><a href="#BGBJFAJE">Figure 6-1</a> shows an active-active topology with Oracle HTTP Server and OC4J in the same Oracle home. <a href="#BGBEGGCJ">Figure 6-2</a> shows an active-active topology with Oracle HTTP Server and OC4J in separate Oracle homes.
+</p>
+<div class="figure">
+<a id="BGBJFAJE" name="BGBJFAJE"></a><a id="sthref484" name="sthref484"></a>
+
+<p class="titleinfigure">Figure 6-1 Active-Active Topology with Oracle HTTP Server and OC4J in the Same Oracle Home</p>
+<img src="img/ashia080.gif" alt="Description of Figure 6-1  follows" title="Description of Figure 6-1  follows"/>
+<br /><a id="sthref485" name="sthref485" href="img_text/ashia080.htm">Description of  "Figure 6-1 Active-Active Topology with Oracle HTTP Server and OC4J in the Same Oracle Home"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<div class="figure">
+<a id="BGBEGGCJ" name="BGBEGGCJ"></a><a id="sthref486" name="sthref486"></a>
+
+<p class="titleinfigure">Figure 6-2 Active-Active Topology with Oracle HTTP Server and OC4J in Separate Oracle Homes</p>
+<img src="img/ashia081.gif" alt="Description of Figure 6-2  follows" title="Description of Figure 6-2  follows"/>
+<br /><a id="sthref487" name="sthref487" href="img_text/ashia081.htm">Description of  "Figure 6-2 Active-Active Topology with Oracle HTTP Server and OC4J in Separate Oracle Homes"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p>
+</p>
+</div><!-- class="sect2" -->
+<a id="BABGACJD" name="BABGACJD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref488" name="sthref488"></a>
+<h3 class="sect2"><span class="secnum">6.3.2 </span>OracleAS Clusters in Active-Active Topologies
+</h3>
+<p>All the Oracle Application Server instances in an active-active topology belong to the same cluster. Oracle HTTP Server forwards application requests only to OC4J instances that belong to the same cluster.
+</p>
+<p>You can cluster instances with OPMN using one of the following ways:
+</p>
+<ul>
+<li type="disc">
+<p>All the instances use the same multicast IP address and port.
+</p>
+</li>
+<li type="disc">
+<p>All the instances are chained to the same discovery server.
+</p>
+</li>
+<li type="disc">
+<p>Each instance specifies all other instances in the opmn.xml configuration file.
+</p>
+</li>
+<li type="disc">
+<p>If the instances run on nodes that are on different subnets, you have to designate a node to be the gateway server, which bridges the instances on the different subnets.
+</p>
+</li>
+</ul>
+<p>Clustering with OPMN also enables you to use the <code>&#064;cluster</code> parameter in some <code>opmnctl</code> commands. Commands that use the <code>&#064;cluster</code> parameter apply to all instances in the cluster. For example, you can use the <code>&#064;cluster</code> parameter to start all components in all instances in the cluster.
+</p>
+<p>OC4J instances in a cluster have the following features:
+</p>
+<ul>
+<li type="disc">
+<p>OC4J instances have cluster-wide properties as well as instance-specific properties. Cluster-wide properties are properties whose values are identical for all OC4J instances in the cluster. Instance-specific properties are properties that have different values for each OC4J instance. For a list of cluster-wide properties, see the "Configuring and Managing Clusters" chapter in the <span class="italic">Oracle Containers for J2EE Configuration and Administration Guide</span>.
+</p>
+</li>
+<li type="disc">
+<p>If you modify a cluster-wide property in one OC4J instance, make sure that you propagate the change to all other OC4J instances in the cluster.
+</p>
+</li>
+<li type="disc">
+<p>When you deploy an application to an OC4J instance, you also need to deploy it on all other OC4J instances in the cluster.
+</p>
+</li>
+<li type="disc">
+<p>The number of OC4J processes is an instance-specific property: it can be different for each OC4J instance. This must be configured for each Oracle Application Server instance in the cluster. The OC4J process configuration provides flexibility to tune according to the specific hardware capabilities of the host. By default, each OC4J instance is instantiated with a single OC4J process.
+</p>
+</li>
+</ul>
+<p>For details, see the "Configuring and Managing Clusters" chapter in the <span class="italic">Oracle Containers for J2EE Configuration and Administration Guide</span>.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABGJJIJ" name="BABGJJIJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref489" name="sthref489"></a>
+<h3 class="sect2"><span class="secnum">6.3.3 </span>Properties of Oracle Application Server Instances in Active-Active Topologies
+</h3>
+<p>Because the load balancer can send a request to any Oracle Application Server instance in the topology, you need to ensure that the instances are configured in the same manner so that clients get the same response regardless of which instance handles the request. This includes the following:
+</p>
+<ul>
+<li type="disc">
+<p>Deploy the same applications on each OC4J instance in the topology.
+</p>
+</li>
+<li type="disc">
+<p>Ensure that you replicate state and stateful session bean information across OC4J instances so that in the event that an OC4J instance fails, another OC4J instance contains the state information and can continue the session.
+</p>
+</li>
+<li type="disc">
+<p>Ensure that configuration properties for all the OC4J instances in the topology are identical. These configuration properties are listed in chapter 8, "Configuring and Managing Clusters", in section "Replicating Changes Across a Cluster", in the <span class="italic"><a href="../../web.1013/b14432/toc.htm">Oracle Containers for J2EE Configuration and Administration Guide</a></span>.
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="BABBJEJI" name="BABBJEJI"></a>
+<div class="sect2">
+<a id="sthref490" name="sthref490"></a>
+<h3 class="sect2"><span class="secnum">6.3.4 </span>Installation Steps for Active-Active Topologies<a id="sthref491" name="sthref491"></a>
+</h3>
+<p>To create the topology shown in <a href="#BGBJFAJE">Figure 6-1</a> or <a href="#BGBEGGCJ">Figure 6-2</a>, you perform the following steps:
+</p>
+<p>Step <a href="#BGBEAHEH">1</a>: <a href="#BGBEAHEH">Configure the Load Balancer with Virtual Server Names</a>
+</p>
+<p>Step <a href="#BGBHFHFJ">2</a>: <a href="#BGBHFHFJ">Install Oracle HTTP Server and OC4J and Cluster the Instances using OPMN</a>
+</p>
+<p>Step <a href="#BGBEACDB">3</a>: <a href="#BGBEACDB">Cluster the OC4J Components to Create an Application Cluster</a>
+</p>
+<p>The following sections describe the steps in detail.
+</p><br /><a id="BGBEAHEH" name="BGBEAHEH"></a>
+<p class="seghead">Step 1   Configure the Load Balancer with Virtual Server Names
+</p>
+<p>Refer to your load balancer documentation for configuration steps. On your load balancer, you need to configure a virtual server name and port for HTTP traffic, and another virtual server name and port for HTTPS traffic. The port numbers for the virtual server names should match the port numbers at which Oracle HTTP Server is listening. Clients will use the virtual server names and ports to access Oracle Application Server instances.
+</p><a id="BGBHFHFJ" name="BGBHFHFJ"></a>
+<p class="seghead">Step 2   Install Oracle HTTP Server and OC4J and Cluster the Instances using OPMN
+</p>
+<p>You can install Oracle HTTP Server and OC4J in the same Oracle home (see <a href="#BGBJFAJE">Figure 6-1</a>), or in different Oracle homes (see <a href="#BGBEGGCJ">Figure 6-2</a>). 
+</p>
+<p>For Oracle Application Server instances that you want to group in the same active-active topology, you need to place them in the same cluster. This enables communication between the Oracle HTTP Server and OC4J instances, and simplifies the management of Oracle Application Server instances. OracleAS Clusters enable you to use the <code>&#064;cluster</code> parameter for the <code>opmnctl</code> command to manage all the instances in the cluster.
+</p>
+<p>You can create clusters using one of the following methods:
+</p>
+<ul>
+<li type="disc">
+<p>Dynamic Discovery Method
+</p>
+<p>In this method, each ONS node within the same subnet announces its presence with a multicast message. The cluster topology map for each node is automatically updated as nodes are added or removed, enabling the cluster to be self-managing. 
+</p>
+<p>If you use this method, you should specify the multicast address and port on the Cluster Topology Configuration screen in the installer.
+</p>
+</li>
+<li type="disc">
+<p>Discovery Server Method
+</p>
+<p>In this method, specific nodes within a cluster are configured to serve as "discovery servers", which maintain the topology map for the cluster; the remaining nodes then connect with one another via this server. 
+</p>
+<p>If you use this method, you can define a cluster for OPMN by specifying the names of the Oracle Application Server instances explicitly in the <code>opmn.xml</code> file of each instance by following the steps in <a href="#BABCDHAH">Section 6.3.5.1, "Setting up Clusters with the Discovery Server Method"</a> after installation.
+</p>
+</li>
+<li type="disc">
+<p>Gateway Method
+</p>
+<p>This configuration is used to connect topologies separated by firewalls or on different subnets using specified "gateway" nodes.
+</p>
+<p>If you use this method, see the section "Configuring Cross-Topology Gateways" in the <span class="italic">Oracle Containers for J2EE Configuration and Administration Guide</span> for configuration details.
+</p>
+</li>
+</ul>
+<p>You can perform either an integrated installation or a distributed installation.
+</p>
+<ul>
+<li type="disc">
+<p><span class="bold">For Integrated Installations (Oracle HTTP Server and OC4J in the Same Oracle Home)</span>
+</p>
+<p>You install Oracle Application Server on the local storage of each node in the active-active topology.
+</p>
+<p>Perform an advanced installation by following the steps in <a href="advanced_install.htm#CIHIEBFI">Section 5.2.4, "Installing Integrated Web Server, J2EE Server and Process Management"</a> so that both Oracle HTTP Server and OC4J will run from the same Oracle home. 
+</p>
+<p>During the installation procedure, follow the prompts, ensuring you perform the following:
+</p>
+<ul>
+<li type="disc">
+<p>On the Administration Instance Settings screen:
+</p>
+<ul>
+<li type="circle">
+<p>If you want this node to administer the cluster using Application Server Control, select <span class="bold">Configure this as an Administration OC4J instance</span>. In a cluster topology, only one instance should be configured as an Administration OC4J instance. Note that the Administration OC4J instance for the cluster does not have to be the first installed node.
+</p>
+</li>
+<li type="circle">
+<p>If you do not want this node to administer the cluster, deselect <span class="bold">Configure this as an Administration OC4J instance</span>.
+</p>
+</li>
+</ul>
+</li>
+<li type="disc">
+<p>If you are using the dynamic discovery method to cluster the Oracle Application Server instances for OPMN, perform the following:
+</p>
+<p>On the Cluster Topology Configuration screen, select <span class="bold">Configure this instance to be part of an Oracle Application Server cluster topology</span>. Specify the <span class="bold">IP Address</span> and <span class="bold">Port</span> for the multicast address shared by all the nodes in the cluster. 
+</p>
+<p>Note that the multicast address must be between 224.0.0.1 and 239.255.255.255. If you are installing on the first node in the cluster, you may choose any IP address and port, as long as it falls in the multicast address range.
+</p>
+</li>
+</ul>
+<p>Note the following:
+</p>
+<ul>
+<li type="disc">
+<p>Set the Oracle home to be on the local storage of each node.
+</p>
+</li>
+<li type="disc">
+<p>Ensure that the same component uses the same port number in each Oracle Application Server instance in the cluster. For example, ensure that Oracle HTTP Server is listening at the same port number for all instances in the cluster.
+</p>
+</li>
+<li type="disc">
+<p>To simplify administering the instances, use the same Oracle home path and the same instance name for each node.
+</p>
+</li>
+<li type="disc">
+<p>If you are using the discovery server method to cluster the Oracle Application Server instances for OPMN, be sure to perform the steps in <a href="#BABCDHAH">Section 6.3.5.1, "Setting up Clusters with the Discovery Server Method"</a> after installation.
+</p>
+</li>
+<li type="disc">
+<p>If you are using the gateway method to cluster the Oracle Application Server instances for OPMN, see the section "Configuring Cross-Topology Gateways" in the <span class="italic">Oracle Containers for J2EE Configuration and Administration Guide</span> for configuration details.
+</p>
+</li>
+</ul>
+</li>
+<li type="disc">
+<p><span class="bold">For Distributed Installations (Oracle HTTP Server and OC4J in Different Oracle Homes)</span>
+</p>
+<p>You install Oracle Application Server on the local storage of each node in the active-active topology.
+</p>
+<p>For the nodes where you want to run Oracle HTTP Server, follow the steps in <a href="advanced_install.htm#CIHFCFIB">Section 5.2.3, "Installing Web Server and Process Management"</a>. For the nodes where you want to run OC4J, follow the steps in <a href="advanced_install.htm#CIHCGJCG">Section 5.2.2, "Installing J2EE Server and Process Management"</a>.
+</p>
+<p>During installation, select the following options:
+</p>
+<ul>
+<li type="disc">
+<p>On the Administration Instance Settings screen:
+</p>
+<ul>
+<li type="circle">
+<p>If you want this node to administer the cluster using Application Server Control, select <span class="bold">Configure this as an Administration OC4J instance</span>. In a cluster topology, only one instance should be configured as an Administration OC4J instance. Note that the Administration OC4J instance for the cluster does not have to be the first installed node.
+</p>
+</li>
+<li type="circle">
+<p>If you do not want this node to administer the cluster, deselect <span class="bold">Configure this as an Administration OC4J instance</span>.
+</p>
+</li>
+</ul>
+</li>
+<li type="disc">
+<p>If you are using the dynamic discovery method to cluster the Oracle Application Server instances for OPMN, perform the following:
+</p>
+<ul>
+<li type="circle">
+<p>If you are installing Oracle HTTP Server, select <span class="bold">Configure this HTTP Server instance to be part of an Oracle Application Server cluster </span>on the "Cluster Topology Configuration" screen. Specify the <span class="bold">IP Address</span> and <span class="bold">Port</span> for the multicast address shared by all the nodes in the cluster. 
+</p>
+</li>
+<li type="circle">
+<p>If you are installing OC4J, select <span class="bold">Configure this OC4J instance to be part of an Oracle Application Server cluster topology</span> on the "Cluster Topology Configuration" screen. Specify the <span class="bold">IP Address</span> and <span class="bold">Port</span> for the multicast address shared by all the nodes in the cluster and select <span class="bold">Access this OC4J Instance from a separate Oracle HTTP Server</span>. 
+</p>
+</li>
+</ul>
+<p>Note that the multicast address must be between 224.0.0.1 and 239.255.255.255. If you are installing on the first node in the cluster, you may choose any IP address and port, as long as it falls in the multicast address range.
+</p>
+</li>
+</ul>
+<p>Note the following:
+</p>
+<ul>
+<li type="disc">
+<p>Set the Oracle home to be on the local storage of each node.
+</p>
+</li>
+<li type="disc">
+<p>Ensure that the same component uses the same port number in each Oracle Application Server instance in the cluster. For example, ensure that Oracle HTTP Server is listening at the same port number for all instances in the cluster.
+</p>
+</li>
+<li type="disc">
+<p>To simplify administering the instances, use the same Oracle home path and the same instance name for each node.
+</p>
+</li>
+<li type="disc">
+<p>If you are using the discovery server method to cluster the Oracle Application Server instances for OPMN, be sure to perform the steps in <a href="#BABCDHAH">Section 6.3.5.1, "Setting up Clusters with the Discovery Server Method"</a> after installation.
+</p>
+</li>
+<li type="disc">
+<p>If you are using the gateway method to cluster the Oracle Application Server instances for OPMN, see the section "Configuring Cross-Topology Gateways" in the <span class="italic">Oracle Containers for J2EE Configuration and Administration Guide</span> for configuration details.
+</p>
+</li>
+</ul>
+</li>
+</ul><a id="BGBEACDB" name="BGBEACDB"></a>
+<p class="seghead">Step 3   Cluster the OC4J Components to Create an Application Cluster
+</p>
+<p>You can also cluster the OC4J components within the Oracle Application Server instances. This type of cluster is called Application Cluster.
+</p>
+<p>Application Clusters provides the following features:
+</p>
+<ul>
+<li type="disc">
+<p>Replication of objects and data contained in an HTTP session or a stateful session Enterprise JavaBean
+</p>
+</li>
+<li type="disc">
+<p>In-memory replication using multicast or peer-to-peer communication, or persistence of state to a database
+</p>
+</li>
+<li type="disc">
+<p>Load-balancing of incoming requests across OC4J instances
+</p>
+</li>
+<li type="disc">
+<p>Transparent failover across applications within the cluster
+</p>
+</li>
+</ul>
+<p><span class="bold">Application Clusters Defined at the Global Level or Application Level</span>
+</p>
+<p>You can define properties of an application cluster at the global level or at the application level. Properties defined at the global level apply to all applications, but you can override specific properties by defining them at the application level.
+</p>
+<p>To define properties at the global level, you define them in the <code>ORACLE&#095;HOME/j2ee/home/config/application.xml</code> file, which is the configuration file for the global <code>default</code> application.
+</p>
+<p>To define properties at the application level, you define them in the application&#039;s <code>orion-application.xml</code> file. When you deploy the application, the file is located in the <code>ORACLE&#095;HOME/j2ee/home/application-deployments/</code><code><span class="codeinlineitalic">&lt;app-name></span></code><code>/</code> directory.
+</p>
+<p><span class="bold">Procedure</span>
+</p>
+<p>To create an application cluster at either the global or application level, you perform these steps:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Add an empty <code>&lt;distributable/></code> tag to the <code>web.xml</code> file for all Web modules that are part of an application configured for clustering.
+</p>
+</li>
+<li>
+<p>Specify the mechanism for replicating state and session information between Oracle Application Server instances. You choose one of the following replication mechanisms:
+</p>
+<div class="tblhruleformal">
+<a id="sthref492" name="sthref492"></a><a id="sthref493" name="sthref493"></a>
+<p class="titleintable">Table 6-2 Application Cluster Replication Mechanisms</p>
+<table class="HRuleFormal" title="Application Cluster Replication Mechanisms" summary="OracleAS Cluster (OC4J) Replication Mechanisms" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5">Replication Mechanism
+</th>
+<th align="left" valign="bottom" id="r1c2-t5">Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p>Multicast
+</p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>OC4J instances use a multicast address and port to replicate information between themselves.
+</p>
+<p>See <a href="#BABEDIIJ">Section 6.3.5.2, "Setting up Multicast Replication"</a> for details.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p>Peer-to-peer
+</p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>Oracle Application Server supports two types of peer-to-peer replication: dynamic and static.
+</p>
+<ul>
+<li type="disc">
+<p>In dynamic peer-to-peer replication, OC4J discovers other OC4J instances through OPMN. You do not have to list the names of the instances in a configuration file.
+</p>
+</li>
+<li type="disc">
+<p>In static peer-to-peer replication, you list the names of the instances that you want to be involved in the replication.
+</p>
+</li>
+</ul>
+<p>See <a href="#BABDHIGE">Section 6.3.5.3, "Setting up Peer-to-Peer Replication"</a> for details.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
+<p>Replication to database
+</p>
+</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">
+<p>State and session information are saved to the database that you specify. The database must be defined in the <code>data-sources.xml</code> file.
+</p>
+<p>See <a href="#BABJJFEB">Section 6.3.5.4, "Setting up Replication to a Database"</a> for details.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformal" -->
+
+</li>
+<li>
+<p>Specify how often and which data are replicated. See <a href="#BABCIDBF">Section 6.3.5.5, "Setting the Replication Policy"</a> for details.
+</p>
+</li>
+<li>
+<p>Specify the number of nodes to replicate the data to. See <a href="#BABCBEDA">Section 6.3.5.6, "Specifying the Number of Nodes to Replicate To"</a> for details.
+</p>
+</li>
+</ol>
+<p>For details, see the "Application Clustering in OC4J" chapter in the <span class="italic">Oracle Containers for J2EE Configuration and Administration Guide</span>.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABEDFGJ" name="BABEDFGJ"></a>
+<div class="sect2">
+<a id="sthref494" name="sthref494"></a>
+<h3 class="sect2"><span class="secnum">6.3.5 </span>Supporting Procedures for Creating the Active-Active Topology<a id="sthref495" name="sthref495"></a>
+</h3>
+<p>This section describes some common procedures that you may need to perform to maintain the active-active topology:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABCDHAH">Section 6.3.5.1, "Setting up Clusters with the Discovery Server Method"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABEDIIJ">Section 6.3.5.2, "Setting up Multicast Replication"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABDHIGE">Section 6.3.5.3, "Setting up Peer-to-Peer Replication"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJJFEB">Section 6.3.5.4, "Setting up Replication to a Database"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABCIDBF">Section 6.3.5.5, "Setting the Replication Policy"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABCBEDA">Section 6.3.5.6, "Specifying the Number of Nodes to Replicate To"</a>
+</p>
+</li>
+</ul><a id="BABCDHAH" name="BABCDHAH"></a>
+<div class="sect3">
+<a id="sthref496" name="sthref496"></a>
+<h4 class="sect3"><span class="secnum">6.3.5.1 </span>Setting up Clusters with the Discovery Server Method
+</h4>
+<p>If you do not want to use the multicast method, you can define a cluster by specifying the names of the nodes running the Oracle Application Server instances in the <code>opmn.xml</code> file of each instance.
+</p>
+<p>Example: if you want to cluster four instances (inst1.node1.mycompany.com, inst2.node2.mycompany.com, inst3.node3.mycompany.com, inst4.node4.mycompany.com), you would perform these steps:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Designate at least one of the instances to serve as the "discovery server". The discovery server maintains the topology for the cluster.
+</p>
+<p>This example assumes that inst1.node1.mycompany.com and inst2.node2.mycompany.com will be the discovery servers for the cluster.
+</p>
+<p>In distributed installations (Oracle HTTP Server and OC4J on different Oracle homes), any instance, whether running Oracle HTTP Server or OC4J, can serve as the discovery server.
+</p>
+</li>
+<li>
+<p>In the <code>opmn.xml</code> file for all instances in the cluster, specify the nodes that are running the discovery servers (node1.mycompany.com and node2.mycompany.com in the example).
+</p>
+<p>In the example, the <code>opmn.xml</code> file is changed to include the following lines:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;notification-server>
+&nbsp;&nbsp; &lt;topology>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;discover
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; list&#061;"node1.mycompany.com:6201,node2.mycompany.com:6201"/>
+&nbsp;&nbsp;&nbsp;&lt;/topology>
+...
+&lt;/notification-server>
+
+</pre>
+<p>The 6201 specifies the port number at which the notification server is listening. You can find this value in the <code>opmn.xml</code> file of that instance.
+</p>
+<p>If you have more than one discovery server, you separate them with the comma character.
+</p>
+</li>
+<li>
+<p>On all the instances, run "<code>opmnctl</code> <code>reload</code>" to force OPMN to read the updated <code>opmn.xml</code> file.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">> ORACLE&#095;HOME/opmn/bin/opmnctl reload
+
+</pre>
+</li>
+</ol>
+</div><!-- class="sect3" -->
+<a id="BABEDIIJ" name="BABEDIIJ"></a>
+<div class="sect3">
+<a id="sthref497" name="sthref497"></a>
+<h4 class="sect3"><span class="secnum">6.3.5.2 </span>Setting up Multicast Replication
+</h4>
+<p>Multicast replication is the default replication type. To set up an application to use multicast replication, you can just add the empty <code>&lt;cluster/></code> tag to the application&#039;s <code>orion-application.xml</code> file or to the global <code>ORACLE&#095;HOME/j2ee/home/config/application.xml</code> file. For example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;orion-application ... >
+&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&lt;cluster/>
+&lt;/orion-application>
+
+</pre>
+<p>You need to add the <code>&lt;cluster/></code> tag on all nodes where the application is deployed.
+</p>
+<p>By default, multicast replication uses multicast address 230.230.0.1 and port 45566. If you want to change these values, you specify the desired values in the <code>ip</code> and <code>port</code> attributes of the <code>multicast</code> element. For example, the following snippet shows the <code>ip</code> and <code>port</code> attributes set to customized values:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;orion-application ... >
+&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&lt;cluster allow-colocation&#061;"false">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;replication-policy trigger&#061;"onShutdown" scope&#061;"allAttributes"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;protocol>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;multicast <span class="bold">ip&#061;"225.130.0.0"</span> <span class="bold">port&#061;"45577"</span> bind-addr&#061;"226.83.24.10"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/protocol>
+&nbsp;&nbsp;&nbsp;&lt;/cluster>
+&lt;/orion-application>
+
+</pre>
+<p>The multicast address must be between 224.0.0.1 and 239.255.255.255.
+</p>
+<p>Description of other tags and attributes used in the snippet above:
+</p>
+<ul>
+<li type="disc">
+<p><code>allow-colocation</code>: specifies whether or not application state is replicated to other Oracle Application Server instances running on the same host. The default is true.
+</p>
+</li>
+<li type="disc">
+<p><code>trigger</code> and <code>scope</code>: see <a href="#BABCIDBF">Section 6.3.5.5, "Setting the Replication Policy"</a>.
+</p>
+</li>
+<li type="disc">
+<p><code>bind-addr</code>: specifies the IP of the network interface card (NIC) to bind to. This is useful if the host machine has multiple NICs, each with its own IP address.
+</p>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+<a id="BABDHIGE" name="BABDHIGE"></a>
+<div class="sect3">
+<a id="sthref498" name="sthref498"></a>
+<h4 class="sect3"><span class="secnum">6.3.5.3 </span>Setting up Peer-to-Peer Replication
+</h4>
+<p>Oracle Application Server supports two types of peer-to-peer replication: dynamic and static.
+</p>
+<ul>
+<li type="disc">
+<p>In dynamic peer-to-peer replication, OC4J discovers other OC4J instances through OPMN. You do not have to list the names of the instances in a configuration file.
+</p>
+</li>
+<li type="disc">
+<p>In static peer-to-peer replication, you list the names of the instances that you want to be involved in the replication.
+</p>
+</li>
+</ul><a id="sthref499" name="sthref499"></a>
+<p class="subhead2">Dynamic Peer-to-Peer Replication</p>
+<p>To specify dynamic peer-to-peer replication, you include an empty <code>&lt;opmn-discovery/></code> tag in the application&#039;s <code>orion-application.xml</code> file or in the global <code>ORACLE&#095;HOME/j2ee/home/config/application.xml</code> file
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;orion-application ... >
+&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&lt;cluster allow-colocation&#061;"false">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;replication-policy trigger&#061;"onShutdown" scope&#061;"allAttributes"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;protocol>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;peer>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="bold">&lt;opmn-discovery/></span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/peer>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/protocol>
+&nbsp;&nbsp;&nbsp;&lt;/cluster>
+&lt;/orion-application>
+
+</pre>
+<p>You defined how OPMN discovers instances in a cluster in step <a href="#BGBHFHFJ">2</a>, <a href="#BGBHFHFJ">"Install Oracle HTTP Server and OC4J and Cluster the Instances using OPMN"</a>.
+</p><a id="sthref500" name="sthref500"></a>
+<p class="subhead2">Static Peer-to-Peer Replication</p>
+<p>To specify static peer-to-peer replication, you list the names of the hosts in the <code>&lt;node></code> element in the application&#039;s <code>orion-application.xml</code> file or in the global <code>ORACLE&#095;HOME/j2ee/home/config/application.xml</code> file. For each node, you specify another node in the active-active topology such that all the nodes in the topology are connected in the chain. For example, if you have three Oracle Application Server instances in your topology, node 1 can specify node 2, node 2 can specify node 3, and node 3 can specify node 1.
+</p>
+<p>Example:
+</p>
+<p>On node 1, the <code>&lt;node></code> tag specifies node 2:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;orion-application ... >
+&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&lt;cluster allow-colocation&#061;"false">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;replication-policy trigger&#061;"onShutdown" scope&#061;"allAttributes"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;protocol>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;peer start-port&#061;"7900" range&#061;"10" timeout&#061;"6000">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;node host&#061;"node2.mycompany.com" port&#061;"7900"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/peer>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/protocol>
+&nbsp;&nbsp;&nbsp;&lt;/cluster>
+&lt;/orion-application>
+
+</pre>
+<p>On node 2, the <code>&lt;node></code> tag specifies node 3:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;orion-application ... >
+&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&lt;cluster allow-colocation&#061;"false">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;replication-policy trigger&#061;"onShutdown" scope&#061;"allAttributes"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;protocol>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;peer start-port&#061;"7900" range&#061;"10" timeout&#061;"6000">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;node host&#061;"node3.mycompany.com" port&#061;"7900"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/peer>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/protocol>
+&nbsp;&nbsp;&nbsp;&lt;/cluster>
+&lt;/orion-application>
+
+</pre>
+<p>On node 3, the <code>&lt;node></code> tag specifies node 1:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;orion-application ... >
+&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&lt;cluster allow-colocation&#061;"false">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;replication-policy trigger&#061;"onShutdown" scope&#061;"allAttributes"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;protocol>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;peer start-port&#061;"7900" range&#061;"10" timeout&#061;"6000">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;node host&#061;"node1.mycompany.com" port&#061;"7900"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/peer>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/protocol>
+&nbsp;&nbsp;&nbsp;&lt;/cluster>
+&lt;/orion-application>
+
+</pre>
+<p>Another way of doing this is to have all the nodes specify the same node. In a three-node example, you could also have nodes 1 and 2 specify node 3, and node 3 can specify either node 1 or node 2.
+</p>
+<p>Description of the tags and attributes used in the example above:
+</p>
+<ul>
+<li type="disc">
+<p><code>start-port</code>: specifies the first port on the local node that Oracle Application Server tries to bind to for peer communication. If this port is already in use, Oracle Application Server increments the port number until it finds an available port. The default is 7800.
+</p>
+</li>
+<li type="disc">
+<p><code>timeout</code>: specifies the length of time in milliseconds to wait for a response from the specified peer node. The default is 3000 milliseconds.
+</p>
+</li>
+<li type="disc">
+<p><code>host</code>: specifies the name of the peer node.
+</p>
+</li>
+<li type="disc">
+<p><code>port</code>: specifies the port to use on the specified host (in the <code>host</code> attribute) for peer communication. The default is 7800.
+</p>
+</li>
+<li type="disc">
+<p><code>range</code>: specifies the number of times to increment the port specified on the <code>port</code> (not <code>start-port</code>) attribute. The default is 5.
+</p>
+</li>
+</ul>
+<p>Note the following:
+</p>
+<ul>
+<li type="disc">
+<p>In static peer-to-peer replication, the application&#039;s <code>orion-application.xml</code> file is different for each instance. When you deploy your application, you have to make sure that you update the <code>orion-application.xml</code> accordingly.
+</p>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+<a id="BABJJFEB" name="BABJJFEB"></a>
+<div class="sect3">
+<a id="sthref501" name="sthref501"></a>
+<h4 class="sect3"><span class="secnum">6.3.5.4 </span>Setting up Replication to a Database
+</h4>
+<p>In this replication mechanism, the replicated data is saved to a database. You specify the database in the <code>&lt;database></code> tag in the application&#039;s <code>orion-application.xml</code> file or in the global <code>ORACLE&#095;HOME/j2ee/home/config/application.xml</code> file. For example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;orion-application ... >
+&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&lt;cluster allow-colocation&#061;"false">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;replication-policy trigger&#061;"onShutdown" scope&#061;"allAttributes"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;protocol>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;database data-source&#061;"jdbc/MyOracleDS"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/protocol>
+&nbsp;&nbsp;&nbsp;&lt;/cluster>
+&lt;/orion-application>
+
+</pre>
+<p>The value for the <code>data-source</code> attribute must match the data source&#039;s <code>jndi-name</code> as specified in the <code>data-sources.xml</code> file. See the <span class="italic">Oracle Containers for J2EE Services Guide</span> for details on creating and using data sources.
+</p>
+</div><!-- class="sect3" -->
+<a id="BABCIDBF" name="BABCIDBF"></a>
+<div class="sect3">
+<a id="sthref502" name="sthref502"></a>
+<h4 class="sect3"><span class="secnum">6.3.5.5 </span>Setting the Replication Policy
+</h4>
+<p>Attributes in the <code>&lt;replication-policy></code> tag enable you to specify which data is to be replicated and how frequently the data is replicated.
+</p><a id="sthref503" name="sthref503"></a>
+<p class="subhead2">The trigger attribute<a id="sthref504" name="sthref504"></a></p>
+<p>The <code>trigger</code> attribute specifies when replication occurs. <a href="#BGBBJIJE">Table 6-3</a> describes supported values for this attribute:
+</p>
+<div class="tblhruleformal">
+<a id="sthref505" name="sthref505"></a><a id="BGBBJIJE" name="BGBBJIJE"></a>
+<p class="titleintable">Table 6-3 Values for the trigger Attribute</p>
+<table class="HRuleFormal" title="Values for the trigger Attribute" summary="Values for the trigger Attribute" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t6">Value
+</th>
+<th align="left" valign="bottom" id="r1c2-t6">HttpSession
+</th>
+<th align="left" valign="bottom" id="r1c3-t6">Stateful Session Bean
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t6" headers="r1c1-t6">
+<p><code>onSetAttribute</code>
+</p>
+</td>
+<td align="left" headers="r2c1-t6 r1c2-t6">
+<p>Replicate each change made to an HTTP session attribute at the time the value is modified. From a programmatic standpoint, replication occurs each time <code>setAttribute()</code> is called on the <code>HttpSession</code> object.
+</p>
+<p>This option can be resource intensive in cases where the session is being extensively modified.
+</p>
+</td>
+<td align="left" headers="r2c1-t6 r1c3-t6">
+<p>Not applicable.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t6" headers="r1c1-t6">
+<p><code>onRequestEnd</code> (default)
+</p>
+</td>
+<td align="left" headers="r3c1-t6 r1c2-t6">
+<p>Queue all changes made to HTTP session attributes, then replicate all changes just before the HTTP response is sent.
+</p>
+</td>
+<td align="left" headers="r3c1-t6 r1c3-t6">
+<p>Replicate the current state of the bean after each EJB method call. The state is replicated frequently, but offers higher reliance.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t6" headers="r1c1-t6">
+<p><code>onShutdown</code>
+</p>
+</td>
+<td align="left" headers="r4c1-t6 r1c2-t6">
+<p>Replicate the current state of the HTTP session whenever the JVM is terminated gracefully, such as with Control-C. State is not replicated if the host is terminated unexpectedly, as in the case of a system crash.
+</p>
+<p>Because session state was not previously replicated, all session data is sent across the network at once upon JVM termination, which can impact network performance. This option can also significantly increase the amount of time needed for the JVM to shut down.
+</p>
+</td>
+<td align="left" headers="r4c1-t6 r1c3-t6">
+<p>Replicate the current state of the bean whenever the JVM is terminated gracefully. State is not replicated if the host is terminated unexpectedly, as in case of a system crash.
+</p>
+<p>Because bean state was not previously replicated, all state data is sent across the network at once upon JVM termination, which can impact network performance. This option may also significantly increase the amount of time needed for the JVM to shut down.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformal" -->
+<a id="sthref506" name="sthref506"></a>
+<p class="subhead2">The scope attribute</p>
+<p>The <code>scope</code> attribute specifies which data is replicated. <a href="#BGBBBBBE">Table 6-4</a> describes supported values for the attribute:
+</p>
+<div class="tblhruleformal">
+<a id="sthref507" name="sthref507"></a><a id="BGBBBBBE" name="BGBBBBBE"></a>
+<p class="titleintable">Table 6-4 Values for the scope Attribute</p>
+<table class="HRuleFormal" title="Values for the scope Attribute" summary="Values for the scope Attribute" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t7">Value
+</th>
+<th align="left" valign="bottom" id="r1c2-t7">HttpSession
+</th>
+<th align="left" valign="bottom" id="r1c3-t7">Stateful Session Bean
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t7" headers="r1c1-t7">
+<p><code>modifiedAttributes</code>
+</p>
+</td>
+<td align="left" headers="r2c1-t7 r1c2-t7">
+<p>Replicate only the modified HTTP session attributes.
+</p>
+<p>This is the default replication setting for HttpSession.
+</p>
+</td>
+<td align="left" headers="r2c1-t7 r1c3-t7">
+<p>Not applicable.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t7" headers="r1c1-t7">
+<p><code>allAttributes</code>
+</p>
+</td>
+<td align="left" headers="r3c1-t7 r1c2-t7">
+<p>Replicate all attribute values set on the HTTP session.
+</p>
+</td>
+<td align="left" headers="r3c1-t7 r1c3-t7">
+<p>Replicate all member variable values set on the stateful session bean.
+</p>
+<p>This is the default replication setting for stateful session beans.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformal" -->
+
+<p>
+</p>
+</div><!-- class="sect3" -->
+<a id="BABCBEDA" name="BABCBEDA"></a>
+<div class="sect3">
+<a id="sthref508" name="sthref508"></a>
+<h4 class="sect3"><span class="secnum">6.3.5.6 </span>Specifying the Number of Nodes to Replicate To
+</h4>
+<p>To specify the number of nodes to replicate to, use the <code>write-quota</code> attribute of the <code>&lt;cluster></code> tag. For example, the following snippet specifies that the replicated data is replicated to two other nodes.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;orion-application ... >
+&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&lt;cluster allow-colocation&#061;"false" <a id="sthref509" name="sthref509"></a><span class="bold">write-quota&#061;"2"</span>>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;replication-policy trigger&#061;"onShutdown" scope&#061;"allAttributes"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;protocol>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;peer>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;opmn-discovery/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/peer>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/protocol>
+&nbsp;&nbsp;&nbsp;&lt;/cluster>
+&lt;/orion-application>
+
+</pre>
+<p>The default is 1.
+</p>
+<p>Recommendations: For a two-node active-active topology, set <code>write-quota</code> to <code>1</code>, so that the data is replicated to the other node.
+</p>
+<p>For topologies with three or more nodes, set <code>write-quota</code> to at least <code>2</code> to ensure that the data is replicated to at least two other nodes.
+</p>
+<p>To replicate data to all nodes in the topology, set <code>write-quota</code> to the total number of nodes in the topology. It is possible to write back to the same node if there is another instance running on that node.
+</p>
+<p>The <code>write-quota</code> attribute is not used if you are replicating to database.
+</p>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABEAAAD" name="BABEAAAD"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref510" name="sthref510"></a>
+<h2 class="sect1"><span class="secnum">6.4 </span>Creating the Active-Passive Topology<a id="sthref511" name="sthref511"></a><a id="sthref512" name="sthref512"></a><a id="sthref513" name="sthref513"></a>
+</h2>
+<p>This section describes how to install Oracle Application Server in an active-passive topology with OracleAS Cold Failover Cluster. OracleAS Cold Failover Cluster is one of the high availability environments supported by Oracle Application Server.
+</p>
+<p>Contents of this section:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABGDHGJ">Section 6.4.1, "Active-Passive Topologies: Introduction"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABCEFCJ">Section 6.4.2, "Overview of Installation Steps for OracleAS Cold Failover Cluster"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABGCFHD">Section 6.4.3, "Preinstallation Steps for OracleAS Cold Failover Cluster"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJHFHJ">Section 6.4.4, "OracleAS Cold Failover Cluster: Details of Installation Steps"</a>
+</p>
+</li>
+</ul><a id="BABGDHGJ" name="BABGDHGJ"></a>
+<div class="sect2">
+<a id="sthref514" name="sthref514"></a>
+<h3 class="sect2"><span class="secnum">6.4.1 </span>Active-Passive Topologies: Introduction<a id="sthref515" name="sthref515"></a>
+</h3>
+<p>An active-passive topology consists of the following:
+</p>
+<ul>
+<li type="disc">
+<p>Two nodes in a hardware cluster
+</p>
+</li>
+<li type="disc">
+<p>A virtual hostname and IP address
+</p>
+</li>
+<li type="disc">
+<p>A shared storage, to be shared between the two nodes
+</p>
+</li>
+</ul>
+<p>You install the Oracle home on the shared storage. During runtime in an active-passive topology, only one node is active. The other node is passive. The active node mounts the shared storage so that it can access the files and runs all the processes and handles all the requests. Clients access the active node through the virtual hostname. Clients do not need to know the physical hostnames of the nodes in the topology.
+</p>
+<p>If the active node fails for any reason, a failover event occurs and the passive node takes over and becomes the active node. It mounts the shared storage and runs all the processes and handles all the requests. The virtual hostname and IP now point to the passive node. Clients, because they access the nodes using the virtual hostname, do not know that it is the passive node that is servicing their requests.
+</p>
+<p>The nodes need to be in hardware cluster to enable failover.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Installing the Oracle home on the local storage of each node in the OracleAS Cold Failover Cluster topology is not supported. You have to install it on the shared storage.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div><a id="sthref516" name="sthref516"></a>
+<p class="subhead2">Vendor Clusterware</p>
+<p>The two nodes in an active-passive topology are in a hardware cluster, which typically includes some vendor clusterware. For a list of certified clusterware, visit the Oracle Technology Network website (<code><a href="http://www.oracle.com/technology">http://www.oracle.com/technology</a></code>).
+</p>
+<p>These products must be installed on both nodes (active and passive) in the topology.
+</p><a id="sthref517" name="sthref517"></a>
+<p class="subhead2">Figures of Active-Passive Topologies</p>
+<p><a href="#CEGJCHIA">Figure 6-3</a> shows a diagram of an active-passive topology with the Oracle Application Server Oracle home installed on the shared storage. The Oracle home contains both Oracle HTTP Server and OC4J. <a href="#CEGEGHHE">Figure 6-4</a> shows a distributed active-passive topology, where Oracle HTTP Server and OC4J are installed on different Oracle home.
+</p>
+<div class="figure">
+<a id="CEGJCHIA" name="CEGJCHIA"></a><a id="sthref518" name="sthref518"></a>
+
+<p class="titleinfigure">Figure 6-3 Active-Passive Topology with Oracle HTTP Server and OC4J in the Same Oracle Home</p>
+<img src="img/ashia083.gif" alt="Description of Figure 6-3  follows" title="Description of Figure 6-3  follows"/>
+<br /><a id="sthref519" name="sthref519" href="img_text/ashia083.htm">Description of  "Figure 6-3 Active-Passive Topology with Oracle HTTP Server and OC4J in the Same Oracle Home"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p>
+</p>
+<div class="figure">
+<a id="CEGEGHHE" name="CEGEGHHE"></a><a id="sthref520" name="sthref520"></a>
+
+<p class="titleinfigure">Figure 6-4 Active-Passive Topology with Oracle HTTP Server and OC4J in Separate Oracle Homes</p>
+<img src="img/ashia084.gif" alt="Description of Figure 6-4  follows" title="Description of Figure 6-4  follows"/>
+<br /><a id="sthref521" name="sthref521" href="img_text/ashia084.htm">Description of  "Figure 6-4 Active-Passive Topology with Oracle HTTP Server and OC4J in Separate Oracle Homes"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+</div><!-- class="sect2" -->
+<a id="BABCEFCJ" name="BABCEFCJ"></a>
+<div class="sect2">
+<a id="sthref522" name="sthref522"></a>
+<h3 class="sect2"><span class="secnum">6.4.2 </span>Overview of Installation Steps for OracleAS Cold Failover Cluster<a id="sthref523" name="sthref523"></a>
+</h3>
+<p>Follow the steps in <a href="#BABHDHIG">Table 6-5</a> to create the OracleAS Cold Failover Cluster configuration. If you are installing Oracle HTTP Server and OC4J in the same Oracle Home (<a href="#CEGJCHIA">Figure 6-3</a>), perform the steps on the hardware cluster. If you are installing Oracle HTTP Server and OC4J in separate Oracle Homes (<a href="#CEGEGHHE">Figure 6-4</a>), perform each step on both hardware clusters.
+</p>
+<div class="tblhruleformalwide">
+<a id="sthref524" name="sthref524"></a><a id="BABHDHIG" name="BABHDHIG"></a>
+<p class="titleintable">Table 6-5 Overview of Installation Steps for OracleAS Cold Failover Cluster </p>
+<table class="HRuleFormalWide" title="Overview of Installation Steps for OracleAS Cold Failover Cluster " summary="Summary of steps for installing OracleAS Cold Failover Cluster with Oracle HTTP Server and OC4J in the Same Oracle Home" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t9">
+<br />
+</th>
+<th align="left" valign="bottom" id="r1c2-t9">Step
+</th>
+<th align="left" valign="bottom" id="r1c3-t9">Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t9" headers="r1c1-t9">
+<p><span class="bold">1.</span>
+</p>
+</td>
+<td align="left" headers="r2c1-t9 r1c2-t9">
+<p><a href="#BABJCFJF">Perform Preinstallation Steps</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r2c1-t9 r1c3-t9">
+<p>Preinstallation tasks, described in <a href="#BABGCFHD">Section 6.4.3</a> include:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABJGHDH">Section 6.4.3.1, "Map the Virtual Hostname and Virtual IP Address"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABHDFAE">Section 6.4.3.2, "Set Up a File System That Can Be Mounted from Both Nodes"</a>
+</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t9" headers="r1c1-t9">
+<p><span class="bold">2.</span>
+</p>
+</td>
+<td align="left" headers="r3c1-t9 r1c2-t9">
+<p><a href="#BABBEBDF">Set VIRTUAL&#095;HOST&#095;NAME Environment Variable</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r3c1-t9 r1c3-t9">
+<p>Set the VIRTUAL&#095;HOST&#095;NAME variable to the virtual hostname.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t9" headers="r1c1-t9">
+<p><span class="bold">3.</span>
+</p>
+</td>
+<td align="left" headers="r4c1-t9 r1c2-t9">
+<p><a href="#BABEEFEF">Install Oracle Application Server on the Shared Disk</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r4c1-t9 r1c3-t9">
+<p>In this step, you run the installer from either node of the hardware cluster to install Oracle HTTP Server and OPMN on the shared disk.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t9" headers="r1c1-t9">
+<p><span class="bold">4.</span>
+</p>
+</td>
+<td align="left" headers="r5c1-t9 r1c2-t9">
+<p><a href="#BABCGHEJ">(optional) Configure the Oracle Application Server Instance for SSL</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r5c1-t9 r1c3-t9">
+<p>If you want the Oracle Application Server instance to use SSL, enable SSL in the Oracle Application Server installation.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t9" headers="r1c1-t9">
+<p><span class="bold">5.</span>
+</p>
+</td>
+<td align="left" headers="r6c1-t9 r1c2-t9">
+<p><a href="#BABGGCDB">(optional) Create a File System on the Shared Disk for OracleAS JMS File-Based Persistence</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r6c1-t9 r1c3-t9">
+<p>If you are using OracleAS JMS, create a file system on the shared disk.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformalwide" -->
+
+</div><!-- class="sect2" -->
+<a id="BABGCFHD" name="BABGCFHD"></a>
+<div class="sect2">
+<a id="sthref525" name="sthref525"></a>
+<h3 class="sect2"><span class="secnum">6.4.3 </span>Preinstallation Steps for <a id="sthref526" name="sthref526"></a>OracleAS Cold Failover Cluster<a id="sthref527" name="sthref527"></a>
+</h3>
+<p>Before installing Oracle Application Server in an OracleAS Cold Failover Cluster, perform these procedures:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABJGHDH">Section 6.4.3.1, "Map the Virtual Hostname and Virtual IP Address"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABHDFAE">Section 6.4.3.2, "Set Up a File System That Can Be Mounted from Both Nodes"</a>
+</p>
+</li>
+</ul>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>In addition to the requirements listed in this chapter, ensure that you meet the requirements described in <a href="#CDEIHBHH">Section 6.2, "Requirements for High Availability Configurations"</a>.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div><a id="BABJGHDH" name="BABJGHDH"></a>
+<div class="sect3">
+<a id="sthref528" name="sthref528"></a>
+<h4 class="sect3"><span class="secnum">6.4.3.1 </span>Map the Virtual Hostname and Virtual IP Address<a id="sthref529" name="sthref529"></a><a id="sthref530" name="sthref530"></a>
+</h4>
+<p>Each node in an OracleAS Cold Failover Cluster configuration is associated with its own physical IP address. In addition, the active node in the cluster is associated with a virtual hostname and virtual IP address. This allows clients to access the OracleAS Cold Failover Cluster using the virtual hostname.
+</p>
+<p>Virtual hostnames and virtual IP addresses are any valid hostname and IP address in the context of the subnet containing the hardware cluster.
+</p>
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Map the virtual hostname and virtual IP address only to the active node. Do not map the virtual hostname and IP address to both active and passive nodes at the same time. When you failover, only then map the virtual hostname and IP address to the passive node, which is now the active node.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p> Before attempting to complete this procedure, ask the system or network administrator to review all the steps required. The procedure will reconfigure the network settings on the cluster nodes and may vary with differing network implementations.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>The following example configures a virtual hostname called <code>vhost.mydomain.com</code>, with a virtual IP of 138.1.12.191:
+</p>
+<ol type="1" start="1">
+<li><a id="CDEDEJJH" name="CDEDEJJH"></a>
+<p>Register the virtual hostname and IP address with DNS for the network. 
+</p>
+<p>For example, register the <code>vhost.mydomain.com</code>/<code>138.1.12.191</code> pair with DNS.
+</p>
+</li>
+<li><a id="BABCBEAE" name="BABCBEAE"></a><a id="BGBCAHFA" name="BGBCAHFA"></a>
+<p>Determine the primary public network interface.
+</p>
+<p>The primary public network interface for Ethernet encapsulation is typically <code>eth0</code>. Use the following command and search for a network interface that has an <code>inet addr</code> value of the physical IP address of the node:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">/sbin/ifconfig
+
+</pre>
+</li>
+<li><a id="BGBIHGJI" name="BGBIHGJI"></a>
+<p>Find an available index number for the primary public network interface.
+</p>
+<p>For example, if the following is the output of the <code><span class="codeinlinebold">/sbin/ifconfig</span></code> command and eth0 is determined to be the primary public interface in step <a href="#BABCBEAE">2</a>, then eth0:1 is available for an additional IP address: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">eth0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link&nbsp;encap:Ethernet&nbsp;&nbsp;HWaddr&nbsp;00:B0:D0:68:B4:3D
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inet addr:130.35.137.46&nbsp;&nbsp;Bcast:130.35.139.255&nbsp;Mask:255.255.252.0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UP&nbsp;BROADCAST&nbsp;RUNNING&nbsp;MULTICAST&nbsp;&nbsp;MTU:1500&nbsp;&nbsp;Metric:1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX packets:608598569&nbsp;errors:8&nbsp;dropped:0&nbsp;overruns:0&nbsp;frame:8
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX packets:578257570&nbsp;errors:111&nbsp;dropped:0&nbsp;overruns:0&nbsp;carrier:111 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;collisions:0&nbsp;txqueuelen:100
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX bytes:2407934851&nbsp;(2296.3 Mb)&nbsp;&nbsp;TX bytes:3386476912&nbsp;(3229.5 Mb)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interrupt:26&nbsp;Base&nbsp;address:0xe0c0&nbsp;Memory:fbefc000-fbefc038
+
+</pre>
+<pre xml:space="preserve" class="oac_no_warn">eth1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link&nbsp;encap:Ethernet&nbsp;&nbsp;HWaddr&nbsp;00:02:B3:28:80:8C 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inet&nbsp;addr:10.0.0.1&nbsp;&nbsp;Bcast:10.255.255.255&nbsp;&nbsp;Mask:255.0.0.0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UP&nbsp;BROADCAST&nbsp;RUNNING&nbsp;MULTICAST&nbsp;&nbsp;MTU:1500&nbsp;&nbsp;Metric:1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX packets:781415&nbsp;errors:0&nbsp;dropped:0&nbsp;overruns:0&nbsp;frame:0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX packets:725511&nbsp;errors:0&nbsp;dropped:0&nbsp;overruns:0&nbsp;carrier:0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;collisions:0&nbsp;txqueuelen:100
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX bytes:280473135&nbsp;(267.4 Mb)&nbsp;&nbsp;TX bytes:254651952&nbsp;(242.8 Mb)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interrupt:23&nbsp;Base&nbsp;address:0xccc0&nbsp;Memory:fabff000-fabff038
+
+</pre>
+<pre xml:space="preserve" class="oac_no_warn">lo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Link&nbsp;encap:Local&nbsp;Loopback
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inet&nbsp;addr:127.0.0.1&nbsp;Mask:255.0.0.0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UP LOOPBACK RUNNING&nbsp;&nbsp;MTU:16436&nbsp;&nbsp;Metric:1
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX packets:114185902&nbsp;errors:0&nbsp;dropped:0&nbsp;overruns:0&nbsp;frame:0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TX packets:114185902&nbsp;errors:0&nbsp;dropped:0&nbsp;overruns:0&nbsp;carrier:0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;collisions:0&nbsp;txqueuelen:0
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RX bytes:2307872746&nbsp;(2200.9 Mb)&nbsp;&nbsp;TX bytes:2307872746&nbsp;(2200.9 Mb)
+
+</pre>
+</li>
+<li><a id="BGBCBFGG" name="BGBCBFGG"></a>
+<p>Add the virtual IP address to the primary public network interface by running the following command, as the root user, using the available index number from step <a href="#BGBIHGJI">3</a>:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">/sbin/ifconfig &lt;<span class="italic">primary&#095;public&#095;interface</span>>:&lt;<span class="italic">available&#095;index</span>> &lt;<span class="italic">virtual&#095;ip&#095;address</span>> netmask &lt;<span class="italic">netmask&#095;value</span>> up
+
+</pre>
+<p>For example, enter the following command if <code>eth0:1</code> is available:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">/sbin/ifconfig eth0:1 138.1.12.191 up
+
+</pre>
+</li>
+<li><a id="BGBHIAED" name="BGBHIAED"></a>
+<p>Check that the virtual IP address is configured correctly:
+</p>
+<ol type="a">
+<li>
+<p>Use the instructions listed in step <a href="#BGBCAHFA">2</a> to confirm the new entry for the <code>primary&#095;public&#095;interface:available&#095;index</code> entry created in step <a href="#BGBCBFGG">4</a>. 
+</p>
+</li>
+<li>
+<p>Try to connect to the node using the virtual hostname and virtual IP address from another node. For example, entering both of the following commands from a different node should provide a login to the node you configured in this procedure:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">telnet <span class="italic">hostname.domain</span>
+telnet <span class="italic">ip&#095;address</span>
+
+</pre>
+<p>For example, enter:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">telnet vhost.mydomain.com
+telnet 138.1.12.191
+
+</pre>
+</li>
+</ol>
+</li>
+</ol><a id="sthref531" name="sthref531"></a>
+<p class="subhead2">On Failover<a id="sthref532" name="sthref532"></a><a id="sthref533" name="sthref533"></a></p>
+<p>If the active node fails, then the passive node takes over. If you do not have a clusterware agent to map the virtual IP from the failed node to the passive node, then you have to do it manually. You have to remove the virtual IP mapping from the failed node, and map it to the passive node.
+</p>
+<ol type="1" start="1">
+<li>
+<p>On the failed node, remove the virtual IP address by running the following command as the root user:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">/sbin/ifconfig</span> <span class="bolditalic">configured&#095;interface</span> <span class="bold">down</span>
+
+</pre>
+<p>For example, enter the following command if <code>eth0:1</code> is configured with the virtual IP address:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">/sbin/ifconfig eth0:1 down
+
+</pre>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Use the commands in step <a href="#BGBCAHFA">2</a> of the previous procedure to confirm that the virtual IP address has been removed.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</li>
+<li>
+<p>On the passive node, add the virtual IP address.
+</p>
+<p>On the passive node, follow steps <a href="#BABCBEAE">2</a> to <a href="#BGBHIAED">5</a> of the previous procedure to add and confirm the virtual IP address on the passive node.
+</p>
+</li>
+</ol>
+</div><!-- class="sect3" -->
+<a id="BABHDFAE" name="BABHDFAE"></a>
+<div class="sect3">
+<a id="sthref534" name="sthref534"></a>
+<h4 class="sect3"><span class="secnum">6.4.3.2 </span>Set Up a File System That Can Be Mounted from Both Nodes<a id="sthref535" name="sthref535"></a>
+</h4>
+<p>Although the hardware cluster has shared storage, you need to create a file system on this shared storage such that both nodes of the OracleAS Cold Failover Cluster can mount this file system. You will use this file system for the following directories:
+</p>
+<ul>
+<li type="disc">
+<p>Oracle home directory for the Oracle Application Server instance
+</p>
+</li>
+<li type="disc">
+<p>The oraInventory directory
+</p>
+</li>
+</ul>
+<p>For disk space requirements, see <a href="reqs.htm#BABJFJFH">Section 2.2, "System Requirements"</a>.
+</p>
+<p>If you are running a volume manager on the cluster to manage the shared storage, refer to the volume manager documentation for steps to create a volume. Once a volume is created, you can create the file system on that volume.
+</p>
+<p>If you do not have a volume manager, you can create a file system on the shared disk directly. Ensure that the hardware vendor supports this, that the file system can be mounted from either node of the OracleAS Cold Failover Cluster, and that the file system is repairable from either node if a node fails.
+</p>
+<p>To check that the file system can be mounted from either node, do the following steps:
+</p>
+<ol type="1" start="1">
+<li><a id="BGBBDBFI" name="BGBBDBFI"></a>
+<p>Set up and mount the file system from node 1.
+</p>
+</li>
+<li>
+<p>Unmount the file system from node 1.
+</p>
+</li>
+<li>
+<p>Mount the file system from node 2 using the same mount point that you used in step <a href="#BGBBDBFI">1</a>.
+</p>
+</li>
+<li>
+<p>Unmount it from node 2, and mount it on node 1, because you will be running the installer from node 1.
+</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left"><a id="BGBFEADI" name="BGBFEADI"></a>
+<p class="notep1">Note:</p>Only one node of the OracleAS Cold Failover Cluster should mount the file system at any given time. File system configuration files on all nodes of the cluster should not include an entry for the automatic mount of the file system upon a node restart or execution of a global mount command. For example, on UNIX platforms, do not include an entry for this file system in <code>/etc/fstab</code> file.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="BABJHFHJ" name="BABJHFHJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref536" name="sthref536"></a>
+<h3 class="sect2"><span class="secnum">6.4.4 </span>OracleAS Cold Failover Cluster: Details of Installation Steps<a id="sthref537" name="sthref537"></a>
+</h3>
+<p>This section lists the steps for installing OracleAS Cold Failover Cluster.
+</p>
+<p>If you are installing Oracle HTTP Server and OC4J in separate Oracle Homes, you need to perform each of these steps on both clusters.
+</p><a id="BABJAIBG" name="BABJAIBG"></a><br /><a id="BABJCFJF" name="BABJCFJF"></a>
+<p class="seghead">Step 1   Perform Preinstallation Steps
+</p>
+<p>Perform the preinstallation steps listed in <a href="#BABGCFHD">Section 6.4.3, "Preinstallation Steps for OracleAS Cold Failover Cluster"</a>.
+</p><a id="BABBEBDF" name="BABBEBDF"></a>
+<p class="seghead">Step 2   Set VIRTUAL&#095;HOST&#095;NAME Environment Variable
+</p>
+<p>Set the VIRTUAL&#095;HOST&#095;NAME environment variable to the virtual hostname on either node of the hardware cluster. You will perform the install from this node onto the shared disk in the next step. To find out more about how to set environment variables, see <a href="reqs.htm#CHDGDCJD">Section 2.8, "Environment Variables"</a>.
+</p><a id="BABEEFEF" name="BABEEFEF"></a>
+<p class="seghead">Step 3   Install Oracle Application Server on the Shared Disk
+</p><a id="BABHEDFJ" name="BABHEDFJ"></a>
+<p>Install Oracle Application Server on the shared disk of the hardware cluster from the node where you set the VIRTUAL&#095;HOST&#095;NAME environment variable.
+</p>
+<ul>
+<li type="disc">
+<p><span class="bold">For OracleAS Cold Failover Cluster with Oracle HTTP Server and OC4J in the Same Oracle Home</span>
+</p>
+<p>Follow the steps in <a href="advanced_install.htm#CIHIEBFI">Section 5.2.4, "Installing Integrated Web Server, J2EE Server and Process Management"</a>. During installation, perform the following actions:
+</p>
+<ul>
+<li type="circle">
+<p>On the "Administration Instance Settings" screen, select <span class="bold">Configure this as an Administration OC4J instance</span> if you want to configure Application Server Control for administering the OC4J instance. Otherwise, deselect this option.
+</p>
+</li>
+</ul>
+</li>
+<li type="disc">
+<p><span class="bold">For OracleAS Cold Failover Cluster with Oracle HTTP Server and OC4J in Separate Oracle Homes</span>
+</p>
+<p>If you are installing on the hardware cluster where you want to run Oracle HTTP Server, follow the steps in <a href="advanced_install.htm#CIHFCFIB">Section 5.2.3, "Installing Web Server and Process Management"</a>. During installation, perform the following actions:
+</p>
+<ul>
+<li type="circle">
+<p>If you want to route all requests to OC4J through the Oracle HTTP Server, select <span class="bold">Configure this HTTP Server instance to be part of an Oracle Application Server cluster</span> on the "Cluster Topology Configuration" screen. Specify the <span class="bold">IP Address</span> and <span class="bold">Port</span> for the multicast address shared by all the nodes in the cluster. 
+</p>
+</li>
+<li type="circle">
+<p>If you do not want to route all requests to OC4J through the Oracle HTTP Server, deselect <span class="bold">Configure this HTTP Server instance to be part of an Oracle Application Server cluster</span> on the "Cluster Topology Configuration" screen. 
+</p>
+</li>
+</ul>
+<p>If you are installing on the hardware cluster where you want to run OC4J, follow the steps in <a href="advanced_install.htm#CIHCGJCG">Section 5.2.2, "Installing J2EE Server and Process Management"</a>. During installation, perform the following actions:
+</p>
+<ul>
+<li type="circle">
+<p>On the "Administration Instance Settings" screen, select <span class="bold">Configure this as an Administration OC4J instance</span> if you want to configure Application Server Control for administering the OC4J instance. Otherwise, deselect this option.
+</p>
+</li>
+<li type="circle">
+<p>If you want to route all requests to OC4J through the Oracle HTTP Server, select <span class="bold">Configure this OC4J instance to be part of an Oracle Application Server cluster topology </span>on the "Cluster Topology Configuration" screen. Specify the <span class="bold">IP Address</span> and <span class="bold">Port</span> for the multicast address shared by all the nodes in the cluster. Select <span class="bold">Access this OC4J Instance from a separate Oracle HTTP Server</span>.
+</p>
+</li>
+<li type="circle">
+<p>If you do not want to route all requests to OC4J through the Oracle HTTP Server, deselect <span class="bold">Configure this OC4J instance to be part of an Oracle Application Server cluster topology </span>on the "Cluster Topology Configuration" screen. 
+</p>
+</li>
+</ul>
+</li>
+</ul><a id="BABCGHEJ" name="BABCGHEJ"></a>
+<p class="seghead">Step 4   (optional) Configure the Oracle Application Server Instance for SSL
+</p>
+<p>If you want the Oracle Application Server instance to use SSL, follow the steps in the <span class="italic">Oracle Application Server Administrator's Guide</span>. 
+</p><a id="BABGGCDB" name="BABGGCDB"></a>
+<p class="seghead">Step 5   (optional) Create a File System on the Shared Disk for OracleAS JMS File-Based Persistence
+</p>
+<p>If you are using OracleAS JMS with file-based persistence, create a file system on the shared disk for the OracleAS JMS queues, and mount this file system from node 1.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABBJIGD" name="BABBJIGD"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref538" name="sthref538"></a>
+<h2 class="sect1"><span class="secnum">6.5 </span>Creating an OracleAS Disaster Recovery Configuration
+</h2>
+<p>This section describes how to install Oracle Application Server in OracleAS Disaster Recovery configurations. OracleAS Disaster Recovery is one of the high availability environments supported by Oracle Application Server.
+</p>
+<p>Contents of this section:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABHIJHI">Section 6.5.1, "OracleAS Disaster Recovery: Introduction"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABDFJHC">Section 6.5.2, "Setting up the OracleAS Disaster Recovery Environment"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABIDJFJ">Section 6.5.3, "Installing Oracle Application Server in an OracleAS Disaster Recovery Environment"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABCIEGA">Section 6.5.4, "Installing the OracleAS 10g (10.1.3) Standalone Install of OracleAS Guard into Oracle Homes"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABHFIBI">Section 6.5.5, "Patching OracleAS Guard Release 10.1.2.n.n with Release 10.1.3.0.0"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABDHAHD">Section 6.5.6, "What to Read Next"</a>
+</p>
+</li>
+</ul><a id="BABHIJHI" name="BABHIJHI"></a>
+<div class="sect2">
+<a id="sthref539" name="sthref539"></a>
+<h3 class="sect2"><span class="secnum">6.5.1 </span>OracleAS Disaster Recovery: Introduction
+</h3>
+<p>Use the OracleAS Disaster Recovery environment when you want to have two physically separate sites in your environment. One site is the production site, and the other site is the standby site. The production site is active, while the standby site is passive; the standby site becomes active when the production site goes down.
+</p>
+<p>OracleAS Disaster Recovery supports a number of basic topologies for the configuration of the Infrastructure and middle tier on production and standby sites. OracleAS Disaster Recovery supports these basic topologies:
+</p>
+<ul>
+<li type="disc">
+<p>Symmetrical topologies -- strict mirror of the production site with collocated Oracle Identity Management and OracleAS Metadata Repository Infrastructure
+</p>
+</li>
+<li type="disc">
+<p>Asymmetrical topologies -- simple asymmetric standby topology with collocated Oracle Identity Management and OracleAS Metadata Repository Infrastructure
+</p>
+</li>
+<li type="disc">
+<p>Separate OracleAS Metadata Repository for OracleAS Portal with collocated Oracle Identity Management and OracleAS Metadata Repository Infrastructure (the Departmental Topology) 
+</p>
+</li>
+<li type="disc">
+<p>Distributed Application OracleAS metadata Repositories with Non collocated Oracle Identity Management and OracleAS Metadata Repository Infrastructure
+</p>
+</li>
+<li type="disc">
+<p>Redundant Multiple OracleAS 10.1.3 Home J2EE Topology
+</p>
+</li>
+<li type="disc">
+<p>Redundant Single OracleAS 10.1.3 Home J2EE Topology Integrated with an Existing Oracle Identity Management 10.1.2.0.2 Topology
+</p>
+</li>
+</ul>
+<p>In a symmetric topology, each node in the standby site corresponds to a node in the production site. This includes the nodes running both OracleAS Infrastructure and middle tiers. In an asymmetric topology, the number of instances required on the standby site are fewer than the number on the production site and the number of instances required on the standby site must be the minimum set of instances required to run your site in the event of a switchover or failover operation. The last two supported topologies are particularly important in OracleAS Release 10.1.3.0.0. See the <span class="italic">Oracle Application Server High Availability Guide</span> for a detailed description of these topologies.
+</p>
+<p>As a small variation to this environment, you can set up the OracleAS Infrastructure on the production site in an OracleAS Cold Failover Cluster environment. See <a href="#BABJCHDC">Section 6.5.2.4, "If You Want to Use OracleAS Cold Failover Cluster on the Production Site (OracleAS 10.1.2.n.n only)"</a> for details.
+</p>
+<p>For these supported topologies, OracleAS Guard will be installed in every Oracle home on every system that is part of your production and standby topology configured for the OracleAS Disaster Recovery solution. 
+</p>
+<p>OracleAS Guard can be installed as a standalone install kit located on OracleAS Companion CD &#035;2. See <a href="#BABCIEGA">Section 6.5.4, "Installing the OracleAS 10g (10.1.3) Standalone Install of OracleAS Guard into Oracle Homes"</a> for more information about when this standalone kit should be installed.
+</p>
+<p><a href="#BGBCDBGE">Figure 6-5</a> shows an example symmetric OracleAS Disaster Recovery environment. Each site has two nodes running middle tiers and a node running OracleAS Infrastructure.
+</p><a id="sthref540" name="sthref540"></a>
+<p class="subhead2">Data Synchronization<a id="sthref541" name="sthref541"></a></p>
+<p>For OracleAS Disaster Recovery to work, data between the production and standby sites must be synchronized so that failover can happen very quickly. Configuration changes done at the production site must be synchronized with the standby site.
+</p>
+<p>You need to synchronize two types of data. The synchronization method depends on the type of data:
+</p>
+<ul>
+<li type="disc">
+<p><a id="sthref542" name="sthref542"></a>Use Oracle Data Guard to synchronize data in the OracleAS Metadata Repository databases on the production and standby sites. You can configure Oracle Data Guard to perform the synchronization.
+</p>
+</li>
+<li type="disc">
+<p><a id="sthref543" name="sthref543"></a>Use the backup and recovery scripts to synchronize data outside of the database (such as data stored in configuration files).
+</p>
+</li>
+</ul>
+<p>See the <span class="italic">Oracle Application Server High Availability Guide</span> for details on how to use Oracle Data Guard and the backup and recovery scripts.
+</p>
+<div class="figure">
+<a id="BGBCDBGE" name="BGBCDBGE"></a><a id="sthref544" name="sthref544"></a>
+
+<p class="titleinfigure">Figure 6-5 OracleAS Disaster Recovery Environment</p>
+<img src="img/dr.gif" alt="Description of Figure 6-5  follows" title="Description of Figure 6-5  follows"/>
+<br /><a id="sthref545" name="sthref545" href="img_text/dr.htm">Description of  "Figure 6-5 OracleAS Disaster Recovery Environment"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+</div><!-- class="sect2" -->
+<a id="BABDFJHC" name="BABDFJHC"></a>
+<div class="sect2">
+<a id="sthref546" name="sthref546"></a>
+<h3 class="sect2"><span class="secnum">6.5.2 </span>Setting up the OracleAS Disaster Recovery Environment<a id="sthref547" name="sthref547"></a>
+</h3>
+<p>Before you can install Oracle Application Server in an OracleAS Disaster Recovery environment, you have to perform these steps:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABECJEF">Section 6.5.2.1, "Ensure Nodes Are Identical at the Operating System Level"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABIAGGI">Section 6.5.2.2, "Set Up staticports.ini File"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABFDACB">Section 6.5.2.3, "Set Up Identical Hostnames on Both Production and Standby Sites"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJCHDC">Section 6.5.2.4, "If You Want to Use OracleAS Cold Failover Cluster on the Production Site (OracleAS 10.1.2.n.n only)"</a>
+</p>
+</li>
+</ul><a id="BABECJEF" name="BABECJEF"></a>
+<div class="sect3">
+<a id="sthref548" name="sthref548"></a>
+<h4 class="sect3"><span class="secnum">6.5.2.1 </span>Ensure Nodes Are Identical at the Operating System Level
+</h4>
+<p>Ensure that the nodes are identical with respect to the following items:
+</p>
+<ul>
+<li type="disc">
+<p>The nodes are running the same version of the operating system.
+</p>
+</li>
+<li type="disc">
+<p>The nodes have the same operating system patches and packages.
+</p>
+</li>
+<li type="disc">
+<p>You can install Oracle Application Server in the same directory path on all nodes.
+</p>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+<a id="BABIAGGI" name="BABIAGGI"></a>
+<div class="sect3">
+<a id="sthref549" name="sthref549"></a>
+<h4 class="sect3"><span class="secnum">6.5.2.2 </span>Set Up staticports.ini File<a id="sthref550" name="sthref550"></a><a id="sthref551" name="sthref551"></a>
+</h4>
+<p>The same component must use the same port number on the production and standby sites. For example, if Oracle HTTP Server is using port 80 on the production site, it must also use port 80 on the standby site. To ensure this is the case, create a <code>staticports.ini</code> file for use during installation. This file enables you to specify port numbers for each component. See <a href="reqs.htm#CIHHAFDF">Section 2.5.3, "Using Custom Port Numbers (the "Static Ports" Feature)"</a> for details.
+</p>
+</div><!-- class="sect3" -->
+<a id="BABFDACB" name="BABFDACB"></a>
+<div class="sect3">
+<a id="sthref552" name="sthref552"></a>
+<h4 class="sect3"><span class="secnum">6.5.2.3 </span>Set Up Identical Hostnames on Both Production and Standby Sites<a id="sthref553" name="sthref553"></a>
+</h4>
+<p>The names of the corresponding nodes on the production and standby sites must be identical, so that when you synchronize data between the sites, you do not have to edit the data to fix the hostnames.
+</p><a id="sthref554" name="sthref554"></a>
+<p class="subhead2">For the Infrastructure Nodes</p>
+<p>For the node running the infrastructure, set up a virtual name. To do this, specify an alias for the node in the <code>/etc/hosts</code> file.
+</p>
+<p>For example, on the infrastructure node on the production site, the following line in the <code>hosts</code> file sets the alias to <code>asinfra</code>:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">138.1.2.111   prodinfra   asinfra
+
+</pre>
+<p>On the standby site, the following line sets the node&#039;s alias to <code>asinfra</code>.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">213.2.2.110   standbyinfra   asinfra
+
+</pre>
+<p>When you install OracleAS Infrastructure on the production and standby sites, you specify this alias (<code>asinfra</code>) in the Specify Virtual Hostname screen. The configuration data will then contain this alias for the infrastructure nodes.
+</p><a id="sthref555" name="sthref555"></a>
+<p class="subhead2">For the Middle-Tier Nodes</p>
+<p>For the nodes running the middle tiers, you cannot set up aliases like you did for the infrastructure nodes because the installer does not display the Specify Virtual Hostname screen for middle-tier installations. When installing middle tiers, the installer determines the hostname automatically by calling the gethostname() function. You want to be sure that for each middle-tier node on the production site, the corresponding node on the standby site returns the same hostname.
+</p>
+<p>To do this, set up a local, or internal, hostname, which could be different from the public, or external, hostname. You can change the names of the nodes on the standby site to match the names of the corresponding nodes on the production site, or you can change the names of the nodes on both production and standby sites to be the same. This depends on other applications that you might be running on the nodes, and whether changing the node name will affect those applications.
+</p>
+<ol type="1" start="1">
+<li>
+<p>On the nodes whose local names you want to change, reconfigure the node so that the <code>hostname</code> command returns the new local hostname.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>The procedure to change the hostname of a system differs between different operating systems. Contact the system administrator of your system to perform this step. Note also that changing the hostname of a system will affect installed software that has a dependency on the previous hostname. Consider the impact of this before changing the hostname. 
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</li>
+<li>
+<p><a id="sthref556" name="sthref556"></a><a id="sthref557" name="sthref557"></a>Enable the other nodes in the OracleAS Disaster Recovery environment to be able to resolve the node using the new local hostname. You can do this in one of two ways:
+</p>
+<p><a id="sthref558" name="sthref558"></a><a id="sthref559" name="sthref559"></a><span class="bold">Method 1: </span>Set up separate internal DNS servers for the production and standby sites. This configuration allows nodes on each site (production or standby) to resolve hostnames within the site. Above the internal DNS servers are the corporate, or external, DNS servers. The internal DNS servers forward non-authoritative requests to the external DNS servers. The external DNS servers do not know about the existence of the internal DNS servers. See <a href="#BGBJGDGH">Figure 6-6</a>.
+</p>
+<div class="figure">
+<a id="BGBJGDGH" name="BGBJGDGH"></a><a id="sthref560" name="sthref560"></a>
+
+<p class="titleinfigure">Figure 6-6 Method 1: Using DNS Servers</p>
+<img src="img/dr_name_res.gif" alt="Description of Figure 6-6  follows" title="Description of Figure 6-6  follows"/>
+<br /><a id="sthref561" name="sthref561" href="img_text/dr_name_res.htm">Description of  "Figure 6-6 Method 1: Using DNS Servers"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p><span class="bold">Method 1 Details</span>
+</p>
+<ol type="a">
+<li>
+<p>Make sure the external DNS names are defined in the external DNS zone. Example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prodmid1.us.oracle.com     IN  A  138.1.2.333
+prodmid2.us.oracle.com     IN  A  138.1.2.444
+prodinf.us.oracle.com      IN  A  138.1.2.111
+standbymid1.us.oracle.com  IN  A  213.2.2.330
+standbymid2.us.oracle.com  IN  A  213.2.2.331
+standbyinf.us.oracle.com   IN  A  213.2.2.110
+
+</pre>
+</li>
+<li>
+<p>At the production site, create a new zone at the production site using a domain name different from your external domain name. To do this, populate the zone data files with entries for each node in the OracleAS Disaster Recovery environment.
+</p>
+<p>For the infrastructure node, use the virtual name or alias.
+</p>
+<p><a id="sthref562" name="sthref562"></a><a id="sthref563" name="sthref563"></a>For the middle-tier nodes, use the node name (the value in <code>/etc/nodename</code>).
+</p>
+<p>The following example uses "asha" as the domain name for the new zone.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">asmid1.asha    IN  A  138.1.2.333
+asmid2.asha    IN  A  138.1.2.444
+asinfra.asha   IN  A  138.1.2.111
+
+</pre>
+<p>Do the same for the standby site. Use the same domain name that you used for the production site.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">asmid1.asha    IN  A  213.2.2.330
+asmid1.asha    IN  A  213.2.2.331
+asinfra.asha   IN  A  213.2.2.110
+
+</pre>
+</li>
+<li>
+<p>Configure the DNS resolver to point to the internal DNS servers instead of the external DNS server.
+</p>
+<p><a id="sthref564" name="sthref564"></a>In the <code>/etc/resolv.conf</code> file for each node on the production site, replace the existing name server IP address with the IP address of the internal DNS server for the production site.
+</p>
+<p>Do the same for the nodes on the standby site, but use the IP address of the internal DNS server for the standby site.
+</p>
+</li>
+<li>
+<p><a id="sthref565" name="sthref565"></a><a id="sthref566" name="sthref566"></a>Create a separate entry for Oracle Data Guard in the internal DNS servers. This entry is used by Oracle Data Guard to ship redo data to the database on the standby site.
+</p>
+<p>In the next example, the "remote&#095;infra" entry points to the infrastructure node on the standby site. This name is used by the TNS entries on both the production and standby sites so that if a switchover occurs, the entry does not have to be changed.
+</p>
+<div class="figure">
+<a id="sthref567" name="sthref567"></a>
+
+<p class="titleinfigure">Figure 6-7 Entry for Oracle Data Guard in the Internal DNS Servers</p>
+<img src="img/dr_dg.gif" alt="Description of Figure 6-7  follows" title="Description of Figure 6-7  follows"/>
+<br /><a id="sthref568" name="sthref568" href="img_text/dr_dg.htm">Description of  "Figure 6-7 Entry for Oracle Data Guard in the Internal DNS Servers"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p>On the production site, the DNS entries look like this:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">asmid1.asha        IN  A  138.1.2.333
+asmid2.asha        IN  A  138.1.2.444
+asinfra.asha       IN  A  138.1.2.111
+remote&#095;infra.asha  IN  A  213.2.2.110
+
+</pre>
+<p>On the standby site, the DNS entries look like this:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">asmid1.asha        IN  A  213.2.2.330
+asmid2.asha        IN  A  213.2.2.331
+asinfra.asha       IN  A  213.2.2.110
+remote&#095;infra.asha  IN  A  138.1.2.111
+
+</pre>
+</li>
+</ol>
+<p><a id="sthref569" name="sthref569"></a><a id="sthref570" name="sthref570"></a><span class="bold">Method 2:</span> Edit the <code>/etc/hosts</code>file on each node on both sites. This method does not involve configuring DNS servers, but you have to maintain the <code>hosts</code> file on each node in the OracleAS Disaster Recovery environment. For example, if an IP address changes, you have to update the files on all the nodes, and restart the nodes.
+</p>
+<p><span class="bold">Method 2 Details</span>
+</p>
+<ol type="a">
+<li>
+<p>On each node on the production site, include these lines in the <code>/etc/hosts</code> file. The IP addresses resolve to nodes on the production site.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>In the <code>hosts</code> file, be sure that the line that identifies the current node comes <span class="italic">immediately</span> after the localhost definition (the line with the 127.0.0.1 address).
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<pre xml:space="preserve" class="oac_no_warn">127.0.0.1    localhost
+138.1.2.333  asmid1.oracle.com   asmid1
+138.1.2.444  asmid2.oracle.com   asmid2
+138.1.2.111  asinfra.oracle.com  asinfra
+
+</pre>
+</li>
+<li>
+<p>On each node on the standby site, include these lines in the <code>hosts</code> file. The IP addresses resolve to nodes on the standby site.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>In the <code>hosts</code> file, be sure that the line that identifies the current node comes <span class="italic">immediately</span> after the localhost definition (the line with the 127.0.0.1 address).
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<pre xml:space="preserve" class="oac_no_warn">127.0.0.1    localhost
+213.2.2.330  asmid1.oracle.com   asmid1
+213.2.2.331  asmid2.oracle.com   asmid2
+213.2.2.110  asinfra.oracle.com  asinfra
+
+</pre>
+</li>
+<li>
+<p>Ensure that the "hosts:" line in the <code>/etc/nsswitch.conf</code> file has "files" as the first item:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">hosts:   files nis dns
+
+</pre>
+<p>The entry specifies the ordering of the name resolution. If another method is listed first, then the node will use the other method to resolve the hostname.
+</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Restart the nodes after editing these files.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</li>
+</ol><a id="sthref571" name="sthref571"></a>
+<p class="subhead2">Verifying that the Nodes Resolve the Hostnames Correctly</p>
+<p>After making the changes and restarting the nodes, check that the nodes resolve the hostnames properly by running the following commands:
+</p>
+<ul>
+<li type="disc">
+<p>On the middle-tier nodes on both sites, you must set the internal hostname. For example, for the prodmid1 middle-tier, set the internal hostname as asmid1 as follows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">> hostname asmid1
+
+</pre>
+</li>
+<li type="disc">
+<p>On the middle-tier nodes on both sites, run the <code>hostname</code> command. This should return the internal hostname. For example, the command should return "asmid1" if you run it on prodmid1 and standbymid1.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">hostname</span>
+asmid1
+
+</pre>
+</li>
+<li type="disc">
+<p>On each node, ping the other nodes in the environment using the internal hostname as well as the external hostname. The command should be successful. For example, from the first midtier node, prodmid1, run the following commands:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">ping prodinfra</span> <span class="italic">ping the production infrastructure node</span>
+PING prodinfra: 56 data byes
+64 bytes from prodinfra.oracle.com (138.1.2.111): icmp&#095;seq&#061;0. time&#061;0. ms
+^C
+
+prompt> <span class="bold">ping iasinfra</span> <span class="italic">ping the production infrastructure node</span>
+PING iasinfra: 56 data byes
+64 bytes from iasinfra.oracle.com (138.1.2.111): icmp&#095;seq&#061;0. time&#061;0. ms
+^C
+
+prompt> <span class="bold">ping iasmid2</span> <span class="italic">ping the second production midtier node</span>
+PING iasmid2: 56 data byes
+64 bytes from iasmid2.oracle.com (138.1.2.444): icmp&#095;seq&#061;0. time&#061;0. ms
+^C
+
+prompt> <span class="bold">ping prodmid2</span> <span class="italic">ping the second production midtier node</span>
+PING prodmid2: 56 data byes
+64 bytes from prodmid2.oracle.com (138.1.2.444): icmp&#095;seq&#061;0. time&#061;0. ms
+^C
+
+prompt> <span class="bold">ping standbymid1</span> <span class="italic">ping the first standby midtier node</span>
+PING standbymid1: 56 data byes
+64 bytes from standbymid1.oracle.com (213.2.2.330): icmp&#095;seq&#061;0. time&#061;0. ms
+^C
+
+</pre>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+<a id="BABJCHDC" name="BABJCHDC"></a>
+<div class="sect3">
+<a id="sthref572" name="sthref572"></a>
+<h4 class="sect3"><span class="secnum">6.5.2.4 </span>If You Want to Use OracleAS Cold Failover Cluster on the <a id="sthref573" name="sthref573"></a><a id="sthref574" name="sthref574"></a>Production Site (OracleAS 10.1.2.n.n only)
+</h4>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>You must perform this installation in an OracleAS Release 10.1.2.<span class="italic">n</span>.<span class="italic">n</span> environment, where <span class="italic">n</span>.<span class="italic">n</span> represents 0.0 or higher. This information is presented here for informative purposes only.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>On the production site of a OracleAS Disaster Recovery system, you can set up the OracleAS Infrastructure to run in a OracleAS Cold Failover Cluster configuration. In this case, you have two nodes in a hardware cluster, and you install the OracleAS Infrastructure on a shared disk. See Chapter 11, "Installing in High Availability Environments: OracleAS Cold Failover Cluster" in the <span class="italic">Oracle Application Server Installation Guide</span> 10<span class="italic">g</span> Release 2 (10.1.2) Documentation set for details.
+</p>
+<div class="figure">
+<a id="sthref575" name="sthref575"></a>
+
+<p class="titleinfigure">Figure 6-8 Infrastructure in an OracleAS Cold Failover Cluster Configuration</p>
+<img src="img/dr_cfc.gif" alt="Description of Figure 6-8  follows" title="Description of Figure 6-8  follows"/>
+<br /><a id="sthref576" name="sthref576" href="img_text/dr_cfc.htm">Description of  "Figure 6-8 Infrastructure in an OracleAS Cold Failover Cluster Configuration"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<p>To set up OracleAS Cold Failover Cluster in this environment, use the virtual IP address (instead of the physical IP address) for asinfra.asha on the production site. The following example assumes 138.1.2.120 is the virtual IP address.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">asmid1.asha          IN  A  138.1.2.333
+asmid2.asha          IN  A  138.1.2.444
+asinfra.asha         IN  A  138.1.2.120         <span class="italic">this is a virtual IP address</span>
+remote&#095;infra.asha    IN  A  213.2.2.110
+
+</pre>
+<p>On the standby site, you still use the physical IP address for asinfra.asha, but the remote&#095;infra.asha uses the virtual IP address.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">asmid1.asha          IN  A  213.2.2.330
+asmid2.asha          IN  A  213.2.2.331
+asinfra.asha         IN  A  213.2.2.110         <span class="italic">physical IP address</span>
+remote&#095;infra.asha    IN  A  138.1.2.120         <span class="italic">virtual IP address</span>
+
+</pre>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="BABIDJFJ" name="BABIDJFJ"></a>
+<div class="sect2">
+<a id="sthref577" name="sthref577"></a>
+<h3 class="sect2"><span class="secnum">6.5.3 </span>Installing Oracle Application Server in an OracleAS Disaster Recovery Environment<a id="sthref578" name="sthref578"></a>
+</h3>
+<p>For OracleAS Release 10.1.3.0.0, you can only install middle tiers on the production and standby sites. 
+</p>
+<p>Install Oracle Application Server as follows:
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>For all of the installations, be sure to use staticports.ini to specify port numbers for the components. See <a href="#BABIAGGI">Section 6.5.2.2, "Set Up staticports.ini File"</a>.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div><a id="sthref579" name="sthref579"></a>
+<p class="subhead2">Install Middle Tiers (OracleAS Release 10.1.3 only)</p>
+<ol type="1" start="1">
+<li>
+<p>Install middle tiers on the production site.
+</p>
+</li>
+<li>
+<p>Install middle tiers on the standby site.
+</p>
+</li>
+</ol><a id="sthref580" name="sthref580"></a>
+<p class="subhead2">Install OracleAS Infrastructure and Middle Tiers (Release 10.1.2.n.n only)</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>You must perform this installation in an OracleAS Release 10.1.2.<span class="italic">n</span>.<span class="italic">n</span> environment, where <span class="italic">n</span>.<span class="italic">n</span> represents 0.0 or higher. This information is presented here for informative purposes only.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<ol type="1" start="1">
+<li>
+<p>Install OracleAS Infrastructure on the production site.
+</p>
+</li>
+<li>
+<p>Install OracleAS Infrastructure on the standby site.
+</p>
+</li>
+<li>
+<p>Start the OracleAS Infrastructure in each site before installing the middle tiers for that site.
+</p>
+</li>
+<li>
+<p>Install middle tiers on the production site.
+</p>
+</li>
+<li>
+<p>Install middle tiers on the standby site.
+</p>
+</li>
+</ol>
+<div class="sect3">
+<a id="sthref581" name="sthref581"></a>
+<h4 class="sect3"><span class="secnum">6.5.3.1 </span> Installing the OracleAS Infrastructure<a id="sthref582" name="sthref582"></a><a id="sthref583" name="sthref583"></a> (OracleAS Release 10.1.2.n.n Only)
+</h4>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>You must perform this installation in an OracleAS Release 10.1.2.<span class="italic">n</span>.<span class="italic">n</span> environment, where <span class="italic">n</span>.<span class="italic">n</span> represents 0.0 or higher. This information is presented here for informative purposes only.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>In an OracleAS Release 10.1.2.0.0 environment, you must install the Oracle Identity Management and the OracleAS Metadata Repository components of OracleAS Infrastructure on the same node. You cannot distribute the components over multiple nodes. In an OracleAS Release 10.1.2.0.2 environment, you can distribute the components over multiple nodes.
+</p>
+<p>The installation steps are similar to that for OracleAS Cold Failover Cluster. See Section 11.3, "Installing an OracleAS Cold Failover Cluster (Infrastructure) Configuration" in the <span class="italic">Oracle Application Server Installation Guide 10<span class="italic">g</span> Release 2 (10.1.2)</span> Documentation set for the screen sequence.
+</p>
+<p>Note the following points:
+</p>
+<ul>
+<li type="disc">
+<p>Select Configuration Options screen: be sure you select <span class="bold">High Availability and Replication</span>. See Table&nbsp;11&#8211;5, step 2.
+</p>
+</li>
+<li type="disc">
+<p>Specify Virtual Hostname screen: enter an alias as the virtual address (for example, asinfra.oracle.com). See Table&nbsp;11&#8211;5, step 6.
+</p>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+
+<div class="sect3">
+<a id="sthref584" name="sthref584"></a>
+<h4 class="sect3"><span class="secnum">6.5.3.2 </span>Installing Middle Tiers<a id="sthref585" name="sthref585"></a><a id="sthref586" name="sthref586"></a> (OracleAS Release 10.1.3 and 10.1.2.n.n)
+</h4>
+<p>Depending on your configuration, you can install OracleAS 10.1.3 middle tiers or OracleAS 10.1.2.<span class="italic">n</span>.<span class="italic">n</span> middle tiers, where <span class="italic">n</span>.<span class="italic">n</span> represents 0.0 or higher.
+</p><a id="sthref587" name="sthref587"></a>
+<p class="subhead2">OracleAS Release 10.1.3</p>
+<p>On OracleAS release 10.1.3, you can install any type of middle tier that you like:
+</p>
+<p>For installing J2EE Server and Process Management, see <a href="advanced_install.htm#CIHCGJCG">Section 5.2.2, "Installing J2EE Server and Process Management"</a>.
+</p>
+<p>For installing Web Server and Process Management, see <a href="advanced_install.htm#CIHFCFIB">Section 5.2.3, "Installing Web Server and Process Management"</a>.
+</p>
+<p>For installing Integrated Web Server, J2EE Server, and Process Management, see <a href="advanced_install.htm#CIHIEBFI">Section 5.2.4, "Installing Integrated Web Server, J2EE Server and Process Management"</a>.
+</p><a id="sthref588" name="sthref588"></a>
+<p class="subhead2">OracleAS Release 10.1.2.n.n</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>You must perform this installation in an OracleAS Release 10.1.2.<span class="italic">n</span>.<span class="italic">n</span> environment, where <span class="italic">n</span>.<span class="italic">n</span> represents 0.0 or higher. This information is presented here for informative purposes only.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>On OracleAS Release 10.1.2.<span class="italic">n</span>.<span class="italic">n</span>, you can install any type of middle tier that you like:
+</p>
+<p>For installing J2EE and Web Cache, see Section 7.9 "Installing J2EE and Web Cache in a Database-Based Farm Repository and with Oracle Identity Management Access" in the <span class="italic">Oracle Application Server Installation Guide</span> for 10<span class="italic">g</span> Release 2 (10.1.2).
+</p>
+<p>For installing Portal and Wireless or Business Intelligence and Forms, see Section 7.13, "Installing Portal and Wireless or Business Intelligence and Forms".
+</p>
+<p>Note the following points on OracleAS 10.1.2.<span class="italic">n</span>.<span class="italic">n</span>:
+</p>
+<ul>
+<li type="disc">
+<p>When the installer prompts you to register with Oracle Internet Directory, and asks you for the Oracle Internet Directory hostname, enter the alias of the node running OracleAS Infrastructure (for example, asinfra.oracle.com).
+</p>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+<a id="BABCIEGA" name="BABCIEGA"></a>
+<div class="sect2">
+<a id="sthref589" name="sthref589"></a>
+<h3 class="sect2"><span class="secnum">6.5.4 </span>Installing the OracleAS 10g (10.1.3) Standalone Install of OracleAS Guard into Oracle Homes
+</h3>
+<p>OracleAS 10g (10.1.3) standalone install of OracleAS Guard is located on Companion CD Disk 2. This standalone install of OracleAS Guard can be installed in the following environments: 
+</p>
+<ul>
+<li type="disc">
+<p>In its own home in the case when you are cloning an instance or topology to a new standby system (see the section on standby site cloning in <span class="italic">Oracle Application Server High Availability Guide</span> for more information).
+</p>
+</li>
+<li type="disc">
+<p>Oracle database server home for an OracleAS Metadata Repository configuration created using OracleAS Metadata Repository Creation Assistant.
+</p>
+</li>
+<li type="disc">
+<p>OracleAS Disaster Recovery full site upgrade from OracleAS 10g (9.0.4) to OracleAS 10g (10.1.3) (see the chapter on OracleAS Disaster Recovery site upgrade procedure in <span class="italic">Oracle Application Server High Availability Guide</span> for more information).
+</p>
+</li>
+<li type="disc">
+<p>OracleAS Guard patch upgrade from OracleAS 10g (10.1.2.0.0) to OracleAS 10g (10.1.2.0.2) (see <a href="#BABHFIBI">Section 6.5.5, "Patching OracleAS Guard Release 10.1.2.n.n with Release 10.1.3.0.0"</a> for more information).
+</p>
+</li>
+</ul>
+<p>If this is an upgrade installation of OracleAS Guard, make a copy of your <code>dsa.conf</code> configuration file to save your current settings for your OracleAS Guard environment. After running the OracleAS 10g (10.1.3) standalone install kit of OracleAS Guard, you can restore your saved <code>dsa.conf</code> configuration file with your settings to continue using the same settings for the upgraded OracleAS Guard environment.
+</p>
+<p>To run the OracleAS 10g (10.1.3) standalone install kit of OracleAS Guard, run the kit in the following directory path:
+</p>
+<p>On UNIX systems:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">/Disk2/asg/install/runInstaller
+
+</pre>
+<p>Choose the type of install that you want. Choose <span class="bold">Typical</span> for most installations. Choose <span class="bold">Custom or Reinstall</span> for upgrading from an older release of OracleAS Guard to the current release.
+</p>
+<p>Enter the <code>oc4jadmin</code> account password to continue the installation.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABHFIBI" name="BABHFIBI"></a>
+<div class="sect2">
+<a id="sthref590" name="sthref590"></a>
+<h3 class="sect2"><span class="secnum">6.5.5 </span>Patching OracleAS Guard Release 10.1.2.n.n with Release 10.1.3.0.0
+</h3>
+<p>If you already have an OracleAS Disaster Recovery environment set up using OracleAS Guard Release 10.1.2.<span class="italic">n</span>.<span class="italic">n</span> (where <span class="italic">n</span>.<span class="italic">n</span> represents 0.0 or higher, you can patch OracleAS Guard in your environment to take advantage of new features and support for the topologies described in <a href="#BABHIJHI">Section 6.5.1, "OracleAS Disaster Recovery: Introduction"</a>. To patch your OracleAS Disaster Recovery environment, follow these basic steps:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Stop the OracleAS Guard server in all OracleAS 10.1.2.<span class="italic">n</span>.<span class="italic">n</span> Oracle homes on both production and standby sites using the following opmnctl command: 
+</p>
+<p>On UNIX systems:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;ORACLE&#095;HOME>/opmn/bin/opmnctl stopall
+
+</pre>
+</li>
+<li>
+<p>Install the OracleAS 10g (10.1.3.0.0) standalone install of OracleAS Guard into each Oracle home on the production and standby sites. 
+</p>
+<p>If multiple Oracle homes exist on the same system, ensure that different ports are configured for each of the OracleAS Guard servers in this configuration file.
+</p>
+<p>Because this is an upgrade installation of OracleAS Guard, make a copy of your <code>dsa.conf</code> configuration file to save your current settings for your OracleAS Guard environment. After running the OracleAS 10g (10.1.3.0.0) standalone install kit of OracleAS Guard, you can restore your saved <code>dsa.conf</code> configuration file with your settings to continue using the same settings for the upgraded OracleAS Guard environment.
+</p>
+<p>On UNIX systems:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;ORACLE&#095;HOME>/dsa/dsa.conf
+
+</pre>
+</li>
+<li>
+<p>Start the OracleAS Guard server in all OracleAS 10.1.3.0.0 Oracle homes on both production and standby sites using the following opmnctl command: 
+</p>
+<p>On UNIX systems:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;ORACLE&#095;HOME>/opmn/bin/opmnctl startall
+&lt;ORACLE&#095;HOME>/opmn/bin/opmnctl startproc ias-component&#061;ASG
+
+</pre>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="BABDHAHD" name="BABDHAHD"></a>
+<div class="sect2">
+<a id="sthref591" name="sthref591"></a>
+<h3 class="sect2"><span class="secnum">6.5.6 </span>What to Read Next
+</h3>
+<p>For information on how to manage your OracleAS Disaster Recovery environment, such as setting up Oracle Data Guard and configuring the OracleAS Metadata Repository database, see the <span class="italic">Oracle Application Server High Availability Guide</span>.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="advanced_install.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="post.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

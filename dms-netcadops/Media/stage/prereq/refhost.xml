@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='windows-1252'?>
+<!-- ref host for solaris -->
+<HOST PLATID="46">
+  <CERTIFIED_SYSTEMS>
+    <OPERATING_SYSTEM>
+      <VERSION VALUE="2.1"/>
+      <ARCHITECTURE VALUE="x86"/>
+      <NAME VALUE="Linux"/>
+      <VENDOR VALUE="redhat"/>
+      <GLIBC VALUE="2.2.4-32.17" />
+      <PACKAGES>
+	      <PACKAGE NAME="pdksh" VERSION="5.2.14-22" />
+	      <PACKAGE NAME="sysstat" VERSION="4.0.1-15.2.1as" />
+	      <PACKAGE NAME="gcc" VERSION="2.96-128.7.2" />
+	      <PACKAGE NAME="openmotif" VERSION="2.1.30-12" />
+	      <PACKAGE NAME="compat-glibc" VERSION="6.2-2.1.3.2" />
+	      <PACKAGE NAME="libstdc++" VERSION="2.96-128.7.2" />
+	      <PACKAGE NAME="glibc-common" VERSION="2.2.4-32.17" />
+	      <PACKAGE NAME="gcc-c++" VERSION="2.96-128.7.2" />
+	      <PACKAGE NAME="compat-libstdc++" VERSION="6.2-2.9.0.16" />
+	      <PACKAGE NAME="gnome-libs" VERSION="1:1.2.13-16" />
+	      <PACKAGE NAME="binutils" VERSION="2.11.90.0.8-12.4" />
+	      <PACKAGE NAME="make" VERSION="1:3.79.1-8" />
+      </PACKAGES>
+      <KERNEL>
+        <!--<PROPERTY NAME="semmsl" VALUE="256" />
+	<PROPERTY NAME="semmns" VALUE="32000" />
+	<PROPERTY NAME="semopm" VALUE="100" />
+	<PROPERTY NAME="semmni" VALUE="142" />
+	<PROPERTY NAME="shmmax" VALUE="2147483648" />
+        <PROPERTY NAME="shmmni" VALUE="4096" />
+	<PROPERTY NAME="shmall" VALUE="2097152" />
+	<PROPERTY NAME="msgmax" VALUE="8192" />
+	<PROPERTY NAME="msgmnb" VALUE="65535" />
+	<PROPERTY NAME="msgmni" VALUE="2878" />
+        <PROPERTY NAME="hardnofiles" VALUE="65536" />
+        <PROPERTY NAME="softnofiles" VALUE="4096" />
+	<PROPERTY NAME="file-max" VALUE="131072" />
+        <PROPERTY NAME="VERSION" VALUE="2.4.9-e.49" /> -->       
+      </KERNEL>
+    </OPERATING_SYSTEM>
+    <OPERATING_SYSTEM>
+      <VERSION VALUE="3"/>
+      <ARCHITECTURE VALUE="x86"/>
+      <NAME VALUE="Linux"/>
+      <VENDOR VALUE="redhat"/>
+      <GLIBC VALUE="2.3.2-95.27" />
+      <PACKAGES>
+	      <PACKAGE NAME="gcc" VERSION="3.2.3-42" />
+	      <PACKAGE NAME="gcc-c++" VERSION="3.2.3-42" />
+	      <PACKAGE NAME="openmotif21" VERSION="2.1.30-8" />
+	      <PACKAGE NAME="setarch" VERSION="1.3-1" />
+	      <PACKAGE NAME="pdksh" VERSION="5.2.14-21" />
+	      <PACKAGE NAME="sysstat" VERSION="4.0.7-4.EL3.3" />
+	      <PACKAGE NAME="gnome-libs" VERSION="1:1.4.1.2.90-34.1" />
+	      <PACKAGE NAME="libstdc++" VERSION="3.2.3-42" />
+	      <PACKAGE NAME="libstdc++-devel" VERSION="3.2.3-42" />
+	      <PACKAGE NAME="compat-libstdc++-devel" VERSION="7.3-2.96.128" />
+	      <PACKAGE NAME="compat-glibc" VERSION="7.x-2.2.4.32.6" />
+	      <PACKAGE NAME="compat-libstdc++" VERSION="7.3-2.96.128" />
+	      <PACKAGE NAME="glibc-common" VERSION="2.3.2-95.27" />
+	      <PACKAGE NAME="binutils" VERSION="2.14.90.0.4-35" />
+	      <PACKAGE NAME="make" VERSION="1:3.79.1-17" />
+      </PACKAGES>
+      <KERNEL>
+        <!-- <PROPERTY NAME="semmsl" VALUE="256" /> -->
+	<!-- <PROPERTY NAME="semmns" VALUE="32000" /> -->
+	<!-- <PROPERTY NAME="semopm" VALUE="100" /> -->
+	<!-- <PROPERTY NAME="semmni" VALUE="142" /> -->
+	<!-- <PROPERTY NAME="shmmax" VALUE="2147483648" /> -->
+        <!-- <PROPERTY NAME="shmmni" VALUE="4096" /> -->
+	<!-- <PROPERTY NAME="shmall" VALUE="2097152" /> -->
+        <!-- <PROPERTY NAME="msgmax" VALUE="8192" /> -->
+        <!-- <PROPERTY NAME="msgmnb" VALUE="65535" /> -->
+        <!-- <PROPERTY NAME="msgmni" VALUE="2878" /> -->
+        <!-- <PROPERTY NAME="hardnofiles" VALUE="65536" /> -->
+        <!-- <PROPERTY NAME="softnofiles" VALUE="4096" /> -->
+        <!-- <PROPERTY NAME="file-max" VALUE="131072" /> -->
+        <!-- <PROPERTY NAME="VERSION" VALUE="2.4.21-20.EL" /> -->
+      </KERNEL>
+    </OPERATING_SYSTEM>
+    <OPERATING_SYSTEM>
+      <VERSION VALUE="4"/>
+      <ARCHITECTURE VALUE="x86"/>
+      <NAME VALUE="Linux"/>
+      <VENDOR VALUE="redhat"/>
+      <GLIBC VALUE="2.3.4-2.9" />
+      <PACKAGES>
+	      <PACKAGE NAME="gcc" VERSION="3.4.3-22.1" />
+	      <PACKAGE NAME="gcc-c++" VERSION="3.4.3-22.1" />
+	      <PACKAGE NAME="openmotif21" VERSION="2.1.30-11.RHEL4.4" />
+	      <PACKAGE NAME="setarch" VERSION="1.6-1" />
+	      <PACKAGE NAME="pdksh" VERSION="5.2.14-30" />
+	      <PACKAGE NAME="sysstat" VERSION="5.0.5-1" />
+	      <PACKAGE NAME="gnome-libs" VERSION="1:1.4.1.2.90-44.1" />
+	      <PACKAGE NAME="libstdc++" VERSION="3.4.3-22.1" />
+	      <PACKAGE NAME="libstdc++-devel" VERSION="3.4.3-22.1" />
+	      <PACKAGE NAME="compat-libstdc++-296" VERSION="2.96-132.7.2" />
+	      <PACKAGE NAME="compat-db" VERSION="4.1.25-9" />
+	      <PACKAGE NAME="control-center" VERSION="2.8.0-12" />
+	      <PACKAGE NAME="glibc-common" VERSION="2.3.4-2.9" />
+	      <PACKAGE NAME="binutils" VERSION="2.15.92.0.2-13" />
+	      <PACKAGE NAME="make" VERSION="1:3.80-5" />
+	      <PACKAGE NAME="xscreensaver" VERSION="4.18-5.rhel4.2" />
+      </PACKAGES>
+      <KERNEL>
+        <!-- <PROPERTY NAME="semmsl" VALUE="256" /> -->
+	<!-- <PROPERTY NAME="semmns" VALUE="32000" /> -->
+	<!-- <PROPERTY NAME="semopm" VALUE="100" /> -->
+	<!-- <PROPERTY NAME="semmni" VALUE="142" /> -->
+	<!-- <PROPERTY NAME="shmmax" VALUE="4294967295" /> -->
+        <!-- <PROPERTY NAME="shmmni" VALUE="4096" /> -->
+	<!-- <PROPERTY NAME="shmall" VALUE="2097152" /> -->
+        <!-- <PROPERTY NAME="msgmax" VALUE="8192" /> -->
+        <!-- <PROPERTY NAME="msgmnb" VALUE="65535" /> -->
+        <!-- <PROPERTY NAME="msgmni" VALUE="2878" /> -->
+        <!-- <PROPERTY NAME="hardnofiles" VALUE="1024" /> -->
+        <!-- <PROPERTY NAME="softnofiles" VALUE="1024" /> -->
+        <!-- <PROPERTY NAME="file-max" VALUE="206173" /> -->
+        <!--<PROPERTY NAME="VERSION" VALUE="2.6.9-11.EL" /> -->       
+      </KERNEL>
+    </OPERATING_SYSTEM>
+    <OPERATING_SYSTEM>
+      <VERSION VALUE="9"/>
+      <ARCHITECTURE VALUE="x86"/>
+      <NAME VALUE="Linux"/>
+      <VENDOR VALUE="SuSE"/>
+      <GLIBC VALUE="2.3.3-98.28" />
+      <PACKAGES>
+             <PACKAGE NAME="pdksh" VERSION="5.2.14-780.1" />
+             <PACKAGE NAME="sysstat" VERSION="5.0.1-35.1" />
+             <PACKAGE NAME="openmotif21-libs" VERSION="2.1.30MLI4-119.1" />
+             <PACKAGE NAME="libstdc++" VERSION="3.3.3-43.24" />
+             <PACKAGE NAME="make" VERSION="3.80-184.1" />
+             <PACKAGE NAME="binutils" VERSION="2.15.90.0.1.1-32.5" />
+	     <PACKAGE NAME="gcc" VERSION="3.3.3-43.24" />
+	     <PACKAGE NAME="gcc-c++" VERSION="3.3.3-43.24" />
+	     <PACKAGE NAME="gnome-libs" VERSION="1.4.1.7-671.1" />
+             <PACKAGE NAME="gnome-libs-devel" VERSION="1.4.1.7-671.1" />
+	     <PACKAGE NAME="libstdc++-devel" VERSION="3.3.3-43.24" />
+      </PACKAGES>
+      <KERNEL>
+        <!--<PROPERTY NAME="semmsl" VALUE="256" />
+        <PROPERTY NAME="semmns" VALUE="32000" />
+        <PROPERTY NAME="semopm" VALUE="100" />
+        <PROPERTY NAME="semmni" VALUE="142" />
+        <PROPERTY NAME="shmmax" VALUE="2147483648" />
+        <PROPERTY NAME="shmmni" VALUE="4096" />
+        <PROPERTY NAME="shmall" VALUE="2097152" />
+        <PROPERTY NAME="msgmax" VALUE="8192" />
+        <PROPERTY NAME="msgmnb" VALUE="65535" />
+        <PROPERTY NAME="msgmni" VALUE="2878" />
+        <PROPERTY NAME="hardnofiles" VALUE="65536" />
+        <PROPERTY NAME="softnofiles" VALUE="4096" />
+        <PROPERTY NAME="file-max" VALUE="131072" />
+        <PROPERTY NAME="VERSION" VALUE="2.6.5-7.97" />-->
+      </KERNEL>
+    </OPERATING_SYSTEM>
+    <OPERATING_SYSTEM>
+      <VERSION VALUE="8"/>
+      <ARCHITECTURE VALUE="x86"/>
+      <NAME VALUE="Linux"/>
+      <VENDOR VALUE="SuSE"/>
+      <GLIBC VALUE="2.2.2-124" />
+      <PACKAGES>
+              <PACKAGE NAME="pdksh" VERSION="5.2.14" />
+              <PACKAGE NAME="sysstat" VERSION="4.0.3" />
+              <PACKAGE NAME="gcc" VERSION="3.2.2-38" />
+              <PACKAGE NAME="gcc-c++" VERSION="3.2.2-38" />
+              <PACKAGE NAME="openmotif" VERSION="2.1.30MLI4" /> 
+              <PACKAGE NAME="sysstat" VERSION="4.0.3" />
+              <PACKAGE NAME="libstdc++" VERSION="3.2.2" />
+              <PACKAGE NAME="make" VERSION="3.79.1-407" />
+              <PACKAGE NAME="binutils" VERSION="2.12.90.0.15-50" />
+      </PACKAGES>
+      <KERNEL>
+        <!--<PROPERTY NAME="semmsl" VALUE="256" />
+        <PROPERTY NAME="semmns" VALUE="32000" />
+        <PROPERTY NAME="semopm" VALUE="100" />
+        <PROPERTY NAME="semmni" VALUE="142" />
+        <PROPERTY NAME="shmmax" VALUE="2147483648" />
+        <PROPERTY NAME="shmmni" VALUE="4096" />
+        <PROPERTY NAME="shmall" VALUE="2097152" />
+        <PROPERTY NAME="msgmax" VALUE="8192" />
+        <PROPERTY NAME="msgmnb" VALUE="65535" />
+        <PROPERTY NAME="msgmni" VALUE="2878" />
+        <PROPERTY NAME="hardnofiles" VALUE="65536" />
+        <PROPERTY NAME="softnofiles" VALUE="4096" />
+        <PROPERTY NAME="file-max" VALUE="131072" />
+        <PROPERTY NAME="VERSION" VALUE="2.4.21-138" />-->
+      </KERNEL>
+    </OPERATING_SYSTEM>
+    <OPERATING_SYSTEM>
+      <VERSION VALUE="1.0"/>
+      <ARCHITECTURE VALUE="x86"/>
+      <NAME VALUE="Linux"/>
+      <VENDOR VALUE="UnitedLinux"/>
+      <GLIBC VALUE="2.2.2-124" />
+      <PACKAGES>
+              <PACKAGE NAME="pdksh" VERSION="5.2.14" />
+              <PACKAGE NAME="sysstat" VERSION="4.0.3" />
+              <PACKAGE NAME="gcc" VERSION="3.2.2-38" />
+              <PACKAGE NAME="gcc-c++" VERSION="3.2.2-38" />
+              <PACKAGE NAME="openmotif" VERSION="2.1.30MLI4" />
+              <PACKAGE NAME="sysstat" VERSION="4.0.3" />
+              <PACKAGE NAME="libstdc++" VERSION="3.2.2" />
+              <PACKAGE NAME="make" VERSION="3.79.1-407" />
+              <PACKAGE NAME="binutils" VERSION="2.12.90.0.15-50" />
+      </PACKAGES>
+      <KERNEL>
+        <!--<PROPERTY NAME="semmsl" VALUE="256" />
+        <PROPERTY NAME="semmns" VALUE="32000" />
+        <PROPERTY NAME="semopm" VALUE="100" />
+        <PROPERTY NAME="semmni" VALUE="142" />
+        <PROPERTY NAME="shmmax" VALUE="2147483648" />
+        <PROPERTY NAME="shmmni" VALUE="4096" />
+        <PROPERTY NAME="shmall" VALUE="2097152" />
+        <PROPERTY NAME="msgmax" VALUE="8192" />
+        <PROPERTY NAME="msgmnb" VALUE="65535" />
+        <PROPERTY NAME="msgmni" VALUE="2878" />
+        <PROPERTY NAME="hardnofiles" VALUE="65536" />
+        <PROPERTY NAME="softnofiles" VALUE="4096" />
+        <PROPERTY NAME="file-max" VALUE="131072" />
+        <PROPERTY NAME="VERSION" VALUE="2.4.21-138" />-->
+      </KERNEL>
+    </OPERATING_SYSTEM>
+  </CERTIFIED_SYSTEMS>
+</HOST>

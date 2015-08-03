@@ -1,0 +1,185 @@
+<IfDefine SSL>
+##
+##  SSL Global Context
+##
+##  All SSL configuration in this context applies both to
+##  the main server and all SSL-enabled virtual hosts.
+##
+
+
+
+
+#   Pass Phrase Dialog:
+#   Configure the pass phrase gathering process.
+#   The filtering dialog program (`builtin' is a internal
+#   terminal dialog) has to provide the pass phrase on stdout.
+SSLPassPhraseDialog  builtin
+
+#   Inter-Process Session Cache:
+#   Configure the SSL Session Cache: First either `none'
+#   or `dbm:/path/to/file' for the mechanism to use and
+#   second the expiring timeout (in seconds).
+#SSLSessionCache        none
+#SSLSessionCache        dbm:%ServerRoot%/logs/ssl_scache
+#SSLSessionCache        shmht:%ServerRoot%/logs/ssl_scache(512000)
+SSLSessionCache        shmcb:%ServerRoot%/logs/ssl_scache(512000)
+
+#  SessionCache Timeout:
+#  This directive sets the timeout in seconds for the information stored
+#  in the global/inter-process SSL Session Cache. It can be set as low as
+#  15 for testing, but should be set to higher values like 300 in real life.
+SSLSessionCacheTimeout  300
+
+#   Semaphore:
+#   Configure the path to the mutual explusion semaphore the
+#   SSL engine uses internally for inter-process synchronization.
+SSLMutex  file:%ServerRoot%/logs/ssl_mutex
+
+#   Logging:
+#   The home of the dedicated SSL protocol logfile. Errors are
+#   additionally duplicated in the general error log file.  Put
+#   this somewhere where it cannot be used for symlink attacks on
+#   a real server (i.e. somewhere where only root can write).
+#   Log levels are (ascending order: higher ones include lower ones):
+#   none, error, warn, info, trace, debug.
+SSLLog      %ServerRoot%/logs/ssl_engine_log
+SSLLogLevel warn
+
+##
+## SSL Virtual Host Context
+##
+#
+# NOTE: this value should match the SSL Listen directive set previously in this
+
+# file otherwise your virtual host will not respond to SSL requests.
+#
+
+#
+#   Some MIME-types for downloading Certificates and CRLs
+#
+AddType application/x-x509-ca-cert .crt
+AddType application/x-pkcs7-crl    .crl
+
+##
+##  SSL Support
+##
+##  When we also provide SSL we have to listen to the
+##  standard HTTP port (see above) and to the HTTPS port
+##
+#
+# NOTE: if virtual hosts are used and you change a port value below
+# from the original value, be sure to update the default port used
+# for your virtual hosts as well.
+#
+
+
+Listen %s_apacheListenSSL%
+
+<VirtualHost _default_:%s_apacheListenSSL%>
+
+#  General setup for the virtual host
+DocumentRoot "%ServerRoot%/htdocs"
+ServerName %s_VirtualHostName%
+ServerAdmin you@your.address
+ErrorLog "|%ServerRoot%/bin/rotatelogs %ServerRoot%/logs/error_log 43200"
+TransferLog "|%ServerRoot%/bin/rotatelogs %ServerRoot%/logs/access_log 43200"
+Port %s_apachePortSSL%
+
+#   SSL Engine Switch:
+#   Enable/Disable SSL for this virtual host.
+SSLEngine on
+
+#   SSL Cipher Suite:
+#   List the ciphers that the client is permitted to negotiate.
+SSLCipherSuite ALL:!ADH:!EXPORT56:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP
+
+#   Server Wallet:
+#   The server wallet contains the server's certificate, private key
+#   and trusted certificates. Set SSLWallet at the wallet directory
+#   using the syntax:  file:<path-to-wallet-directory>
+SSLWallet file:%ServerRoot%/conf/ssl.wlt/default
+
+#   Certificate Revocation Lists (CRL):
+#   Set the CA revocation path where to find CA CRLs for client
+#   authentication or alternatively one huge file containing all
+#   of them (file must be PEM encoded)
+#   Note: Inside SSLCARevocationPath you need hash symlinks
+#         to point to the certificate files. Use the provided
+#         Makefile to update the hash symlinks after changes.
+#SSLCARevocationPath %ServerRoot%/conf/ssl.crl
+#SSLCARevocationFile %ServerRoot%/conf/ssl.crl/ca-bundle.crl
+
+#   Client Authentication (Type):
+#   Client certificate verification type and depth.  Types are
+#   none, optional and require
+#SSLVerifyClient require
+
+
+#   Access Control:
+#   With SSLRequire you can do per-directory access control based
+#   on arbitrary complex boolean expressions containing server
+#   variable checks and other lookup directives.  The syntax is a
+#   mixture between C and Perl.  See the mod_ssl documentation
+#   for more details.
+#<Location />
+#SSLRequire (    %{SSL_CIPHER} !~ m/^(EXP|NULL)-/ \
+#            and %{SSL_CLIENT_S_DN_O} eq "Snake Oil, Ltd." \
+#            and %{SSL_CLIENT_S_DN_OU} in {"Staff", "CA", "Dev"} \
+#            and %{TIME_WDAY} >= 1 and %{TIME_WDAY} <= 5 \
+#            and %{TIME_HOUR} >= 8 and %{TIME_HOUR} <= 20       ) \
+#           or %{REMOTE_ADDR} =~ m/^192\.76\.162\.[0-9]+$/
+
+#</Location>
+
+#   SSL Engine Options:
+#   Set various options for the SSL engine.
+#   o FakeBasicAuth:
+#     Translate the client X.509 into a Basic Authorisation.  This means that
+#     the standard Auth/DBMAuth methods can be used for access control.  The
+#     user name is the `one line' version of the client's X.509 certificate.
+#     Note that no password is obtained from the user. Every entry in the user
+#     file needs this password: `xxj31ZMTZzkVA'.
+#   o ExportCertData:
+#     This exports two additional environment variables: SSL_CLIENT_CERT and
+#     SSL_SERVER_CERT. These contain the PEM-encoded certificates of the
+#     server (always existing) and the client (only existing when client
+#     authentication is used). This can be used to import the certificates
+#     into CGI scripts.
+#   o StdEnvVars:
+#     This exports the standard SSL/TLS related `SSL_*' environment variables.
+#     Per default this exportation is switched off for performance reasons,
+#     because the extraction step is an expensive operation and is usually
+#     useless for serving static content. So one usually enables the
+#     exportation for CGI and SSI requests only.
+#   o CompatEnvVars:
+#     This exports obsolete environment variables for backward compatibility
+#     to Apache-SSL 1.x, mod_ssl 2.0.x, Sioux 1.0 and Stronghold 2.x. Use this
+#     to provide compatibility to existing CGI scripts.
+#   o StrictRequire:
+#     This denies access when "SSLRequireSSL" or "SSLRequire" applied even
+#     under a "Satisfy any" situation, i.e. when it applies access is denied
+#     and no other module can change it.
+#   o OptRenegotiate:
+#     This enables optimized SSL connection renegotiation handling when SSL
+#     directives are used in per-directory context.
+#SSLOptions +FakeBasicAuth +ExportCertData +CompatEnvVars +StrictRequire
+<Files ~ "\.(cgi|shtml)$">
+    SSLOptions +StdEnvVars
+</Files>
+<Directory "%ServerRoot%/cgi-bin">
+    SSLOptions +StdEnvVars
+</Directory>
+
+SetEnvIf User-Agent "MSIE" nokeepalive ssl-unclean-shutdown
+
+#   Per-Server Logging:
+#   The home of a custom SSL log file. Use this when you want a
+#   compact non-error SSL logfile on a virtual host basis.
+CustomLog "|%ServerRoot%/bin/rotatelogs %ServerRoot%/logs/ssl_request_log 43200" \
+          "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
+
+  %s_rewriteOptions%
+</VirtualHost>
+
+</IfDefine>
+

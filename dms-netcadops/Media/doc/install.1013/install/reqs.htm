@@ -1,0 +1,2729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 23, 2006 13:32:46 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5.1 Build 4" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Requirements</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="topo.htm" title="Previous" />
+<link rel="next" href="basic.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+<link rel="index" href="index.htm" title="Index" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Installation Guide  </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25217-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="topo.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="basic.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="BABFDIBC" name="BABFDIBC"></a><a id="sthref57" name="sthref57"></a>
+<h1 class="chapter"><span class="secnum">2 </span> <a name="ASINS103|requirements"></a>Requirements</h1>
+<p>Before installing Oracle Application Server, ensure that your computer meets the requirements described in this chapter.
+</p>
+<div class="tblhruleformalwide">
+<a id="sthref58" name="sthref58"></a><a id="sthref59" name="sthref59"></a>
+<p class="titleintable">Table 2-1 Sections in This Chapter</p>
+<table class="HRuleFormalWide" title="Sections in This Chapter" summary="Sections in this chapter" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t2">Section
+</th>
+<th align="left" valign="bottom" id="r1c2-t2">Highlights
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t2" headers="r1c1-t2">
+<p><a href="#BABGICCI">Section 2.1, "Using Oracle<span class="italic">MetaLink</span> to Obtain the Latest Oracle Application Server Hardware and Software Requirements"</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r2c1-t2 r1c2-t2">
+<p>Describes how to find the most current requirements for Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3).
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t2" headers="r1c1-t2">
+<p><a href="#BABJFJFH">Section 2.2, "System Requirements"</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r3c1-t2 r1c2-t2">
+<p>Lists requirements such as supported processor speed, memory, disk space, and swap space. 
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t2" headers="r1c1-t2">
+<p><a href="#CIHHHDHB">Section 2.3, "Software Requirements"</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r4c1-t2 r1c2-t2">
+<p>Lists requirements such as supported operating systems, operating system patches, software packages, and Linux x86-64 certification informations.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t2" headers="r1c1-t2">
+<p><a href="#CIHHGJDC">Section 2.4, "Set Shell Limits for the oracle User"</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r5c1-t2 r1c2-t2">
+<p>Lists the shell limits for the <code>oracle</code> user.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t2" headers="r1c1-t2">
+<p><a href="#CIHEBBII">Section 2.5, "Ports"</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r6c1-t2 r1c2-t2">
+<p>Describes how to configure components to use ports other than the default ports.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t2" headers="r1c1-t2">
+<p><a href="#BABEJJJF">Section 2.6, "Operating System Groups"</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r7c1-t2 r1c2-t2">
+<p>Describes why the operating system user who installs Oracle Application Server should belong to certain operating system groups.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t2" headers="r1c1-t2">
+<p><a href="#CHDEBHIE">Section 2.7, "Operating System User"</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r8c1-t2 r1c2-t2">
+<p>Describes why you should create an operating system user to install Oracle Application Server.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t2" headers="r1c1-t2">
+<p><a href="#CHDGDCJD">Section 2.8, "Environment Variables"</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r9c1-t2 r1c2-t2">
+<p>Describes how to set or unset environment variables required for installation.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t2" headers="r1c1-t2">
+<p><a href="#BABIAEEC">Section 2.9, "Network Topics"</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r10c1-t2 r1c2-t2">
+<p>Describes network issues such as installing Oracle Application Server on a remote computer, using a remote CD-ROM/DVD-ROM drive, or installing from a hard disk.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t2" headers="r1c1-t2">
+<p><a href="#BABHBIAD">Section 2.10, "Prerequisite Checks Performed by the Installer"</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r11c1-t2 r1c2-t2">
+<p>Lists the items checked by the installer, such as length of the Oracle home name and whether or not the Oracle home directory already contains another Oracle product.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformalwide" -->
+<a id="BABGICCI" name="BABGICCI"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref60" name="sthref60"></a>
+<h2 class="sect1"><span class="secnum">2.1 </span>Using <a id="sthref61" name="sthref61"></a>Oracle<span class="italic">MetaLink</span> to Obtain the Latest Oracle Application Server Hardware and Software Requirements
+</h2>
+<p>The Oracle Application Server 10g (10.1.3) hardware and software requirements included in this guide were accurate at the time this manual was released to manufacturing. For the most up-to-date information about hardware and software requirements, refer to Oracle<span class="italic">MetaLink</span>:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">http://metalink.oracle.com/
+
+</pre>
+<p>After logging into Oracle<span class="italic">MetaLink</span>, click <span class="bold">Certify</span>. From the resulting Web page, you can view the latest certifications by product, platform, and product availability.
+</p>
+</div><!-- class="sect1" -->
+<a id="BABJFJFH" name="BABJFJFH"></a>
+<div class="sect1">
+<a id="sthref62" name="sthref62"></a>
+<h2 class="sect1"><span class="secnum">2.2 </span>System <a id="sthref63" name="sthref63"></a>Requirements
+</h2>
+<p><a href="#BABICBJA">Table 2-2</a> lists the system requirements for running Oracle Application Server. The installer checks many of these requirements at the start of the installation process and warns you if any of them is not met. To save time, you can manually check only the ones that are not checked by the installer. Refer to <a href="#BABICBJA">Table 2-2</a> to see which requirements are not checked by the installer.
+</p>
+<p>You can also run the system checks performed by the installer without doing an installation, by running the <code>runInstaller</code> command as shown. The <code>runInstaller</code> command is on the Oracle Application Server CD-ROM (Disk 1) or DVD-ROM (in the <code>application&#095;server</code> directory).
+</p>
+<p><a id="sthref64" name="sthref64"></a>CD-ROM:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="italic">mount&#095;point</span><span class="bold">/runInstaller -executeSysPrereqs</span>
+
+</pre>
+<p>DVD-ROM:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="italic">mount&#095;point</span><span class="bold">/application&#095;server/runInstaller -executeSysPrereqs</span>
+
+</pre>
+<p>The results are displayed on the screen as well as written to a log file. For more information on the types of checks performed, see <a href="#BABHBIAD">Section 2.10, "Prerequisite Checks Performed by the Installer"</a><a name="ASINS151|system reqs"></a>.
+</p>
+<div class="tblhruleformalwide">
+<a id="sthref65" name="sthref65"></a><a id="BABICBJA" name="BABICBJA"></a>
+<p class="titleintable">Table 2-2 System Requirements</p>
+<table class="HRuleFormalWide" title="System Requirements" summary="Minimum requirements" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t3">Item
+</th>
+<th align="left" valign="bottom" id="r1c2-t3">Requirement
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t3" headers="r1c1-t3">
+<p>Network<a id="sthref66" name="sthref66"></a><a id="sthref67" name="sthref67"></a>
+</p>
+</td>
+<td align="left" headers="r2c1-t3 r1c2-t3">
+<p>You can install Oracle Application Server on a computer that is connected to a network, or on a "standalone" computer (not connected to the network).
+</p>
+<p>If you are installing Oracle Application Server on a standalone computer, you can connect the computer to a network after installation. You have to perform some configuration tasks when you connect it to the network; see the<span class="italic"> Oracle Application Server Administrator's Guide</span> for details.
+</p>
+<p><span class="bold">Checked by Installer:</span> No
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t3" headers="r1c1-t3">
+<p>IP<a id="sthref68" name="sthref68"></a><a id="sthref69" name="sthref69"></a>
+</p>
+</td>
+<td align="left" headers="r3c1-t3 r1c2-t3">
+<p>The computer&#039;s IP address can be static or allocated using DHCP. If you later change the IP configuration, see the <span class="italic">Oracle Application Server 10g Administrator's Guide</span> for information on reconfiguring Oracle Application Server. See <a href="#CHDEFBDA">Section 2.9.1, "Installing on a DHCP Host"</a> for additional requirements.
+</p>
+<p><span class="bold">Checked by Installer:</span> No
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t3" headers="r1c1-t3">
+<p>Hostname<a id="sthref70" name="sthref70"></a><a id="sthref71" name="sthref71"></a>
+</p>
+</td>
+<td align="left" headers="r4c1-t3 r1c2-t3">
+<p>Ensure that your hostnames are not longer than 255 characters.
+</p>
+<p><span class="bold">Checked by Installer:</span> No
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t3" headers="r1c1-t3">
+<p>Processor<a id="sthref72" name="sthref72"></a><a id="sthref73" name="sthref73"></a><a id="sthref74" name="sthref74"></a> type
+</p>
+</td>
+<td align="left" headers="r5c1-t3 r1c2-t3">
+<p>Pentium (32-bit) 
+</p>
+<p>To determine the processor type, run the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">cat /proc/cpuinfo &#124; grep name</span>
+model name      : Intel(R) Pentium(R) 4 CPU 3.00GHz
+
+</pre>
+<p><span class="bold">Checked by Installer:</span> No
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t3" headers="r1c1-t3">
+<p>Processor<a id="sthref75" name="sthref75"></a><a id="sthref76" name="sthref76"></a><a id="sthref77" name="sthref77"></a> Speed
+</p>
+</td>
+<td align="left" headers="r6c1-t3 r1c2-t3">
+<p>300 MHz or faster
+</p>
+<p>To determine the processor speed, run the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">cat /proc/cpuinfo &#124; grep MHz</span>
+cpu MHz         : 2992.553
+
+</pre>
+<p><span class="bold">Checked by Installer:</span> Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t3" headers="r1c1-t3">
+<p>Memory<a id="sthref78" name="sthref78"></a><a id="sthref79" name="sthref79"></a><a id="sthref80" name="sthref80"></a>
+</p>
+</td>
+<td align="left" headers="r7c1-t3 r1c2-t3">
+<p>512 MB
+</p>
+<p>The memory requirement provided represents enough physical memory to install and run Oracle Application Server. However, for most production sites, you should configure at least 1 GB of physical memory. For sites with substantial traffic, increasing the amount of memory further may improve your performance. For Java applications, you should either increase the maximum heap allocated to the OC4J processes, or configure additional OC4J processes to utilize this memory. See the <span class="italic">Oracle Application Server Performance Guide</span> for details.
+</p>
+<p>To determine the optimal amount of memory for your installation, the best practice is to load test your site. Resource requirements can vary substantially for different applications and different usage patterns. In addition, some operating system utilities for monitoring memory can overstate memory usage (partially due to the representation of shared memory). The preferred method for determining memory requirements is to monitor the improvement in performance resulting from the addition of physical memory in your load test. Refer to your platform vendor documentation for information on how to configure memory and processor resources for testing purposes.
+</p>
+<p><span class="bold">Notes:</span>
+</p>
+<ul>
+<li type="disc">
+<p>The installer checks the amount of memory on your computer and will warn you if your computer does not meet the minimum memory requirements.
+</p>
+</li>
+</ul>
+<p>To determine the amount of memory, enter the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">grep MemTotal /proc/meminfo</span>
+
+</pre>
+<p><span class="bold">Checked by Installer:</span> Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t3" headers="r1c1-t3">
+<p>Disk space<a id="sthref81" name="sthref81"></a><a id="sthref82" name="sthref82"></a>
+</p>
+</td>
+<td align="left" headers="r8c1-t3 r1c2-t3">
+<ul>
+<li type="disc">
+<p>Integrated Web Server, J2EE Server and Process Management: 678MB
+</p>
+</li>
+<li type="disc">
+<p>J2EE Server and Process Management: 641 MB
+</p>
+</li>
+<li type="disc">
+<p>Web Server and Process Management: 558 MB
+</p>
+</li>
+<li type="disc">
+<p>Oracle TopLink: 154 MB
+</p>
+</li>
+</ul>
+<p>The installer may display inaccurate disk space requirement figures. Refer to the figures listed above for disk space requirements. 
+</p>
+<p>To determine the amount of free disk space, use the <code>df</code> command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">df -k</span> <span class="italic">dir</span>
+
+</pre>
+<p>Replace <span class="italic">dir</span> with the Oracle home directory or with the parent directory if the Oracle home directory does not exist yet. For example, if you plan to install Oracle Application Server in <code>/opt/oracle/j2ee</code>, you can replace <span class="italic">dir</span> with <code>/opt/oracle</code> or <code>/opt/oracle/j2ee</code>.
+</p>
+<p><span class="bold">Checked by Installer:</span> No
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t3" headers="r1c1-t3">
+<p>Space in <code>/tmp</code> or directory<a id="sthref83" name="sthref83"></a>
+</p>
+</td>
+<td align="left" headers="r9c1-t3 r1c2-t3">
+<p>400 MB
+</p>
+<p>To determine the amount of free disk space in the <code>/tmp</code> directory, use the <code>df</code> command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">df -k /tmp</span>
+
+</pre>
+<p>If the <code>/tmp</code> directory does not have enough free space, you can specify a different directory by setting the TMP or TMPDIR environment variable. See <a href="#BABBFAJD">Section 2.8.6, "TMP and TMPDIR"</a> for details.
+</p>
+<p><span class="bold">Checked by Installer:</span> Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t3" headers="r1c1-t3">
+<p>Swap space<a id="sthref84" name="sthref84"></a><a id="sthref85" name="sthref85"></a>
+</p>
+</td>
+<td align="left" headers="r10c1-t3 r1c2-t3">
+<p>512 MB of available swap space
+</p>
+<p>To determine the amount of available swap space, enter the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">grep SwapTotal /proc/meminfo</span><span class="bold"></span><span class="italic"></span>
+
+</pre>
+<p>If necessary, see your operating system documentation for information on how to configure additional swap space.
+</p>
+<p><span class="bold">Checked by Installer:</span> Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t3" headers="r1c1-t3">
+<p>Monitor<a id="sthref86" name="sthref86"></a><a id="sthref87" name="sthref87"></a><a id="sthref88" name="sthref88"></a>
+</p>
+</td>
+<td align="left" headers="r11c1-t3 r1c2-t3">
+<p>256 color display
+</p>
+<p>To determine your monitor&#039;s display capabilities, run the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">/usr/X11R6/bin/xdpyinfo</span>
+
+</pre>
+<p>Look for the "depths" line. You need a depth of at least 8 (bits per pixel).
+</p>
+<p><span class="bold">Checked by Installer:</span> Yes
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t3" headers="r1c1-t3"><a id="CIHBFBCG" name="CIHBFBCG"></a>
+<p>Supported browsers<a id="sthref89" name="sthref89"></a><a id="sthref90" name="sthref90"></a>
+</p>
+</td>
+<td align="left" headers="r12c1-t3 r1c2-t3">
+<p>Oracle Enterprise Manager 10<span class="italic">g</span> is supported on the following browsers:
+</p>
+<ul>
+<li type="disc">
+<p>Microsoft Internet Explorer 6.0 SP2 (supported on Microsoft Windows only)
+</p>
+</li>
+<li type="disc">
+<p>Netscape 7.2
+</p>
+</li>
+<li type="disc">
+<p>Mozilla 1.7. You can download Mozilla from <code><a href="http://www.mozilla.org">http://www.mozilla.org</a></code>. 
+</p>
+</li>
+<li type="disc">
+<p>Firefox 1.0.4. You can download Firefox from <code><a href="http://www.mozilla.org">http://www.mozilla.org</a></code>.
+</p>
+</li>
+<li type="disc">
+<p>Safari 1.2, 2.0 (on Apple Macintosh computers)
+</p>
+</li>
+</ul>
+<p>For the most current list of supported browsers, check the Oracle<span class="italic">MetaLink</span> site (<code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>).
+</p>
+<p><span class="bold">Checked by Installer:</span> No. However, if you access Oracle Enterprise Manager 10<span class="italic">g</span> using a non-supported browser, you will get a warning message.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformalwide" -->
+
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref91" name="sthref91"></a>
+<h3 class="sect2"><span class="secnum">2.2.1 </span><a id="sthref92" name="sthref92"></a><a id="sthref93" name="sthref93"></a>Installing from the Console or X Windows
+</h3>
+<p>If you are performing the installation from the console or X Windows, then add the following line to the <code>/etc/pam.d/xdm</code> file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">session required pam&#095;limits.so
+
+</pre>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CIHHHDHB" name="CIHHHDHB"></a>
+<div class="sect1">
+<a id="sthref94" name="sthref94"></a>
+<h2 class="sect1"><span class="secnum">2.3 </span>Software Requirements<a id="sthref95" name="sthref95"></a><a id="sthref96" name="sthref96"></a>
+</h2>
+<p>Depending on your distribution of Linux, see one of the following sections for information on checking the software requirements:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDBIEDF">Section 2.3.1, "Software Requirements for Red Hat Enterprise Linux AS/ES 3.0 Systems"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHEFBJD">Section 2.3.2, "Software Requirements for Red Hat Enterprise Linux AS/ES 4.0 Systems"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BCFGGCGE">Section 2.3.3, "Software Requirements for SUSE Linux Enterprise Server 9 Systems"</a>
+</p>
+</li>
+</ul>
+<p>Oracle does not support customized kernels or modules not supported by the Linux vendor.
+</p>
+<p>You can install Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) on a Linux system that is not on a network and you can install Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) on a Linux system that is configured to use DHCP. If you want to install Oracle Application Server on a computer that is not on a network you must configure the computer to use either a static IP address or a loopback IP address. Configure the computer to resolve the hostname of the computer to either a static IP address or a loopback IP address.
+</p><a id="CHDBIEDF" name="CHDBIEDF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref97" name="sthref97"></a>
+<h3 class="sect2"><span class="secnum">2.3.1 </span><a id="sthref98" name="sthref98"></a><a id="sthref99" name="sthref99"></a>Software Requirements for Red Hat Enterprise Linux AS/ES 3.0 Systems
+</h3>
+<p><a href="#CHDFAEJI">Table 2-3</a> lists the software requirements for Red Hat Enterprise Linux AS/ES 3.0 systems and the procedure that follows the table describes how to ensure your system meets these requirements and any additional requirements for installing Oracle Application Server.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Red Hat Enterprise Linux AS/ES 3.0, 4.0 and SUSE Linux Enterprise Server 9 are certified and supported. For the most current list of supported Linux Operating Systems, check Oracle<span class="italic">MetaLink</span> (<code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>). 
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<div class="tblformal">
+<a id="sthref100" name="sthref100"></a><a id="CHDFAEJI" name="CHDFAEJI"></a>
+<p class="titleintable">Table 2-3 Software Requirements for Red Hat Enterprise Linux AS/ES 3.0 Systems </p>
+<table class="Formal" title="Software Requirements for Red Hat Enterprise Linux AS/ES 3.0 Systems " summary="This table lists the Software Requirements for Red Hat 3.0 Systems" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t5">Item
+</th>
+<th align="left" valign="bottom" id="r1c2-t5">Requirement
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t5" headers="r1c1-t5">
+<p>Operating System
+</p>
+</td>
+<td align="left" headers="r2c1-t5 r1c2-t5">
+<p>Red Hat Enterprise Linux AS/ES 3.0 
+</p>
+<p>For more information on Red Hat, see:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><code><a href="http://www.redhat.com">http://www.redhat.com</a></code>
+
+</pre>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t5" headers="r1c1-t5">
+<p>Red Hat Update
+</p>
+</td>
+<td align="left" headers="r3c1-t5 r1c2-t5">
+<p>Update 3
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t5" headers="r1c1-t5">
+<p>Software packages
+</p>
+<p>(check that these versions or higher versions are installed)
+</p>
+</td>
+<td align="left" headers="r4c1-t5 r1c2-t5">
+<pre xml:space="preserve" class="oac_no_warn">glibc-2.3.2-95.27
+glibc-common-2.3.2-95.27
+binutils-2.14.90.0.4-35
+compat-glibc-7.x-2.2.4.32.6
+compat-libstdc&#043;&#043;-7.3-2.96.128
+compat-libstdc&#043;&#043;-devel-7.3-2.96.128
+gcc-3.2.3-42
+gcc-c&#043;&#043;-3.2.3-42
+libstdc&#043;&#043;-3.2.3-42
+libstdc&#043;&#043;-devel-3.2.3-42
+openmotif21-2.1.30-8
+pdksh-5.2.14-21
+setarch-1.3-1
+make-3.79.1-17
+gnome-libs-1.4.1.2.90-34.1
+sysstat-4.0.7-4.EL3.3
+compat-db-4.0.14-5
+
+</pre>
+<p><span class="bold">Note:</span> For Red Hat Enterprise Linux AS/ES 3.0, the equivalent version of <code>openmotif 2.1.30-8</code> is <code>openmotif21-2.1.30-8</code>. The <code>openmotif21-2.1.30-8</code> package can be installed from disk number 3 of the Red Hat Enterprise Linux AS/ES 3.0 distribution by entering:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#036; rpm -ivh openmotif21-2.1.30-8
+</pre>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t5" headers="r1c1-t5">
+<p>64-bit Certification
+</p>
+</td>
+<td align="left" headers="r5c1-t5 r1c2-t5">
+<p>Red Hat Enterprise Linux AS/ES 3.0, Update 3 or higher, is certified on AMD64 and Intel EM64T. The following packages (or higher versions) are required:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">glibc-2.3.2-95.27.x86&#095;64.rpm
+glibc-3.2.3-95.27.i686.rpm (32-bit)
+glibc-devel-3.2.3-95.27.x86&#095;64.rpm
+glibc-devel-3.2.3-95.27.i386.rpm (32-bit)
+gcc-3.2.3-20.x86&#095;64.rpm
+libgcc-3.2.3-20.x86&#095;64.rpm
+libgcc-3.2.3-20.i386.rpm (32-bit)
+setarch-1.3-1.x86&#095;64.rpm
+pdksh-5.2.14-21.x86&#095;64.rpm
+openmotif21-2.1.30-8.i386.rpm
+compat-glibc-7.x-2.2.4.32.5.i386.rpm (32-bit)
+compat-gcc-7.3-2.96.122.i386.rpm
+sysstat-4.0.7-4.x86&#095;64.rpm
+gnome-libs-1.4.1.2.90-34.1.i386.rpm (32-bit)
+compat-db-4.0.14-5.1.i386.rpm (32-bit)
+
+</pre>
+<p>Note the following:
+</p>
+<ul>
+<li type="disc">
+<p>To install 32-bit packages on a 64-bit system, you may need to use the <code>--force</code> option and the <code>--nodeps</code> option of the <code>rpm</code> utility.
+</p>
+</li>
+<li type="disc">
+<p>Always use 32-bit shell emulation, use the following command before running the installer and any other Oracle Application Server commands or scripts:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; linux32 bash
+</pre>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblformal" -->
+
+<p>To ensure that the system meets all the requirements, follow these steps:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Log in as the <code>root</code> user.
+</p>
+</li>
+<li>
+<p>To determine which distribution and version of Linux is installed, enter the following command: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">cat /etc/issue</span>
+Red Hat Enterprise Linux AS release 3 (Taroon) 
+
+</pre>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Red Hat Enterprise Linux AS/ES 3.0, 4.0 and SUSE Linux Enterprise Server 9 are certified and supported. For the most current list of supported Linux Operating Systems, check Oracle<span class="italic">MetaLink</span> (<code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>). 
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</li>
+<li>
+<p>To check that Update 3 is installed:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">cat /etc/redhat-release</span>
+Red Hat Enterprise Linux AS release 3 (Taroon Update 3)
+
+</pre>
+</li>
+<li>
+<p>To determine whether any other package is installed, enter a command similar to the following:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">&#035; rpm -q </span><span class="bolditalic">package&#095;name</span>
+
+</pre>
+<p>If a package is missing, download it and install it using the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">&#035; rpm -i </span>package&#095;name
+
+</pre>
+<p>When installing a package, make sure you are using the correct architecture and optimization rpm file. To check the architecture of an rpm file, run the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">&#035; rpm -q </span>package&#095;name <span class="bold">--queryformat "&#037;&#123;arch&#125;&#092;n"</span>
+
+</pre>
+<p>In the following example, the glibc rpm file is suitable for an Intel architecture
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">&#035; rpm -q glibc --queryformat "&#037;&#123;arch&#125;&#092;n"</span> 
+i686 
+
+</pre>
+</li>
+<li>
+<p>If the <code>hugemem</code> kernel is used, set the architecture using following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">setarch i386</span>
+
+</pre>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="CIHEFBJD" name="CIHEFBJD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref101" name="sthref101"></a>
+<h3 class="sect2"><span class="secnum">2.3.2 </span><a id="sthref102" name="sthref102"></a><a id="sthref103" name="sthref103"></a>Software Requirements for Red Hat Enterprise Linux AS/ES 4.0 Systems
+</h3>
+<p><a href="#CIHFHDFG">Table 2-4</a> lists the software requirements for Red Hat Enterprise Linux AS/ES 4.0 systems and the procedure that follows the table describes how to ensure your system meets these requirements and any additional requirements for installing Oracle Application Server.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Red Hat Enterprise Linux AS/ES 3.0, 4.0 and SUSE Linux Enterprise Server 9 are certified and supported. For the most current list of supported Linux Operating Systems, check Oracle<span class="italic">MetaLink</span> (<code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>). 
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<div class="tblformal">
+<a id="sthref104" name="sthref104"></a><a id="CIHFHDFG" name="CIHFHDFG"></a>
+<p class="titleintable">Table 2-4 Software Requirements for Red Hat Enterprise Linux AS/ES 4.0 Systems </p>
+<table class="Formal" title="Software Requirements for Red Hat Enterprise Linux AS/ES 4.0 Systems " summary="This table lists the Software Requirements for Red Hat 3.0 Systems" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t8">Item
+</th>
+<th align="left" valign="bottom" id="r1c2-t8">Requirement
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t8" headers="r1c1-t8">
+<p>Operating System
+</p>
+</td>
+<td align="left" headers="r2c1-t8 r1c2-t8">
+<p>Red Hat Enterprise Linux AS/ES 4.0 
+</p>
+<p>For more information on Red Hat, see:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><code><a href="http://www.redhat.com">http://www.redhat.com</a></code>
+
+</pre>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t8" headers="r1c1-t8">
+<p>Red Hat Update
+</p>
+</td>
+<td align="left" headers="r3c1-t8 r1c2-t8">
+<p>Update 1
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t8" headers="r1c1-t8">
+<p>Software packages
+</p>
+<p>(check that these versions or higher versions are installed)
+</p>
+</td>
+<td align="left" headers="r4c1-t8 r1c2-t8">
+<pre xml:space="preserve" class="oac_no_warn">glibc-2.3.4-2.9
+glibc-common-2.3.4-2.9
+binutils-2.15.92.0.2-13
+compat-libstdc&#043;&#043;-296-2.96-132.7.2
+gcc-3.4.3-22.1
+gcc-c&#043;&#043;-3.4.3-22.1
+libstdc&#043;&#043;-3.4.3-22.1
+libstdc&#043;&#043;-devel-3.4.3-22.1
+openmotif21-2.1.30-11.RHEL4.4
+pdksh-5.2.14-30
+setarch-1.6-1
+make-3.80-5
+gnome-libs-1.4.1.2.90-44.1
+sysstat-5.0.5-1
+compat-db-4.1.25-9
+control-center-2.8.0-12
+xscreensaver-4.18-5.rhel4.2
+
+</pre>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t8" headers="r1c1-t8">
+<p>64-bit Certification
+</p>
+</td>
+<td align="left" headers="r5c1-t8 r1c2-t8">
+<p>Red Hat Enterprise Linux AS/ES 4.0, Update 1 or higher, is certified on AMD64 and Intel EM64T. The following packages (or higher versions) are required:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">binutils-2.15.92.0.2-13.x86&#095;64.rpm
+compat-db-4.1.25-9.i386.rpm (32-bit)
+compat-db-4.1.25-9.x86&#095;64.rpm
+control-center-2.8.0-12.x86&#095;64.rpm
+gcc-3.4.3-22.1.x86&#095;64.rpm
+gcc-c&#043;&#043;-3.4.3-22.1.x86&#095;64.rpm
+glibc-2.3.4-2.9.i686.rpm (32-bit)
+glibc-2.3.4-2.9.x86&#095;64.rpm
+glibc-common-2.3.4-2.9.x86&#095;64.rpm
+gnome-libs-1.4.1.2.90-44.1.x86&#095;64.rpm
+libstdc&#043;&#043;-3.4.3-22.1.i386.rpm (32-bit)
+libstdc&#043;&#043;-3.4.3-22.1.x86&#095;64.rpm
+libstdc&#043;&#043;-devel-3.4.3-22.1.i386.rpm (32-bit)
+libstdc&#043;&#043;-devel-3.4.3-22.1.x86&#095;64.rpm
+make-3.80-5.x86&#095;64.rpm
+pdksh-5.2.14-30.x86&#095;64.rpm
+sysstat-5.0.5-1.x86&#095;64.rpm
+xscreensaver-4.18-5.rhel4.2.x86&#095;64.rpm
+setarch-1.6-1.x86&#095;64
+openmotif21-2.1.30-11.RHEL4.4.i386.rpm (32-bit)
+
+</pre>
+<p>Note the following:
+</p>
+<ul>
+<li type="disc">
+<p>To install 32-bit packages on a 64-bit system, you may need to use the <code>--force</code> option and the <code>--nodeps</code> option of the <code>rpm</code> utility.
+</p>
+</li>
+<li type="disc">
+<p>Always use 32-bit shell emulation, use the following command before running the installer and any other Oracle Application Server commands or scripts:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; linux32 bash
+</pre>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblformal" -->
+
+<p>To ensure that the system meets all the requirements, follow these steps:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Log in as the <code>root</code> user.
+</p>
+</li>
+<li>
+<p>To determine which distribution and version of Linux is installed, enter the following command: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">cat /etc/issue</span>
+Red Hat Enterprise Linux AS release 4 (Nahant Update 1)
+
+</pre>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Red Hat Enterprise Linux AS/ES 3.0, 4.0 and SUSE Linux Enterprise Server 9 are certified and supported. For the most current list of supported Linux Operating Systems, check Oracle<span class="italic">MetaLink</span> (<code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>). 
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</li>
+<li>
+<p>To check that Update 1 is installed:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; <span class="bold">cat /etc/redhat-release</span>
+Red Hat Enterprise Linux AS release 4 (Nahant Update 1)
+
+</pre>
+</li>
+<li>
+<p>To determine whether any other package is installed, enter a command similar to the following:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">&#035; rpm -q </span><span class="bolditalic">package&#095;name</span>
+
+</pre>
+<p>If a package is missing, download it and install it using the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">&#035; rpm -i </span>package&#095;name
+
+</pre>
+<p>When installing a package, make sure you are using the correct architecture and optimization rpm file. To check the architecture of an rpm file, run the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">&#035; rpm -q </span>package&#095;name <span class="bold">--queryformat "&#037;&#123;arch&#125;&#092;n"</span>
+
+</pre>
+<p>In the following example, the glibc rpm file is suitable for an Intel architecture
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">&#035; rpm -q glibc --queryformat "&#037;&#123;arch&#125;&#092;n"</span> 
+i686 
+
+</pre>
+</li>
+<li>
+<p>If the <code>hugemem</code> kernel is used, set the architecture using following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">setarch i386</span>
+
+</pre>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="BCFGGCGE" name="BCFGGCGE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref105" name="sthref105"></a>
+<h3 class="sect2"><span class="secnum">2.3.3 </span><a id="sthref106" name="sthref106"></a><a id="sthref107" name="sthref107"></a>Software Requirements for SUSE Linux Enterprise Server 9 Systems
+</h3>
+<p><a href="#BABGDJAF">Table 2-5</a> lists the software requirements for SUSE Linux Enterprise Server 9 systems and the procedure that follows the table describes how to ensure your system meets these requirements and any additional requirements for installing Oracle Application Server.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Oracle Application Server 10<span class="italic">g</span> Release 3 (10.1.3) is certified with the following Operating System specific software. For the most current list of supported Operating System specific software, for example JDK version, Operating System version, check Oracle<span class="italic">MetaLink</span> (<code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>).
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<div class="tblformal">
+<a id="sthref108" name="sthref108"></a><a id="BABGDJAF" name="BABGDJAF"></a>
+<p class="titleintable">Table 2-5 Software Requirements for SUSE Linux Enterprise Server 9 Systems</p>
+<table class="Formal" title="Software Requirements for SUSE Linux Enterprise Server 9 Systems" summary="Software Requirements for SUSELinux Enterprise Server 9 Systems" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t11">Item
+</th>
+<th align="left" valign="bottom" id="r1c2-t11">Requirement
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t11" headers="r1c1-t11">
+<p>Operating System
+</p>
+</td>
+<td align="left" headers="r2c1-t11 r1c2-t11">
+<p>SUSE Linux Enterprise Server 9
+</p>
+<p>For more information on SUSE Linux Enterprise Server, see:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><code><a href="http://www.suse.com">http://www.suse.com</a></code>
+
+</pre>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t11" headers="r1c1-t11">
+<p>Software packages
+</p>
+<p>(check that these versions or higher versions are installed)
+</p>
+</td>
+<td align="left" headers="r3c1-t11 r1c2-t11">
+<pre xml:space="preserve" class="oac_no_warn">glibc-2.3.3-98.28
+gcc-3.3.3-43.24
+gcc-c&#043;&#043;-3.3.3-43.24
+libstdc&#043;&#043;-3.3.3-43.24
+libstdc&#043;&#043;-devel-3.3.3-43.24
+openmotif21-libs-2.1.30MLI4-119.1
+pdksh-5.2.14-780.1
+make-3.80-184.1
+gnome-libs-1.4.1.7-671.1
+gnome-libs-devel-1.4.1.7-671.1
+sysstat-5.0.1-35.1
+binutils-2.15.90.0.1.1-32.5
+
+</pre>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t11" headers="r1c1-t11">
+<p>64-bit Certification
+</p>
+</td>
+<td align="left" headers="r4c1-t11 r1c2-t11">
+<p>SUSE Linux Enterprise Server is certified on AMD64 and Intel EM64T. The following packages (or higher versions) are required:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">glibc-2.3.3-98.28.x86&#095;64.rpm
+glibc-32bit-9-200407011233.x86&#095;64.rpm
+glibc-devel-32bit-9-200407011229.x86&#095;64.rpm
+gcc-3.3.3-43.24.x86&#095;64.rpm
+gcc-3.2.3-20.x86&#095;64.rpm
+gcc-c&#043;&#043;-3.3.3-43.24.x86&#095;64.rpm
+libgcc-3.2.3-20.i386.rpm (32-bit)
+libstdc&#043;&#043;-3.3.3-43.24.x86&#095;64.rpm
+libstdc&#043;&#043;-devel-3.3.3-43.24.x86&#095;64.rpm
+libstdc&#043;&#043;-devel-32bit-9-200407011229.x86&#095;64.rpm
+gnome-libs-1.4.1.7-671.1.x86&#095;64.rpm
+gnome-libs-devel-1.4.1.7-671.1.x86&#095;64.rpm
+gnome-libs-32bit-9-200407011229.x86&#095;64.rpm
+binutils-2.15.90.0.1.1-32.5.x86&#095;64.rpm
+binutils-32bit-9-200407011229.x86&#095;64.rpm
+compat-32bit-9-200407011229.x86&#095;64.rpm
+compat-sles8-1.3-93.3.x86&#095;64.rpm
+compat-2004.7.1-1.2.x86&#095;64.rpm
+pdksh-5.2.14-780.1.x86&#095;64.rpm
+make-3.80-184.1.x86&#095;64.rpm
+sysstat-5.0.1-35.1.x86&#095;64.rpm
+perl-32bit-9-200407011229.x86&#095;64.rpm
+libaio-devel-32bit-9-200407011229.x86&#095;64.rpm
+XFree86-devel-32bit-9-200407011229.x86&#095;64.rpm
+linux32-1.0-341.1.x86&#095;64.rpm
+db-32bit-9-200407011229.x86&#095;64.rpm
+db1-32bit-9-200407011229.x86&#095;64.rpm
+compat-32bit-9-200407011229.x86&#095;64.rpm
+
+</pre>
+<p>Always use 32-bit shell emulation, use the following command before running the installer and any other Oracle Application Server commands or scripts:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; linux32 bash
+</pre>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblformal" -->
+
+<p>To ensure that the system meets all the requirements, follow these steps:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Log in as the <code>root</code> user.
+</p>
+</li>
+<li>
+<p>To determine which distribution and version of Linux is installed, enter the following command: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">cat /etc/issue</span>
+Welcome to SuSE Linux 9.0 (i686) - Kernel &#092;r (&#092;l).
+
+</pre>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Red Hat Enterprise Linux AS/ES 3.0, 4.0 and SUSE Linux Enterprise Server 9 are certified and supported. For the most current list of supported Linux Operating Systems, check Oracle<span class="italic">MetaLink</span> (<code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>).
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</li>
+<li>
+<p>To determine whether any other package is installed, enter a command similar to the following:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">prompt> rpm -q </span><span class="bolditalic">package&#095;name</span>
+
+</pre>
+<p>If a package is missing, download it and install it using the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">prompt> rpm -i </span>package&#095;name
+
+</pre>
+<p>When installing a package, make sure you are using the correct architecture and optimization rpm file. To check the architecture of an rpm file, run the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">prompt> rpm -q </span>package&#095;name <span class="bold">--queryformat "&#037;&#123;arch&#125;&#092;n"</span>
+
+</pre>
+<p>In the following example, the glibc rpm file is suitable for an Intel architecture
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="bold">prompt> rpm -q glibc --queryformat "&#037;&#123;arch&#125;&#092;n"</span> 
+i686 
+
+</pre>
+</li>
+<li>
+<p>Create the following symbolic link for the Perl executable if it does not already exist:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">ln -sf /usr/bin/perl /usr/local/bin/perl</span>
+
+</pre>
+</li>
+<li>
+<p>Create the following symbolic link for the <code>fuser</code> executable if it does not already exist:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">ln -sf /bin/fuser /sbin/fuser</span>
+
+</pre>
+</li>
+<li>
+<p>If the <code>orarun</code> package was installed on a SUSE Linux Enterprise Server system, complete the following steps as the <code>oracle</code> user to reset the environment:
+</p>
+<ol type="a">
+<li>
+<p>Enter the following commands:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">cd /etc/profile.d</span> 
+prompt> <span class="bold">mv oracle.csh oracle.csh.bak</span>
+prompt> <span class="bold">mv oracle.sh oracle.sh.bak</span>
+prompt> <span class="bold">mv alljava.sh alljava.sh.bak</span>
+prompt> <span class="bold">mv alljava.csh alljava.csh.bak</span>
+
+</pre>
+</li>
+<li>
+<p>Use any text editor to comment out the following line from the <code>&#036;HOME/.profile</code> file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">. ./.oracle
+
+</pre>
+</li>
+<li>
+<p>Log out of the <code>oracle</code> user account.
+</p>
+</li>
+<li>
+<p>Log into the <code>oracle</code> user account for the changes to take effect.
+</p>
+</li>
+</ol>
+</li>
+<li>
+<p>If any Java packages are installed on the system, unset the Java environment variables, for example JAVA&#095;HOME.
+</p>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Oracle recommends that you do not install any of the Java packages supplied with the SUSE Linux Enterprise Server distribution. 
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</li>
+<li>
+<p>If you use Network Information Service (NIS): 
+</p>
+<ol type="a">
+<li>
+<p>Make sure that the following line exists in the <code>/etc/yp.conf</code> file: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">hostname.domainname</span> broadcast 
+
+</pre>
+</li>
+<li>
+<p>Make sure that the following line exists in the<code> /etc/nsswitch.conf</code> file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">hosts: files nis dns 
+
+</pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Make sure that the <code>localhost</code> entry in the <code>/etc/hosts</code> file is an IPv4 entry. If the IP entry for <code>localhost</code> is IPv6 format, installation cannot succeed. The following example shows an IPv6 entry:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> special IPv6 addresses
+::1             localhost ipv6-localhost ipv6-loopback
+::1             ipv6-localhost ipv6-loopback
+
+</pre>
+<p>To correct this example <code>/etc/hosts </code>file, comment the localhost entry as follows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> special IPv6 addresses
+prompt> ::1             localhost ipv6-localhost ipv6-loopback
+::1             ipv6-localhost ipv6-loopback
+
+</pre>
+<p>To comment the entries, you can use the perl script included in the <code>utils/4015045/</code> directory of CD-ROM Disk 1 and in the <code>application&#095;server/utils/4015045/</code> directory on the DVD-ROM. Run the script as the <code>root</code> user. This script is also available as patch 4015045. This patch is available from:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>
+
+</pre>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CIHHGJDC" name="CIHHGJDC"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref109" name="sthref109"></a>
+<h2 class="sect1"><span class="secnum">2.4 </span>Set Shell Limits for the oracle User<a id="sthref110" name="sthref110"></a><a id="sthref111" name="sthref111"></a><a id="sthref112" name="sthref112"></a><a id="sthref113" name="sthref113"></a><a id="sthref114" name="sthref114"></a><a id="sthref115" name="sthref115"></a><a id="sthref116" name="sthref116"></a><a id="sthref117" name="sthref117"></a><a id="sthref118" name="sthref118"></a><a id="sthref119" name="sthref119"></a><a id="sthref120" name="sthref120"></a>
+</h2>
+<p>The following table contains the recommended shell limits for the <code>oracle</code> user, depending on the user's default shell.
+</p>
+<div class="inftblinformal">
+
+<table class = "Informal" title="Recommended Shell Limits on Linux" summary="This table shows recommended shell limits on Linux" dir="ltr" border="1" width="100%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t14">Bourne or Bash Shell Limit
+</th>
+<th align="left" valign="bottom" id="r1c2-t14">Korn Shell Limit
+</th>
+<th align="left" valign="bottom" id="r1c3-t14">C or tcsh Shell Limit
+</th>
+<th align="left" valign="bottom" id="r1c4-t14">Hard Limit
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t14" headers="r1c1-t14">nofile<a id="sthref121" name="sthref121"></a>
+</td>
+<td align="left" headers="r2c1-t14 r1c2-t14">nofile
+</td>
+<td align="left" headers="r2c1-t14 r1c3-t14">descriptors
+</td>
+<td align="left" headers="r2c1-t14 r1c4-t14">65536
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t14" headers="r1c1-t14">noproc<a id="sthref122" name="sthref122"></a>
+</td>
+<td align="left" headers="r3c1-t14 r1c2-t14">processes
+</td>
+<td align="left" headers="r3c1-t14 r1c3-t14">maxproc
+</td>
+<td align="left" headers="r3c1-t14 r1c4-t14">16384
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblinformal -->
+
+<p>To increase the shell limits:
+</p>
+<ol type="1" start="1">
+<li>
+<p><a id="sthref123" name="sthref123"></a><a id="sthref124" name="sthref124"></a><a id="sthref125" name="sthref125"></a>Add the following lines to <code>/etc/security/limits.conf</code> file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#042; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;soft &nbsp;&nbsp;nproc &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2047
+&#042; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hard &nbsp;&nbsp;nproc &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16384
+&#042; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;soft &nbsp;&nbsp;nofile &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2048
+&#042; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hard &nbsp;&nbsp;nofile &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;65536
+
+</pre>
+</li>
+<li>
+<p><a id="sthref126" name="sthref126"></a><a id="sthref127" name="sthref127"></a><a id="sthref128" name="sthref128"></a>Add the following line to the <code>/etc/pam.d/login</code> file, if it does not already exist:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">session    required     /lib/security/pam&#095;limits.so
+
+</pre>
+</li>
+<li>
+<p>Depending on the <code>oracle</code> user's default shell, make the following changes to the default shell start-up file:
+</p>
+<ul>
+<li type="disc">
+<p><a id="sthref129" name="sthref129"></a><a id="sthref130" name="sthref130"></a><a id="sthref131" name="sthref131"></a><a id="sthref132" name="sthref132"></a><a id="sthref133" name="sthref133"></a><a id="sthref134" name="sthref134"></a><a id="sthref135" name="sthref135"></a><a id="sthref136" name="sthref136"></a><a id="sthref137" name="sthref137"></a><a id="sthref138" name="sthref138"></a><a id="sthref139" name="sthref139"></a><a id="sthref140" name="sthref140"></a><a id="sthref141" name="sthref141"></a><a id="sthref142" name="sthref142"></a><a id="sthref143" name="sthref143"></a><a id="sthref144" name="sthref144"></a><a id="sthref145" name="sthref145"></a>For the Bourne, Bash, or Korn shell, add the following lines to the <code>/etc/profile</code> file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">if &#091; &#036;USER &#061; "oracle" &#093;; then
+        if &#091; &#036;SHELL &#061; "/bin/ksh" &#093;; then
+              ulimit -p 16384
+              ulimit -n 65536
+        else
+              ulimit -u 16384 -n 65536
+        fi
+fi
+
+</pre>
+</li>
+<li type="disc">
+<p><a id="sthref146" name="sthref146"></a><a id="sthref147" name="sthref147"></a>For the C or tcsh shell, add the following lines to the <code>/etc/csh.login</code> file:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">if ( &#036;USER &#061;&#061; "oracle" ) then
+        limit maxproc 16384
+        limit descriptors 65536
+endif
+
+</pre>
+</li>
+</ul>
+</li>
+</ol>
+</div><!-- class="sect1" -->
+<a id="CIHEBBII" name="CIHEBBII"></a>
+<div class="sect1">
+<a id="sthref148" name="sthref148"></a>
+<h2 class="sect1"><span class="secnum">2.5 </span>Ports<a id="sthref149" name="sthref149"></a>
+</h2>
+<p>Many Oracle Application Server components, such as Oracle HTTP Server, use ports. You can have the installer assign default port numbers, or use port numbers that you specify.
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CIHDFIFD">Section 2.5.1, "Checking If a Port Is in Use"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABCHBHE">Section 2.5.2, "Using Default Port Numbers"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CIHHAFDF">Section 2.5.3, "Using Custom Port Numbers (the "Static Ports" Feature)"</a>
+</p>
+</li>
+</ul><a id="sthref150" name="sthref150"></a>
+<p class="subhead2">Why the Default Port for Oracle HTTP Server Is Port 7777 and Not Port 80</p>
+<p>By default, the installer configures Oracle HTTP Server to use port 7777, not port 80. Port 7777 is the default port because on UNIX, components that use port numbers lower than 1024 require additional steps to be done as the root user before the components can run. Because the installer does not have root access, it has to use a port greater than 1024.
+</p>
+<p>If you want Oracle HTTP Server to use a different port, such as port 80, use the "static ports" feature, which enables you to specify port numbers for components. Although you can change the port number after installation, it is easier to set the port number during installation.
+</p><a id="CIHDFIFD" name="CIHDFIFD"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref151" name="sthref151"></a>
+<h3 class="sect2"><span class="secnum">2.5.1 </span>Checking If a Port Is in Use<a id="sthref152" name="sthref152"></a>
+</h3>
+<p>To check if a port is being used, you can run the <code>netstat</code> command as follows:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">netstat -an &#124; grep</span> <span class="italic">portnum</span>
+
+</pre>
+</div><!-- class="sect2" -->
+<a id="BABCHBHE" name="BABCHBHE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref153" name="sthref153"></a>
+<h3 class="sect2"><span class="secnum">2.5.2 </span>Using Default Port Numbers<a id="sthref154" name="sthref154"></a><a id="sthref155" name="sthref155"></a>
+</h3>
+<p>If you want to use the default port numbers for components, you do not have to do anything. See <a href="ports.htm#CHDFIGAE">Appendix B, "Default Port Numbers"</a> for a list of the default port numbers and ranges. Make sure that at least one port is available in the port range for each component. If the installer is unable to find a free port in the range, the installation will fail.
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHHAFDF" name="CIHHAFDF"></a>
+<div class="sect2">
+<a id="sthref156" name="sthref156"></a>
+<h3 class="sect2"><span class="secnum">2.5.3 </span>Using Custom Port Numbers (the "Static Ports" Feature)<a id="sthref157" name="sthref157"></a><a id="sthref158" name="sthref158"></a><a id="sthref159" name="sthref159"></a><a id="sthref160" name="sthref160"></a>
+</h3>
+<p>To instruct the installer to assign custom port numbers for components:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Create a file containing the component names and port numbers. <a href="#BABEEAAJ">Section 2.5.3.1, "Format of the staticports.ini File"</a> describes the file format. This file is typically called the <code>staticports.ini</code> file, but you can name it anything you want.
+</p>
+</li>
+<li>
+<p>In the installer, on the Specify Port Configuration Options screen, select <span class="bold">Manual</span> and enter the <span class="italic">full path</span> to the <code>staticports.ini</code> file.
+</p>
+<p>If you do not specify the full path to the file, the installer will not be able to find the file. The installer will then assign default ports for all the components, and it will do this without displaying any warning.
+</p>
+</li>
+</ol><a id="BABEEAAJ" name="BABEEAAJ"></a>
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref161" name="sthref161"></a>
+<h4 class="sect3"><span class="secnum">2.5.3.1 </span>Format of the staticports.ini File<a id="sthref162" name="sthref162"></a>
+</h4>
+<p>The <code>staticports.ini</code> file has the following format. Replace <span class="italic">port&#095;num</span> with the port number that you want to use for the component.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Oracle HTTP Server port &#061; <span class="italic">port&#095;num</span>
+Oracle HTTP Server SSL port &#061; <span class="italic">port&#095;num</span>
+Oracle Notification Server Request port &#061; <span class="italic">port&#095;num</span>
+Oracle Notification Server Local port &#061; <span class="italic">port&#095;num</span>
+Oracle Notification Server Remote port &#061; <span class="italic">port&#095;num</span>
+
+</pre>
+<p><a id="sthref163" name="sthref163"></a>The easiest way to create the file is to use the <code>staticports.ini</code> file on the CD-ROM (Disk 1) or DVD-ROM as a template:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Copy the <code>staticports.ini</code> file from the CD-ROM or DVD-ROM to your hard disk.
+</p>
+<div class="tblhruleformal">
+<a id="sthref164" name="sthref164"></a><a id="sthref165" name="sthref165"></a>
+<p class="titleintable">Table 2-6 Location of the staticports.ini File on CD-ROM and DVD-ROM</p>
+<table class="HRuleFormal" title="Location of the staticports.ini File on CD-ROM and DVD-ROM" summary="Location of staticports.ini file on CD-ROM and DVD" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t15">Media
+</th>
+<th align="left" valign="bottom" id="r1c2-t15">Location of staticports.ini File
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t15" headers="r1c1-t15">
+<p>CD-ROM
+</p>
+</td>
+<td align="left" headers="r2c1-t15 r1c2-t15">
+<p>Disk 1: <span class="italic">mount&#095;point</span><code>/stage/Response/staticports.ini</code>
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t15" headers="r1c1-t15">
+<p>DVD-ROM
+</p>
+</td>
+<td align="left" headers="r3c1-t15 r1c2-t15">
+<p><span class="italic">mount&#095;point</span><code>/application&#095;server/stage/Response/staticports.ini</code>
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformal" -->
+
+</li>
+<li>
+<p>Edit the local copy (the file on the hard disk) to include the desired port numbers.
+</p>
+<p>You do not need to specify port numbers for all components in the <code>staticports.ini</code> file. If a component is not listed in the file, the installer uses the default port number for that component.
+</p>
+<p>The following example sets the Oracle HTTP Server ports and some Oracle Process Manager and Notification Server ports. For components not specified, the installer will assign the default port numbers.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Oracle HTTP Server port &#061; 2000
+Oracle HTTP Server SSL port &#061; 2001
+Oracle Notification Server Request port &#061; 2002
+Oracle Notification Server Local port &#061; 2003
+
+</pre>
+<p>When installation is complete, you can run the following commands to see the assigned ports:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">ORACLE&#095;HOME/opmn/bin/opmnctl startall</span>
+prompt> <span class="bold">ORACLE&#095;HOME/opmn/bin/opmnctl status -l</span>
+
+</pre>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1"><a id="sthref166" name="sthref166"></a>Notes on Choosing Port Numbers:</p>
+<ul>
+<li type="disc">
+<p>Port numbers cannot be greater than 65535.
+</p>
+</li>
+<li type="disc">
+<p>If you use a port number less than 1024 for a component, you must run the component as the root user.
+</p>
+</li>
+<li type="disc">
+<p>If you use a port number less than 1024 for a component, the installer will not be able to start up the component at the end of installation. You may need to configure the component first before you can start it up. See the appropriate component documentation for details.
+</p>
+</li>
+<li type="disc">
+<p>If you plan to set port numbers for Oracle HTTP Server, be sure you read <a href="#CIHIBAAA">Section 2.5.3.3, "Ports for Oracle HTTP Server"</a>.
+</p>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>The installer verifies that the ports specified in the file are available by checking memory. This means that it can only detect ports that are being used by running processes. It does not look in configuration files to determine which ports an application is using.
+</p>
+<p>If the installer detects that a specified port is not available, it displays an alert. The installer will not assign a port that is not available. To fix this:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Edit the <code>staticports.ini</code> file to specify a different port, or shut down the application that is using the port.
+</p>
+</li>
+<li>
+<p>Click <span class="bold">Retry</span>. The installer re-reads the <code>staticports.ini</code> file and verifies the entries in the file again.
+</p>
+</li>
+</ol>
+</div><!-- class="sect3" -->
+
+<div class="sect3">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref167" name="sthref167"></a>
+<h4 class="sect3"><span class="secnum">2.5.3.2 </span>Error Conditions that Will Cause the Installer to Use Default Ports Instead of Specified Ports<a id="sthref168" name="sthref168"></a>
+</h4>
+<p>Check your <code>staticports.ini</code> file carefully because a mistake can cause the installer to use default ports without displaying any warning. Here are some things that you should check:
+</p>
+<ul>
+<li type="disc">
+<p>If you specify the same port for more than one component, the installer will use the specified port for the first component, but for the other components, it will use the components&#039; default ports. The installer does not warn you if you have specified the same port for multiple components.
+</p>
+</li>
+<li type="disc">
+<p>If you specify different ports for one component on multiple lines, the installer assigns the default port for the component. The installer does not warn you if you have specified different ports for one component.
+</p>
+</li>
+<li type="disc">
+<p>If you specify the same port for one component on multiple lines, the installer assigns the default port for the component. The installer does not warn you if you have specified the same port on multiple lines.
+</p>
+</li>
+<li type="disc">
+<p>If you have syntax errors in the <code>staticports.ini</code> file (for example, if you omitted the <code>&#061;</code> character for a line), the installer ignores the line. For the components specified on such lines, the installer assigns the default ports. The installer does not display a warning for lines with syntax errors.
+</p>
+</li>
+<li type="disc">
+<p>If you misspell a component name, the installer assigns the default port for the component. Names of components in the file are case sensitive. The installer does not display a warning for lines with unrecognized names.
+</p>
+</li>
+<li type="disc">
+<p>If you specify a non-numeric value for the port number, the installer ignores the line and assigns the default port number for the component. It does this without displaying any warning.
+</p>
+</li>
+<li type="disc">
+<p>If you specify a relative path to the staticports.ini file (for example, "<code>./staticports.ini</code>" or just "<code>staticports.ini</code>"), the installer will not find the file. The installer continues without displaying a warning and it will assign default ports to all components. You must specify a full path to the <code>staticports.ini</code> file.
+</p>
+</li>
+</ul>
+</div><!-- class="sect3" -->
+<a id="CIHIBAAA" name="CIHIBAAA"></a>
+<div class="sect3">
+<a id="sthref169" name="sthref169"></a>
+<h4 class="sect3"><span class="secnum">2.5.3.3 </span>Ports for Oracle HTTP Server<a id="sthref170" name="sthref170"></a><a id="sthref171" name="sthref171"></a>
+</h4>
+<p>Be sure you understand the following when setting ports for this component.
+</p>
+<p><a id="sthref172" name="sthref172"></a>In the <code>httpd.conf</code> file for Oracle HTTP Server, the <code>Port</code> and the <code>Listen</code> directives specify the ports used by Oracle HTTP Server (<a href="#BABDHCFI">Figure 2-1</a>). You must set both directives to use the same port number.
+</p>
+<p>To set these ports, use the "Oracle HTTP Server port" and "Oracle HTTP Server Listen port" lines in the <code>staticports.ini</code> file. For example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Oracle HTTP Server port &#061; 8080
+Oracle HTTP Server Listen port &#061; 8080
+
+</pre>
+<p>To set the SSL version of these ports, use the following lines. As in the non-SSL version, the port numbers must be the same.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Oracle HTTP Server SSL port &#061; 443
+Oracle HTTP Server Listen (SSL) port &#061; 443
+
+</pre>
+<div class="figure">
+<a id="BABDHCFI" name="BABDHCFI"></a><a id="sthref173" name="sthref173"></a>
+
+<p class="titleinfigure">Figure 2-1 Configuring Oracle HTTP Server</p>
+<img src="img/ports_no_wc.gif" alt="Description of Figure 2-1  follows" title="Description of Figure 2-1  follows"/>
+<br /><a id="sthref174" name="sthref174" href="img_text/ports_no_wc.htm">Description of  "Figure 2-1 Configuring Oracle HTTP Server"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+<div class="sect4">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref175" name="sthref175"></a>
+<h5 class="sect4"><span class="secnum">2.5.3.3.1 </span>staticports.ini Example
+</h5>
+<p>In this scenario, configure Oracle HTTP Server to use ports 80 and 443. Create a <code>staticports.ini</code> file that includes the following lines:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">Oracle HTTP Server port &#061; 80
+Oracle HTTP Server Listen port &#061; 80
+Oracle HTTP Server SSL port &#061; 443
+Oracle HTTP Server Listen (SSL) port &#061; 443
+
+</pre>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Because you are using ports less than 1024, you have to configure Oracle HTTP Server to run as the root user. You can perform the configuration during installation or after installation.
+<ul>
+<li type="disc">
+<p>You can choose to perform the configuration after installation, but note that the installer will not be able to start up the components (because they are not yet configured).
+</p>
+</li>
+</ul>
+<p>For details, see the <span class="italic">Oracle HTTP Server Administrator's Guide</span>.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect4" -->
+
+</div><!-- class="sect3" -->
+
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABEJJJF" name="BABEJJJF"></a>
+<div class="sect1">
+<a id="sthref176" name="sthref176"></a>
+<h2 class="sect1"><span class="secnum">2.6 </span>Operating System Groups<a id="sthref177" name="sthref177"></a>
+</h2>
+<p>If you plan to install Oracle Application Server on a computer that does not have Oracle products, you need to create an operating system group to own the "inventory" directory. See <a href="#BABFIDCH">Section 2.6.1, "Create a Group for the Inventory Directory"</a>.
+</p>
+<p>To create a local operating system group:
+</p>
+<p>Enter the following command to create the <code>oinstall</code> group:<a id="sthref178" name="sthref178"></a><a id="sthref179" name="sthref179"></a>
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; /usr/sbin/groupadd oinstall
+
+</pre>
+<p>For more information about operating system users and groups, see your operating system documentation or contact your system administrator.
+</p><a id="BABFIDCH" name="BABFIDCH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref180" name="sthref180"></a>
+<h3 class="sect2"><span class="secnum">2.6.1 </span>Create a Group for the Inventory Directory<a id="sthref181" name="sthref181"></a><a id="sthref182" name="sthref182"></a>
+</h3>
+<p>If you plan to install Oracle Application Server on a computer that does not have Oracle products, create a group to own the inventory directory. The installer writes its files in the inventory directory to keep track of the Oracle products installed on the computer.
+</p>
+<p><a id="sthref183" name="sthref183"></a><a id="sthref184" name="sthref184"></a>This guide uses the name <code>oinstall</code> for this operating system group.
+</p>
+<p>By having a separate group for the inventory directory, you allow different users to install Oracle products on the computer. Users need write permission for the inventory directory. They can achieve this by belonging to the <code>oinstall</code> group.
+</p>
+<p>For the first time installation of any Oracle product on a computer, the installer displays a screen where you enter a group name for the inventory directory, and a screen where you enter the location of the inventory directory.
+</p>
+<p><a id="sthref185" name="sthref185"></a>The default name of the inventory directory is <code>oraInventory</code>.
+</p>
+<p><a id="sthref186" name="sthref186"></a><a id="sthref187" name="sthref187"></a><a id="sthref188" name="sthref188"></a>If you are unsure if there is already an inventory directory on the computer, look in the <code>/etc/oraInst.loc</code> file. This file lists the location of the inventory directory and the group who owns it. If the file does not exist, the computer does not have Oracle products installed on it.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDEBHIE" name="CHDEBHIE"></a>
+<div class="sect1">
+<a id="sthref189" name="sthref189"></a>
+<h2 class="sect1"><span class="secnum">2.7 </span><a name="ASINS105|create an os user to install ias"></a>Operating System <a id="sthref190" name="sthref190"></a>User
+</h2>
+<p>Create an operating system user to install and upgrade Oracle products. This guide refers to this user as <a id="sthref191" name="sthref191"></a>the <code>oracle</code> user. The <code>oracle</code> user running the installer must have write permission for these directories:
+</p>
+<ul>
+<li type="disc">
+<p>the Oracle home directory, which contains files for the product you are installing
+</p>
+</li>
+<li type="disc">
+<p>the inventory directory, which is used by the installer for all Oracle products
+</p>
+</li>
+</ul>
+<p>If the computer contains other Oracle products, you might already have a user for this purpose. Look in the <code>/etc/oraInst.loc</code> file. This file lists the location of the inventory directory and the group who owns it. If the file does not exist, the computer does not have Oracle products installed on it.
+</p>
+<p>If you do not already have a user for installing Oracle products, create a user with the following properties:
+</p>
+<div class="tblhruleformal">
+<a id="sthref192" name="sthref192"></a><a id="sthref193" name="sthref193"></a>
+<p class="titleintable">Table 2-7 Properties of the Operating System User Who Runs the Installer</p>
+<table class="HRuleFormal" title="Properties of the Operating System User Who Runs the Installer" summary="Properties of the operating system user who runs the installer" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t18">Item
+</th>
+<th align="left" valign="bottom" id="r1c2-t18">Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t18" headers="r1c1-t18">
+<p>Login name
+</p>
+</td>
+<td align="left" headers="r2c1-t18 r1c2-t18">
+<p>You can use any name for the user. This guide refers to the user as the <code>oracle</code> user.<a id="sthref194" name="sthref194"></a><a id="sthref195" name="sthref195"></a>
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t18" headers="r1c1-t18">
+<p>Group identifier
+</p>
+</td>
+<td align="left" headers="r3c1-t18 r1c2-t18">
+<p>The primary group of the <code>oracle</code> user must have write permission for the <code>oraInventory</code> directory. See <a href="#BABFIDCH">Section 2.6.1, "Create a Group for the Inventory Directory"</a> for more information about this group.
+</p>
+<p>You can use any name for the group. This guide uses the name <code>oinstall</code>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t18" headers="r1c1-t18">
+<p>Home directory
+</p>
+</td>
+<td align="left" headers="r4c1-t18 r1c2-t18">
+<p>The home directory for the <code>oracle</code> user can be consistent with the home directories of other users.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t18" headers="r1c1-t18">
+<p>Login shell
+</p>
+</td>
+<td align="left" headers="r5c1-t18 r1c2-t18">
+<p>The default login shell can be the C, Bourne, or Korn shell.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformal" -->
+
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>Use the <code>oracle</code> user only for installing and running Oracle products. Do not use root as the <code>oracle</code> user.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+<p>To create a local operating system user:
+</p>
+<ol type="1" start="1">
+<li>
+<p>To create the <code>oracle</code> user, enter a command similar to the following:<a id="sthref196" name="sthref196"></a><a id="sthref197" name="sthref197"></a>
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; /usr/sbin/useradd -g oinstall -G dba&#091;,oper&#093; oracle
+
+</pre>
+<p>In this command:
+</p>
+<ul>
+<li type="circle">
+<p>The <code>-g</code> option specifies the primary group, which must be the Oracle Inventory group, for example <code>oinstall</code>
+</p>
+</li>
+<li type="circle">
+<p>The <code>-G</code> option specifies the secondary groups, which must include the OSDBA group and if required, the OSOPER group, for example <code>dba</code> or <code>dba,oper</code>
+</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Set the password of the <code>oracle</code> user:<a id="sthref198" name="sthref198"></a><a id="sthref199" name="sthref199"></a>
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; passwd oracle
+
+</pre>
+</li>
+</ol>
+<p><a id="sthref200" name="sthref200"></a><a id="sthref201" name="sthref201"></a><a id="sthref202" name="sthref202"></a>To check which groups an operating system user belongs to, run the <code>groups</code> command with the name of the user. For example:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">groups oracle</span>
+
+</pre>
+<p>For more information about operating system users and groups, see your operating system documentation or contact your system administrator.
+</p>
+</div><!-- class="sect1" -->
+<a id="CHDGDCJD" name="CHDGDCJD"></a>
+<div class="sect1">
+<a id="sthref203" name="sthref203"></a>
+<h2 class="sect1"><span class="secnum">2.8 </span><a name="ASINS130|Environment Variables"></a>Environment Variables<a id="sthref204" name="sthref204"></a><a id="sthref205" name="sthref205"></a>
+</h2>
+<p>The operating system user who will be installing Oracle Application Server needs to set (or unset) the following environment variables.
+</p>
+<p><a href="#CIHBGJJD">Table 2-8</a> summarizes whether you set or unset an environment variable.
+</p>
+<div class="tblhruleformal">
+<a id="sthref206" name="sthref206"></a><a id="CIHBGJJD" name="CIHBGJJD"></a>
+<p class="titleintable">Table 2-8 Environment Variable Summary</p>
+<table class="HRuleFormal" title="Environment Variable Summary" summary="Environment variable summary" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t20">Environment variable
+</th>
+<th align="left" valign="bottom" id="r1c2-t20">Set or Unset
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t20" headers="r1c1-t20">
+<p><a href="#BABJCCIC">ORACLE&#095;HOME and ORACLE&#095;SID</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r2c1-t20 r1c2-t20">
+<p>Must not be set.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t20" headers="r1c1-t20">
+<p><a href="#CIHBEGCF">PATH, CLASSPATH, and LD&#095;LIBRARY&#095;PATH</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r3c1-t20 r1c2-t20">
+<p>Must not contain references to directories in any Oracle home directories
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t20" headers="r1c1-t20">
+<p><a href="#BABEIDGA">DISPLAY</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r4c1-t20 r1c2-t20">
+<p>Set it to the monitor where you want to the installer window to appear.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t20" headers="r1c1-t20">
+<p><a href="#BABBFAJD">TMP and TMPDIR</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r5c1-t20 r1c2-t20">
+<p>Optional. If unset, defaults to <code>/tmp</code>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t20" headers="r1c1-t20">
+<p><a href="#BABGADBH">TNS&#095;ADMIN</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r6c1-t20 r1c2-t20">
+<p>Must not be set.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t20" headers="r1c1-t20">
+<p><a href="#CHDCIHEC">ORA&#095;NLS</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r7c1-t20 r1c2-t20">
+<p>Must not be set.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t20" headers="r1c1-t20">
+<p><a href="#CHDDDIBA">LD&#095;BIND&#095;NOW</a>
+</p>
+<br />
+</td>
+<td align="left" headers="r8c1-t20 r1c2-t20">
+<p>Must not be set.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformal" -->
+
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref207" name="sthref207"></a>
+<h3 class="sect2"><span class="secnum">2.8.1 </span>Environment Variable Tips
+</h3>
+<p>Here are some tips when working with environment variables:
+</p>
+<ul>
+<li type="disc">
+<p><a id="sthref208" name="sthref208"></a><a id="sthref209" name="sthref209"></a>If you set environment variables in the <code>.profile</code> file, they might not be read. To ensure environment variables are set to the correct values, check their values in the shell where you will be running the installer.
+</p>
+</li>
+<li type="disc">
+<p>To check the value of environment variables, use the <code>env</code> command. This displays all the currently defined environment variables and their values.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#037; <code><span class="codeinlinebold">env</span></code>
+
+</pre>
+</li>
+<li type="disc">
+<p><a id="sthref210" name="sthref210"></a><a id="sthref211" name="sthref211"></a>If you use the <code>su</code> command to switch users (for example, switching from the root user to the <code>oracle</code> user), check the environment variables when you are the new user because the environment variables might not be passed to the new user. This can happen even if you run <code>su</code> with the <code>-</code> parameter (<code>su - </code><code><span class="codeinlineitalic">user</span></code>).
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#035; /&#042; root user &#042;/
+&#035; <code><span class="codeinlinebold">su - oracle</span></code>
+&#037; <code><span class="codeinlinebold">env</span></code>
+
+</pre>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="BABJCCIC" name="BABJCCIC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref212" name="sthref212"></a>
+<h3 class="sect2"><span class="secnum">2.8.2 </span>ORACLE&#095;HOME<a id="sthref213" name="sthref213"></a><a id="sthref214" name="sthref214"></a> and ORACLE&#095;SID<a id="sthref215" name="sthref215"></a><a id="sthref216" name="sthref216"></a>
+</h3>
+<p>These environment variables must not be set.
+</p>
+</div><!-- class="sect2" -->
+<a id="CIHBEGCF" name="CIHBEGCF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref217" name="sthref217"></a>
+<h3 class="sect2"><span class="secnum">2.8.3 </span>PATH, CLASSPATH, and LD&#095;LIBRARY&#095;PATH<a id="sthref218" name="sthref218"></a><a id="sthref219" name="sthref219"></a><a id="sthref220" name="sthref220"></a><a id="sthref221" name="sthref221"></a><a id="sthref222" name="sthref222"></a><a id="sthref223" name="sthref223"></a>
+</h3>
+<p>Edit your PATH, CLASSPATH, and LD&#095;LIBRARY&#095;PATH environment variables so that they do not reference any Oracle home directories.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABEIDGA" name="BABEIDGA"></a>
+<div class="sect2">
+<a id="sthref224" name="sthref224"></a>
+<h3 class="sect2"><span class="secnum">2.8.4 </span>DISPLAY<a id="sthref225" name="sthref225"></a><a id="sthref226" name="sthref226"></a>
+</h3>
+<p>Set the DISPLAY environment variable to point to the X server that will display the installer. The format of the DISPLAY environment variable is:
+</p>
+<pre xml:space="preserve" class="oac_no_warn"><span class="italic">hostname</span>:<span class="italic">display&#095;number</span>.<span class="italic">screen&#095;number</span>
+
+</pre>
+<p>Example (C shell):
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#037; <span class="bold">setenv DISPLAY test.mydomain.com:0.0</span>
+
+</pre>
+<p>Example (Bourne or Korn shell):
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#036; <span class="bold">DISPLAY&#061;test.mydomain.com:0.0; export DISPLAY</span>
+
+</pre>
+<p>You can test the display by running the xclock program:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#036; <span class="bold">xclock &amp;</span>
+
+</pre>
+<p>Oracle Application Server requires a running X server during installation only. The frame buffer X server installed with your operating system requires that you remain logged in and have the frame buffer running during installation. If you do not wish to do this, then you must use a virtual frame buffer, such as X Virtual Frame Buffer (XVFB) or Virtual Network Computing (VNC).
+</p>
+<p>Visit Oracle Technology Network (<code><a href="http://www.oracle.com/technology">http://www.oracle.com/technology</a></code>) for information about obtaining and installing XVFB or other virtual frame buffer solutions. Search OTN for "frame buffer".
+</p>
+</div><!-- class="sect2" -->
+<a id="BABGADBH" name="BABGADBH"></a>
+<div class="sect2">
+<a id="sthref227" name="sthref227"></a>
+<h3 class="sect2"><span class="secnum">2.8.5 </span>TNS&#095;ADMIN<a id="sthref228" name="sthref228"></a><a id="sthref229" name="sthref229"></a>
+</h3>
+<p>This section describes two requirements:
+</p>
+<ul>
+<li type="disc">
+<p>The TNS&#095;ADMIN environment variable must not be set. If set, it can cause errors during installation. 
+</p>
+</li>
+<li type="disc">
+<p><a id="sthref230" name="sthref230"></a>The <code>/etc</code> and the <code>/var/opt/oracle</code> directories must not contain a <code>tnsnames.ora</code> file.
+</p>
+</li>
+</ul>
+<p>These requirements are necessary to prevent conflicts between the Net configuration files for different Oracle products.
+</p>
+<p>If you need to set TNS&#095;ADMIN or if you have the <code>tnsnames.ora</code> file in <code>/etc</code> or <code>/var/opt/oracle</code>, do the following steps before installing Oracle Application Server.
+</p>
+<ol type="1" start="1">
+<li>
+<p>If you have the <code>tnsnames.ora</code> file in <code>/etc</code> or <code>/var/opt/oracle</code>, move the file from these directories to a different directory. Alternatively, you can rename the file.
+</p>
+</li>
+<li>
+<p>Make sure the TNS&#095;ADMIN environment variable is not set.
+</p>
+<p>Example (C shell):
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#037; <span class="bold">unsetenv TNS&#095;ADMIN</span>
+
+</pre>
+<p>Example (Bourne or Korn shell):
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#036; <span class="bold">unset TNS&#095;ADMIN</span>
+
+</pre>
+</li>
+</ol>
+<p>After installation, you can merge the contents of the newly created <code>tnsnames.ora</code> file with your existing <code>tnsnames.ora</code> file.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABBFAJD" name="BABBFAJD"></a>
+<div class="sect2">
+<a id="sthref231" name="sthref231"></a>
+<h3 class="sect2"><span class="secnum">2.8.6 </span>TMP and TMPDIR<a id="sthref232" name="sthref232"></a><a id="sthref233" name="sthref233"></a><a id="sthref234" name="sthref234"></a><a id="sthref235" name="sthref235"></a>
+</h3>
+<p>The installer uses a temporary directory for swap space. The installer checks for the TMP and TMPDIR environment variables to locate the temporary directory. If this environment variable does not exist, the installer uses the <code>/tmp</code><a id="sthref236" name="sthref236"></a> directory.
+</p>
+<p>If you want the installer to use a temporary directory other than <code>/tmp</code>, set the TMP and TMPDIR environment variables to the full path of an alternate directory. The <code>oracle</code> user must have right permission for this directory and the directory must meet the requirements listed in <a href="#BABICBJA">Table 2-2</a>.
+</p>
+<p>Example (C shell):
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#037; <span class="bold">setenv TMP /tmp2</span>
+&#037; <span class="bold">setenv TMPDIR /tmp2</span>
+
+</pre>
+<p>Example (Bourne or Korn shell):
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#036; <span class="bold">TMP&#061;/tmp2; export TMP</span>
+&#036; <span class="bold">TMPDIR&#061;/tmp2; export TMPDIR</span>
+
+</pre>
+<p>If you do not set this environment variable, and the default directory does not have enough space, then the installer displays an error message that says the environment variable is not set. You can either set the environment variable to point to a different directory or free up enough space in the default directory. In either case, you have to restart the installation.
+</p>
+</div><!-- class="sect2" -->
+<a id="CHDCIHEC" name="CHDCIHEC"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref237" name="sthref237"></a>
+<h3 class="sect2"><span class="secnum">2.8.7 </span>ORA&#095;NLS<a id="sthref238" name="sthref238"></a><a id="sthref239" name="sthref239"></a>
+</h3>
+<p>To make sure that the Oracle Application Server installation completes successfully, unset this environment variable.
+</p>
+<p>Example:	
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#036; unset ORA&#095;NLS
+</pre>
+</div><!-- class="sect2" -->
+<a id="CHDDDIBA" name="CHDDDIBA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref240" name="sthref240"></a>
+<h3 class="sect2"><span class="secnum">2.8.8 </span>LD&#095;BIND&#095;NOW<a id="sthref241" name="sthref241"></a><a id="sthref242" name="sthref242"></a>
+</h3>
+<p>To make sure that the Oracle Application Server installation completes successfully, unset this environment variable.
+</p>
+<p>Example:	
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#036; unset LD&#095;BIND&#095;NOW
+</pre>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABIAEEC" name="BABIAEEC"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref243" name="sthref243"></a>
+<h2 class="sect1"><span class="secnum">2.9 </span>Network Topics<a id="sthref244" name="sthref244"></a>
+</h2>
+<p>Typically, the computer on which you want to install Oracle Application Server is connected to the network, has local storage to contain the Oracle Application Server installation, has a display monitor, and has a CD-ROM or DVD-ROM drive.
+</p>
+<p>This section describes how to install Oracle Application Server on computers that do not meet the typical scenario. It covers the following cases:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDEFBDA">Section 2.9.1, "Installing on a DHCP Host"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABHFIBJ">Section 2.9.2, "Installing on Multihomed (Multi-IP) Computers"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABGDAAH">Section 2.9.3, "Copying CD-ROMs or DVD-ROM to Hard Drive, and Installing from the Hard Drive"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABFCGAI">Section 2.9.4, "Installing from a Remote CD-ROM or DVD-ROM Drive"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDFGEAI">Section 2.9.5, "Installing on Remote Computers"</a>
+</p>
+</li>
+</ul><a id="CHDEFBDA" name="CHDEFBDA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref245" name="sthref245"></a>
+<h3 class="sect2"><span class="secnum">2.9.1 </span>Installing on a DHCP Host<a id="sthref246" name="sthref246"></a><a id="sthref247" name="sthref247"></a><a id="sthref248" name="sthref248"></a>
+</h3>
+<p>If you are installing Oracle Application Server in a DHCP network you must use a loopback configuration. To access the Oracle Application Server, you need to use a local browser. Perform the following steps to install Oracle Application Server in a DHCP network: 
+</p>
+<ol type="1" start="1">
+<li>
+<p>Find the IP address allocated from the DHCP server by running the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#036; /sbin/ifconfig -a
+
+</pre>
+<p>The IP address is associated with the interface configured to use DHCP.
+</p>
+</li>
+<li>
+<p>Configure the host to resolve hostname to loopback IP address:
+</p>
+<ol type="a">
+<li>
+<p>Configure the host to resolve hostname to loopback IP address, by modifying the <code>/etc/hosts</code> file to contain the following entries:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">127.0.0.1 <span class="italic">hostname.domainname hostname</span> 
+127.0.0.1 localhost.localdomain localhost 
+
+</pre>
+</li>
+<li>
+<p>Check that the hostname resolves to the loopback IP address by entering the following command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&#036; /bin/ping <span class="italic">hostname.domainname</span>
+
+</pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Complete the Oracle Application Server installation as described in this guide using the hostname used in step 2.
+</p>
+</li>
+</ol>
+</div><!-- class="sect2" -->
+<a id="BABHFIBJ" name="BABHFIBJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref249" name="sthref249"></a>
+<h3 class="sect2"><span class="secnum">2.9.2 </span>Installing on Multihomed (Multi-IP) Computers<a id="sthref250" name="sthref250"></a><a id="sthref251" name="sthref251"></a><a id="sthref252" name="sthref252"></a><a id="sthref253" name="sthref253"></a>
+</h3>
+<p>You can install Oracle Application Server on a multihomed computer. A multihomed computer is associated with multiple IP addresses. This is typically achieved by having multiple network cards on the computer. Each IP address is associated with a hostname; additionally, you can set up aliases for the hostname. By default, Oracle Universal Installer uses the <code>ORACLE&#095;HOSTNAME</code> environment variable setting to find the hostname. If <code>ORACLE&#095;HOSTNAME</code> is not set and you are installing on a computer that has multiple network cards, Oracle Universal Installer determines the hostname by using the first name in the <code>/etc/hosts</code> file. 
+</p>
+<p>Clients must be able to access the computer using this hostname (or using aliases for this hostname). To check, ping the hostname from the client computers using the short name (hostname only) and the full name (hostname and domain name). Both must work.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABGDAAH" name="BABGDAAH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref254" name="sthref254"></a>
+<h3 class="sect2"><span class="secnum">2.9.3 </span>Copying CD-ROMs or DVD-ROM to Hard Drive, and Installing from the Hard Drive<a id="sthref255" name="sthref255"></a><a id="sthref256" name="sthref256"></a><a id="sthref257" name="sthref257"></a><a id="sthref258" name="sthref258"></a><a id="sthref259" name="sthref259"></a>
+</h3>
+<p>Instead of installing from the Oracle Application Server CD-ROMs or DVD-ROM, you can copy the contents of the CD-ROMs or DVD-ROM to a hard drive and install from there. This might be easier if you plan to install many instances of Oracle Application Server on your network, or if the computers where you want to install Oracle Application Server do not have CD-ROM or DVD-ROM drives.
+</p>
+<p>(You can install from remote CD-ROM or DVD-ROM drives; see <a href="#BABFCGAI">Section 2.9.4, "Installing from a Remote CD-ROM or DVD-ROM Drive"</a>.)
+</p>
+<p>When you install from the hard drive, the installer does not prompt you to swap CD-ROMs. It can find all the files if they are in the proper locations (see <a href="#BABDBIFG">Figure 2-2</a>).
+</p><a id="sthref260" name="sthref260"></a>
+<p class="subhead2">Space Requirement</p>
+<p>Ensure that the hard drive contains enough space to hold the contents of the CD-ROMs or the <code>application&#095;server</code> directory on the DVD-ROM. Each CD-ROM contains approximately 650 MB. This means that if you are copying three CD-ROMs, you need approximately 1.9 GB of disk space.
+</p>
+<p>On the DVD-ROM, the <code>application&#095;server</code> directory is approximately 1.6 GB.
+</p>
+<p>This space is in addition to the space required for installing Oracle Application Server (listed in <a href="#BABICBJA">Table 2-2</a>).
+</p><a id="sthref261" name="sthref261"></a>
+<p class="subhead2">To Copy the CD-ROMs:</p>
+<ol type="1" start="1">
+<li>
+<p>Create a directory structure on your hard drive as shown in <a href="#BABDBIFG">Figure 2-2</a>.
+</p>
+<p>You need to create a parent directory (called <code>OracleAS&#095;10g</code> in the example, but you can name it anything you like), and, under the parent directory, create subdirectories called <code>Disk1</code>, <code>Disk2</code>, and so on. The names of the subdirectories must be <code>Disk</code><code><span class="codeinlineitalic">N</span></code>, where <code><span class="codeinlineitalic">N</span></code> is the CD-ROM number.
+</p>
+<div class="figure">
+<a id="BABDBIFG" name="BABDBIFG"></a><a id="sthref262" name="sthref262"></a>
+
+<p class="titleinfigure">Figure 2-2 Directory Structure for Copying CD-ROMs to Disk</p>
+<img src="img/copyToDisk.gif" alt="Description of Figure 2-2  follows" title="Description of Figure 2-2  follows"/>
+<br /><a id="sthref263" name="sthref263" href="img_text/copyToDisk.htm">Description of  "Figure 2-2 Directory Structure for Copying CD-ROMs to Disk"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+</li>
+<li>
+<p>Copy the contents of each CD-ROM into the corresponding directory.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">cp -pr</span> <span class="italic">/cdrom&#095;mount&#095;point</span><span class="bold">/10.1.3disk1/&#042;</span> <span class="italic">/path/to/hard/drive/</span><span class="bold">Disk1/</span>
+prompt> <span class="bold">cp -pr</span> <span class="italic">/cdrom&#095;mount&#095;point</span><span class="bold">/10.1.3disk2/&#042;</span> <span class="italic">/path/to/hard/drive/</span><span class="bold">Disk2/</span>
+... <span class="italic">Repeat for each CD-ROM.</span>
+
+</pre>
+</li>
+</ol>
+<p>To run the installer from the copied files, invoke the <code>runInstaller</code> executable from the <code>Disk1</code> directory. Run it from the computer that will be running Oracle Application Server.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="italic">/path/to/hard/drive/</span><span class="bold">Disk1/runInstaller</span>
+
+</pre><a id="sthref264" name="sthref264"></a>
+<p class="subhead2">To Copy the application&#095;server Directory from the DVD-ROM</p>
+<ol type="1" start="1">
+<li>
+<p>(optional) Create a directory to contain the <code>application&#095;server</code> directory.
+</p>
+</li>
+<li>
+<p>Copy the <code>application&#095;server</code> directory from the DVD-ROM to your hard disk.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">cp -pr</span> <span class="italic">/dvd&#095;mount&#095;point</span><span class="bold">/application&#095;server</span> <span class="italic">/path/to/hard/drive</span>
+
+</pre>
+</li>
+</ol>
+<p>To run the installer from the copied files, invoke the <code>runInstaller</code> executable from the computer that will be running Oracle Application Server:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="italic">/path/to/hard/drive/</span><span class="bold">application&#095;server/runInstaller</span>
+
+</pre>
+</div><!-- class="sect2" -->
+<a id="BABFCGAI" name="BABFCGAI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref265" name="sthref265"></a>
+<h3 class="sect2"><span class="secnum">2.9.4 </span>Installing from a Remote CD-ROM or DVD-ROM Drive<a id="sthref266" name="sthref266"></a><a id="sthref267" name="sthref267"></a>
+</h3>
+<p>You can run the installer on a remote computer ("remote&#095;computer"), but have the installer screens display on your local computer ("local&#095;computer"). The installer will install Oracle Application Server on the remote computer.
+</p>
+<ol type="1" start="1">
+<li>
+<p>Allow remote&#095;computer to display on local&#095;computer. You need to run this command on the local computer&#039;s console.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">local&#095;computer> <span class="bold">xhost &#043;remote&#095;computer</span>
+
+</pre>
+<p>If you do not run <code>xhost</code>, you might get an Xlib error similar to "Failed to connect to server", "Connection refused by server," or "Can&#039;t open display" when starting the installer.
+</p>
+</li>
+<li>
+<p>On local&#095;computer, perform a remote login (using <code>telnet</code> or <code>rlogin</code>) to remote&#095;computer. Log in as the <code>oracle</code> user, as described in <a href="#CHDEBHIE">Section 2.7, "Operating System User"</a>. Ensure that the user has set the environment variables correctly, as described in <a href="#CHDGDCJD">Section 2.8, "Environment Variables"</a>.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">local&#095;computer> <span class="bold">rlogin -l oracle remote&#095;computer.mydomain.com</span>
+- OR -
+local&#095;computer> <span class="bold">telnet remote&#095;computer.mydomain.com</span>
+
+</pre>
+</li>
+<li>
+<p>Set the DISPLAY environment variable on remote&#095;computer to point to local&#095;computer.
+</p>
+<p>Example (C shell):
+</p>
+<pre xml:space="preserve" class="oac_no_warn">remote&#095;computer> <span class="bold">setenv DISPLAY local&#095;computer.mydomain.com:0.0</span>
+
+</pre>
+<p>Example (Bourne or Korn shell):
+</p>
+<pre xml:space="preserve" class="oac_no_warn">remote&#095;computer> <span class="bold">DISPLAY&#061;local&#095;computer.mydomain.com:0.0; export DISPLAY</span>
+
+</pre>
+</li>
+<li>
+<p>Run the installer. See <a href="basic.htm#BABEIGGD">Section 3.11, "Starting theOracle Universal Installer"</a>.
+</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>You can use a PC X emulator to run the installer if it supports a PseudoColor color model or PseudoColor visual. Set the PC X emulator to use a PseudoColor visual, and then start the installer. Refer to the X emulator documentation for instructions on how to change the color model or visual settings.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="CHDFGEAI" name="CHDFGEAI"></a>
+<div class="sect2">
+<a id="sthref268" name="sthref268"></a>
+<h3 class="sect2"><span class="secnum">2.9.5 </span>Installing on Remote Computers<a id="sthref269" name="sthref269"></a><a id="sthref270" name="sthref270"></a>
+</h3>
+<p>You can run the installer on a remote computer ("remote&#095;computer"), but have the installer screens display on your local computer ("local&#095;computer"). The installer will install Oracle Application Server on the remote computer.
+</p>
+<ol type="1" start="1">
+<li>
+<p>Allow remote&#095;computer to display on local&#095;computer. You need to run this command on the local computer&#039;s console.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">local&#095;computer> <span class="bold">xhost &#043;remote&#095;computer</span>
+
+</pre>
+<p>If you do not run <code>xhost</code>, you might get an Xlib error similar to "Failed to connect to server", "Connection refused by server," or "Can&#039;t open display" when starting the installer.
+</p>
+</li>
+<li>
+<p>On local&#095;computer, perform a remote login (using <code>telnet</code> or <code>rlogin</code>) to remote&#095;computer. Log in as the <code>oracle</code> user, as described in <a href="#CHDEBHIE">Section 2.7, "Operating System User"</a>. Ensure that the user has set the environment variables correctly, as described in <a href="#CHDGDCJD">Section 2.8, "Environment Variables"</a>.
+</p>
+<pre xml:space="preserve" class="oac_no_warn">local&#095;computer> <span class="bold">rlogin -l oracle remote&#095;computer.mydomain.com</span>
+- OR -
+local&#095;computer> <span class="bold">telnet remote&#095;computer.mydomain.com</span>
+
+</pre>
+</li>
+<li>
+<p>Set the DISPLAY environment variable on remote&#095;computer to point to local&#095;computer.
+</p>
+<p>Example (C shell):
+</p>
+<pre xml:space="preserve" class="oac_no_warn">remote&#095;computer> <span class="bold">setenv DISPLAY local&#095;computer.mydomain.com:0.0</span>
+
+</pre>
+<p>Example (Bourne or Korn shell):
+</p>
+<pre xml:space="preserve" class="oac_no_warn">remote&#095;computer> <span class="bold">DISPLAY&#061;local&#095;computer.mydomain.com:0.0; export DISPLAY</span>
+
+</pre>
+</li>
+<li>
+<p>Run the installer. See <a href="basic.htm#BABEIGGD">Section 3.11, "Starting theOracle Universal Installer"</a>.
+</p>
+</li>
+</ol>
+<div align="center">
+<div class="inftblnote">
+
+<br /><table class = "Note oac_no_warn" summary="This is a layout table to format a note" title="This is a layout table to format a note" dir="ltr" border="1" width="80%" frame="hsides" rules="groups" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left">
+<p class="notep1">Note:</p>You can use a PC X emulator to run the installer if it supports a PseudoColor color model or PseudoColor visual. Set the PC X emulator to use a PseudoColor visual, and then start the installer. Refer to the X emulator documentation for instructions on how to change the color model or visual settings.
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="inftblnote -->
+
+</div>
+</div><!-- class="sect2" -->
+<a id="BABBAGDE" name="BABBAGDE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref271" name="sthref271"></a>
+<h3 class="sect2"><span class="secnum">2.9.6 </span>Installing on NFS-Mounted Storage<a id="sthref272" name="sthref272"></a><a id="sthref273" name="sthref273"></a>
+</h3>
+<p>To run Oracle Application Server on NFS systems, you have to use a certified NFS-mounted storage system.
+</p>
+<p>Currently Oracle Application Server is certified to run on these NFS systems:
+</p>
+<ul>
+<li type="disc">
+<p>Network Appliance (NetApp) filers<a id="sthref274" name="sthref274"></a>
+</p>
+</li>
+</ul>
+<p>The NetApp system should be exported to at least the remote install user and remote root user. You can do this using <code>exportfs</code> command:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">prompt> <span class="bold">exportfs -i /vol/vol1</span>
+
+</pre>
+<p>Before installing, verify that the NFS mount setuid permission is set to <code>suid</code>. The <code>nosuid</code> option will cause the install to fail.
+</p>
+<p>To check the latest certification list for any updates, visit Oracle Technology Network (<code><a href="http://www.oracle.com/technology">http://www.oracle.com/technology</a></code>).
+</p>
+</div><!-- class="sect2" -->
+<a id="BABJIICJ" name="BABJIICJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref275" name="sthref275"></a>
+<h3 class="sect2"><span class="secnum">2.9.7 </span>Running Multiple Instances from One Installation
+</h3>
+<p>Oracle Application Server components are intended to be run only on the computer where they are installed. You cannot run the components on remote computers, even though the computers can access the files through NFS.
+</p>
+<div class="figure">
+<a id="sthref276" name="sthref276"></a>
+
+<p class="titleinfigure">Figure 2-3 Run Oracle Application Server Only on the Computer Where It Is Installed</p>
+<img src="img/nfs_multi_inst.gif" alt="Description of Figure 2-3  follows" title="Description of Figure 2-3  follows"/>
+<br /><a id="sthref277" name="sthref277" href="img_text/nfs_multi_inst.htm">Description of  "Figure 2-3 Run Oracle Application Server Only on the Computer Where It Is Installed"</a>
+<br /><br />
+</div><!-- class="figure" -->
+
+</div><!-- class="sect2" -->
+<a id="BABIDABA" name="BABIDABA"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref278" name="sthref278"></a>
+<h3 class="sect2"><span class="secnum">2.9.8 </span>Support for NIS and NIS&#043;<a id="sthref279" name="sthref279"></a>
+</h3>
+<p>You can install and run Oracle Application Server in NIS and NIS&#043; environments.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABHBIAD" name="BABHBIAD"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref280" name="sthref280"></a>
+<h2 class="sect1"><span class="secnum">2.10 </span>Prerequisite Checks Performed by the Installer<a id="sthref281" name="sthref281"></a><a id="sthref282" name="sthref282"></a>
+</h2>
+<p><a href="#CIHGHHCD">Table 2-9</a> lists the checks performed by the installer:
+</p>
+<div class="tblhruleformalwide">
+<a id="sthref283" name="sthref283"></a><a id="CIHGHHCD" name="CIHGHHCD"></a>
+<p class="titleintable">Table 2-9 Prerequisite Checks Performed by the Installer</p>
+<table class="HRuleFormalWide" title="Prerequisite Checks Performed by the Installer" summary="Prerequisite checks performed by the installer" dir="ltr" border="1" width="100%" frame="hsides" rules="rows" cellpadding="3" cellspacing="0">
+<thead>
+<tr align="left" valign="top">
+<th align="left" valign="bottom" id="r1c1-t23">Item
+</th>
+<th align="left" valign="bottom" id="r1c2-t23">Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr align="left" valign="top">
+<td align="left" id="r2c1-t23" headers="r1c1-t23">
+<p>Processor
+</p>
+</td>
+<td align="left" headers="r2c1-t23 r1c2-t23">
+<p>See <a href="#BABICBJA">Table 2-2</a> for recommended values.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r3c1-t23" headers="r1c1-t23">
+<p>Operating system version
+</p>
+</td>
+<td align="left" headers="r3c1-t23 r1c2-t23">
+<p>See <a href="#CIHHHDHB">Section 2.3, "Software Requirements"</a> for supported versions.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r4c1-t23" headers="r1c1-t23">
+<p>Operating system patches
+</p>
+</td>
+<td align="left" headers="r4c1-t23 r1c2-t23">
+<p>See <a href="#CIHHHDHB">Section 2.3, "Software Requirements"</a> for a list of required patches.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r5c1-t23" headers="r1c1-t23">
+<p>Software packages
+</p>
+</td>
+<td align="left" headers="r5c1-t23 r1c2-t23">
+<p>See <a href="#CIHHHDHB">Section 2.3, "Software Requirements"</a> for a list of required packages.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r6c1-t23" headers="r1c1-t23">
+<p>Memory
+</p>
+</td>
+<td align="left" headers="r6c1-t23 r1c2-t23">
+<p>See <a href="#BABICBJA">Table 2-2</a> for recommended values.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r7c1-t23" headers="r1c1-t23">
+<p>Swap space
+</p>
+</td>
+<td align="left" headers="r7c1-t23 r1c2-t23">
+<p>See <a href="#BABICBJA">Table 2-2</a> for recommended values.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r8c1-t23" headers="r1c1-t23">
+<p>TMP space
+</p>
+</td>
+<td align="left" headers="r8c1-t23 r1c2-t23">
+<p>See <a href="#BABICBJA">Table 2-2</a> for recommended values.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r9c1-t23" headers="r1c1-t23">
+<p>Instance name
+</p>
+</td>
+<td align="left" headers="r9c1-t23 r1c2-t23">
+<p>The installer checks that the computer on which you are installing Oracle Application Server does not already have an instance of the same name.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r10c1-t23" headers="r1c1-t23">
+<p>Oracle home directory name
+</p>
+</td>
+<td align="left" headers="r10c1-t23 r1c2-t23">
+<p>The installer checks that the Oracle home directory name does not contain any spaces.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r11c1-t23" headers="r1c1-t23">
+<p>Path to Oracle home directory
+</p>
+</td>
+<td align="left" headers="r11c1-t23 r1c2-t23">
+<p>The installer checks that the path to the Oracle home directory is not longer than 127 characters.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r12c1-t23" headers="r1c1-t23">
+<p>Oracle home directory contents
+</p>
+</td>
+<td align="left" headers="r12c1-t23 r1c2-t23">
+<p>The installer checks that the Oracle home directory does not contain any files that might interfere with the installation.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r13c1-t23" headers="r1c1-t23"><a id="CIHDDFIB" name="CIHDDFIB"></a>
+<p>Oracle home directory
+</p>
+</td>
+<td align="left" headers="r13c1-t23 r1c2-t23">
+<p>You should install Oracle Application Server in a new directory. Here are some examples of installations that are <span class="bold">not allowed</span>:
+</p>
+<ul>
+<li type="disc">
+<p>Oracle Application Server into an 8.0, 8<span class="italic">i</span>, 9.0.1, 9.2, or 10<span class="italic">g</span> database Oracle home
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server into an Oracle Management Service Oracle home
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server into an Oracle Collaboration Suite Oracle home
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server into an Oracle HTTP Server standalone Oracle home
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server into an OracleAS Web Cache standalone Oracle home
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server into an Oracle9<span class="italic">i</span> Developer Suite 9.0.2 or Oracle Developer Suite 10<span class="italic">g</span> Release 2 (10.1.2) Oracle home
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server into an Oracle Containers for J2EE standalone Oracle home
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server into an Oracle9<span class="italic">i</span>AS 1.0.2.2 Oracle home
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server into an infrastructure 9.0.2, 9.0.4, or 10<span class="italic">g</span> Release 2 (10.1.2) Oracle home
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server into an Oracle9<span class="italic">i</span>AS 9.0.2, 9.0.3, 9.0.4, or 10<span class="italic">g</span> Release 2 (10.1.2) middle tier Oracle home
+</p>
+</li>
+<li type="disc">
+<p>Oracle Application Server into an Oracle home installed from the Oracle Business Intelligence 10<span class="italic">g</span> (10.1.2.0.2) CD-ROM.
+</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r14c1-t23" headers="r1c1-t23">
+<p>Static port conflicts
+</p>
+</td>
+<td align="left" headers="r14c1-t23 r1c2-t23">
+<p>The installer checks the ports listed in the <code>staticports.ini</code> file, if specified. See <a href="#CIHEBBII">Section 2.5, "Ports"</a>.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r15c1-t23" headers="r1c1-t23">
+<p>Monitor
+</p>
+</td>
+<td align="left" headers="r15c1-t23 r1c2-t23">
+<p>The installer checks that the monitor is configured to display at least 256 colors.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r16c1-t23" headers="r1c1-t23">
+<p>Display permission
+</p>
+</td>
+<td align="left" headers="r16c1-t23 r1c2-t23">
+<p>The installer checks that the user has permissions to display on the monitor specified by the DISPLAY environment variable.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r17c1-t23" headers="r1c1-t23">
+<p>DISPLAY environment variable
+</p>
+</td>
+<td align="left" headers="r17c1-t23 r1c2-t23">
+<p>The installer checks that the DISPLAY environment variable is set.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r18c1-t23" headers="r1c1-t23">
+<p>TNS&#095;ADMIN environment variable
+</p>
+</td>
+<td align="left" headers="r18c1-t23 r1c2-t23">
+<p>The TNS&#095;ADMIN environment variable must not be set.
+</p>
+<p>There must not be a <code>tnsnames.ora</code> file in the <code>/etc</code> or <code>/var/opt/oracle</code> directories.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r19c1-t23" headers="r1c1-t23">
+<p>Cluster file system
+</p>
+</td>
+<td align="left" headers="r19c1-t23 r1c2-t23">
+<p>The installer checks that you are not installing Oracle Application Server in a cluster file system (CFS).
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r20c1-t23" headers="r1c1-t23">
+<p>glibc version check on Linux
+</p>
+</td>
+<td align="left" headers="r20c1-t23 r1c2-t23">
+<p>The installer runs this check only if you are installing on Linux. The installer makes sure that the glibc version is glibc-2.3.2-95.27 or higher on Red Hat Enterprise Linux AS/ES 3.0, glibc-2.3.4-2.9 or higher on Red Hat Enterprise Linux AS/ES 4.0, and glibc-2.3.3-98.28 or higher on SUSE Linux Enterprise Server 9.
+</p>
+</td>
+</tr>
+<tr align="left" valign="top">
+<td align="left" id="r21c1-t23" headers="r1c1-t23">
+<p>Packages check on Linux
+</p>
+</td>
+<td align="left" headers="r21c1-t23 r1c2-t23">
+<p>The installer runs this check only if you are installing on Linux.The installer makes sure that the mandatory packages are installed. For example, it checks the gcc, sysstat and openmotif packages as specified in <a href="#CHDFAEJI">Table 2-3</a> for Red Hat Enterprise Linux AS/ES 3.0 , <a href="#CIHFHDFG">Table 2-4</a> for Red Hat Enterprise Linux AS/ES 4.0, and <a href="#BABGDJAF">Table 2-5</a> for SUSE Linux Enterprise Server 9.
+</p>
+</td>
+</tr>
+</tbody>
+</table><br />
+</div><!-- class="tblhruleformalwide" -->
+
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="topo.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="basic.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

@@ -1,0 +1,8 @@
+[DEFAULT_SECTION]
+
+[General]
+Label=LABEL1
+Number=1
+Size=600.0
+ReservedSize=1.0
+

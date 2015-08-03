@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-- Run date = January 23, 2006 13:32:47 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5.1 Build 4" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Description of the illustration ashia084.eps</title>
+</head>
+<body>
+<p>The figure shows two hardware clusters. Each hardware cluster consists of:
+</p>
+<ul>
+<li type="disc">
+<p>two nodes (an active node and a passive node)
+</p>
+</li>
+<li type="disc">
+<p>a shared storage
+</p>
+</li>
+<li type="disc">
+<p>a virtual hostname and IP address
+</p>
+</li>
+<li type="disc">
+<p>vendor clusterware for each node. On Windows, you need Microsoft Cluster Server and Oracle Fail Safe.
+</p>
+</li>
+</ul>
+<p>In the first hardware cluster, the active node runs Oracle HTTP Server. The Oracle home for the Oracle HTTP Server is installed on the shared storage. If the active node fails, the passive node takes over, mounts the shared storage, and runs Oracle HTTP Server.
+</p>
+<p>In the second hardware cluster, the active node runs OC4J. The Oracle home for OC4J is installed on the shared storage. If the active node fails, the passive node takes over, mounts the shared storage, and runs the OC4J processes.
+</p>
+<p>Oracle HTTP Server in the first hardware cluster accesses OC4J in the second hardware cluster using the second hardware cluster&#039;s virtual hostname and IP address.
+</p>
+<p>Variations on this topology:
+</p>
+<ul>
+<li type="disc">
+<p>You can use Oracle Identity Management from Release 2 (10.1.2) with this topology.
+</p>
+</li>
+<li type="disc">
+<p>You can use Oracle HTTP Server from Release 2 (10.1.2) with this topology.
+</p>
+</li>
+</ul>
+</body>
+</html>

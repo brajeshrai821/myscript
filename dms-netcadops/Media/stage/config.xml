@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes" ?>
+<!-- Copyright (c) 2002 Oracle Corporation. All rights Reserved -->
+<!-- Do not modify the contents of this file by hand. -->
+<CONFIG_LIST>
+<COMP NAME="oracle.apache.standalone" VER="10.1.2.0.0" PLAT="NT_X86">
+   <CT NAME="configtool1" NAME_ID="configtool1_ALL" DESC_ID="configtool1_DESC_ALL" LOC="" CLS_NAME="Components.oracle.apache.standalone.v10_1_2_0_0.PostInstallTool0" PLAT="Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_S390 HP_IA64 Linux_IA64 NT_X86"/>
+</COMP>
+<COMP NAME="oracle.as.j2ee.top" VER="10.1.3.0.0" PLAT="Linux">
+   <CT NAME="OPMNconfig" NAME_ID="OPMNconfig_ALL" DESC_ID="OPMNconfig_DESC_ALL" LOC="" CLS_NAME="Components.oracle.as.j2ee.top.v10_1_3_0_0.PostInstallTool0" PLAT="Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_S390 HP_IA64 Linux_IA64 NT_X86 NT_IA64"/>
+</COMP>
+<COMP NAME="oracle.rdbms.jazn.config" VER="10.1.2.0.0" PLAT="Linux">
+   <CT NAME="jaznca" NAME_ID="jaznca_ALL" DESC_ID="jaznca_DESC_ALL" LOC="" CLS_NAME="Components.oracle.rdbms.jazn.config.v10_1_2_0_0.PostInstallTool0" PLAT="Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_S390 HP_IA64 Linux_IA64 NT_X86 NT_IA64 W95 W98 NT_Alpha"/>
+</COMP>
+<COMP NAME="oracle.apache" VER="10.1.3.0.0" PLAT="Linux">
+   <CT NAME="configtool1" NAME_ID="configtool1_ALL" DESC_ID="configtool1_DESC_ALL" LOC="" CLS_NAME="Components.oracle.apache.v10_1_3_0_0.PostInstallTool0" PLAT="Solaris"/>
+</COMP>
+<COMP NAME="oracle.apache.apache" VER="1.3.31.0.0" PLAT="Linux">
+   <CT NAME="configtool4" NAME_ID="configtool4_ALL" DESC_ID="configtool4_DESC_ALL" LOC="" CLS_NAME="Components.oracle.apache.apache.v1_3_31_0_0.PostInstallTool0" PLAT="Solaris NT_X86 NT_IA64"/>
+   <CT NAME="configtool3" NAME_ID="configtool3_ALL" DESC_ID="configtool3_DESC_ALL" LOC="" CLS_NAME="Components.oracle.apache.apache.v1_3_31_0_0.PostInstallTool1" PLAT="Solaris"/>
+</COMP>
+<COMP NAME="oracle.networking.netca" VER="10.1.0.2.0" PLAT="Linux">
+   <CT NAME="netca" NAME_ID="netca_ALL" DESC_ID="netca_DESC_ALL" LOC="" CLS_NAME="Components.oracle.networking.netca.v10_1_0_2_0.PostInstallTool0" PLAT="Solaris Intel_Solaris UnixWare DG_UX HP_UX IBM_AIX UNIX_Alpha NT_X86 W95 W98 Linux Linux_IA64 Linux_S390"/>
+   <CT NAME="netca_deinst" NAME_ID="netca_deinst_ALL" DESC_ID="netca_deinst_DESC_ALL" LOC="" CLS_NAME="Components.oracle.networking.netca.v10_1_0_2_0.PostInstallTool1" PLAT="Solaris Intel_Solaris UnixWare DG_UX HP_UX IBM_AIX UNIX_Alpha NT_X86 W95 W98 Linux Linux_IA64 Linux_S390"/>
+</COMP>
+<COMP NAME="oracle.adf.lib" VER="10.1.3.0.0" PLAT="Linux">
+   <CT NAME="ADFconfigtool" NAME_ID="ADFconfigtool_ALL" DESC_ID="ADFconfigtool_DESC_ALL" LOC="" CLS_NAME="Components.oracle.adf.lib.v10_1_3_0_0.PostInstallTool0" PLAT="Solaris Intel_Solaris SINIX_Y ReliantUNIX_M UNIX_Alpha IBM_AIX Dynix UnixWare DG_UX HP_UX NEC Hitachi_UX Iris NCOS OpenVMS IBM_MVS Linux Linux_S390 HP_IA64 Linux_IA64 NT_X86 NT_IA64 W95 W98 NT_Alpha"/>
+</COMP>
+</CONFIG_LIST>

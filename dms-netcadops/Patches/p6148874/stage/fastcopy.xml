@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="yes"?>
+<!-- Copyright (c) 2007 Oracle Corporation. All Rights Reserved. -->
+<!-- Do not modify the contents of this file by hand. -->
+
+<FASTCOPY DISKS="1" DIR="fastcopy">
+
+  <SETPERMS>
+    <SCRIPT DISK="1"> setperms1.sh </SCRIPT>
+  </SETPERMS>
+
+</FASTCOPY>

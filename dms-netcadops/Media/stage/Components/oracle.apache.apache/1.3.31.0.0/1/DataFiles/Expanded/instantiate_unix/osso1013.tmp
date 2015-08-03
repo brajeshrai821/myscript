@@ -1,0 +1,181 @@
+#!%s_perlLocation%
+
+BEGIN
+{
+  if ($^O =~ "linux")
+  {
+    push @INC, '%ORACLE_HOME%/perl/lib/5.8.3/i686-linux-thread-multi',
+      '%ORACLE_HOME%/perl/lib/5.8.3', '%ORACLE_HOME%/perl/5.8.3/lib';
+  }
+  elsif($^O =~ "Win")
+  {
+    push @INC, '%ORACLE_HOME%\perl\site\5.8.3\lib\MSWin32-x86-multi-thread',
+      '%ORACLE_HOME%\perl\5.8.3\lib\MSWin32-x86-multi-thread',
+      '%ORACLE_HOME%\perl\site\5.8.3\lib','%ORACLE_HOME%\perl\5.8.3\lib';
+  }
+  else
+  {
+    push @INC, '%ORACLE_HOME%/perl/site/5.8.3/lib',
+      '%ORACLE_HOME%/perl/5.8.3/lib';
+  }
+}
+
+eval
+{
+
+if($#ARGV < 0)
+{
+  if ($^O =~ "Win")
+  {
+    die "\nUsage: perl osso1013 <conf file>\n";
+  }
+  else
+  {
+    die "\nUsage: osso1013 <conf file path>\n";
+  }
+}
+
+$ossoConf = $ARGV[0];
+if(not -e '%ORACLE_HOME%/ohs')
+{
+  $apacheHomeConf = '%ORACLE_HOME%/Apache/Apache/conf';
+}
+else
+{
+  $apacheHomeConf = '%ORACLE_HOME%/ohs/conf';
+}
+$ossoConfDest = "$apacheHomeConf/osso/osso.conf";
+$httpdConfName = "$apacheHomeConf/httpd.conf";
+$modossoConf = "$apacheHomeConf/mod_osso.conf";
+
+# If we're on Windows, convert all back slashes to forward slashes.
+if ($^O =~ "Win")
+{
+  $ossoConf =~ s/\\/\//g;
+  $ossoConfDest =~ s/\\/\//g;
+  $httpdConfName =~ s/\\/\//g;
+  $modossoConf =~ s/\\/\//g;
+}
+
+if(not -e $ossoConf)
+{
+   die "\nCould not find file $ossoConf!\n";
+}
+
+# Copy the conf file into place, but don't bother if src and dest are 
+# the same...
+use File::Compare;
+if (compare($ossoConf, $ossoConfDest))
+{
+  use File::Copy;
+
+  copy($ossoConf, $ossoConfDest) or die "Could not copy $ossoConf:\n$!\n";
+}
+
+# Uncomment the include line in httpd.conf
+if(not -e $httpdConfName)
+{
+  die "\nCould not find httpd.conf at $httpdConfName.\n";
+}
+else
+{
+  # Back up the original
+  copy($httpdConfName, "$httpdConfName".".osso1013") or
+    die "Could not make a backup copy of $httpdConfName\n";
+  $httpdBack = "$httpdConfName".".osso1013";
+
+  open(HTTPD_READ, "<$httpdConfName".".osso1013") or
+    die "\nCannot open $$httpdConfName".".osso1013"." for reading\n";
+  open(HTTPD_WRITE, ">$httpdConfName") or
+    die "\nCannot open $httpdConfName for writing\n";
+
+  while (<HTTPD_READ>)
+  {
+    if (s/^#include (.*mod_osso\.conf")$/include $1/)
+    {
+      $httpReplaced = 1;
+    }
+    print HTTPD_WRITE $_;
+  }
+
+  close(HTTPD_READ);
+  close(HTTPD_WRITE);
+
+  if ($httpReplaced)
+  {
+    print "\n$httpdConfName successfully updated.\n";
+  }
+  else
+  {
+    print "\nWARNING: Commented out include of mod_osso.conf not found in httpd.conf.  Please check httpd.conf and ensure include of mod_osso.conf is present.\n";
+  }
+
+}
+
+# Add the OssoConfigFile entry to mod_osso.conf
+if(not -e $modossoConf)
+{
+  die "\nCould not find mod_osso.conf at $modossoConf.\n";
+}
+else
+{
+  # Back up the original
+  copy($modossoConf, "$modossoConf".".osso1013") or
+    die "Could not make a backup copy of $modossoConf\n";
+  $modossoBack = "$modossoConf".".osso1013";
+
+  open(MODOSSO_READ, "<$modossoConf".".osso1013") or
+    die "\nCannot open $modossoConf".".osso1013"." for reading\n";
+  open(MODOSSO_WRITE, ">$modossoConf") or
+    die "\nCannot open $modossoConf for writing\n";
+
+  @ossoConfContents = <MODOSSO_READ>;
+  if (grep {/OssoConfigFile/} @ossoConfContents)
+  {
+    $alreadyPresent = 1;
+  }
+
+  foreach $line (@ossoConfContents)
+  {
+    $line =~ s/OssoConfigFile (.*)$/OssoConfigFile $ossoConfDest/;
+    print MODOSSO_WRITE $line;
+    if (($line =~ /<IfModule mod_osso\.c>/) && !$alreadyPresent)
+    {
+      print MODOSSO_WRITE "\n   OssoConfigFile $ossoConfDest";
+    }
+  }
+
+  close(MODOSSO_READ);
+  close(MODOSSO_WRITE);
+
+  if ($alreadyPresent)
+  {
+     print "\nWARNING: OssoConfigFile entry already present in mod_osso.conf!  Please check mod_osso.conf file and ensure OssoConfigFile entry is correct.\n";
+  }
+  else
+  {
+    print "$modossoConf successfully updated.\n";
+  }
+}
+};
+
+if ($@)
+{
+  print "\nExecution failed:\n";
+  print "$@";
+  # Print info about the backups of the conf files, if they exist
+  if ($httpdBack || $modossoBack)
+  {
+    print "Changes may have been made to configuration files.  Backups have been created.\n";
+    if ($httpdBack)
+    {
+      print "  httpd.conf was copied to: $httpdBack\n";
+    }
+    if ($modossoBack)
+    {
+      print "  mod_osso.conf was copied to: $modossoBack\n";
+    }
+  }
+}
+
+print "\n";

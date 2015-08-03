@@ -1,0 +1,583 @@
+#!/bin/bash
+#===================================================================================
+# Title        : install-netcadops
+#
+# Description  : DMS NetCadops installer
+#                Installs the Oracle application server and configures
+#                the DMS NetCadops configuration
+#
+# Author       : Firas AlShafei
+#
+# Version      : v1.2
+#
+# Last Revised : 02/08/2014
+#
+#===================================================================================
+# Usage        : bash install-netcadops
+#
+# Notes        : - Must be run as root
+#                - tnsnames.ora file available in:
+#                      ./Config
+#                  or   /etc/tnsnames.ora
+#                - DMS cadops directory available in:
+#                     [NetMod] /dms/cadops
+#                  or [Standalone] /usr/users/oracle/cadops
+#
+#===================================================================================
+# Changelog:
+#
+# v1.2 - Firas AlShafei - 02/08/2014
+# - Changed default Oracle path
+# - Added apache password obfuscation
+# - [RHEL6] Fixed user and group checking
+# - Added user profile creation
+# - Moved variables to a conf file
+# - Set default script header
+# - Changed port number to 2200
+#
+# v1.1 - Firas AlShafei - 05/22/2013
+# - Fixed oraInst.loc bug
+# - Added exit code checking for Oracle install/Patch
+# - Fixed tnsnames.ora checking logic
+# - Modified spinner function
+# - Fixed bug in oraInst.loc detection logic
+# - Added log coloring
+#
+# v1.0 - Firas AlShafei - 05/19/2013
+# - Initial Version
+#
+#===================================================================================
+
+#-------------------------------------------------------------------------------
+# Script Functions
+#-------------------------------------------------------------------------------
+
+function _set_variables(){
+   scriptName=$( basename $0 )
+   BASEDIR=$(dirname "$(readlink -f "$0")")
+   configFile=${BASEDIR}/${scriptName}.conf
+   LOG_FILE=${BASEDIR}/${scriptName}.log
+   MEDIA_DIR=${BASEDIR}/Media
+   CONFIG_DIR=${BASEDIR}/Config
+   PATCH_DIR=${BASEDIR}/Patches
+   
+   # Get configuration from config file
+   . ${configFile}
+
+   if [ -z "$SERVER_IP" ]; then
+      SERVER_IP=$(ifconfig | grep inet | grep -v inet6 | grep -v 127.0.0.1 | awk '{print $2}' | sed 's/addr://')
+   fi
+   HOSTNAME=$(hostname)
+}
+
+function _log(){
+# Usage _LogMesg ARG1 ARG2
+# ARG1: Verbosity Level [0-5]
+#       Level 5   : Information messages
+#       Level 1-4 : More detailed messages
+#       Level 0   : All Messages
+# ARG2: Message to be output
+
+# Set default verbosity level to 5 if not set in script
+VERBOSITY=${VERBOSITY:=5}
+
+if [ $# -le 1 ]; then
+   MSG=$( echo $@ | sed "s/[Ee][Rr][Rr][Oo][Rr]/$(tput setaf 1)ERROR$(tput setaf 7)/" | sed "s/[Ww][Aa][Rr][Nn][Ii][Nn][Gg]/$(tput setaf 3)WARNING$(tput setaf 7)/" )
+   echo "$(date +%m/%d/%y) - $(date +%H:%M:%S) : $MSG" >> ${LOG_FILE}
+   echo $MSG
+else
+   LEVEL=$1
+   MSG=$( echo $@ | cut -d\  -f2- | sed "s/[Ee][Rr][Rr][Oo][Rr]/$(tput setaf 1)ERROR$(tput setaf 7)/" | sed "s/[Ww][Aa][Rr][Nn][Ii][Nn][Gg]/$(tput setaf 3)WARNING$(tput setaf 7)/" )
+
+   case $LEVEL in
+   [0-5])
+      if [ ${LEVEL} -ge ${VERBOSITY} ]; then
+         echo "$(date +%m/%d/%y) - $(date +%H:%M:%S) : $MSG" >> ${LOG_FILE}
+         echo $MSG
+      else
+         echo "$(date +%m/%d/%y) - $(date +%H:%M:%S) : $MSG" >> ${LOG_FILE}
+      fi
+   ;;
+    *)
+       MSG=$( $@ | sed "s/[Ee][Rr][Rr][Oo][Rr]/$(tput setaf 1)ERROR$(tput setaf 7)/" | sed "s/[Ww][Aa][Rr][Nn][Ii][Nn][Gg]/$(tput setaf 3)WARNING$(tput setaf 7)/" )
+       echo "$(date +%m/%d/%y) - $(date +%H:%M:%S) : $MSG"   >> ${LOG_FILE}
+       echo $MSG
+    ;;
+   esac
+fi
+}
+
+
+function _welcome(){
+   # Display banner
+   clear
+   tput setaf 1 && tput setab 7
+   echo "================================================================"
+   echo " DMS NetCadops Installer                                   v1.1 "
+   echo "================================================================"
+   tput sgr0
+   echo "Script Variables"
+   echo "================"
+   echo "Server Hostame/IP         : ${HOSTNAME}/${SERVER_IP}"
+   echo "DMS Database SID          : ${DMS_SID}"
+   echo "NetCadop Schema User/Pass : ${NETC_SCHEMA_USER}/${NETC_SCHEMA_PASS}"
+   echo "Oracle User               : ${ORA_USER}"
+   echo "Oracle Group              : ${ORA_GROUP}"
+   echo "Oracle User Home          : ${ORA_USER_HOME}"
+   echo "Oracle Home Name          : ${ORACLE_HOME_NAME}"
+   echo "Oracle Home               : ${ORACLE_HOME}"
+   echo "Is this a NetMod Server?  : ${ISNETMOD}"
+   echo "[NetMod] DMS User         : ${DMS_USER}"
+   echo
+   echo "Script Directory          : ${BASEDIR}"
+   echo "Log File                  : ${LOG_FILE}"
+   echo "Script Verbosity          : ${VERBOSITY}"
+   echo "================================================================"
+   read -s -n1 -p "Is the information correct (Y/N)? " key
+   case $key in
+      "Y" | "y")
+      echo
+      ;;
+      "N" | "n")
+         echo && echo "Please modify the script and re-run"
+         exit 1
+      ;;
+      *)
+         echo && echo "Invalid Input"
+         echo "Terminating Script..."
+         exit 1
+      ;;
+   esac
+
+   # Log file banner
+   echo "================================================================"       > ${LOG_FILE}
+   echo " NetCadops Installer                                       v1.1 "      >> ${LOG_FILE}
+   echo "================================================================"      >> ${LOG_FILE}
+   echo "$(date +%m/%d/%y) - $(date +%H:%M:%S) : Installation Started"          >> ${LOG_FILE}
+}
+
+function _banner(){
+   clear
+   tput setaf 1 && tput setab 7
+   echo "================================================================"
+   echo " DMS NetCadops Installer                                   v1.1 "
+   echo "================================================================"
+   tput sgr0
+   echo "Log File: ${LOG_FILE}"
+   echo
+
+}
+
+function _spinner(){
+   local PID=$1
+   local MSG=$2
+   if [ -z "${MSG}" ]; then
+      MSG="Please wait |"
+   else
+      MSG="${MSG} - Please wait |"
+   fi
+   printf "$MSG"
+   rotate='|/-\'
+   # to fix notepad++ coloring '
+   while kill -n 0 $PID 2>/dev/null; do
+      rotate="${rotate#?}${rotate%???}"
+      printf '\b%.1s' "$rotate"
+      usleep 250000
+   done
+   echo ''
+
+   wait $PID
+}
+
+
+function _check_prereqs(){
+   _log 2 "Verifying that the script is run by root"
+   if [ "$(id -u)" != "0" ]; then
+      _log "Error: This script must be run as root"
+      _log "Terminating script..."
+      exit 1
+   fi
+
+   _log 2 "Checking that the oracle user exists"
+   id $ORA_USER > /dev/null
+   if [ ! "$?" = "0" ]; then
+      _log "Error: Oracle user ($ORA_USER) does not exist."
+      _log "Error: Please verify user existance and re-run"
+      _log "Terminating script..."
+      exit 1
+   fi
+
+   _log 2 "Checking that the defined oracle group (${ORA_GROUP}) exists and oracle user is a member"
+   id $ORA_USER | grep "\($ORA_GROUP\)" > /dev/null
+   if [ ! "$?" = "0" ]; then
+      _log "Error: Oracle group ($ORA_GROUP) doesnt exist or doesnt contain the oracle user ($ORA_USER)."
+      _log "Error: Please verify group existance and memberships and re-run."
+      _log "Terminating script..."
+      exit 1
+   fi
+
+   _log 2 "Verifying that the installation media exists"
+   if [ ! -d ${MEDIA_DIR} ]; then
+      _log "Error: Installation media path not accessible."
+      _log "Error: Please extract the complete installation package and re-run."
+      _log "Terminating script..."
+      exit 1
+   fi
+
+   _log 2 "Verifying that tnsnames.ora is available in ${CONFIG_DIR}"
+   if [ ! -f ${CONFIG_DIR}/tnsnames.ora ] && [ ! -f /etc/tnsnames.ora ]; then
+      _log "Error: tnsnames.ora not found"
+      _log "Error: Please place a copy of tnsnames.ora in ${CONFIG_DIR} or in /etc/"
+      _log "Terminating script..."
+      exit 1
+   fi
+
+   _log 2 "Verifying that the required cadops data exists"
+   if [ ${ISNETMOD} == FALSE ]; then
+      _log 4 "NOT NetMod server, expecting cadops data in ${ORA_USER_HOME}/cadops"
+      if [ ! -d ${ORA_USER_HOME}/cadops/netcadops ]; then
+         _log "Error: Cadops data not found"
+         _log "Error: Please place a copy of the cadops/netcadops in the oracle user home ${ORA_USER_HOME}"
+         _log "Terminating script..."
+         exit 1
+      fi
+
+      if [ ! -d ${ORA_USER_HOME}/cadops/landbaseSync ]; then
+         _log "Error: Cadops data not found"
+         _log "Error: Please place a copy of the cadops/landbaseSync in the oracle user home ${ORA_USER_HOME}"
+         _log "Terminating script..."
+         exit 1
+      fi
+   else
+      _log 4 "NetMod server, expecting cadops data in ${DMS_PATH}/cadops"
+      if [ ! -d ${DMS_PATH}/cadops ]; then
+         _log "Error: Cant find ${DMS_PATH}/cadops"
+         _log "Error: Please verify path/variable and re-run"
+         _log "Terminating script..."
+         exit 1
+      fi
+
+      _log 2 "Verifying that the DMS User (${DMS_USER}) exists"
+      getent passwd $DMS_USER > /dev/null
+      if [ ! "$?" = "0" ]; then
+         _log "Error: DMS user ($DMS_USER) does not exist."
+         _log "Error: Please verify user existance and re-run"
+         _log "Terminating script..."
+         exit 1
+      fi
+   fi
+
+   _log 4 "Check if perl exists in /usr/local/bin/"
+   if [ ! -f /usr/local/bin/perl ]; then
+      _log 4 "Perl not found, creating symlink to /usr/bin/"
+      ln -sf /usr/bin/perl /usr/local/bin/perl
+   else
+      _log 4 "Perl found in /usr/local/bin/"
+   fi
+
+   _log 2 "Make linux32 executable by the oracle user"
+   chmod +x ${CONFIG_DIR}/linux32
+   chown ${ORA_USER}:${ORA_GROUP} ${CONFIG_DIR}/linux32
+}
+
+### Set open file and processes limits
+# Keep existing limits if greater than our limits
+function _set_limits(){
+
+   _log 4 "Setting open file and process limits needed by Oracle"
+   _log 2 "Removing End of File comment from /etc/limit.conf"
+   sed -i '/# End of file/d' /etc/security/limits.conf  >> ${LOG_FILE} 2>&1
+
+   # Call each limit array
+   for (( i=1; i<=$LIMITS; i++ )); do
+      # Parse limit array
+      domain=LIMIT$i[0]
+      type=LIMIT$i[1]
+      item=LIMIT$i[2]
+      value=LIMIT$i[3]
+
+      _log 2 "Processing Limit #$i (${!domain} ${!type} ${!item} ${!value})"
+
+      # If limit exists check its value. If value is less than desired then set it.
+      # If value if greater than or equal to wanted value then dont modify it.
+      if $(grep -q "${!domain}.*${!type}.*${!item}.*" /etc/security/limits.conf); then
+         # Get existing limit value
+         val=$(grep "${!domain}.*${!type}.*${!item}.*" /etc/security/limits.conf | awk '{print $4}' 2>/dev/null)
+
+         # If value is smaller than wanted value then set it, otherwise leave is alone.
+         if (( ${val:=0} < ${!value} )); then
+            _log 2 "Limit ({!domain} ${!type} ${!item}) exist, current value ${val}, increasing to ${!value}"
+            sed -i "s|${!domain}.*${!type}.*${!item}.*|${!domain}          ${!type}    ${!item}    ${!value}|" /etc/security/limits.conf
+         else
+            _log 2 "Limit (${!domain} ${!type} ${!item}) exists and is already >= (${!value})"
+         fi
+      else
+         _log 2 "Adding limit {!domain} ${!type} ${!item} ${!value}"
+         echo "${!domain}          ${!type}    ${!item}    ${!value}" >> /etc/security/limits.conf
+      fi
+   done
+
+   _log 2 "Restoring End of file comment to /etc/security/limits.conf"
+   echo "# End of file" >> /etc/security/limits.conf
+
+   _log 3 "Enable the pam_limits module in /etc/pam.d/login to enforce limits"
+   if ! $(grep -q "session.*required.*pam_limits.so.*" /etc/pam.d/login); then
+      echo "session    required     pam_limits.so" >> /etc/pam.d/login
+   fi
+}
+
+function _install_oracle(){
+
+   _log 4 "Checking oraInst.loc to determine if another Oracle installation exists"
+   if [ ! -f /etc/oraInst.loc ]; then
+      _log 3 "Creating ${ORACLE_BASE}/../oraInventory"
+      mkdir -p ${ORACLE_BASE}/../oraInventory
+      _log 3 "Setting ownership to ${ORA_USER}:${ORA_GROUP}"
+      chown ${ORA_USER}:${ORA_GROUP} ${ORACLE_BASE}
+      chown ${ORA_USER}:${ORA_GROUP} ${ORACLE_BASE}/../oraInventory
+
+      inventory_loc=$(readlink -f ${ORACLE_BASE}/../oraInventory)
+      _log 3 "/etc/oraInst.loc doesnt exist, creating"
+      echo "inventory_loc=${inventory_loc}"  > /etc/oraInst.loc
+      echo "inst_group=${ORA_GROUP}"         >> /etc/oraInst.loc
+
+      _log 3 "Modifying oraInst.loc permissions"
+      chmod 644 /etc/oraInst.loc
+      chown ${ORA_USER}:${ORA_GROUP} /etc/oraInst.loc
+   else
+      . /etc/oraInst.loc
+      if [ ! -d $inventory_loc ] || [ ! ${ORA_GROUP} = ${inst_group} ]; then
+         _log "Error: Invaid group or location in /etc/oraInst.loc"
+         _log "Error: Please verify /etc/oraInst.loc contents and re-run"
+         exit 1
+      fi
+   fi
+
+   _log 4 "Creating OAS response file from oas.rsp_template"
+   cp ${CONFIG_DIR}/templates/oas.rsp_template ${CONFIG_DIR}/oas.rsp
+   chown ${ORA_USER}:${ORA_GROUP} ${CONFIG_DIR}/oas.rsp
+
+   _log 3 "Modifying oas.rsp to match enviroment"
+   _log 3 "Setting oas.rsp Oracle Home to ${ORACLE_HOME}"
+   sed -i "s|SCRIPT_ORAHOME|${ORACLE_HOME}|"                                 ${CONFIG_DIR}/oas.rsp
+   sed -i "s|ORACLE_HOME_NAME=.*|ORACLE_HOME_NAME=\"${ORACLE_HOME_NAME}\"|"  ${CONFIG_DIR}/oas.rsp
+
+   _log 3 "Setting oas.rsp installer group to ${ORA_GROUP}"
+   sed -i "s|SCRIPT_ORAGROUP|${ORA_GROUP}|"                                  ${CONFIG_DIR}/oas.rsp
+
+   _log 4 "Starting Oracle installation"
+   if [ ${VERBOSITY} = 0 ]; then
+      su oracle -c "${CONFIG_DIR}/linux32 ${MEDIA_DIR}/runInstaller -silent -noconfig -waitforcompletion -responseFile ${CONFIG_DIR}/oas.rsp" | sed "s/[Ee][Rr][Rr][Oo][Rr]/$(tput setaf 1)ERROR$(tput setaf 7)/" | sed "s/[Ww][Aa][Rr][Nn][Ii][Nn][Gg]/$(tput setaf 3)WARNING$(tput setaf 7)/" | tee -a ${LOG_FILE} &
+   else
+      su oracle -c "${CONFIG_DIR}/linux32 ${MEDIA_DIR}/runInstaller -silent -noconfig -waitforcompletion -responseFile ${CONFIG_DIR}/oas.rsp" | sed "s/[Ee][Rr][Rr][Oo][Rr]/$(tput setaf 1)ERROR$(tput setaf 7)/" | sed "s/[Ww][Aa][Rr][Nn][Ii][Nn][Gg]/$(tput setaf 3)WARNING$(tput setaf 7)/"  >> ${LOG_FILE} 2>&1 &
+   fi
+
+   ORACLE_INSTALL_PID=$!
+   _spinner ${ORACLE_INSTALL_PID} "== Installing Oracle"
+   ORACLE_INSTALL_EXIT=$?
+
+   if ! [[ ${ORACLE_INSTALL_EXIT} = 0 || ${ORACLE_INSTALL_EXIT} = 1 || ${ORACLE_INSTALL_EXIT} = 2 ]]; then
+      _log 5 "Error: Oracle installation failed."
+      _log 5 "Error: Please check the installation log and Oracle log"
+      exit 1
+   else
+      _log 4 "Oracle installation successful"
+   fi
+
+
+   _log 3 "modify post-install root script to run silently"
+   sed -i '/DEFLT=${LBIN};.*/d' ${ORACLE_HOME}/root.sh
+   sed -i '/DEFLT=.*/d'         ${ORACLE_HOME}/root.sh
+
+   _log 4 "Running post-install root script"
+   if [ ${VERBOSITY} = 0 ]; then
+      ${CONFIG_DIR}/linux32 ${ORACLE_HOME}/root.sh
+   else
+      ${CONFIG_DIR}/linux32 ${ORACLE_HOME}/root.sh >> ${LOG_FILE} 2>&1
+   fi
+}
+
+function _patch_oracle(){
+
+   _log 5 "== Applying Oracle patch 6078836"
+   if [ -f /usr/lib/libdb.so.2 ]; then
+      mv /usr/lib/libdb.so.2 /usr/lib/libdb.so.2.pre6078836
+   fi
+   cp ${PATCH_DIR}/p6078836/libdb.so.2 /usr/lib
+   _log 3 "Running ldconfig to refresh library cache"
+   ldconfig
+
+   _log 4 "= Applying Oracle patch 6148874"
+   _log 3 "Creating response file from p6148874.rsp_template"
+   cp ${CONFIG_DIR}/templates/p6148874.rsp_template ${CONFIG_DIR}/p6148874.rsp
+   chown ${ORA_USER}:${ORA_GROUP} ${CONFIG_DIR}/p6148874.rsp
+
+   _log 3 "Setting reponse file Oracle Home to ${ORACLE_HOME}"
+   sed -i "s|SCRIPT_ORAHOME|${ORACLE_HOME}|"                                 ${CONFIG_DIR}/p6148874.rsp
+   sed -i "s|ORACLE_HOME_NAME=.*|ORACLE_HOME_NAME=\"${ORACLE_HOME_NAME}\"|"  ${CONFIG_DIR}/p6148874.rsp
+
+   _log 3 "Setting resoponse file installer group to ${ORA_GROUP}"
+   sed -i "s|SCRIPT_ORAGROUP|${ORA_GROUP}|"                                  ${CONFIG_DIR}/p6148874.rsp
+
+   _log 4 "Starting p6148874 Patching"
+   if [ ${VERBOSITY} = 0 ]; then
+      su oracle -c "${CONFIG_DIR}/linux32 ${PATCH_DIR}/p6148874/runInstaller -silent -noconfig -waitforcompletion -responseFile ${CONFIG_DIR}/p6148874.rsp" | sed "s/[Ee][Rr][Rr][Oo][Rr]/$(tput setaf 1)ERROR$(tput setaf 7)/" | sed "s/[Ww][Aa][Rr][Nn][Ii][Nn][Gg]/$(tput setaf 3)WARNING$(tput setaf 7)/" | tee -a ${LOG_FILE} &
+   else
+      su oracle -c "${CONFIG_DIR}/linux32 ${PATCH_DIR}/p6148874/runInstaller -silent -noconfig -waitforcompletion -responseFile ${CONFIG_DIR}/p6148874.rsp" | sed "s/[Ee][Rr][Rr][Oo][Rr]/$(tput setaf 1)ERROR$(tput setaf 7)/" | sed "s/[Ww][Aa][Rr][Nn][Ii][Nn][Gg]/$(tput setaf 3)WARNING$(tput setaf 7)/" >> ${LOG_FILE} 2>&1 &
+   fi
+   PATCH_6148874_PID=$!
+   _spinner ${PATCH_6148874_PID} "== Applying Oracle Patch 6148874"
+   PATCH_6148874_EXIT=$?
+
+   if ! [[ ${PATCH_6148874_EXIT} = 0 || ${PATCH_6148874_EXIT} = 1 || ${PATCH_6148874_EXIT} = 2 ]]; then
+      _log 5 "Error: Oracle patch 6148874 failed."
+      _log 5 "Error: Please check the installation log and patch log"
+      exit 1
+   else
+      _log 4 "Oracle Patch 6148874 Installation Successful"
+   fi
+
+   _log 3 "Running p6148874 root script"
+   if [ ${VERBOSITY} = 0 ]; then
+      ${CONFIG_DIR}/linux32 ${ORACLE_HOME}/root.sh
+   else
+      ${CONFIG_DIR}/linux32 ${ORACLE_HOME}/root.sh >> ${LOG_FILE} 2>&1
+   fi
+
+   }
+
+function _obfuscatePassword(){
+   _log 4 "Make the dadobf script executable"
+   chmod +x ${ORACLE_HOME}/Apache/modplsql/conf/dadobf
+
+   _log 4 "Load library files needed for obfuscation"
+   ldconfig ${ORACLE_HOME}/lib > /dev/null 2>&1
+
+   _log 4 "Get obfuscated password"
+   NETC_SCHEMA_PASS=$(${ORACLE_HOME}/Apache/modplsql/conf/dadobf ${NETC_SCHEMA_PASS})
+}
+
+# OAS Config for non-netmod server
+function _config_oas(){
+   if [ ${ISNETMOD} == FALSE ]; then
+      _log 3 "Setting ${ORA_USER_HOME}/cadops ownership to ${ORA_USER}:${ORA_GROUP}"
+      chown -R ${ORA_USER}:${ORA_GROUP} ${ORA_USER_HOME}/cadops
+   fi
+
+   _log 4 "Creating dms_httpd.conf and dms_dads.conf from templates"
+   cp ${CONFIG_DIR}/templates/dms_httpd.conf_template ${CONFIG_DIR}/dms_httpd.conf
+   cp ${CONFIG_DIR}/templates/dms_dads.conf_template ${CONFIG_DIR}/dms_dads.conf
+
+   _log 3 "Modifying dms_httpd.conf with enviroment specific values"
+   sed -i "s|<web_server_ip_addr>|${SERVER_IP}|"     ${CONFIG_DIR}/dms_httpd.conf
+   sed -i "s|<web_server_name>|${HOSTNAME}|"         ${CONFIG_DIR}/dms_httpd.conf
+   sed -i "s|<instance_name>|${DMS_SID}|"            ${CONFIG_DIR}/dms_httpd.conf
+   if [ ${ISNETMOD} == FALSE ]; then
+      sed -i "s|<cadops_path>|${ORA_USER_HOME}/cadops|" ${CONFIG_DIR}/dms_httpd.conf
+   else
+      sed -i "s|<cadops_path>|${DMS_PATH}/cadops|" ${CONFIG_DIR}/dms_httpd.conf
+   fi
+
+   _log 3 "Modifying dms_dads.conf with enviroment specific values"
+   sed -i "s|<instance_name>|${DMS_SID}|"                      ${CONFIG_DIR}/dms_dads.conf
+   sed -i "s|<NetCadops_schema_user>|${NETC_SCHEMA_USER}|"     ${CONFIG_DIR}/dms_dads.conf
+   sed -i "s|<NetCadops_schema_password>|${NETC_SCHEMA_PASS}|" ${CONFIG_DIR}/dms_dads.conf
+   sed -i "s|<instance_name>|${DMS_SID}|"                      ${CONFIG_DIR}/dms_dads.conf
+
+   _log 3 "Copying the modified dms_httpd.conf to ${ORACLE_HOME}/Apache/conf/dms_httpd.conf"
+   cp -r ${CONFIG_DIR}/dms_httpd.conf ${ORACLE_HOME}/Apache/Apache/conf/
+   chown ${ORA_USER}:${ORA_GROUP} ${ORACLE_HOME}/Apache/Apache/conf/dms_httpd.conf
+
+   _log 3 "Copying the modified dms_dads.conf to ${ORACLE_HOME}/Apache/modplsql/conf/dms_dads.conf"
+   cp -r ${CONFIG_DIR}/dms_dads.conf ${ORACLE_HOME}/Apache/modplsql/conf/
+   chown ${ORA_USER}:${ORA_GROUP} ${ORACLE_HOME}/Apache/modplsql/conf/dms_dads.conf
+
+   _log 4 "Modifying httpd.conf"
+   echo -e "\n# Include DMS NetCadops Configuration File"               >> ${ORACLE_HOME}/Apache/Apache/conf/httpd.conf
+   echo "include \"${ORACLE_HOME}/Apache/Apache/conf/dms_httpd.conf\""  >> ${ORACLE_HOME}/Apache/Apache/conf/httpd.conf
+
+   _log 4 "Modifying dads.conf"
+   echo -e "\n# Include DMS NetCadops Configuration File"               >> ${ORACLE_HOME}/Apache/modplsql/conf/dads.conf
+   echo "include \"${ORACLE_HOME}/Apache/modplsql/conf/dms_dads.conf\"" >> ${ORACLE_HOME}/Apache/modplsql/conf/dads.conf
+
+   _log 4 "Adding oasstart service"
+   cp ${CONFIG_DIR}/templates/oracleas_template ${CONFIG_DIR}/oracleas
+   sed -i "s|SCRIPT_ORAHOME|${ORACLE_HOME}|" ${CONFIG_DIR}/oracleas
+   sed -i "s|SCRIPT_ORAUSER|${ORA_USER}|"    ${CONFIG_DIR}/oracleas
+   cp ${CONFIG_DIR}/oracleas /etc/init.d/oracleas
+   chmod 755 /etc/init.d/oracleas
+   chown ${ORA_USER}:${ORA_GROUP} /etc/init.d/oracleas
+   chkconfig oracleas on
+
+   _log 5 "== Starting OracleAS"
+   if [ ${VERBOSITY} = 0 ]; then
+      su - ${ORA_USER} -c "${ORACLE_HOME}/opmn/bin/opmnctl startall"
+   else
+      su - ${ORA_USER} -c "${ORACLE_HOME}/opmn/bin/opmnctl startall" >> ${LOG_FILE} 2>&1
+   fi
+}
+
+function _configureProfile(){
+   ### Modify Oracle Profile
+   _log 4 "= Modify and set oracle profile"
+
+   # If profile doesn't exist then create a new one
+   # otherwise, modify existing profile
+   if [ ! -f ${ORA_USER_HOME}/.profile ]; then
+      # Create profile from template
+      'cp' -f ${CONFIG_DIR}/templates/${oracleProfileTemplate}              ${CONFIG_DIR}/oracle.profile
+      sed -i "s|OracleAppServerBase=.*|OracleAppServerBase=${ORACLE_BASE}|" ${CONFIG_DIR}/oracle.profile
+      sed -i "s|oracleAppServerHome=.*|oracleAppServerHome=${ORACLE_HOME}|" ${CONFIG_DIR}/oracle.profile
+      sed -i "s|enableOasProfile=.*|enableOasProfile=TRUE|"                 ${CONFIG_DIR}/oracle.profile
+      
+      # Set profile ownership & permissions
+      chown ${ORA_USER}:${ORA_GROUP}                                        ${CONFIG_DIR}/oracle.profile
+      chmod 644                                                             ${CONFIG_DIR}/oracle.profile
+      # Copy profile to oracle home
+      'cp' -f ${CONFIG_DIR}/oracle.profile                                  ${ORA_USER_HOME}/.profile
+   else
+      sed -i "s|OracleAppServerBase=.*|OracleAppServerBase=${ORACLE_BASE}|" ${ORA_USER_HOME}/.profile
+      sed -i "s|oracleAppServerHome=.*|oracleAppServerHome=${ORACLE_HOME}|" ${ORA_USER_HOME}/.profile
+      sed -i "s|enableOasProfile=.*|enableOasProfile=TRUE|"                 ${ORA_USER_HOME}/.profile
+   fi
+}
+
+#-------------------------------------------------------------------------------
+# Script Main
+#-------------------------------------------------------------------------------
+
+_set_variables
+
+_welcome
+
+_banner
+
+_log 5 "=== Verifying script prerequisites"
+_check_prereqs
+
+echo
+_log 5 "=== Checking Shell Limits for Oracle User"
+_set_limits
+
+echo
+_log 5 "=== Starting Oracle Installation"
+_install_oracle
+
+echo
+_log 5 "=== Appling Oracle Patches"
+_patch_oracle
+
+echo
+_log 5 "=== Obfuscate Apache Password"
+_obfuscatePassword
+
+echo
+_log 5 "=== Configuring & Starting DMS OAS"
+_config_oas
+
+echo
+_log 5 "=== Configuring Oracle Profile"
+_configureProfile
+
+exit 0
+

@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 23, 2006 13:32:48 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5.1 Build 4" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Troubleshooting</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="ca.htm" title="Previous" />
+<link rel="next" href="index.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+<link rel="index" href="index.htm" title="Index" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Installation Guide  </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25217-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="ca.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="index.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="BABFHDCC" name="BABFHDCC"></a><a id="sthref697" name="sthref697"></a>
+<h1 class="appendix"><span class="secnum">E </span> Troubleshooting<a id="sthref698" name="sthref698"></a></h1>
+<p>This appendix describes solutions to common problems that you might encounter when installing Oracle Application Server. It contains the following sections:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABCGFIA">Section E.1, "Log Files"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABEGJHB">Section E.2, "General Troubleshooting Tips"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABCGIHG">Section E.3, "Installation Problems and Solutions"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABDAFBH">Section E.4, "Need More Help?"</a>
+</p>
+</li>
+</ul><a id="BABCGFIA" name="BABCGFIA"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref699" name="sthref699"></a>
+<h2 class="sect1"><span class="secnum">E.1 </span>Log Files<a id="sthref700" name="sthref700"></a><a id="sthref701" name="sthref701"></a>
+</h2>
+<p>The installer writes the following log files:
+</p>
+<ul>
+<li>
+<p><code><span class="codeinlineitalic">oraInventory&#095;location</span></code><code>/logs/installActions</code><code><span class="codeinlineitalic">timestamp</span></code><code>.log</code>
+</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">oraInventory&#095;location</span></code><code>/logs/oraInstall</code><code><span class="codeinlineitalic">timestamp</span></code><code>.err</code>
+</p>
+</li>
+<li>
+<p><code><span class="codeinlineitalic">oraInventory&#095;location</span></code><code>/logs/oraInstall</code><code><span class="codeinlineitalic">timestamp</span></code><code>.out</code>
+</p>
+</li>
+</ul>
+</div><!-- class="sect1" -->
+<a id="BABEGJHB" name="BABEGJHB"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref702" name="sthref702"></a>
+<h2 class="sect1"><span class="secnum">E.2 </span>General Troubleshooting Tips<a id="sthref703" name="sthref703"></a>
+</h2>
+<p>If you encounter an error during installation:
+</p>
+<ul>
+<li type="disc"><a id="i638624" name="i638624"></a>
+<p>Read the <!A HREF="olinkSRC ASIRN"><span class="italic">Oracle Application Server Release Notes</span></a> for the latest updates. The release notes are available with the platform-specific documentation. The most current version of the release notes is available on Oracle Technology Network (<code><a href="http://www.oracle.com/technology/documentation">http://www.oracle.com/technology/documentation</a></code>).
+</p>
+</li>
+<li type="disc">
+<p>Verify that your computer meets the requirements specified in <a href="reqs.htm#BABFDIBC">Chapter 2, "Requirements"</a>.
+</p>
+</li>
+<li type="disc">
+<p>If you entered incorrect information on one of the installation screens, return to that screen by clicking <span class="bold">Back</span> until you see the screen.
+</p>
+</li>
+<li type="disc">
+<p>If a configuration assistant failed, check the log file for that configuration assistant. <a href="ca.htm#i765063">Section D.2, "Description of Oracle Application Server Configuration Assistants"</a> lists the configuration assistants and the location of their log files. If you do not see log files from some configuration assistants in the <code>ORACLE&#095;HOME/cfgtoollogs</code> directory, exit the installer. This causes the installer to copy the log files to that directory.
+</p>
+</li>
+<li type="disc">
+<p>If an error occurred while the installer is copying or linking files:
+</p><a id="i637930" name="i637930"></a>
+<ol type="1" start="1">
+<li>
+<p>Note the error and review the installation log files.
+</p>
+</li>
+<li>
+<p>Remove the failed installation by following the steps in <a href="deinst.htm#CHDHFGDA">Appendix C, "Deinstallation and Reinstallation"</a>.
+</p>
+</li>
+<li>
+<p>Correct the issue that caused the error.
+</p>
+</li>
+<li>
+<p>Restart the installation.
+</p>
+</li>
+</ol>
+</li>
+</ul>
+</div><!-- class="sect1" -->
+<a id="BABCGIHG" name="BABCGIHG"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref704" name="sthref704"></a>
+<h2 class="sect1"><span class="secnum">E.3 </span>Installation Problems and Solutions
+</h2>
+<p>This section describes common installation problems and solutions:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABDGGBH">Section E.3.1, "Location of Log Files"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABIHHCH">Section E.3.2, "Linking Failed, ORA Errors"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABCEGAB">Section E.3.3, "Prerequisite Checks Fail at the Start of Installation"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABCBJAF">Section E.3.4, "Installer Disappears After Running the Preinstallation Checks"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABBHBCB">Section E.3.5, "Unable to Clean Up a Failed Installation"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABICDJH">Section E.3.6, "User Interface Does Not Display in the Desired Language, or Does Not Display Properly"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJEHCH">Section E.3.7, "Configuration Assistant Failures - General"</a>
+</p>
+</li>
+</ul><a id="BABDGGBH" name="BABDGGBH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref705" name="sthref705"></a>
+<h3 class="sect2"><span class="secnum">E.3.1 </span>Location of Log Files<a id="sthref706" name="sthref706"></a>
+</h3>
+<p>There are two sets of log files:
+</p>
+<ul>
+<li type="disc">
+<p>The installer writes the following log files:
+</p>
+<ul>
+<li type="circle">
+<p><code><span class="codeinlineitalic">oraInventory&#095;location</span></code><code>/logs/installActions</code><code><span class="codeinlineitalic">timestamp</span></code><code>.log</code>
+</p>
+</li>
+<li type="circle">
+<p><code><span class="codeinlineitalic">oraInventory&#095;location</span></code><code>/logs/oraInstall</code><code><span class="codeinlineitalic">timestamp</span></code><code>.err</code>
+</p>
+</li>
+<li type="circle">
+<p><code><span class="codeinlineitalic">oraInventory&#095;location</span></code><code>/logs/oraInstall</code><code><span class="codeinlineitalic">timestamp</span></code><code>.out</code>
+</p>
+</li>
+<li type="circle">
+<p><code><span class="codeinlineitalic">Oracle&#095;Home</span></code><code>/install/make.log</code>
+</p>
+</li>
+</ul>
+</li>
+<li type="disc">
+<p>The configuration assistants write log files in the <code>ORACLE&#095;HOME/cfgtoollogs</code> directory.
+</p>
+<p>Note that if you want to access the log files created by the configuration assistants, you need to exit the installer first. The log files are inaccessible if the installer is still in use.
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="BABIHHCH" name="BABIHHCH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref707" name="sthref707"></a>
+<h3 class="sect2"><span class="secnum">E.3.2 </span>Linking Failed, ORA Errors<a id="sthref708" name="sthref708"></a>
+</h3><a id="sthref709" name="sthref709"></a>
+<p class="subhead2">Problem</p>
+<p>Linking failed, and ORA errors were displayed during installation
+</p><a id="sthref710" name="sthref710"></a>
+<p class="subhead2">Solution</p>
+<p>Exit the installer and check the log files for any error message. In particular, check the <code>ORACLE&#095;HOME/install/make.log</code> file.
+</p>
+<p>Remove the failed installation. Before reinstalling Oracle Application Server, make sure that your computer meets all the requirements listed in <a href="reqs.htm#BABFDIBC">Chapter 2, "Requirements"</a>.
+</p>
+<p>Check especially the following requirements:
+</p>
+<ul>
+<li type="disc">
+<p>Check that the kernel parameters are set to the proper values. Note that if you change the value of a kernel parameter, you must exit the installer and restart your computer for the new value to take effect.
+</p>
+</li>
+<li type="disc">
+<p>Check that you are installing Oracle Application Server in a valid directory. For example, you cannot install Oracle Application Server in a database Oracle home. See <a href="reqs.htm#BABHBIAD">Section 2.10</a> for a complete list.
+</p>
+</li>
+</ul>
+</div><!-- class="sect2" -->
+<a id="BABCEGAB" name="BABCEGAB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref711" name="sthref711"></a>
+<h3 class="sect2"><span class="secnum">E.3.3 </span>Prerequisite Checks Fail at the Start of Installation<a id="sthref712" name="sthref712"></a>
+</h3><a id="sthref713" name="sthref713"></a>
+<p class="subhead2">Problem</p>
+<p>The prerequisite checks that are run at the start of installation failed
+</p><a id="sthref714" name="sthref714"></a>
+<p class="subhead2">Solution</p>
+<p>If the prerequisite checks display warnings about missing operating system patches or patch bundles, the patch may actually be missing, or it may have been superseded. If your computer contains the patch that supersedes it, you can ignore the warning.
+</p>
+<p>See <a href="reqs.htm#CIHHHDHB">Section 2.3, "Software Requirements"</a> for a list of required operating system patches.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABCBJAF" name="BABCBJAF"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref715" name="sthref715"></a>
+<h3 class="sect2"><span class="secnum">E.3.4 </span>Installer Disappears After Running the Preinstallation Checks<a id="sthref716" name="sthref716"></a>
+</h3><a id="sthref717" name="sthref717"></a>
+<p class="subhead2">Problem</p>
+<p>The installer disappears after running preinstallation checks
+</p><a id="sthref718" name="sthref718"></a>
+<p class="subhead2">Solution</p>
+<p>The directory that is the mount point of the CD-ROM or DVD-ROM was mounted with incorrect permissions, and this caused the <code>pwd</code> command to not work correctly. When you run <code>pwd</code>, it returns "cannot determine current directory".
+</p>
+<p>To fix:
+</p>
+<ol type="1" start="1">
+<li>
+<p>Unmount the CD-ROM.
+</p>
+</li>
+<li>
+<p>Change permissions of the mount directory to 755.
+</p>
+</li>
+<li>
+<p>Remount the CD-ROM.
+</p>
+</li>
+</ol>
+<p>The installer should now run correctly.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABBHBCB" name="BABBHBCB"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref719" name="sthref719"></a>
+<h3 class="sect2"><span class="secnum">E.3.5 </span>Unable to Clean Up a Failed Installation
+</h3>
+<p>If your installation was not successful, you have to deinstall it first before you can install Oracle Application Server again. Refer to <a href="deinst.htm#CHDHFGDA">Appendix C, "Deinstallation and Reinstallation"</a> for instructions.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABICDJH" name="BABICDJH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref720" name="sthref720"></a>
+<h3 class="sect2"><span class="secnum">E.3.6 </span>User Interface Does Not Display in the Desired Language, or Does Not Display Properly<a id="sthref721" name="sthref721"></a><a id="sthref722" name="sthref722"></a>
+</h3><a id="sthref723" name="sthref723"></a>
+<p class="subhead2">Problem</p>
+<p>Messages do not appear in the desired language, or messages are not displayed correctly
+</p><a id="sthref724" name="sthref724"></a>
+<p class="subhead2">Solution</p>
+<p>Currently Oracle Application Server does not support adding or removing languages after installation.
+</p>
+<p>If you are serving non-English content, be sure you add all the languages that you need during installation. To add languages during installation, click the <span class="bold">Product Languages</span> button in the "Select Installation Type" screen. To see which languages are installed by default, see <a href="basic.htm#CHDHGHJH">Section 3.3, "Installing Additional Languages"</a>.
+</p>
+<p>If you are serving non-English content and forgot to click the Product Languages in the installation, the user interface might not display properly because the required fonts were not installed. You can fix this by contacting Customer Service for the requirement fonts.
+</p>
+</div><!-- class="sect2" -->
+<a id="BABJEHCH" name="BABJEHCH"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref725" name="sthref725"></a>
+<h3 class="sect2"><span class="secnum">E.3.7 </span>Configuration Assistant Failures - General
+</h3>
+<p>This section describes general tips for troubleshooting configuration assistant failures. See the next sections for specific configuration assistant failures. See also <a href="ca.htm#BABDIJHH">Appendix D, "Configuration Assistants"</a>.
+</p><a id="sthref726" name="sthref726"></a>
+<p class="subhead2">Problem</p>
+<p>Configuration assistant failed
+</p><a id="sthref727" name="sthref727"></a>
+<p class="subhead2">Solution</p>
+<p>Configuration assistants fail from a variety of causes. Some things you can check are:
+</p>
+<ul>
+<li type="disc">
+<p>Check the log files for the failed configuration assistant to determine the problem. The log files are located in the <code>ORACLE&#095;HOME/cfgtoollogs</code> directory.
+</p>
+<p>Fix the problem indicated in the log file, and click <span class="bold">Retry</span> to rerun the failed configuration assistant.
+</p>
+</li>
+</ul>
+<p>If the configuration assistant fails while running configuration assistant execution commands on the command line, then run the configuration assistant execution command again.
+</p>
+<p>You can use the generated script file named <code>configtoolcmds.pl</code> located in the <code><span class="codeinlineitalic">ORACLE&#095;HOME</span></code><code>/bin</code> directory to run the failed configuration assistant again. The <code>configtoolcmds.pl</code> script is generated after you exit the installer. During silent or non-interactive installation, the <code>configtoolcmds.pl</code> script is generated immediately after configuration assistant failure. 
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="BABDAFBH" name="BABDAFBH"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref728" name="sthref728"></a>
+<h2 class="sect1"><span class="secnum">E.4 </span>Need More Help?
+</h2>
+<p>If this appendix does not solve the problem you encountered, try these other sources:
+</p>
+<ul>
+<li type="disc">
+<p><span class="italic">Oracle Application Server Release Notes</span>, available on the Oracle Technology Network (<code><a href="http://www.oracle.com/technology/documentation">http://www.oracle.com/technology/documentation</a></code>)
+</p>
+</li>
+<li type="disc">
+<p>Oracle<span class="italic">MetaLink</span> (<code><a href="http://metalink.oracle.com">http://metalink.oracle.com</a></code>)
+</p>
+</li>
+</ul>
+<p>If you do not find a solution for your problem, open a service request.
+</p>
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="ca.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="index.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+
+<td align="center" valign="top"><a href="index.htm"><img src="../../dcommon/gifs/index.gif" alt="Go To Index" border="0"  /><br /><span class="icon">Index</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

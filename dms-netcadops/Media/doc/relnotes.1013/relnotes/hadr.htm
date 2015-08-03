@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 24, 2006 11:30:33 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5 Build 274" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> OracleAS Disaster Recovery</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="rules.htm" title="Previous" />
+<link rel="next" href="sensoredgeserver.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Release Notes </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25216-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="rules.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="sensoredgeserver.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="sthref169" name="sthref169"></a>
+<h1 class="chapter"><span class="secnum">9 </span> OracleAS Disaster Recovery<a id="sthref170" name="sthref170"></a></h1>
+<p>This chapter describes issues associated with OracleAS Disaster Recovery. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDBCGCE">Section 9.1, "General Issues and Workarounds"</a>
+</p>
+</li>
+</ul><a id="CHDBCGCE" name="CHDBCGCE"></a>
+<div class="sect1">
+<a id="sthref171" name="sthref171"></a>
+<h2 class="sect1"><span class="secnum">9.1 </span>General Issues and Workarounds
+</h2>
+<p>This section describes general issues and workarounds. It includes the following topic:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#i1090876">Section 9.1.1, "Adding an Instance from a Remote Client Adds an Instance on the Local Instance and Not on the Remote Instance"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDCJGJI">Section 9.1.2, "Switchover Operation in an Asymmetric Topology Requires All Components to be Shutdown on Instances on the Primary Site that Do Not Have a Standby Peer"</a>
+</p>
+</li>
+</ul><a id="i1090876" name="i1090876"></a>
+<div class="sect2">
+<a id="sthref172" name="sthref172"></a>
+<h3 class="sect2"><span class="secnum">9.1.1 </span>Adding an Instance from a Remote Client Adds an Instance on the Local Instance and Not on the Remote Instance
+</h3>
+<p>When using the asgctl <code>add instance</code> command, the OracleAS Guard client must be run from a system that is already included in the topology.
+</p>
+<p>For example, when an OracleAS Guard client is connected to the OracleAS Guard server that is to be added to an existing topology, the following error is returned:
+</p>
+<pre xml:space="preserve" class="oac_no_warn">ASG&#095;IAS-15785: ERROR: The topology is missing the instance that exists in the home 
+where the ASG server is running. 
+You must first discover or add the instance in home
+
+</pre>
+<p>The workaround to this problem is to use an OracleAS Guard client from a system that is already included in the topology to perform the asgctl <code>add instance</code> command to add an instance to the topology.
+</p>
+</div><!-- class="sect2" -->
+<a id="CHDCJGJI" name="CHDCJGJI"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref173" name="sthref173"></a>
+<h3 class="sect2"><span class="secnum">9.1.2 </span>Switchover Operation in an Asymmetric Topology Requires All Components to be Shutdown on Instances on the Primary Site that Do Not Have a Standby Peer
+</h3>
+<p>Prior to performing an asgctl switchover operation in an asymmetric topology for instances that do not have a standby peer, you must perform an opmnctl stopall command to shutdown all components on each of these ignored instances on the primary site.
+</p>
+<p>When an XML policy file is in use for an asymmetric topology and has the &lt;instanceList successRequirement &#061;"Ignore" set for an instance, for example, as shown in the following example, then in a switchover operation OracleAS Guard ignores that instance: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">.
+.
+.
+&lt;instanceList successRequirement &#061; "Ignore">
+  &lt;instance>instance B&lt;/instance>
+&lt;/instanceList>
+.
+.
+.
+
+</pre>
+<p>OracleAS Guard, on a switchover operation, shuts down all components on the old primary site except for OracleAS Guard and OPMN and ignores instance B because the policy file specifies to do so. The switchover operation fails because all components are not shut down on the primary site, in this case instance B because the policy file specifies to ignore instance B on the primary site, which has no standby peer. 
+</p>
+<p>To workaround this problem, the OracleAS Disaster Recovery Administrator must perform an opmnctl stopall operation for all components on instance B prior to the switchover operation in order for the switchover operation to succeed in this asymmetric topology.
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="rules.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="sensoredgeserver.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

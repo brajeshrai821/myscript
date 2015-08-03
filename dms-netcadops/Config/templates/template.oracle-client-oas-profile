@@ -1,0 +1,203 @@
+#===================================================================================
+# Title        : oracle-client-oas-profile (.profile)
+#
+# Description  : Oracle client & OAS profile
+#                Allows switching of oracle profiles based on installed function               
+#
+# Author       : Firas AlShafei
+#
+# Version      : v1.0.0
+#
+# Last Revised : 02/08/2014
+#
+#===================================================================================
+# Usage        : rename to .profile and place in oracle users home path
+#                - can also be called manually. Ex .profile [client|oas]
+#
+# Notes        : - The profile will be configured by the oracle client and OAS 
+#                  installers
+#                - Configure manually by modifying the user variables section
+#
+#===================================================================================
+# Changelog:
+#
+# v1.0.0 - Firas AlShafei - 02/08/2014
+# - initial version
+#
+#===================================================================================
+
+#-------------------------------------------------------------------------------
+# User Variables
+#-------------------------------------------------------------------------------
+# Display peorile choices when user logs in [TRUE|FALSE]
+enableLoginBanner=TRUE
+
+# Enable oracle client profile [TRUE|FALSE]
+enableclientProfile=FALSE
+
+# Enable Oracle AS profile [TRUE|FALSE]
+enableOasProfile=FALSE
+
+## Oracle client enviroment variables
+# Will get set automatically by installer
+oracleClientBase=
+oracleClientHome=
+
+## Oracle Application Server enviroment variables
+# Will get set automatically by installer
+OracleAppServerBase=
+oracleAppServerHome=
+
+### Default Profile
+# Set the value to one of the functions
+# - profile_client
+# - profile_oas
+# or leave blank for no default profile
+# No checking is done for this profile, ensure that the
+# variables exist before setting it
+defaultProfile=
+
+#-------------------------------------------------------------------------------
+# Default Enviroment
+#-------------------------------------------------------------------------------
+# Set up the terminal:
+if [ "$TERM" = "" ]; then
+   eval ` tset -s -Q -m ':?hp' `
+else
+   eval ` tset -s -Q `
+fi
+if [ -t 0 ]; then
+   stty erase "^?" kill "^U" intr "^C" eof "^D"
+   stty hupcl ixon ixoff
+fi
+
+# Enable Home/End/Delete/PgUp/PgDn in shell
+keybd_trap()
+{
+  case ${.sh.edchar} in
+    $'\e[1~') .sh.edchar=$'\001';; # Home = beginning-of-line
+    $'\e[4~') .sh.edchar=$'\005';; # End = end-of-line
+    $'\e[5~') .sh.edchar=$'\e>';;  # PgUp = history-previous
+    $'\e[6~') .sh.edchar=$'\e<';;  # PgDn = history-next
+    $'\e[3~') .sh.edchar=$'\004';; # Delete = delete-char
+  esac
+}
+trap keybd_trap KEYBD
+
+# Set up the shell environment:
+set -u
+set -o emacs
+
+# Set umask
+umask 0022
+
+# Use vim
+alias vi=vim
+
+# Set PS1 to something more informative
+GREEN=$'\e[0;32m'
+NOCOLOR=$'\e[0m'
+export PS1='[${GREEN}${USER}${NOCOLOR}@$(hostname) $(basename $(pwd))]\$ '
+
+# Conserve default PATH
+defaultPath=${PATH}
+# Conserver default library path
+# If it doesnt exist then set it to something sane
+defaultLibPath=${LD_LIBRARY_PATH:="/lib:/lib64:/usr/lib:/usr/lib64"}
+
+#-------------------------------------------------------------------------------
+# Oracle Profile Functions
+#-------------------------------------------------------------------------------
+_oracleClient()
+{
+    export TNS_ADMIN=/etc
+    export ORACLE_TERM=xterm
+
+    # NLS settings should match the database config
+    # Query : SELECT * FROM V$NLS_PARAMETERS
+    # NLS_LANG => [NLS_LANGUAGE]_[NLS_TERRITORY].[NLS_CHARACTERSET]
+    export NLS_LANG=AMERICAN_AMERICA.AL32UTF8
+    # NLS_DATE_FORMAT
+    export NLS_DATE_FORMAT='DD-MON-RR'
+
+    export ORACLE_BASE=${oracleClientBase}
+    export ORACLE_HOME=${oracleClientHome}
+
+    export LD_LIBRARY_PATH=${defaultLibPath}:${ORACLE_HOME}/lib:/lib:/usr/lib
+    export PATH=${defaultPath}:/usr/sbin:${HOME}/bin:.:${ORACLE_HOME}/bin
+
+    # Clean up App Server unique vars
+    unset CLASSPATH
+}
+
+_oracleAppServer()
+{
+    # Set ulimits
+    ulimit -u 16384
+    ulimit -n 65536
+
+    export TNS_ADMIN=/etc
+    export ORACLE_TERM=xterm
+
+    export ORACLE_BASE=${OracleAppServerBase}
+    export ORACLE_HOME=${oracleAppServerHome}
+
+    export LD_LIBRARY_PATH=${defaultLibPath}:${ORACLE_HOME}/lib:${ORACLE_HOME}/opmn/lib:/lib:/usr/lib
+    export CLASSPATH=${ORACLE_HOME}/JRE:${ORACLE_HOME}/jlib:${ORACLE_HOME}/rdbms/jlib
+    export PATH=${defaultPath}:/usr/sbin:${HOME}/bin:.:${ORACLE_HOME}/dcm/bin:${ORACLE_HOME}/opmn/bin:${ORACLE_HOME}/Apache/Apache/bin
+
+    # Clean up App Server unique vars
+    unset NLS_LANG
+    unset NLS_DATE_FORMAT
+}
+
+
+
+#-------------------------------------------------------------------------------
+# Oracle Profile Choice
+#-------------------------------------------------------------------------------
+
+# Display banner if enabled
+if [ ${enableLoginBanner} = TRUE ] && ( [ ${enableclientProfile} = TRUE ] || [ ${enableOasProfile} = TRUE ] ); then
+    echo "Profile(s) Available :"
+    echo "----------------------"
+
+    if [ ${enableclientProfile} = TRUE ]; then
+        echo "profile_client - Oracle Client"
+    fi
+
+    if [ ${enableOasProfile} = TRUE ]; then
+        echo "profile_oas    - NetCadops"
+    fi
+
+    echo "------------------------------"
+fi
+
+# Enable the profiles 
+if [ ${enableclientProfile} = TRUE ]; then
+    alias profile_client="_oracleClient"
+fi
+
+if [ ${enableOasProfile} = TRUE ]; then
+    alias profile_oas="_oracleAppServer"
+fi
+
+#-------------------------------------------------------------------------------
+# Profile Parameters, for scripting support
+#-------------------------------------------------------------------------------
+
+case $1 in
+   profile_client|client)
+      echo Using Oracle Client Profile...
+      profile_grid
+   ;;
+   profile_oas|oas)
+      echo Using Oracle App Server Profile...
+      profile_dms
+   ;;
+   *)
+      if [ ! -z "$defaultProfile" ]; then
+         echo Using Default Profile \(${defaultProfile}\)...
+         ${defaultProfile}
+      fi
+esac

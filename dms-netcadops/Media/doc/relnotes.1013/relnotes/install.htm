@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<!-- Run date = January 24, 2006 11:30:33 -->
+<meta name="Generator" content=" Oracle DARB XHTML converter - Version 4.5 Build 274" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title> Installation and Upgrade Issues</title>
+<link rel="stylesheet" type="text/css" href="blafdoc.css" title="default" />
+<link rel="prev" href="intro.htm" title="Previous" />
+<link rel="next" href="manage.htm" title="Next" />
+<link rel="up" href="toc.htm" title="Up" />
+<link rel="contents" href="toc.htm" title="Contents" />
+<link rel="copyright" href="../../dcommon/html/cpyr.htm" title="Copyright" />
+</head>
+<body>
+<div class="header">
+<a id="top" name="top"></a>
+<div class="zz-skip-header"><a href="#BEGIN">Skip Headers</a></div>
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td align="left" valign="top">
+<b>Oracle&#174; Application Server Release Notes </b>
+<br />
+<b>10<span class="italic">g</span> Release 3 (10.1.3) for Linux x86</b>
+<br />
+B25216-01
+</td>
+<td valign="bottom" align="right">
+<table  class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr>
+<td align="center">
+<a href="intro.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="manage.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<a name="BEGIN"></a>
+</div><!-- class="header" -->
+<div class="ind">
+<!-- End Header --><a id="CHDJCIBI" name="CHDJCIBI"></a><a id="i1010474" name="i1010474"></a>
+<h1 class="chapter"><span class="secnum">2 </span> Installation and Upgrade Issues</h1>
+<p>This chapter describes installation and upgrade issues and their workarounds associated with Oracle Application Server. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDCBBEE">Section 2.1, "Installation Issues"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#CHDIGJDE">Section 2.2, "Upgrade Issues"</a>
+</p>
+</li>
+</ul><a id="CHDCBBEE" name="CHDCBBEE"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref15" name="sthref15"></a>
+<h2 class="sect1"><span class="secnum">2.1 </span>Installation Issues
+</h2>
+<p>This section describes issues with installation of Oracle Application Server. It includes the following topics:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#BABIJEEG">Section 2.1.1, "Set Kernel Parameter Prior to Installation of Oracle HTTP Server on Red Hat Linux 4.0"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABJIGHJ">Section 2.1.2, "Japanese Fonts Not Displayed Correctly on the Title of Oracle Universal Installer Help Screens on SUSE Linux"</a>
+</p>
+</li>
+<li type="disc">
+<p><a href="#BABFDIGG">Section 2.1.3, "Some Languages Not Displayed Correctly on JDK"</a>
+</p>
+</li>
+</ul><a id="BABIJEEG" name="BABIJEEG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref16" name="sthref16"></a>
+<h3 class="sect2"><span class="secnum">2.1.1 </span>Set Kernel Parameter Prior to Installation of Oracle HTTP Server on Red Hat Linux 4.0
+</h3>
+<p>Prior to installation of Oracle HTTP Server as part of an Oracle Application Server installation on Red Hat Linux 4.0, set the following kernel parameter: 
+</p>
+<p><code>file-max >&#061; 131072</code> 
+</p>
+<p>Failure to set the preceding parameter may result in an error in installation of Oracle Application Server. 
+</p>
+</div><!-- class="sect2" -->
+<a id="BABJIGHJ" name="BABJIGHJ"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref17" name="sthref17"></a>
+<h3 class="sect2"><span class="secnum">2.1.2 </span>Japanese Fonts Not Displayed Correctly on the Title of Oracle Universal Installer Help Screens on SUSE Linux
+</h3>
+<p>When you install Oracle Application Server within a <code>ja&#095;JP</code> locale on SUSE Linux, the titles of all Oracle Universal Installer windows, including Help windows, include garbled fonts (for example,'&#037;9&#037;H&#036;'). However, the fonts displayed on the content of the Oracle Universal Installer are displayed correctly. 
+</p>
+<p>According to release notes for Java Developer Kit (JDK) 1.4.2 posted on the Sun Microsystems Java Web site (<code><a href="http://java.sun.com">http://java.sun.com</a></code>), JDK 1.4.2 does not provide support for east-asian languages including Japanese on SUSE Linux.
+</p>
+<p>
+</p>
+</div><!-- class="sect2" -->
+<a id="BABFDIGG" name="BABFDIGG"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref18" name="sthref18"></a>
+<h3 class="sect2"><span class="secnum">2.1.3 </span>Some Languages Not Displayed Correctly on JDK
+</h3>
+<p>Some languages might not be displayed correctly with Sun Microsystems JDK on SLES9.
+</p>
+<p>You can refer to the following Sun Microsystems Web pages to see what languages are supported by the Sun Microsystems&#039; JDK:
+</p>
+<p><code><a href="http://java.sun.com/j2se/1.5.0/system-configurations.html ">http://java.sun.com/j2se/1.5.0/system-configurations.html </a></code>
+</p>
+<p><code><a href="http://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html&#035;jfc">http://java.sun.com/j2se/1.5.0/docs/guide/intl/locale.doc.html&#035;jfc</a></code>
+</p>
+<p><code><a href="http://java.sun.com/j2se/1.4.2/system-configurations.html">http://java.sun.com/j2se/1.4.2/system-configurations.html</a></code>
+</p>
+<p><code><a href="http://java.sun.com/j2se/1.4.2/docs/guide/intl/locale.doc.html&#035;jfc">http://java.sun.com/j2se/1.4.2/docs/guide/intl/locale.doc.html&#035;jfc</a></code>
+</p>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+<a id="CHDIGJDE" name="CHDIGJDE"></a>
+<div class="sect1">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref19" name="sthref19"></a>
+<h2 class="sect1"><span class="secnum">2.2 </span>Upgrade Issues
+</h2>
+<p>This section describes issues with upgrade of Oracle Application Server. It includes the following topic:
+</p>
+<ul>
+<li type="disc">
+<p><a href="#CHDGFJJE">Section 2.2.1, "Additional Data Source Requirement for OEMS JMS Database Applications"</a>
+</p>
+</li>
+</ul><a id="CHDGFJJE" name="CHDGFJJE"></a>
+<div class="sect2">
+
+<!-- infolevel="all" infotype="General" --><a id="sthref20" name="sthref20"></a>
+<h3 class="sect2"><span class="secnum">2.2.1 </span>Additional Data Source Requirement for OEMS JMS Database Applications 
+</h3>
+<p>If you are deploying an OEMS JMS Database application on Oracle Application Server 10g Release (10.1.3), note that you must verify that the manage-local-transactions attribute in the data-sources.xml file is set to false. 
+</p>
+<p>The following example shows the managed-data-source element in the data-sources.xml file with the required attribute for OEMS JMS Database applications: 
+</p>
+<pre xml:space="preserve" class="oac_no_warn">&lt;managed-data-source name&#061;"OracleDS" connection-pool-name&#061;"Example
+Connection Pool" jndi-name&#061;"jdbc/OracleDS" &#042;manage-local-transactions&#061;"false"&#042;/>.
+
+</pre>
+</div><!-- class="sect2" -->
+
+</div><!-- class="sect1" -->
+
+</div>
+<!-- Start Footer -->
+<div class="footer">
+<hr />
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100%">
+<tr>
+<td valign="bottom" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="100">
+<tr><td>&nbsp;</td>
+<td align="center">
+<a href="intro.htm">
+<img src="../../dcommon/gifs/leftnav.gif" alt="Previous" border="0" /><br /><span class="icon">Previous</span></a>
+</td>
+<td align="center">
+<a href="manage.htm">
+<img src="../../dcommon/gifs/rightnav.gif" alt="Next" border="0" /><br /><span class="icon">Next</span></a>
+</td>
+</tr>
+</table>
+</td>
+<td class="copyrightlogo">
+<a href="../../dcommon/html/cpyr.htm">
+<img class="copyrightlogo" src="../../dcommon/gifs/oracle.gif" alt="Oracle Logo" /><br />
+<span class="copyrightlogo">
+Copyright&nbsp;&copy;&nbsp;2006,&nbsp;Oracle.&nbsp;All&nbsp;rights&nbsp;reserved.
+</span>
+</a>
+</td>
+<td valign="bottom" align="right" width="33%">
+<table class="simple oac_no_warn" summary="" cellspacing="0" cellpadding="0" width="225">
+<tr><td>&nbsp;</td>
+
+<td align="center" valign="top"><a href="../../index.htm"><img src="../../dcommon/gifs/doclib.gif" alt="Go To Documentation Library" border="0" /><br /><span class="icon">Home</span></a></td>
+
+ 
+
+<td align="center" valign="top"><a href="toc.htm"><img src="../../dcommon/gifs/toc.gif" alt="Go To Table Of Contents" border="0" /><br /><span class="icon">Contents</span></a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</div><!-- class="footer" -->
+</body>
+</html>

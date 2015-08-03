@@ -1,0 +1,74 @@
+#!/bin/sh
+
+# The environment variable $SRCHOME cannot be set during the installation
+unset SRCHOME
+
+# The environment variable $JAVA_HOME cannot be set during the installation
+unset JAVA_HOME
+
+# The environment variable $THREADS_FLAG cannot be set during installation
+unset THREADS_FLAG
+
+CMDDIR=`dirname $0`
+SRVCONFIG_FILE=/var/opt/oracle/srvConfig.loc
+CAT=/bin/cat
+GREP=/bin/grep
+LOCAL_ONLY=local_only
+CUT=/bin/cut
+NONRAC_OPTION="-noClusterEnabled"
+
+if [ "$CMDDIR" = "." ];then
+   CMDDIR=`pwd`; 
+fi 
+# Replace relative path with fully qualified path.
+if [ ! "`echo $CMDDIR|grep '^/'`" ];then
+   CMDDIR=`pwd`/$CMDDIR;
+fi
+
+#Check for Alpha chipset
+#cd $CMDDIR
+#./check_chipset
+if [ $? = -1 ]
+then
+    echo "Installation cannot proceed. Alpha Chipset should be EV5.6 or above."
+    exit;
+fi
+
+
+if [ x${PATH} != x ] ; then
+  PATH=/usr/bin:/usr/ccs/bin:/bin:$PATH
+  export PATH 
+else
+ PATH=/usr/bin:/usr/ccs/bin:/bin
+ export PATH
+fi
+
+if [ x${LD_LIBRARY_PATH} != x ] ; then
+  LD_LIBRARY_PATH=/usr/lib:$LD_LIBRARY_PATH
+  export LD_LIBRARY_PATH
+else
+ LD_LIBRARY_PATH=/usr/lib
+ export LD_LIBRARY_PATH
+fi
+
+if [ x${TMP} = x ] ; then
+  TMP=/tmp
+  export TMP
+fi
+
+if [ x${ORACLE_HOME} != x ] ; then
+  unset ORACLE_HOME
+  export ORACLE_HOME
+fi
+
+################## Fix for bug 4992337 ##################
+
+if [ `uname -m` == x86_64 ]; then
+ echo "On a 64-bit Linux operating system, Oracle Applicaton Server 10g needs 32-bit emulation mode in this release. Please set 32-bit emulation mode by running following command and restart the installation."
+ echo "# linux32 bash"
+ exit 0
+fi
+
+################## End of fix ##########################
+
+$CMDDIR/install/runInstaller -oneclick SHOW_CUSTOM_TREE_PAGE=false $*

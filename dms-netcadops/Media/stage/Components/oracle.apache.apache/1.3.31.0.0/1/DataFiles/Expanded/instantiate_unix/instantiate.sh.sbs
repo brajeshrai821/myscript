@@ -1,0 +1,6 @@
+#!/bin/sh
+
+ORACLE_HOME=%ORACLE_HOME%; export ORACLE_HOME
+PERL5LIB=${ORACLE_HOME}/perl/lib/5.8.3:${ORACLE_HOME}/perl/lib/site_perl/5.8.3; export PERL5LIB
+
+${ORACLE_HOME}/perl/bin/perl ${ORACLE_HOME}/install/instantiate.pl

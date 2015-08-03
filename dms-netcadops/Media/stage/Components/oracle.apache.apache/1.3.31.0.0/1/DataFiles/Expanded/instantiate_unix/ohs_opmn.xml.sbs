@@ -1,0 +1,10 @@
+<ias-component id="HTTP_Server">
+   <process-type id="HTTP_Server" module-id="OHS">
+     <module-data>
+       <category id="start-parameters"> 
+         <data id="start-mode" value="ssl-enabled"/>
+       </category>
+     </module-data>
+     <process-set id="HTTP_Server" numprocs="1"/>
+   </process-type>
+</ias-component>

@@ -1,0 +1,426 @@
+/* ========================================================================== */
+
+/*                               darbbook.css                                 */
+
+/*                                Release 0.0.1                               */
+
+/*                           Last revision 02/07/03                           */
+
+/*              © 2003, Oracle Corporation. All rights reserved.              */
+
+/* ========================================================================== */
+
+
+
+/*   This is not intended to be a stand-along CSS.  Instead, it cascades on   */
+
+/*   top of the BLAF CSS, providing minimal changes to the existing styles    */
+
+/*   in BLAF, while defining further styles for DARB-specific classes.        */
+
+
+
+
+
+/******************************************************************************/
+
+/*                        BLAF Overrides/Additions                            */
+
+/******************************************************************************/
+
+
+
+/*  First, we need a couple tweaks to the BLAF CSS.                           */
+
+/*  H4 needs to be weight BOLD, as "normal" is too light for accessibility    */
+
+
+
+H4 {
+
+    font-weight:bold;
+
+}
+
+
+
+/*  BLAF doesn't include styles for H5/H6, so we'll include them.  Same       */
+
+/*  Font family as H1-H4, just slightly smaller and BOLD as well.             */
+
+
+
+H5, H6 {
+
+    font-family: Arial, Helvetica, Geneva, sans-serif;
+
+    color:#336699;
+
+    background-color : #FFFFFF;
+
+    }
+
+
+
+H5 {
+
+   font-size: 0.9em;
+
+   font-weight: bold;
+
+}
+
+
+
+H6 {
+
+   font-size: 0.7em;
+
+   font-weight: bold;
+
+}
+
+
+
+/* Loose the H1 underscore */
+
+
+
+H1 {
+
+    border-width : 0px 0px 0px 0px;
+
+}
+
+
+
+
+
+/*  BLAF doesn't provide much contrast between links and visited links       */
+
+/*  so we'll add a little red to increase contrast.                          */
+
+
+
+A:visited {           
+
+    color : #AA3300;
+
+    background-color : #FFFFFF;
+
+}
+
+
+
+/******************************************************************************/
+
+/*                              DARB-specific formats                         */
+
+/******************************************************************************/
+
+
+
+.bold {                       
+
+    font-weight: bold;        
+
+}
+
+
+
+.italic {                     
+
+    font-style: italic;       
+
+}                             
+
+
+
+.bolditalic {                 
+
+    font-weight: bold;        
+
+    font-style: italic;       
+
+}
+
+
+
+.codeinlinebold {                       
+
+    font-weight: bold;        
+
+}
+
+
+
+.codeinlineitalic {                     
+
+    font-style: italic;       
+
+}                             
+
+
+
+.codeinlineboldital {                 
+
+    font-weight: bold;        
+
+    font-style: italic;       
+
+}
+
+
+
+.syntaxinlinebold { 
+
+    font-weight: bold; 
+
+
+
+}
+
+
+
+.syntaxinlineitalic  { 
+
+    font-style: italic;
+
+}
+
+
+
+.syntaxinlineboldital { 
+
+    font-weight: bold; font-style: italic;  
+
+}
+
+
+
+.bridgehead {
+
+    font-family: Arial, Helvetica, Geneva, sans-serif;
+
+    color:#336699;
+
+    background-color : #FFFFFF;
+
+    font-weight: bold;
+
+}
+
+
+
+.term, .glossterm { 
+
+    font-weight: bold;
+
+}
+
+
+
+.glossaryterm { 
+
+    font-weight: bold;
+
+}
+
+
+
+.keyword { 
+
+    font-weight: bold;
+
+}
+
+
+
+.variable {
+
+    font-style: italic;
+
+}
+
+
+
+.msg, .msgexplankw, .msgactionkw { 
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+.underline {
+
+    text-decoration: underline;
+
+}
+
+
+
+.superscript {
+
+    vertical-align: super;
+
+}
+
+
+
+.subscript {
+
+    vertical-align: sub;
+
+}
+
+
+
+.listofeft {
+
+    border: none;
+
+}
+
+
+
+.titleinfigure, .titleinexample, .titleintable, .titleinequation {
+
+	font-weight: bold;
+
+    font-style: italic;
+
+}
+
+
+
+
+
+.subhead1, .subhead2, .subhead3 {
+
+    font-family: Arial, Helvetica, Geneva, sans-serif;
+
+    color: #336699;
+
+    background-color : #FFFFFF;
+
+	font-weight: bold;
+
+}
+
+
+
+.subhead1 { 
+
+    font-size:1.1em;
+
+}
+
+
+
+.subhead2 { 
+
+    font-size:1.0em;
+
+}
+
+
+
+.subhead3 { 
+
+    font-size:0.9em;
+
+	display: inline;
+
+}
+
+
+
+
+
+/* When lists are inside tables, they need to be more "compact" so they don't */
+
+/* spread the table out.   We need to suppress the natural line break in the  */
+
+/* para element for "paras inside a list item inside a table data"            */
+
+
+
+td li p {
+
+  display: inline;
+
+}
+
+
+
+
+
+
+
+TD.copyrightlogo {            
+
+    text-align:center;        
+
+    font-size: xx-small;      
+
+}                             
+
+
+
+SPAN.copyrightlogo {          
+
+    text-align:center;        
+
+    font-size: xx-small;      
+
+    }                         
+
+
+
+IMG.copyrightlogo {           
+
+    border-style:none;        
+
+    }                         
+
+
+
+p.betadraftsubtitle {         
+
+    text-align:center;        
+
+    font-weight:bold;         
+
+    color:#FF0000;            
+
+    }    
+
+	                     
+
+.betadraft {                  
+
+    color:#FF0000;            
+
+} 
+
+
+
+.comment {                  
+
+    color:#008800;            
+
+} 
+
+
+
+
+
+
+
+
+
+
+

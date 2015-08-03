@@ -1,0 +1,15 @@
+DMSDB =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (LOAD_BALANCE=on)
+      (FAILOVER=on)
+      (ADDRESS = (PROTOCOL = TCP)(HOST = dmsdb1-vip)(PORT = 1521))
+      (ADDRESS = (PROTOCOL = TCP)(HOST = dmsdb2-vip)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = dmsdb)
+      (FAILOVER_MODE = (TYPE = SELECT)(METHOD = BASIC))
+    )
+  )
+
