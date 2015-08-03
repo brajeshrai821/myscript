@@ -1,0 +1,21 @@
+conbld {
+  filter="No such file or directory|cp: cannot stat|Option|Missing file:"
+}
+
+make {
+  filter="uxb|Compiling|Preprocessing|gen_ss|gendef_one|C-compiling|Translating|Xlib.h"
+  filter="|\/usr\/include\/X11|extern X|-------|Remove link|Cond_Comp|TRP-|TRP|Skipping|^ |^$"
+  filter="|Precompiling|Checking out|Disqualify|Linking|Updating archive|Creating|Prebuild|Postbuild"
+  filter="|sidlc:|yacc|Yacc|parser|Parser|In function|dangerous|linking|building|Removing|mv:"
+  filter="|^m05|Unpacking|^dlg|^fortcom|jacket|Building|Updating|IDL|^Environment"
+  filter="|Extracting|CPPing|^GENDEF|înt|Copying|^ar:|^No|^start|symlink|^Removing|^Preparing"
+  filter="|^create|^Pro\*C|Copyright|System default|^Using directory|Destination|^udw_tomcat"
+  filter="|Packing|^View created|^Table created|Create Table|Sequence created|^Create Sequence|^Table altered"
+  filter="|^Index created|^Adding|^Package|^PL/SQL|Constraint|created|reating|eplacing"
+  filter="|ppendin|acr2def:|^Create|^Ready|^YYSTYPE|^int yy|dropped|^Grant|^CC=|^gcc|Clock skew"
+  filter="|in the future|checking for|Running |In file included|ignoring #pragma message"
+}
+
+pdlinfo {
+  filter="CPU Time|End Time|Start Time"
+}
