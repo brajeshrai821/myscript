@@ -6,7 +6,6 @@
 #                Installs the Oracle application server and configures
 #                the DMS NetCadops configuration
 #
-# Author       : Firas AlShafei
 #
 # Version      : v1.2
 #
@@ -22,29 +21,6 @@
 #                - DMS cadops directory available in:
 #                     [NetMod] /dms/cadops
 #                  or [Standalone] /usr/users/oracle/cadops
-#
-#===================================================================================
-# Changelog:
-#
-# v1.2 - Firas AlShafei - 02/08/2014
-# - Changed default Oracle path
-# - Added apache password obfuscation
-# - [RHEL6] Fixed user and group checking
-# - Added user profile creation
-# - Moved variables to a conf file
-# - Set default script header
-# - Changed port number to 2200
-#
-# v1.1 - Firas AlShafei - 05/22/2013
-# - Fixed oraInst.loc bug
-# - Added exit code checking for Oracle install/Patch
-# - Fixed tnsnames.ora checking logic
-# - Modified spinner function
-# - Fixed bug in oraInst.loc detection logic
-# - Added log coloring
-#
-# v1.0 - Firas AlShafei - 05/19/2013
-# - Initial Version
 #
 #===================================================================================
 
