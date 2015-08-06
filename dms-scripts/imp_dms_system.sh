@@ -1,4 +1,4 @@
-:
+#!/bin/sh
 
 # "single_file" - Either run imp once for entire DMS database or once for each DMS schema
 #    "y" = Run imp once for entire DMS database (all schemas)

@@ -1,35 +1,4 @@
 #!/bin/ksh
-#AM
-#!/bin/ksh
-###########################################
-# stagedms.sh
-# Script that stages the installation
-# files into the right direcroty structure
-#
-# v.7.0.1-1 		Alireza Mehr - 10/13/2012   Initial Version
-# v.7.0.1-2 v1.0.1 	Firas Alshafei - 11/05/2012
-# 			- Added the * in variable naming to
-#   			make the script more generic
-# 			- Added version checking, if both old and new
-#   			versions are the same then stop the script
-# v.7.1.0-1		Alireza Mehr - 2/22/2013
-#			Modified scripts for DMS.7.1
-# v.7.1.0-2		Alireza Mehr - 3/12/2013
-#			Moved the user variables into $DMS_UPGRADE_PROFILE
-#
-
-
-###################################
-
-###################################
-# USER VARIABLES:
-
-# The following is moved to $DMS_UPGRADE_PROFILE  3/12/2013 AAM
-#. $DMS_UPGRADE_PROFILE
-#DMS_VERSION=DMS.7.1.0.5.201302180
-
-###################################
-
 
 ###################################
 ThisReleaseDir=/nmdata/dmsrelease/Releases/${DMS_VERSION}

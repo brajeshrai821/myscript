@@ -1,4 +1,4 @@
-:
+#!/bin/sh
 # "single_file" - Either run exp once for entire DMS database or once for each DMS schema
 #    "y" = Run exp once for entire DMS database (all schemas)
 #    "n" = Run exp once for each DMS schema (astatus, astorm, netc, adm)

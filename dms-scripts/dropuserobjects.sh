@@ -1,5 +1,4 @@
 #!/bin/ksh  
-# Authur: Alireza Mehr 2005
 #
 if [[ $# != 3 ]] then
   echo "usage: $0 dbConnect dbSchema dbPass"

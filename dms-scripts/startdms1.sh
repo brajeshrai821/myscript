@@ -1,5 +1,5 @@
 #!/bin/sh
-#AM
+
 # The startdms starts the dms pocesses
 #
 #

@@ -1,5 +1,4 @@
 #!/bin/sh
-#AM
 # The statusdms reports the status of the dms pocesses
 #
 #

@@ -1,5 +1,5 @@
 #!/bin/sh
-#AM
+
 # The stopdms stops the dms pocesses
 #
 #
